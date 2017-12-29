@@ -1,12 +1,12 @@
 package com.eshare.command.example1;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
+ * ½ÓÊÕÕß¶ÔÏó
  */
 public class Receiver {
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä²ï¿½ï¿½ï¿½
+	 * Ê¾Òâ·½·¨£¬ÕæÕýÖ´ÐÐÃüÁîÏàÓ¦µÄ²Ù×÷
 	 */
 	public void action(){
-		//ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½Ü´ï¿½ï¿½ï¿½
+		//ÕæÕýÖ´ÐÐÃüÁî²Ù×÷µÄ¹¦ÄÜ´úÂë
 	}
 }

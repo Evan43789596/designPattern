@@ -1,16 +1,16 @@
 package com.eshare.mediator.example1;
 /**
- * 锟斤拷锟斤拷锟酵拷锟斤拷锟紹
+ * 具体的同事类B
  */
 public class ConcreteColleagueB extends Colleague {
 	public ConcreteColleagueB(Mediator mediator) {
 		super(mediator);
 	}
 	/**
-	 * 示锟解方锟斤拷锟斤拷执锟斤拷某些业锟斤拷锟斤拷
+	 * 示意方法，执行某些业务功能
 	 */
 	public void someOperation() {
-		//锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷同锟斤拷通锟脚碉拷时锟斤拷通知锟叫斤拷锟竭讹拷锟斤拷
+		//在需要跟其他同事通信的时候，通知中介者对象
 		getMediator().changed(this);
 	}
 }

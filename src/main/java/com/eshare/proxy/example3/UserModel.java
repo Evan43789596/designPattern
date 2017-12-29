@@ -1,22 +1,22 @@
 package com.eshare.proxy.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ÝµÄ¶ï¿½ï¿½ï¿½
+ * ÃèÊöÓÃ»§Êý¾ÝµÄ¶ÔÏó
  */
 public class UserModel implements UserModelApi{	
 	/**
-	 * ï¿½Ã»ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃ»§±àºÅ
 	 */
 	private String userId;
 	/**
-	 * ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃ»§ÐÕÃû
 	 */
 	private String name;
 	/**
-	 * ï¿½ï¿½ï¿½Å±ï¿½ï¿½
+	 * ²¿ÃÅ±àºÅ
 	 */
 	private String depId;
 	/**
-	 * ï¿½Ô±ï¿½
+	 * ÐÔ±ð
 	 */
 	private String sex;
 	

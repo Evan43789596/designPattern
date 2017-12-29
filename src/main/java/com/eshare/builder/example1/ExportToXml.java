@@ -3,31 +3,31 @@ package com.eshare.builder.example1;
 import java.util.Collection;
 import java.util.Map;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½XMLï¿½Ä¼ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+ * µ¼³öÊı¾İµ½XMLÎÄ¼şµÄ¶ÔÏó
  */
 public class ExportToXml {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½XMLï¿½Ä¼ï¿½
-	 * @param ehm ï¿½Ä¼ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param mapData ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param efm ï¿½Ä¼ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * µ¼³öÊı¾İµ½XMLÎÄ¼ş
+	 * @param ehm ÎÄ¼şÍ·µÄÄÚÈİ
+	 * @param mapData Êı¾İµÄÄÚÈİ
+	 * @param efm ÎÄ¼şÎ²µÄÄÚÈİ
 	 */
 	public void export(ExportHeaderModel ehm,Map<String,Collection<ExportDataModel>> mapData,ExportFooterModel efm){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÓÃÀ´¼ÇÂ¼×îÖÕÊä³öµÄÎÄ¼şÄÚÈİ
 		StringBuffer buffer = new StringBuffer();
-		//1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½Ä¼ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£ºÏÈÀ´Æ´½ÓÎÄ¼şÍ·µÄÄÚÈİ
 		buffer.append("<?xml version='1.0' encoding='gb2312'?>\n");
 		buffer.append("<Report>\n");
 		buffer.append("  <Header>\n");
 		buffer.append("    <DepId>"+ehm.getDepId()+"</DepId>\n");
 		buffer.append("    <ExportDate>"+ehm.getExportDate()+"</ExportDate>\n");
 		buffer.append("  </Header>\n");
-		//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//2£º½Ó×ÅÀ´Æ´½ÓÎÄ¼şÌåµÄÄÚÈİ
 		buffer.append("  <Body>\n");
 		for(String tblName : mapData.keySet()){
-			//ï¿½ï¿½Æ´ï¿½Ó±ï¿½ï¿½ï¿½ï¿½ï¿½
+			//ÏÈÆ´½Ó±íÃû³Æ
 			buffer.append("    <Datas TableName=\""+tblName+"\">\n");
-			//È»ï¿½ï¿½Ñ­ï¿½ï¿½Æ´ï¿½Ó¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//È»ºóÑ­»·Æ´½Ó¾ßÌåÊı¾İ
 			for(ExportDataModel edm : mapData.get(tblName)){
 				buffer.append("      <Data>\n");
 				buffer.append("        <ProductId>"+edm.getProductId()+"</ProductId>\n");
@@ -38,14 +38,14 @@ public class ExportToXml {
 			buffer.append("    </Datas>\n");
 		}
 		buffer.append("  </Body>\n");
-		//3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½Ä¼ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//3£º½Ó×ÅÀ´Æ´½ÓÎÄ¼şÎ²µÄÄÚÈİ
 		buffer.append("  <Footer>\n");
 		buffer.append("    <ExportUser>"+efm.getExportUser()+"</ExportUser>\n");
 		buffer.append("  </Footer>\n");
 		buffer.append("</Report>\n");
 		
-		//Îªï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½Í²ï¿½È¥Ğ´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½XMLï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½\n"+buffer);
+		//ÎªÁËÑİÊ¾¼ò½àĞÔ£¬ÕâÀï¾Í²»È¥Ğ´Êä³öÎÄ¼şµÄ´úÂëÁË
+		//°ÑÒªÊä³öµÄÄÚÈİÊä³öµ½¿ØÖÆÌ¨¿´¿´
+		System.out.println("Êä³öµ½XMLÎÄ¼şµÄÄÚÈİ£º\n"+buffer);
 	}
 }

@@ -1,18 +1,18 @@
 package com.eshare.prototype.example6;
 /**
- * ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¸öÈË¶©µ¥¶ÔÏó
  */
 public class PersonalOrder implements OrderApi{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½
+	 * ¶©¹ºÈËÔ±ÐÕÃû
 	 */
 	private String customerName;
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ²úÆ·¶ÔÏó
 	 */
 	private Product product = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ¶©µ¥²úÆ·ÊýÁ¿
 	 */
 	private int orderProductNum = 0;
 	
@@ -36,16 +36,16 @@ public class PersonalOrder implements OrderApi{
 	}
 	
 	public String toString(){
-		//ï¿½òµ¥µï¿½ï¿½ï¿½ï¿½
-		return "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½="+this.product.getName()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª="+this.orderProductNum;
+		//¼òµ¥µãÊä³ö
+		return "¶©¹º²úÆ·ÊÇ="+this.product.getName()+"£¬¶©¹ºÊýÁ¿Îª="+this.orderProductNum;
 	}
 	
 	public OrderApi cloneOrder() {
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ÂµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½Ñ±ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½Æ¹ï¿½È¥
+		//´´½¨Ò»¸öÐÂµÄ¶©µ¥£¬È»ºó°Ñ±¾ÊµÀýµÄÊý¾Ý¸´ÖÆ¹ýÈ¥
 		PersonalOrder order = new PersonalOrder();
 		order.setCustomerName(this.customerName);
 		order.setOrderProductNum(this.orderProductNum);
-		//ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½È¿ï¿½Â¡ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Â¡ï¿½ï¿½ï¿½ï¿½
+		//¶ÔÓÚ¶ÔÏóÀàÐÍµÄÊý¾Ý£¬Éî¶È¿ËÂ¡µÄÊ±ºòÐèÒª¼ÌÐøµ÷ÓÃÕâ¸ö¶ÔÏóµÄ¿ËÂ¡·½·¨
 		order.setProduct((Product)this.product.cloneProduct());		
 		return order;
 	}

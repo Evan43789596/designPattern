@@ -1,16 +1,16 @@
 package com.eshare.abstractfactory.example3;
 /**
- * ï¿½ï¿½ï¿½ó¹¤³ï¿½ï¿½Ä½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
+ * ³éÏó¹¤³§µÄ½Ó¿Ú£¬ÉùÃ÷´´½¨³éÏó²úÆ·¶ÔÏóµÄ²Ù×÷
  */
 public interface AbstractFactory {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½CPUï¿½Ä¶ï¿½ï¿½ï¿½
-	 * @return CPUï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ´´½¨CPUµÄ¶ÔÏó
+	 * @return CPUµÄ¶ÔÏó
 	 */
 	public CPUApi createCPUApi();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ´´½¨Ö÷°åµÄ¶ÔÏó
+	 * @return Ö÷°åµÄ¶ÔÏó
 	 */
 	public MainboardApi createMainboardApi();
 }

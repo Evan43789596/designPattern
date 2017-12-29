@@ -1,11 +1,11 @@
 package com.eshare.factorymethod.example1;
 /**
- * 锟斤拷锟斤拷锟斤拷锟侥憋拷锟侥硷拷锟斤拷式锟侥讹拷锟斤拷
+ * 导出成文本文件格式的对象
  */
 public class ExportTxtFile implements ExportFileApi{
 	public boolean export(String data) {
-		//锟斤拷示锟斤拷一锟铰ｏ拷锟斤拷锟斤拷锟斤拷要锟斤拷锟斤拷锟侥硷拷
-		System.out.println("锟斤拷锟斤拷锟斤拷锟斤拷"+data+"锟斤拷锟侥憋拷锟侥硷拷");
+		//简单示意一下，这里需要操作文件
+		System.out.println("导出数据"+data+"到文本文件");
 		return true;
 	}
 }

@@ -1,35 +1,35 @@
 package com.eshare.visitor.example6;
 import java.util.*;
 /**
- * ï¿½ï¿½Ï¶ï¿½ï¿½ó£¬¿ï¿½ï¿½Ô°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½
- * ï¿½àµ±ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½Ä¾ï¿½ï¿½ï¿½ElementÊµï¿½Ö¶ï¿½ï¿½ï¿½
+ * ×éºÏ¶ÔÏó£¬¿ÉÒÔ°üº¬ÆäËü×éºÏ¶ÔÏó»òÕßÒ¶×Ó¶ÔÏó£¬
+ * Ïàµ±ÓÚ·ÃÎÊÕßÄ£Ê½µÄ¾ßÌåElementÊµÏÖ¶ÔÏó
  */
 public class Composite extends Component{
 	public void accept(Visitor visitor) {
-		//ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
+		//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
 		visitor.visitComposite(this);
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½Ğ°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃÀ´´æ´¢×éºÏ¶ÔÏóÖĞ°üº¬µÄ×Ó×é¼ş¶ÔÏó
 	 */
 	private List<Component> childComponents = new ArrayList<Component>();
 	public List<Component> getChildComponents() {
 		return childComponents;
 	}
 	/**
-	 * ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ×éºÏ¶ÔÏóµÄÃû×Ö
 	 */
 	private String name = "";
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param name ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë×éºÏ¶ÔÏóµÄÃû×Ö
+	 * @param name ×éºÏ¶ÔÏóµÄÃû×Ö
 	 */
 	public Composite(String name){
 		this.name = name;
 	}
 	
 	public void addChild(Component child) {
-		//ï¿½Ó³Ù³ï¿½Ê¼ï¿½ï¿½
+		//ÑÓ³Ù³õÊ¼»¯
 		if (childComponents == null) {
 			childComponents = new ArrayList<Component>();
 		}
@@ -37,5 +37,8 @@ public class Composite extends Component{
 	}
 	public String getName() {
 		return name;
+	}
+	public void setName(String name){
+		this.name = name;
 	}
 }

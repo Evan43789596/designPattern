@@ -3,11 +3,11 @@ package com.eshare.interpreter.example3;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 /**
- * т╙О©╫О©╫О©╫О©╫н╙О©╫у╫О©╫О©╫О©╫О©╫с╕О©╫д╫О©╫О©╫О©╫О©╫О©╫
+ * т╙кьвВн╙жу╫А╥Ш╤тс╕╣д╫БймфВ
  */
 public class ElementTerminalExpression  extends ReadXmlExpression{
 	/**
-	 * т╙О©╫ь╣О©╫О©╫О©╫О©╫О©╫
+	 * т╙кь╣дцШвж
 	 */
 	private String eleName = "";
 	public ElementTerminalExpression(String name){
@@ -15,22 +15,22 @@ public class ElementTerminalExpression  extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╣О©╫г╟т╙О©╫О©╫О©╫О©╫н╙О©╫О©╫О©╫О©╫т╙О©╫О©╫
+		//охх║ЁЖиообндюО╣д╣╠г╟т╙кьвВн╙╦╦╪╤т╙кь
 		Element pEle = c.getPreEle();
-		//О©╫О©╫О©╫р╣О©╫О©╫О©╫г╟т╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫с╕О©╫О©╫xmlт╙О©╫О©╫
+		//╡Иур╣╫╣╠г╟т╙кьцШЁфкЫ╤тс╕╣дxmlт╙кь
 		Element ele = null;
 		if(pEle==null){
-			//к╣О©╫О©╫О©╫О©╫О©╫з╩О©╫х║О©╫О©╫О©╫г╦О©╫т╙О©╫О©╫
+			//к╣цВожтз╩Ях║╣дйг╦Ыт╙кь
 			ele = c.getDocument().getDocumentElement();
 			c.setPreEle(ele);
 		}else{
-			//О©╫О©╫О©╫щ╦О©╫О©╫О©╫т╙О©╫ь╨О©╫р╙О©╫О©╫О©╫р╣О©╫т╙О©╫ь╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫х║О©╫О©╫г╟О©╫О©╫т╙О©╫О©╫
+			//╦Ы╬щ╦╦╪╤т╙кь╨мр╙╡Иур╣дт╙кь╣дцШЁфю╢╩Ях║╣╠г╟╣дт╙кь
 			ele = c.getNowEle(pEle, eleName);
-			//О©╫я╣О©╫г╟О©╫О©╫х║О©╫О©╫т╙О©╫ь╥е╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+			//╟я╣╠г╟╩Ях║╣дт╙кь╥е╣╫иообндюОцФ
 			c.setPreEle(ele);
 		}
 
-		//х╩О©╫О©╫О©╫О©╫р╙х╔О©╫О©╫х║О©╫О©╫О©╫т╙О©╫ь╣О©╫ж╣
+		//х╩╨СпХр╙х╔╩Ях║уБ╦Жт╙кь╣дж╣
 		String[] ss = new String[1];
 		ss[0] = ele.getFirstChild().getNodeValue();
 		return ss;

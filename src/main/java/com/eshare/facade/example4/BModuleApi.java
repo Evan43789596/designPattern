@@ -1,10 +1,11 @@
 package com.eshare.facade.example4;
 
 public interface BModuleApi {
-	//锟斤拷锟斤拷系统锟解部
+	//对子系统外部
 	public void b1();
-	//锟斤拷系统锟节诧拷使锟斤拷
+	
+	//子系统内部使用
 	public void b2();
-	//锟斤拷系统锟节诧拷使锟斤拷
+	//子系统内部使用
 	public void b3();
 }

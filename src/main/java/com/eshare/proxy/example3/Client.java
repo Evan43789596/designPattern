@@ -5,13 +5,18 @@ public class Client {
 		UserManager userManager = new UserManager();
 		Collection<UserModelApi> col = userManager.getUserByDepId("0101");
 
-		//ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Â²ï¿½Ñ¯ï¿½ï¿½ï¿½İ¿ï¿½
+		//Èç¹ûÖ»ÊÇÏÔÊ¾ÓÃ»§Ãû³Æ£¬ÄÇÃ´²»ĞèÒªÖØĞÂ²éÑ¯Êı¾İ¿â
 		for(UserModelApi umApi : col){
-			System.out.println("ï¿½Ã»ï¿½ï¿½ï¿½Å£ï¿½="+umApi.getUserId()+",ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½="+umApi.getName());
+			System.out.println("ÓÃ»§±àºÅ£º="+umApi.getUserId()+",ÓÃ»§ĞÕÃû£º="+umApi.getName());
 		}
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Åºï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½Ç¾Í»ï¿½ï¿½ï¿½ï¿½Â²ï¿½Ñ¯ï¿½ï¿½ï¿½İ¿ï¿½
+		//Èç¹û·ÃÎÊ·ÇÓÃ»§±àºÅºÍÓÃ»§ĞÕÃûÍâµÄÊôĞÔ£¬ÄÇ¾Í»áÖØĞÂ²éÑ¯Êı¾İ¿â
 		for(UserModelApi umApi : col){
-			System.out.println("ï¿½Ã»ï¿½ï¿½ï¿½Å£ï¿½="+umApi.getUserId()+",ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½="+umApi.getName()+",ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½="+umApi.getDepId());
+			System.out.println("ÓÃ»§±àºÅ£º="+umApi.getUserId()+",ÓÃ»§ĞÕÃû£º="+umApi.getName()+",ËùÊô²¿ÃÅ£º="+umApi.getDepId());
 		}
 	}
 }
+
+//ÒÔÊ±¼ä»»¿Õ¼ä
+//1+N´Î²éÑ¯µÄÎÊÌâ
+
+//Lazy Load===¡µÊµÏÖ»úÖÆ¾ÍÊÇ   ´úÀí

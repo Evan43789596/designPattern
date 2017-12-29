@@ -2,21 +2,21 @@ package com.eshare.command.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//Ö»ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ë¾Íºï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±
+		//Ö»ÊÇ¸ºÔğÏò·şÎñÔ±µã²Ë¾ÍºÃÁË
+		//´´½¨·şÎñÔ±
 		Waiter waiter = new Waiter();
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬¾ï¿½ï¿½ï¿½Òªï¿½ï¿½Ä²ï¿½
+		//´´½¨ÃüÁî¶ÔÏó£¬¾ÍÊÇÒªµãµÄ²Ë
 		Command chop = new ChopCommand();
 		Command duck = new DuckCommand();
 		Command pork = new PorkCommand();
 		
-		//ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ğ©ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+		//µã²Ë£¬¾ÍÊÇ°ÑÕâĞ©²ËÈÃ·şÎñÔ±¼ÇÂ¼ÏÂÀ´
 		waiter.orderDish(chop);
 		waiter.orderDish(duck);
 		waiter.orderDish(pork);
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//µã²ËÍê±Ï
 		waiter.orderOver();
 	}
 }

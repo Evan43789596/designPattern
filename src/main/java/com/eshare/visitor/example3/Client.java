@@ -2,19 +2,19 @@ package com.eshare.visitor.example3;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ObjectStructure
+		//´´½¨ObjectStructure
 		ObjectStructure os = new ObjectStructure();
-		//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½Ôªï¿½ï¿½
+		//´´½¨Òª¼ÓÈë¶ÔÏó½á¹¹µÄÔªËØ
 		Element eleA = new ConcreteElementA();
 		Element eleB = new ConcreteElementB();
-		//ï¿½ï¿½Ôªï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹¹
+		//°ÑÔªËØ¼ÓÈë¶ÔÏó½á¹¹
 		os.addElement(eleA);
 		os.addElement(eleB);
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		Visitor visitor = new ConcreteVisitor1();
+		//´´½¨·ÃÎÊÕß
+		Visitor visitor = new ConcreteVisitor2();
 		
-		//ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+		//µ÷ÓÃÒµÎñ´¦ÀíµÄ·½·¨
 		os.handleRequest(visitor);		
 	}
 }

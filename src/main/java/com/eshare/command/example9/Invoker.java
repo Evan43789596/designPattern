@@ -2,8 +2,8 @@ package com.eshare.command.example9;
 
 public class Invoker {
 	public void startPrint(Command cmd){	
-		System.out.println("ï¿½ï¿½Invokerï¿½Ğ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°");
+		System.out.println("ÔÚInvokerÖĞ£¬Êä³ö·şÎñÇ°");
 		cmd.execute();
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		System.out.println("Êä³ö·şÎñ½áÊø");
 	}
 }

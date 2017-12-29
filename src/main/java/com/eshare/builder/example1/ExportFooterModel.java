@@ -1,10 +1,10 @@
 package com.eshare.builder.example1;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½İµÄ¶ï¿½ï¿½ï¿½
+ * ÃèÊöÊä³öµ½ÎÄ¼şÎ²µÄÄÚÈİµÄ¶ÔÏó
  */
 public class ExportFooterModel {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Êä³öÈË
 	 */
 	private String exportUser;
 

@@ -1,25 +1,25 @@
 package com.eshare.templatemethod.example2;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æµï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¹¤×÷ÈËÔ±µÇÂ¼¿ØÖÆµÄÂß¼­´¦Àí
  */
 public class WorkerLogin {
 	/**
-	 * ï¿½Ð¶Ïµï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Üµï¿½Â¼ï¿½É¹ï¿½
-	 * @param lm ï¿½ï¿½×°ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ýµï¿½Model
-	 * @return trueï¿½ï¿½Ê¾ï¿½ï¿½Â¼ï¿½É¹ï¿½ï¿½ï¿½falseï¿½ï¿½Ê¾ï¿½ï¿½Â¼Ê§ï¿½ï¿½
+	 * ÅÐ¶ÏµÇÂ¼Êý¾ÝÊÇ·ñÕýÈ·£¬Ò²¾ÍÊÇÊÇ·ñÄÜµÇÂ¼³É¹¦
+	 * @param lm ·â×°µÇÂ¼Êý¾ÝµÄModel
+	 * @return true±íÊ¾µÇÂ¼³É¹¦£¬false±íÊ¾µÇÂ¼Ê§°Ü
 	 */
 	public boolean login(LoginModel lm) {
-		//1ï¿½ï¿½ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£º¸ù¾Ý¹¤×÷ÈËÔ±±àºÅÈ¥»ñÈ¡¹¤×÷ÈËÔ±µÄÊý¾Ý
 		WorkerModel wm = this.findWorkerByWorkerId(lm.getWorkerId());
-		//2ï¿½ï¿½ï¿½Ð¶Ï´ï¿½Ç°Ì¨ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½
-		//ï¿½ï¿½ï¿½Ð¶Ï¹ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½Ç·ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½wmÎªnullï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½Ç²ï¿½Îªnullï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½
-		//ï¿½ï¿½Îªï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½new WorkerModel();ï¿½ï¿½Ë»ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
+		//2£ºÅÐ¶Ï´ÓÇ°Ì¨´«µÝ¹ýÀ´µÄÓÃ»§ÃûºÍ¼ÓÃÜºóµÄÃÜÂëÊý¾Ý£¬ºÍÊý¾Ý¿âÖÐÒÑÓÐµÄÊý¾ÝÊÇ·ñÆ¥Åä
+		//ÏÈÅÐ¶Ï¹¤×÷ÈËÔ±ÊÇ·ñ´æÔÚ£¬Èç¹ûwmÎªnull£¬ËµÃ÷¹¤×÷ÈËÔ±¿Ï¶¨²»´æÔÚ
+		//µ«ÊÇ²»Îªnull£¬¹¤×÷ÈËÔ±²»Ò»¶¨´æÔÚ£¬
+		//ÒòÎªÊý¾Ý²ã¿ÉÄÜ·µ»Ønew WorkerModel();Òò´Ë»¹ÐèÒª×ö½øÒ»²½µÄÅÐ¶Ï
 		if (wm != null) {
-			//3ï¿½ï¿½ï¿½Ñ´ï¿½Ç°Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//3£º°Ñ´ÓÇ°Ì¨´«À´µÄÃÜÂëÊý¾Ý£¬Ê¹ÓÃÏàÓ¦µÄ¼ÓÃÜËã·¨½øÐÐ¼ÓÃÜÔËËã
 			String encryptPwd = this.encryptPwd(lm.getPwd());
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½é¹¤ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½
+			//Èç¹û¹¤×÷ÈËÔ±´æÔÚ£¬¼ì²é¹¤×÷ÈËÔ±±àºÅºÍÃÜÂëÊÇ·ñÆ¥Åä
 			if (wm.getWorkerId().equals(lm.getWorkerId())
 					&& wm.getPwd().equals(encryptPwd)) {
 				return true;
@@ -28,21 +28,21 @@ public class WorkerLogin {
 		return false;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
-	 * @param pwd ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¶ÔÃÜÂëÊý¾Ý½øÐÐ¼ÓÃÜ
+	 * @param pwd ÃÜÂëÊý¾Ý
+	 * @return ¼ÓÃÜºóµÄÃÜÂëÊý¾Ý
 	 */
 	private String encryptPwd(String pwd){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½Ü£ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½
+		//ÕâÀï¶ÔÃÜÂë½øÐÐ¼ÓÃÜ£¬Ê¡ÂÔÁË
 		return pwd;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Å»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
-	 * @param workerId ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½Ó¦ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
+	 * ¸ù¾Ý¹¤×÷ÈËÔ±±àºÅ»ñÈ¡¹¤×÷ÈËÔ±µÄÏêÏ¸ÐÅÏ¢
+	 * @param workerId ¹¤×÷ÈËÔ±±àºÅ
+	 * @return ¶ÔÓ¦µÄ¹¤×÷ÈËÔ±µÄÏêÏ¸ÐÅÏ¢
 	 */
 	private WorkerModel findWorkerByWorkerId(String workerId) {
-		// ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½Ô¾ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¶ï¿½ï¿½ï¿½
+		// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓÐÄ¬ÈÏÊý¾ÝµÄ¶ÔÏó
 		WorkerModel wm = new WorkerModel();
 		wm.setWorkerId(workerId);
 		wm.setName("Worker1");

@@ -1,20 +1,20 @@
 package com.eshare.command.example7;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ÐµÄ²ï¿½ï¿½ï¿½
+ * ÃüÁî½Ó¿Ú£¬ÉùÃ÷Ö´ÐÐµÄ²Ù×÷
  */
 public interface Command {
 	/**
-	 * Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä²ï¿½ï¿½ï¿½
+	 * Ö´ÐÐÃüÁî¶ÔÓ¦µÄ²Ù×÷
 	 */
 	public void execute();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param cookApi ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+	 * ÉèÖÃÃüÁîµÄ½ÓÊÕÕß
+	 * @param cookApi ÃüÁîµÄ½ÓÊÕÕß 
 	 */
 	public void setCookApi(CookApi cookApi);
 	/**
-	 * ï¿½ï¿½ï¿½Ø·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½Çµï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ·µ»Ø·¢ÆðÇëÇóµÄ×ÀºÅ£¬¾ÍÊÇµã²ËµÄ×ÀºÅ
+	 * @return ·¢ÆðÇëÇóµÄ×ÀºÅ
 	 */
 	public int getTableNum();
 }

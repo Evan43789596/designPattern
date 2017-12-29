@@ -1,11 +1,11 @@
 package com.eshare.templatemethod.example6;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
+ * ÃèÊöÓÃ»§µÄÊı¾İÄ£ĞÍ£¬VO
  */
 public class UserModel {
-	private String uuid;
-	private String name;
-	private int age;
+	private String uuid; //¾ø¶ÔÆ¥Åä
+	private String name; //Ä£ºıÆ¥Åä
+	private int age; //Çø¼äÆ¥Åä
 	public String getUuid() {
 		return uuid;
 	}

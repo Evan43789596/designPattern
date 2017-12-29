@@ -1,11 +1,11 @@
 package com.eshare.factorymethod.example7;
 /**
- * 锟斤拷锟斤拷锟斤拷xml锟侥硷拷锟侥讹拷锟斤拷
+ * 导出成xml文件的对象
  */
 public class ExportXml implements ExportFileApi{
 	public boolean export(String data) {
-		//锟斤拷示锟斤拷一锟斤拷
-		System.out.println("锟斤拷锟斤拷锟斤拷锟斤拷"+data+"锟斤拷XML锟侥硷拷");
+		//简单示意一下
+		System.out.println("导出数据"+data+"到XML文件");
 		return true;
 	}
 }

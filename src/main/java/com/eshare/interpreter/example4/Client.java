@@ -9,50 +9,49 @@ import org.w3c.dom.Element;
 
 public class Client {
 	public static void main(String[] args) throws Exception {
-		//в╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+		//в╪╠╦иообнд
 		Context c = new Context("InterpreterTest.xml");
 
-		//О©╫О©╫р╙О©╫О©╫х║О©╫О©╫О©╫dт╙О©╫ь╣О©╫ж╣О©╫О©╫р╡О©╫О©╫О©╫О©╫О©╫О©╫О©╫б╠О©╫О©╫й╫О©╫О©╫ж╣О©╫О©╫"root/a/b/d$"
-
-//		//О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫дЁО©╫О©╫О©╫О©╫О╥╗О©╫О©╫
+		//оКр╙╩Ях║╤Ю╦Жdт╙кь╣дж╣ё╛р╡╬мйгхГоб╠М╢Ой╫╣дж╣ё╨"root/a/b/d$"
+//		//йвохр╙╧╧╫╗╫БймфВ╣дЁИоСсО╥╗йВ
 //		ElementExpression root = new ElementExpression("root");
 //		ElementExpression aEle = new ElementExpression("a");
 //		ElementExpression bEle = new ElementExpression("b");
 //		ElementsTerminalExpression dEle = new ElementsTerminalExpression("d");
-//		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+//		//вИ╨офПю╢
 //		root.addEle(aEle);
 //		aEle.addEle(bEle);
 //		bEle.addEle(dEle);
-//		//О©╫О©╫О©╫О©╫
+//		//╣Всц
 //		String ss[] = root.interpret(c);
 //		for(String s : ss){
-//			System.out.println("dО©╫О©╫ж╣О©╫О©╫="+s);	
+//			System.out.println("d╣дж╣йг="+s);	
 //		}
 
-		//О©╫О©╫р╙О©╫О©╫х║dт╙О©╫ь╣О©╫idО©╫О©╫О©╫тёО©╫р╡О©╫О©╫О©╫О©╫О©╫О©╫О©╫б╠О©╫О©╫й╫О©╫О©╫ж╣О©╫О©╫"a/b/d$.id$"
+		//оКр╙╩Ях║dт╙кь╣дidйТптё╛р╡╬мйгхГоб╠М╢Ой╫╣дж╣ё╨"a/b/d$.id$"
 		ElementExpression root = new ElementExpression("root");
 		ElementExpression aEle = new ElementExpression("a");
 		ElementExpression bEle = new ElementExpression("b");
 		ElementsExpression dEle = new ElementsExpression("d");
 		PropertysTerminalExpression prop = new PropertysTerminalExpression("id");
-		//О©╫О©╫О©╫
+		//вИ╨о
 		root.addEle(aEle);
 		aEle.addEle(bEle);
 		bEle.addEle(dEle);
 		dEle.addEle(prop);
-		//О©╫О©╫О©╫О©╫
+		//╣Всц
 		String ss[] = root.interpret(c);
 		for (String s : ss) {
-			System.out.println("dО©╫О©╫О©╫О©╫О©╫О©╫idж╣О©╫О©╫=" + s);
+			System.out.println("d╣дйТптidж╣йг=" + s);
 		}
 		
-		//О©╫О©╫О©╫р╙й╧О©╫О©╫м╛р╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫бЁО©╫й╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╤О©╫О©╫О©╫
-		//О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ы╩О©╫х║р╩О©╫О©╫О©╫О©╫О©╫О©╫idО©╫О©╫ж╣О©╫О©╫О©╫О©╫х╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╙О©╫ьёО©╫
-		//О©╫О©╫О©╫б╫О©╫О©╫О©╫О©╫О©╫ж╩р╙О©╫О©╫О©╫О©╫й╧О©╫О©╫м╛р╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫бЁО©╫й╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╤О©╫О©╫О©╫
+		//хГ╧Шр╙й╧сцм╛р╩╦Жиообндё╛а╛пЬ╫Ьпп╫БнЖё╛пХр╙жьпбЁУй╪╩╞иообнд╤тоС
+		//╠ххГр╙а╛пЬ╣джьпбты╩Ях║р╩╢нйТптid╣дж╣ё╛╣╠х╩дЦ©иртжьпбвИ╨от╙кьё╛
+		//жьпб╫БнЖё╛ж╩р╙йгтзй╧сцм╛р╩╦Жиообндё╛╬мпХр╙жьпбЁУй╪╩╞иообнд╤тоС
 		c.reInit();
 		String ss2[] = root.interpret(c);
 		for (String s : ss2) {
-			System.out.println("О©╫О©╫О©╫б╩О©╫х║dО©╫О©╫О©╫О©╫О©╫О©╫idж╣О©╫О©╫=" + s);
+			System.out.println("жьпб╩Ях║d╣дйТптidж╣йг=" + s);
 		}
 	}
 }

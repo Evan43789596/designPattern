@@ -1,18 +1,18 @@
 package com.eshare.mediator.example3;
 /**
- *	О©╫О©╫О©╫О©╫О©╫О©╫О©╫е╨О©╫О©╫О©╫т╠О©╫О©╫о╣О©╫О©╫О©╫О©╫
+ *	цХйЖ╡©це╨мхкт╠╧ьо╣╣дюЮ
  */
 public class DepUserModel {
 	/**
-	 * О©╫О©╫О©╫з╡О©╫О©╫е╨О©╫О©╫О©╫т╠О©╫О©╫о╣О©╫д╠О©╫еёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+	 * сцсз╡©це╨мхкт╠╧ьо╣╣д╠Ю╨её╛сцвЖжВ╪Э
 	 */
 	private String depUserId;
 	/**
-	 * О©╫О©╫О©╫е╣д╠О©╫О©╫
+	 * ╡©це╣д╠Ю╨е
 	 */
 	private String depId;
 	/**
-	 * О©╫О©╫т╠О©╫д╠О©╫О©╫
+	 * хкт╠╣д╠Ю╨е
 	 */
 	private String userId;
 	public String getDepUserId() {

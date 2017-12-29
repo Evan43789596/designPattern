@@ -1,12 +1,12 @@
 package com.eshare.strategy.example3;
 
 /**
- * Êµï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨
+ * ÊµÏÖ¾ßÌåµÄËã·¨
  */
 public class ConcreteStrategyA implements Strategy {
 
 	public void algorithmInterface() {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨Êµï¿½ï¿½		
+		//¾ßÌåµÄËã·¨ÊµÏÖ		
 	}
 	
 }

@@ -1,18 +1,18 @@
 package com.eshare.prototype.example3;
 /**
- * ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¸öÈË¶©µ¥¶ÔÏó
  */
 public class PersonalOrder implements OrderApi{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½
+	 * ¶©¹ºÈËÔ±ÐÕÃû
 	 */
 	private String customerName;
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+	 * ²úÆ·±àºÅ
 	 */
 	private String productId;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ¶©µ¥²úÆ·ÊýÁ¿
 	 */
 	private int orderProductNum = 0;
 	
@@ -35,12 +35,13 @@ public class PersonalOrder implements OrderApi{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½="+this.customerName+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½="+this.productId+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª="+this.orderProductNum;
+		return "±¾¸öÈË¶©µ¥µÄ¶©¹ºÈËÊÇ="+this.customerName+"£¬¶©¹º²úÆ·ÊÇ="+this.productId+"£¬¶©¹ºÊýÁ¿Îª="+this.orderProductNum;
 	}
 	
 	public OrderApi cloneOrder() {
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ÂµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½Ñ±ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½Æ¹ï¿½È¥
+		//´´½¨Ò»¸öÐÂµÄ¶©µ¥£¬È»ºó°Ñ±¾ÊµÀýµÄÊý¾Ý¸´ÖÆ¹ýÈ¥
 		PersonalOrder order = new PersonalOrder();
+		
 		order.setCustomerName(this.customerName);
 		order.setProductId(this.productId);
 		order.setOrderProductNum(this.orderProductNum);

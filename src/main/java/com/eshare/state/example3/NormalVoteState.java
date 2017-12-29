@@ -2,9 +2,9 @@ package com.eshare.state.example3;
 
 public class NormalVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//ï¿½ï¿½ï¿½ï¿½Í¶Æ±
-		//ï¿½ï¿½Â¼ï¿½ï¿½Í¶Æ±ï¿½ï¿½Â¼ï¿½ï¿½
+		//Õý³£Í¶Æ±
+		//¼ÇÂ¼µ½Í¶Æ±¼ÇÂ¼ÖÐ
 		voteManager.getMapVote().put(user, voteItem);
-		System.out.println("ï¿½ï¿½Ï²ï¿½ï¿½Í¶Æ±ï¿½É¹ï¿½");
+		System.out.println("¹§Ï²ÄãÍ¶Æ±³É¹¦");
 	}
 }

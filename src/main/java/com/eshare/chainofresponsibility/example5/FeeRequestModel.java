@@ -1,21 +1,21 @@
 package com.eshare.chainofresponsibility.example5;
 /**
- * ï¿½ï¿½×°ï¿½ï¿½ï¿½Û²Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ·â×°¸ú¾Û²Í·ÑÓÃÉêÇëÒµÎñÏà¹ØµÄÇëÇóÊı¾İ
  */
 public class FeeRequestModel extends RequestModel{
 	/**
-	 * Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ô¼¶¨¾ßÌåµÄÒµÎñÀàĞÍ
 	 */
 	public final static String FEE_TYPE = "fee";
 	public FeeRequestModel() {
 		super(FEE_TYPE);
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉêÇëÈË
 	 */
 	private String user;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉêÇë½ğ¶î
 	 */
 	private double fee;
 	public String getUser() {

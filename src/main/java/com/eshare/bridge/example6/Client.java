@@ -2,31 +2,31 @@ package com.eshare.bridge.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö¶ï¿½ï¿½ï¿½
-		MessageImplementor impl = new MessageSMS();
+		//´´½¨¾ßÌåµÄÊµÏÖ¶ÔÏó
+		MessageImplementor impl = new MessageEmail();
 
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
+		//´´½¨Ò»¸öÆÕÍ¨ÏûÏ¢¶ÔÏó
 		AbstractMessage m = new CommonMessage(impl);
-		m.sendMessage("ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½", "Ğ¡ï¿½ï¿½");
+		m.sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
 		
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
+		//´´½¨Ò»¸ö½ô¼±ÏûÏ¢¶ÔÏó
 		m = new UrgencyMessage(impl);
-		m.sendMessage("ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½", "Ğ¡ï¿½ï¿½");
+		m.sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
 		
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
+		//´´½¨Ò»¸öÌØ¼±ÏûÏ¢¶ÔÏó
 		m = new SpecialUrgencyMessage(impl);
-		m.sendMessage("ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½", "Ğ¡ï¿½ï¿½");
+		m.sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
 		
-		//ï¿½ï¿½Êµï¿½Ö·ï¿½Ê½ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ò»ï¿½ï¿½
+		//°ÑÊµÏÖ·½Ê½ÇĞ»»³ÉÊÖ»ú¶ÌÏûÏ¢£¬È»ºóÔÙÊµÏÖÒ»±é
 		impl = new MessageMobile();
 		
 		m = new CommonMessage(impl);
-		m.sendMessage("ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½", "Ğ¡ï¿½ï¿½");
+		m.sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
 		
 		m = new UrgencyMessage(impl);
-		m.sendMessage("ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½", "Ğ¡ï¿½ï¿½");
+		m.sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
 		
 		m = new SpecialUrgencyMessage(impl);
-		m.sendMessage("ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½", "Ğ¡ï¿½ï¿½");
+		m.sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
 	}
 }

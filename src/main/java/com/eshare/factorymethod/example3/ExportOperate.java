@@ -1,21 +1,38 @@
 package com.eshare.factorymethod.example3;
 /**
- * Êµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½Òµï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½
+ * ÊµÏÖµ¼³öÊı¾İµÄÒµÎñ¹¦ÄÜ¶ÔÏó
  */
 public abstract class ExportOperate {
+	public ABC createABC(String name){
+		return new ABC(name,factoryMethod());
+	}
+	
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
-	 * @param data ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½Ç·ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+	 * µ¼³öÎÄ¼ş
+	 * @param data ĞèÒª±£´æµÄÊı¾İ
+	 * @return ÊÇ·ñ³É¹¦µ¼³öÎÄ¼ş
 	 */
 	public boolean export(String data){
-		//Ê¹ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÏÈÍê³É¸÷ÖÖµ¼³öÊı¾İÇ°µÄ×¼±¸¹¤×÷
+		//±ÈÈç½øĞĞÊı¾İĞ£Ñé
+		System.out.println("now ½øĞĞÊı¾İĞ£Ñé");
+		//±ÈÈç½øĞĞÊı¾İ×ª»»
+		System.out.println("now ½øĞĞÊı¾İ×ª»»");
+		//±ÈÈç½øĞĞÊı¾İ¸ñÊ½µÄ·â×°
+		System.out.println("now ½øĞĞÊı¾İ¸ñÊ½µÄ·â×°");
+		
+		//È»ºó²ÅÕæÕıµÄÈ¥µ¼³ö
+		
+		//Ê¹ÓÃ¹¤³§·½·¨
 		ExportFileApi api = factoryMethod();
+		
 		return api.export(data);
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿Ú¶ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿Ú¶ï¿½ï¿½ï¿½
+	 * ¹¤³§·½·¨£¬´´½¨µ¼³öµÄÎÄ¼ş¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
+	 * @return µ¼³öµÄÎÄ¼ş¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
 	 */
 	protected abstract ExportFileApi factoryMethod();
+	
+	//¼ÈÒªÔ¼Êø×ÓÀàµÄĞĞÎª£¬ÓÖÒªÎª×ÓÀàÌá¹©¹«¹²µÄ¹¦ÄÜ
 }

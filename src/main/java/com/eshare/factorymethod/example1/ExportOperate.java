@@ -1,21 +1,32 @@
 package com.eshare.factorymethod.example1;
 /**
- * Êµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½Òµï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½
+ * ÊµÏÖµ¼³öÊı¾İµÄÒµÎñ¹¦ÄÜ¶ÔÏó
  */
 public class ExportOperate {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
-	 * @param type ï¿½Ã»ï¿½Ñ¡ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param data ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½Ç·ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+	 * µ¼³öÎÄ¼ş
+	 * @param type ÓÃ»§Ñ¡ÔñµÄµ¼³öÀàĞÍ
+	 * @param data ĞèÒª±£´æµÄÊı¾İ
+	 * @return ÊÇ·ñ³É¹¦µ¼³öÎÄ¼ş
 	 */
 	public boolean export(int type,String data){
+		//ÏÈÍê³É¸÷ÖÖµ¼³öÊı¾İÇ°µÄ×¼±¸¹¤×÷
+		//±ÈÈç½øĞĞÊı¾İĞ£Ñé
+		System.out.println("now ½øĞĞÊı¾İĞ£Ñé");
+		//±ÈÈç½øĞĞÊı¾İ×ª»»
+		System.out.println("now ½øĞĞÊı¾İ×ª»»");
+		//±ÈÈç½øĞĞÊı¾İ¸ñÊ½µÄ·â×°
+		System.out.println("now ½øĞĞÊı¾İ¸ñÊ½µÄ·â×°");
+		
+		//È»ºó²ÅÕæÕıµÄÈ¥µ¼³ö
 		ExportFileApi api = null;
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ñ¾¿¾ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Öµï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
+		//¸ù¾İÀàĞÍÀ´Ñ¡Ôñ¾¿¾¹Òª´´½¨ÄÄÒ»ÖÖµ¼³öÎÄ¼ş¶ÔÏó
 		if(type == 1){
 			api = new ExportTxtFile();
 		}else if(type == 2){
 			api = new ExportDB();
+		}else if(type==3){
+			api = new ExportXmlFile();
 		}
 		return api.export(data);
 	}

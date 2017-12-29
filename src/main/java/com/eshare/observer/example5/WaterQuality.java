@@ -4,51 +4,51 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Observable;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¾ßÌåµÄË®ÖÊ¼à²â¶ÔÏó
  */
 public class WaterQuality extends WaterQualitySubject{
 	/**
-	 * ï¿½ï¿½È¾ï¿½Ä¼ï¿½ï¿½ï¿½0ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½È¾ï¿½ï¿½2ï¿½ï¿½Ê¾ï¿½Ð¶ï¿½ï¿½ï¿½È¾ï¿½ï¿½3ï¿½ï¿½Ê¾ï¿½ß¶ï¿½ï¿½ï¿½È¾
+	 * ÎÛÈ¾µÄ¼¶±ð£¬0±íÊ¾Õý³££¬1±íÊ¾Çá¶ÈÎÛÈ¾£¬2±íÊ¾ÖÐ¶ÈÎÛÈ¾£¬3±íÊ¾¸ß¶ÈÎÛÈ¾
 	 */
 	private int polluteLevel = 0;
 	/**
-	 * ï¿½ï¿½È¡Ë®ï¿½ï¿½ï¿½ï¿½È¾ï¿½Ä¼ï¿½ï¿½ï¿½
-	 * @return Ë®ï¿½ï¿½ï¿½ï¿½È¾ï¿½Ä¼ï¿½ï¿½ï¿½
+	 * »ñÈ¡Ë®ÖÊÎÛÈ¾µÄ¼¶±ð
+	 * @return Ë®ÖÊÎÛÈ¾µÄ¼¶±ð
 	 */
 	public int getPolluteLevel() {
 		return polluteLevel;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½È¾ï¿½Ä¼ï¿½ï¿½ï¿½
-	 * @param polluteLevel Ë®ï¿½ï¿½ï¿½ï¿½È¾ï¿½Ä¼ï¿½ï¿½ï¿½
+	 * µ±¼à²âË®ÖÊÇé¿öºó£¬ÉèÖÃË®ÖÊÎÛÈ¾µÄ¼¶±ð
+	 * @param polluteLevel Ë®ÖÊÎÛÈ¾µÄ¼¶±ð
 	 */
 	public void setPolluteLevel(int polluteLevel) {
 		this.polluteLevel = polluteLevel;
-		//Í¨Öªï¿½ï¿½Ó¦ï¿½Ä¹Û²ï¿½ï¿½ï¿½
+		//Í¨ÖªÏàÓ¦µÄ¹Û²ìÕß
 		this.notifyWatchers();
 	}
 	/**
-	 * Í¨Öªï¿½ï¿½Ó¦ï¿½Ä¹Û²ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
+	 * Í¨ÖªÏàÓ¦µÄ¹Û²ìÕß¶ÔÏó
 	 */
 	public void notifyWatchers() {
-		//Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½Ä¹Û²ï¿½ï¿½ï¿½
+		//Ñ­»·ËùÓÐ×¢²áµÄ¹Û²ìÕß
 		for(WatcherObserver watcher : observers){
-						//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¾ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ÒªÍ¨Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¿ï¿½
+						//¿ªÊ¼¸ù¾ÝÎÛÈ¾¼¶±ðÅÐ¶ÏÊÇ·ñÐèÒªÍ¨Öª£¬ÓÉÕâÀï×Ü¿Ø
 						if(this.polluteLevel >= 0){
-							//Í¨Öªï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Â¼
-							if("ï¿½ï¿½ï¿½ï¿½ï¿½Ô±".equals(watcher.getJob())){
+							//Í¨Öª¼à²âÔ±×ö¼ÇÂ¼
+							if("¼à²âÈËÔ±".equals(watcher.getJob())){
 								watcher.update(this);
 							}
 						}
 						if(this.polluteLevel >= 1){
-							//Í¨ÖªÔ¤ï¿½ï¿½ï¿½ï¿½Ô±
-							if("Ô¤ï¿½ï¿½ï¿½ï¿½Ô±".equals(watcher.getJob())){
+							//Í¨ÖªÔ¤¾¯ÈËÔ±
+							if("Ô¤¾¯ÈËÔ±".equals(watcher.getJob())){
 								watcher.update(this);
 							}
 						}
 						if(this.polluteLevel >= 2){
-							//Í¨Öªï¿½ï¿½â²¿ï¿½ï¿½ï¿½ìµ¼
-							if("ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ìµ¼".equals(watcher.getJob())){
+							//Í¨Öª¼à²â²¿ÃÅÁìµ¼
+							if("¼à²â²¿ÃÅÁìµ¼".equals(watcher.getJob())){
 								watcher.update(this);
 							}
 						}

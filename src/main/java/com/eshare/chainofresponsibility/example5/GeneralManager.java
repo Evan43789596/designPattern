@@ -1,6 +1,6 @@
 package com.eshare.chainofresponsibility.example5;
 /**
- * Êµï¿½ï¿½ï¿½Ü¾ï¿½ï¿½ï¿½ï¿½ï¿½Û²Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ 
+ * ÊµÏÖ×Ü¾­Àí´¦Àí¾Û²Í·ÑÓÃÉêÇëµÄ¶ÔÏó 
  */
 public class GeneralManager extends Handler{
 	public Object handleRequest(RequestModel rm){
@@ -11,21 +11,21 @@ public class GeneralManager extends Handler{
 		}
 	}
 	private Object handleFeeRequest(RequestModel rm) {
-		//ï¿½È°ï¿½Í¨ï¿½ÃµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½
+		//ÏÈ°ÑÍ¨ÓÃµÄ¶ÔÏóÔìÐÍ»ØÀ´
 		FeeRequestModel frm = (FeeRequestModel)rm;
 		String str = "";
-		//ï¿½Ü¾ï¿½ï¿½ï¿½ï¿½È¨ï¿½ÞºÜ´ï¿½Ö»Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½
+		//×Ü¾­ÀíµÄÈ¨ÏÞºÜ´ó£¬Ö»ÒªÇëÇóµ½ÁËÕâÀï£¬Ëû¶¼¿ÉÒÔ´¦Àí
 		if(frm.getFee() >= 1000){
-			//Îªï¿½Ë²ï¿½ï¿½Ô£ï¿½ï¿½òµ¥µã£¬Ö»Í¬ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½
-			if("Ð¡ï¿½ï¿½".equals(frm.getUser())){
-				str = "ï¿½Ü¾ï¿½ï¿½ï¿½Í¬ï¿½ï¿½"+frm.getUser()+"ï¿½Û²Í·ï¿½ï¿½ï¿½"+frm.getFee()+"Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+			//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâÐ¡ÀîµÄ
+			if("Ð¡Àî".equals(frm.getUser())){
+				str = "×Ü¾­ÀíÍ¬Òâ"+frm.getUser()+"¾Û²Í·ÑÓÃ"+frm.getFee()+"ÔªµÄÇëÇó";
 			}else{
-				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½É²ï¿½Í¬ï¿½ï¿½
-				str = "ï¿½Ü¾ï¿½ï¿½ï¿½Í¬ï¿½ï¿½"+frm.getUser()+"ï¿½Û²Í·ï¿½ï¿½ï¿½"+frm.getFee()+"Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+				//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
+				str = "×Ü¾­Àí²»Í¬Òâ"+frm.getUser()+"¾Û²Í·ÑÓÃ"+frm.getFee()+"ÔªµÄÇëÇó";
 			}
 			return str;
 		}else{
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðºï¿½ÌµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//Èç¹û»¹ÓÐºó¼ÌµÄ´¦Àí¶ÔÏó£¬¼ÌÐø´«µÝ
 			if(this.successor!=null){
 				return successor.handleRequest(rm);
 			}

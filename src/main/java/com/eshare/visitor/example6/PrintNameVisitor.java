@@ -1,15 +1,28 @@
 package com.eshare.visitor.example6;
 /**
- * О©╫О©╫О©╫О©╫д╥О©╫О©╫О©╫О©╫ъёО©╫й╣О©╫жёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫фёО©╫О©╫О©╫О©╫О©╫о╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫г╟О©╫О©╫О©╫О©╫О©╫"О©╫з╣Цё╨"О©╫О©╫
- * О©╫О©╫р╤О©╫с╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫г╟О©╫О©╫О©╫О©╫О©╫"р╤О©╫сёО©╫"
+ * ╬ълЕ╣д╥цнйуъё╛й╣ожё╨йДЁЖ╤тоС╣дцШЁфё╛тзвИ╨о╤тоС╣дцШЁфг╟цФлМ╪с"╫з╣Цё╨"ё╛
+ * тзр╤вс╤тоС╣дцШЁфг╟цФлМ╪с"р╤всё╨"
 */
 public class PrintNameVisitor implements Visitor {
 	public void visitComposite(Composite composite) {
-		//О©╫О©╫О©╫й╣О©╫О©╫О©╫о╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
-		System.out.println("О©╫з╣Цё╨"+composite.getName());
+		//╥цнй╣╫вИ╨о╤тоС╣дйЩ╬щ
+		
+		composite.setName("╫з╣Цё╨"+composite.getName());
+		
+		//хГ╧Ш╩╧╟Э╨╛спвсвИ╪Чё╛дгц╢╬мйДЁЖуБп╘всвИ╪Ч╤тоС
+		if(composite.getChildComponents()!=null){
+			//йДЁЖ╣╠г╟╤тоС╣двс╤тоСак
+			for(Component c : composite.getChildComponents()){
+				//╣щ╧ИйДЁЖц©╦Жвс╤тоС
+				c.accept(this);
+			}
+		}	
+		
+//		System.out.println("╫з╣Цё╨"+composite.getName());
 	}
 	public void visitLeaf(Leaf leaf) {
-		//О©╫О©╫О©╫й╣О©╫р╤О©╫с╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫		
-		System.out.println("р╤О©╫сёО©╫"+leaf.getName());
+		leaf.setName("р╤всё╨"+leaf.getName());
+		//╥цнй╣╫р╤вс╤тоС╣дйЩ╬щ		
+//		System.out.println("р╤всё╨"+leaf.getName());
 	}
 }

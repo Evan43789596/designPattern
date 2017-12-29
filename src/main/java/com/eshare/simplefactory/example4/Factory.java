@@ -1,19 +1,26 @@
 package com.eshare.simplefactory.example4;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Apiï¿½ï¿½
+ * ¹¤³§Àà£¬ÓÃÀ´´´ÔìApiµÄ
  */
 public class Factory {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½Apiï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿Í»ï¿½ï¿½ËµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
-	 * @param type ï¿½Í»ï¿½ï¿½Ë´ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ó¿Úµï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½Ãµï¿½Apiï¿½ï¿½ï¿½ï¿½
+	 * ¾ßÌåµÄ´´ÔìApiµÄ·½·¨£¬¸ù¾Ý¿Í»§¶ËµÄ²ÎÊýÀ´´´½¨½Ó¿Ú
+	 * @param type ¿Í»§¶Ë´«ÈëµÄÑ¡Ôñ´´Ôì½Ó¿ÚµÄÌõ¼þ
+	 * @return ´´ÔìºÃµÄApi¶ÔÏó
 	 */
 	public static Api createApi(int type){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½typeÒ²ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó¶ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½È¡
-		//Îªï¿½Ë°ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½ï¿½Í²ï¿½È¥Ð´ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÕâÀïµÄtypeÒ²¿ÉÒÔ²»ÓÉÍâ²¿´«Èë£¬¶øÊÇÖ±½Ó¶ÁÈ¡ÅäÖÃÎÄ¼þÀ´»ñÈ¡
+		//ÎªÁË°Ñ×¢ÒâÁ¦·ÅÔÚÄ£Ê½±¾ÉíÉÏ£¬ÕâÀï¾Í²»È¥Ð´¶ÁÈ¡ÅäÖÃÎÄ¼þµÄ´úÂëÁË
 		
-		//ï¿½ï¿½ï¿½ï¿½typeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ñ£¬µï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½2Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½É³ï¿½ï¿½ï¿½
+		//¸ù¾ÝtypeÀ´½øÐÐÑ¡Ôñ£¬µ±È»ÕâÀïµÄ1ºÍ2Ó¦¸Ã×ö³É³£Á¿
+
+		
+		//Ñ¡Ôñ===¡µÈçºÎÑ¡£¿====¡µÑ¡ÔñµÄ²ÎÊý===¡µ²ÎÊý´ÓºÎ¶øÀ´£¿
+		//1£º²ÎÊýÀ´Ô´ÓÚ client
+		//2£º²ÎÊýÀ´Ô´ÓÚÅäÖÃÎÄ¼þ
+		//3£º²ÎÊýÀ´Ô´ÓÚÏµÍ³×ÔÉí£¬±ÈÈçÔËÐÐÆÚ¼äµÄÄ³¸öÖµ
+		
 		Api api = null;
 		if(type==1){
 			api = new Impl();

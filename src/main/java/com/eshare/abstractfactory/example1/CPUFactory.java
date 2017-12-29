@@ -1,16 +1,16 @@
 package com.eshare.abstractfactory.example1;
 /**
- * ï¿½ï¿½ï¿½ï¿½CPUï¿½Ä¼òµ¥¹ï¿½ï¿½ï¿½
+ * ´´½¨CPUµÄ¼òµ¥¹¤³§
  */
 public class CPUFactory {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½CPUï¿½Ó¿Ú¶ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
-	 * @param type Ñ¡ï¿½ï¿½CPUï¿½ï¿½ï¿½ÍµÄ²ï¿½ï¿½ï¿½
-	 * @return CPUï¿½Ó¿Ú¶ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+	 * ´´½¨CPU½Ó¿Ú¶ÔÏóµÄ·½·¨
+	 * @param type Ñ¡ÔñCPUÀàÐÍµÄ²ÎÊý
+	 * @return CPU½Ó¿Ú¶ÔÏóµÄ·½·¨
 	 */
 	public static CPUApi createCPUApi(int type){
 		CPUApi cpu = null;
-		//ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ñ²¢´ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½
+		//¸ù¾Ý²ÎÊýÀ´Ñ¡Ôñ²¢´´½¨ÏàÓ¦µÄCPU¶ÔÏó
 		if(type==1){
 			cpu = new IntelCPU(1156);
 		}else if(type==2){

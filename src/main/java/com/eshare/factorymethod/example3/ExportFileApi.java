@@ -1,12 +1,12 @@
 package com.eshare.factorymethod.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+ * µ¼³öµÄÎÄ¼þ¶ÔÏóµÄ½Ó¿Ú
  */
 public interface ExportFileApi {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý³ï¿½Îªï¿½Ä¼ï¿½
-	 * @param data Ê¾ï¿½â£ºï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½Ç·ñµ¼³ï¿½ï¿½É¹ï¿½
+	 * µ¼³öÄÚÈÝ³ÉÎªÎÄ¼þ
+	 * @param data Ê¾Òâ£ºÐèÒª±£´æµÄÊý¾Ý
+	 * @return ÊÇ·ñµ¼³ö³É¹¦
 	 */
 	public boolean export(String data);
 }

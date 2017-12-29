@@ -1,18 +1,18 @@
 package com.eshare.builder.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµÄ¶ï¿½ï¿½ï¿½
+ * ÃèÊöÊä³öÊı¾İµÄ¶ÔÏó
  */
 public class ExportDataModel {
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+	 * ²úÆ·±àºÅ
 	 */
 	private String productId;
 	/**
-	 * ï¿½ï¿½ï¿½Û¼Û¸ï¿½
+	 * ÏúÊÛ¼Û¸ñ
 	 */
 	private double price;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÏúÊÛÊıÁ¿
 	 */
 	private double amount;
 	

@@ -1,14 +1,14 @@
 package com.eshare.state.example5;
 /**
- * О©╫О©╫в╟р╩О©╫О©╫м╤ф╠в╢л╛О©╫О©╫ь╣О©╫О©╫О©╫н╙
+ * ╥Бв╟р╩╦Жм╤ф╠в╢л╛оЮ╧ь╣дппн╙
  */
 public interface VoteState {
 	/**
-	 * О©╫О©╫О©╫О©╫в╢л╛О©╫О©╫с╕О©╫О©╫О©╫О©╫н╙
-	 * @param user м╤ф╠О©╫О©╫
-	 * @param voteItem м╤ф╠О©╫О©╫
-	 * @param voteManager м╤ф╠О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫О©╫О©╫О©╫О©╫й╣О©╫О©╫в╢л╛О©╫О©╫с╕О©╫д╧О©╫О©╫э╢О©╫О©╫О©╫О©╫й╠О©╫О©╫
-	 *                    О©╫О©╫О©╫т╩ь╣О©╫О©╫О©╫О©╫О©╫О©╫д╣О©╫О©╫О©╫О©╫О©╫
+	 * ╢╕юМв╢л╛╤тс╕╣дппн╙
+	 * @param user м╤ф╠хк
+	 * @param voteItem м╤ф╠оН
+	 * @param voteManager м╤ф╠иообндё╛сцю╢тзй╣ожв╢л╛╤тс╕╣д╧╕дэ╢╕юМ╣дй╠╨Рё╛
+	 *                    ©ирт╩ь╣Виообнд╣дйЩ╬щ
 	 */
 	public void vote(String user, String voteItem, VoteManager voteManager);
 }

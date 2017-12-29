@@ -1,15 +1,15 @@
 package com.eshare.iterator.example4;
 
 /**
- * 锟斤拷锟斤拷锟斤拷锟斤拷模锟酵讹拷锟斤拷
+ * 工资描述模型对象
  */
 public class PayModel {
 	/**
-	 * 支锟斤拷锟斤拷锟绞碉拷锟斤拷员
+	 * 支付工资的人员
 	 */
 	private String userName;
 	/**
-	 * 支锟斤拷锟侥癸拷锟斤拷锟斤拷锟斤拷
+	 * 支付的工资数额
 	 */
 	private double pay;
 	public String getUserName() {

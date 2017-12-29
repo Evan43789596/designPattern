@@ -1,16 +1,28 @@
 package com.eshare.singleton.example6;
 
+//饿汉式
 public class Singleton {
-	//4锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷态锟斤拷锟斤拷锟斤拷锟芥储锟斤拷锟斤拷锟矫碉拷锟斤拷实锟斤拷
-	//直锟斤拷锟斤拷锟斤拷锟斤创锟斤拷锟斤拷实锟斤拷锟斤拷只锟结创锟斤拷一锟斤拷
+	//4：定义一个静态变量来存储创建好的类实例
+	//直接在这里创建类实例，由虚拟机来保证只会创建一次
 	private static Singleton instance = new Singleton();
-	//1锟斤拷私锟叫伙拷锟斤拷锟届方锟斤拷锟斤拷锟斤拷锟斤拷锟节诧拷锟斤拷锟狡达拷锟斤拷实锟斤拷锟斤拷锟斤拷目
+	//1：私有化构造方法，好在内部控制创建实例的数目
 	private Singleton(){		
 	}
-	//2锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷为锟酵伙拷锟斤拷锟结供锟斤拷实锟斤拷
-	//3锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟揭拷锟斤拷锟斤拷锟洁方锟斤拷锟斤拷也锟斤拷锟斤拷要锟斤拷static
+	
+	//2：定义一个方法来为客户端提供类实例
+	//3：这个方法需要定义成类方法，也就是要加static
 	public static Singleton getInstance(){
-		//5锟斤拷直锟斤拷使锟斤拷锟窖撅拷锟斤拷锟斤拷锟矫碉拷实锟斤拷
+		//5：直接使用已经创建好的实例
 		return instance;
 	}
+	
+	public static void main(String[] args) {
+		for(int i=0;i<3;i++){
+			System.out.println(Singleton.getInstance());
+		}
+	}
+	
 }
+
+//从时间空间上看：以空间换时间
+//从线程安全上看：安全的

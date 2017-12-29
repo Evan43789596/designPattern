@@ -3,21 +3,21 @@ package com.eshare.templatemethod.example7;
 
 public class Client {
 	public static void main(String[] args) {
-		//в╪О©╫О©╫О©╫О©╫б╪О©╫к╣О©╫О©╫О©╫о╒
+		//в╪╠╦╣гб╪хк╣дпео╒
 		LoginModel lm = new LoginModel();
 		lm.setLoginId("admin");
 		lm.setPwd("workerpwd");
-		//в╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╤о╣д╤О©╫О©╫О©╫
+		//в╪╠╦сцю╢╫Ьппеп╤о╣д╤тоС
 		LoginTemplate lt = new LoginTemplate();
 		
-		//О©╫О©╫О©╫п╣О©╫б╪О©╫О©╫О©╫тёО©╫О©╫х╡О©╫О©╫О©╫О©╫О©╫м╗О©╫О©╫т╠О©╫О©╫б╪
+		//╫Ьпп╣гб╪╡Бйтё╛ох╡Бйтфум╗хкт╠╣гб╪
 		boolean flag = lt.login(lm,new LoginCallback(){
 			public String encryptPwd(String pwd, LoginTemplate template) {
-				//О©╫т╪О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫ж╠О©╫О©╫в╙О©╫О©╫дёО©╫О©╫О©╫п╣О©╫д╛О©╫О©╫й╣О©╫О©╫
+				//вт╪╨╡╩пХр╙ё╛ж╠╫св╙╣Вдё╟Ежп╣дд╛хой╣ож
 				return template.encryptPwd(pwd);
 			}
 			public LoginModel findLoginUser(String loginId) {
-				// О©╫О©╫О©╫О©╫й║О©╫т╬О©╫О©╫О©╫д╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╬О©╫Бё╛О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫д╛О©╫О©╫О©╫О©╫О©╫щ╣д╤О©╫О©╫О©╫
+				// уБюОй║бт╬ълЕ╣д╢╕юМё╛╫ЖвЖй╬рБё╛╥╣╩ьр╩╦Жспд╛хойЩ╬щ╣д╤тоС
 				LoginModel lm = new LoginModel();
 				lm.setLoginId(loginId);
 				lm.setPwd("testpwd");
@@ -25,23 +25,23 @@ public class Client {
 			}
 			public boolean match(LoginModel lm, LoginModel dbLm,
 					LoginTemplate template) {
-				//О©╫т╪О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫гёО©╫ж╠О©╫О©╫в╙О©╫О©╫дёО©╫О©╫О©╫п╣О©╫д╛О©╫О©╫й╣О©╫О©╫
+				//вт╪╨╡╩пХр╙╦╡╦гё╛ж╠╫св╙╣Вдё╟Ежп╣дд╛хой╣ож
 				return template.match(lm, dbLm);
 			}
 			
 		});
-		System.out.println("О©╫О©╫О©╫т╫О©╫О©╫О©╫О©╫О©╫м╗О©╫О©╫т╠О©╫О©╫б╪="+flag);
+		System.out.println("©ирт╫Ьппфум╗хкт╠╣гб╪="+flag);
 
-		//О©╫О©╫О©╫т╧О©╫О©╫О©╫О©╫О©╫т╠О©╫О©╫б╪
+		//╡Бйт╧╓вВхкт╠╣гб╪
 		boolean flag2 = lt.login(lm,new LoginCallback(){
 			public String encryptPwd(String pwd, LoginTemplate template) {
-				//О©╫О©╫О©╫г╦О©╫О©╫О©╫д╥О©╫О©╫О©╫О©╫О©╫О©╫А╧╘О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫й╣О©╫О©╫
-				//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╪О©╫О©╫эёО©╫О©╫О©╫О©╫О©╫й╧О©╫цёО©╫MD5О©╫О©╫3DESО©╫х╣хёО©╫й║О©╫О©╫О©╫О©╫
-				System.out.println("й╧О©╫О©╫MD5О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+				//╦╡╦г╦╦юЮ╣д╥╫╥╗ё╛лА╧╘уФуЩ╣д╪сцэй╣ож
+				//уБюО╤тцэбК╫Ьпп╪сцэё╛╠ххГй╧сцё╨MD5║╒3DES╣х╣хё╛й║бтак
+				System.out.println("й╧сцMD5╫ЬппцэбК╪сцэ");
 				return pwd;
 			}
 			public LoginModel findLoginUser(String loginId) {
-				// О©╫О©╫О©╫О©╫й║О©╫т╬О©╫О©╫О©╫д╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╬О©╫Бё╛О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫д╛О©╫О©╫О©╫О©╫О©╫щ╣д╤О©╫О©╫О©╫
+				// уБюОй║бт╬ълЕ╣д╢╕юМё╛╫ЖвЖй╬рБё╛╥╣╩ьр╩╦Жспд╛хойЩ╬щ╣д╤тоС
 				LoginModel lm = new LoginModel();
 				lm.setLoginId(loginId);
 				lm.setPwd("workerpwd");
@@ -49,11 +49,11 @@ public class Client {
 			}
 			public boolean match(LoginModel lm, LoginModel dbLm,
 					LoginTemplate template) {
-				//О©╫т╪О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫гёО©╫ж╠О©╫О©╫в╙О©╫О©╫дёО©╫О©╫О©╫п╣О©╫д╛О©╫О©╫й╣О©╫О©╫
+				//вт╪╨╡╩пХр╙╦╡╦гё╛ж╠╫св╙╣Вдё╟Ежп╣дд╛хой╣ож
 				return template.match(lm, dbLm);
 			}
 			
 		});		
-		System.out.println("О©╫О©╫О©╫т╣О©╫б╪О©╫О©╫О©╫О©╫ф╫л╗="+flag2);
+		System.out.println("©ирт╣гб╪╧╓вВф╫л╗="+flag2);
 	}
 }

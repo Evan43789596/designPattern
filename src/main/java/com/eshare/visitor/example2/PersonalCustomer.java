@@ -1,14 +1,14 @@
 package com.eshare.visitor.example2;
 /**
- * ï¿½ï¿½ï¿½Ë¿Í»ï¿½
+ * ¸öÈË¿Í»§
  */
 public class PersonalCustomer extends Customer{
 	/**
-	 * ï¿½ï¿½Ïµï¿½ç»°
+	 * ÁªÏµµç»°
 	 */
 	private String telephone;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½
+	 * ÄêÁä
 	 */
 	private int age;
 	
@@ -30,22 +30,22 @@ public class PersonalCustomer extends Customer{
 
 	
 	/**
-	 * ï¿½ï¿½ï¿½Ë¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ¸öÈË¿Í»§Ìá³ö·şÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public void serviceRequest(){
-		//ï¿½ï¿½ï¿½Ë¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		System.out.println("ï¿½Í»ï¿½"+this.getName()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		//¸öÈË¿Í»§Ìá³öµÄ¾ßÌå·şÎñÇëÇó
+		System.out.println("¿Í»§"+this.getName()+"Ìá³ö·şÎñÇëÇó");
 	}
 	/**
-	 * ï¿½ï¿½ï¿½Ë¿Í»ï¿½ï¿½Ô¹ï¿½Ë¾ï¿½ï¿½Æ·ï¿½ï¿½Æ«ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ¸öÈË¿Í»§¶Ô¹«Ë¾²úÆ·µÄÆ«ºÃ·ÖÎö£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public void predilectionAnalyze(){
-		System.out.println("ï¿½ï¿½ï¿½Ú¶Ô¸ï¿½ï¿½Ë¿Í»ï¿½"+this.getName()+"ï¿½ï¿½ï¿½Ğ²ï¿½Æ·Æ«ï¿½Ã·ï¿½ï¿½ï¿½");
+		System.out.println("ÏÖÔÚ¶Ô¸öÈË¿Í»§"+this.getName()+"½øĞĞ²úÆ·Æ«ºÃ·ÖÎö");
 	}
 	/**
-	 * ï¿½ï¿½ï¿½Ë¿Í»ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ¸öÈË¿Í»§¼ÛÖµ·ÖÎö£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public void worthAnalyze(){
-		System.out.println("ï¿½ï¿½ï¿½Ú¶Ô¸ï¿½ï¿½Ë¿Í»ï¿½"+this.getName()+"ï¿½ï¿½ï¿½Ğ¼ï¿½Öµï¿½ï¿½ï¿½ï¿½");
+		System.out.println("ÏÖÔÚ¶Ô¸öÈË¿Í»§"+this.getName()+"½øĞĞ¼ÛÖµ·ÖÎö");
 	}
 }

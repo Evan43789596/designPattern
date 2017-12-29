@@ -2,13 +2,13 @@ package com.eshare.strategy.example4;
 
 public class Client2 {
 	public static void main(String[] args) {
-		//1ï¿½ï¿½Ñ¡ï¿½ñ²¢´ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ÃµÄ²ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½
+		//1£ºÑ¡Ôñ²¢´´½¨ÐèÒªÊ¹ÓÃµÄ²ßÂÔ¶ÔÏó
 		Strategy strategy = new CooperateCustomerStrategy();
-		//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//2£º´´½¨ÉÏÏÂÎÄ
 		Price ctx = new Price(strategy);
 		
-		//3ï¿½ï¿½ï¿½ï¿½ï¿½ã±¨ï¿½ï¿½
+		//3£º¼ÆËã±¨¼Û
 		double quote = ctx.quote(1000);
-		System.out.println("ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½Û£ï¿½"+quote);
+		System.out.println("Ïò¿Í»§±¨¼Û£º"+quote);
 	}
 }

@@ -2,18 +2,18 @@ package com.eshare.command.example8;
 
 public class PrintService implements Command{
 	/**
-	 * Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÒªÊä³öµÄÄÚÈİ
 	 */
 	private String str = "";
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param s Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«ÈëÒªÊä³öµÄÄÚÈİ
+	 * @param s ÒªÊä³öµÄÄÚÈİ
 	 */
 	public PrintService(String s){
 		str = s;
 	}
 	
 	public void execute() {
-		System.out.println("ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª="+str);
+		System.out.println("´òÓ¡µÄÄÚÈİÎª="+str);
 	}
 }

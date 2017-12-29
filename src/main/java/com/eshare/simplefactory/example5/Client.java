@@ -1,12 +1,14 @@
 package com.eshare.simplefactory.example5;
 
 /**
- * 锟酵伙拷锟剿ｏ拷锟斤拷锟斤拷使锟斤拷Api锟接匡拷
+ * 客户端：测试使用Api接口
  */
 public class Client {
 	public static void main(String[] args) {
-		//锟斤拷要锟侥变，没锟斤拷new Impl()锟剿ｏ拷取锟斤拷锟斤拷之Factory.createApi()
+		//重要改变，没有new Impl()了，取而代之Factory.createApi()
+		
 		Api api = Factory.createApi();
-		api.test1("锟斤拷锟斤拷锟斤拷锟斤拷要锟斤拷锟脚ｏ拷只锟角革拷锟斤拷锟皆讹拷锟窖ｏ拷");
+		
+		api.test1("哈哈，不要紧张，只是个测试而已！");
 	}
 }

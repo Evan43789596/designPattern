@@ -1,6 +1,6 @@
 package com.eshare.proxy.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+ * ¶¨ÒåÓÃ»§Êý¾Ý¶ÔÏóµÄ½Ó¿Ú
  */
 public interface UserModelApi {
 	public String getUserId();

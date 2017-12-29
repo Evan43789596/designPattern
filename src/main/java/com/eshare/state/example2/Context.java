@@ -2,26 +2,26 @@ package com.eshare.state.example2;
 
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½È¤ï¿½Ä½Ó¿Ú£ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½Ò»ï¿½ï¿½Stateï¿½ï¿½ï¿½ÍµÄ¶ï¿½ï¿½ï¿½Êµï¿½ï¿½
+ * ¶¨Òå¿Í»§¸ĞĞËÈ¤µÄ½Ó¿Ú£¬Í¨³£»áÎ¬»¤Ò»¸öStateÀàĞÍµÄ¶ÔÏóÊµÀı
  */
 public class Context {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Stateï¿½ï¿½ï¿½ÍµÄ¶ï¿½ï¿½ï¿½Êµï¿½ï¿½
+	 * ³ÖÓĞÒ»¸öStateÀàĞÍµÄ¶ÔÏóÊµÀı
 	 */
 	private State state;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Stateï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ 
-	 * @param state Êµï¿½ï¿½Stateï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ 
+	 * ÉèÖÃÊµÏÖStateµÄ¶ÔÏóµÄÊµÀı 
+	 * @param state ÊµÏÖStateµÄ¶ÔÏóµÄÊµÀı 
 	 */
 	public void setState(State state) {
 		this.state = state;
 	}
 	/**
-	 * ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½È¤ï¿½Ä½Ó¿Ú·ï¿½ï¿½ï¿½
-	 * @param sampleParameter Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃ»§¸ĞĞËÈ¤µÄ½Ó¿Ú·½·¨
+	 * @param sampleParameter Ê¾Òâ²ÎÊı
 	 */
 	public void request(String sampleParameter) {
-		//ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğ£ï¿½ï¿½ï¿½×ªï¿½ï¿½stateï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÔÚ´¦ÀíÖĞ£¬»á×ªµ÷stateÀ´´¦Àí
 		state.handle(sampleParameter);
 	}
 

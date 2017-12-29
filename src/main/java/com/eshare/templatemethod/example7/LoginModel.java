@@ -1,14 +1,14 @@
 package com.eshare.templatemethod.example7;
 /**
- * ï¿½ï¿½×°ï¿½ï¿½ï¿½Ðµï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ·â×°½øÐÐµÇÂ¼¿ØÖÆËùÐèÒªµÄÊý¾Ý
  */
 public class LoginModel {
 	/**
-	 * ï¿½ï¿½Â¼ï¿½ï¿½Ô±ï¿½Ä±ï¿½Å£ï¿½Í¨ï¿½ÃµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Å£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½
+	 * µÇÂ¼ÈËÔ±µÄ±àºÅ£¬Í¨ÓÃµÄ£¬¿ÉÄÜÊÇÓÃ»§±àºÅ£¬Ò²¿ÉÄÜÊÇ¹¤×÷ÈËÔ±±àºÅ
 	 */
 	private String loginId;
 	/**
-	 * ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * µÇÂ¼µÄÃÜÂë
 	 */
 	private String pwd;
 	public String getLoginId() {

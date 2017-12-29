@@ -1,10 +1,10 @@
 package com.eshare.abstractfactory.example1;
 /**
- * CPUï¿½Ä½Ó¿ï¿½
+ * CPUµÄ½Ó¿Ú
  */
 public interface CPUApi {
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
+	 * Ê¾Òâ·½·¨£¬CPU¾ßÓÐÔËËãµÄ¹¦ÄÜ
 	 */
 	public void calculate();
 }

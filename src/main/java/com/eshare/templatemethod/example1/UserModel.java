@@ -1,6 +1,6 @@
 package com.eshare.templatemethod.example1;
 /**
- * 锟斤拷锟斤拷锟矫伙拷锟斤拷息锟斤拷锟斤拷锟斤拷模锟斤拷
+ * 描述用户信息的数据模型
  */
 public class UserModel {
 	private String uuid,userId,pwd,name;

@@ -2,12 +2,12 @@ package com.eshare.abstractfactory.example5;
 
 public class BusinessObject {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½DAOï¿½Ä³ï¿½ï¿½ó¹¤³ï¿½
-		DAOFactory df = new RdbDAOFactory();
-		//Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ó¹¤³ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Òªï¿½ï¿½DAOï¿½Ó¿ï¿½
+		//´´½¨DAOµÄ³éÏó¹¤³§
+		DAOFactory df = new XmlDAOFactory();
+		//Í¨¹ý³éÏó¹¤³§À´»ñÈ¡ÐèÒªµÄDAO½Ó¿Ú
 		OrderMainDAO mainDAO = df.createOrderMainDAO();
 		OrderDetailDAO detailDAO = df.createOrderDetailDAO();
-		//ï¿½ï¿½ï¿½ï¿½DAOï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý´æ´¢ï¿½Ä¹ï¿½ï¿½ï¿½
+		//µ÷ÓÃDAOÀ´Íê³ÉÊý¾Ý´æ´¢µÄ¹¦ÄÜ
 		mainDAO.saveOrderMain();
 		detailDAO.saveOrderDetail();
 	}

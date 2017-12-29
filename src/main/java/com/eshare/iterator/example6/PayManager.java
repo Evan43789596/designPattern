@@ -2,30 +2,30 @@ package com.eshare.iterator.example6;
 import java.util.*;
 
 /**
- * ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¹ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¿Í»§·½ÒÑÓÐµÄ¹¤×Ê¹ÜÀí¶ÔÏó
  */
 public class PayManager extends Aggregate{
 	private List<PayModel> list = new ArrayList<PayModel>();
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
+	 * »ñÈ¡¹¤×ÊÁÐ±í
+	 * @return ¹¤×ÊÁÐ±í
 	 */
 	public List<PayModel> getPayList(){
 		return list;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ã¹¤ï¿½Ê£ï¿½ï¿½ï¿½ÊµÓ¦ï¿½ï¿½ï¿½ÐºÜ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Ó¼ï¿½
+	 * ¼ÆËã¹¤×Ê£¬ÆäÊµÓ¦¸ÃÓÐºÜ¶à²ÎÊý£¬ÎªÁËÑÝÊ¾´Ó¼ò
 	 */
 	public void calcPay(){
-		//ï¿½ï¿½ï¿½ã¹¤ï¿½Ê£ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½äµ½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½
-		//Îªï¿½Ë²ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½ï¿½È¥
+		//¼ÆËã¹¤×Ê£¬²¢°Ñ¹¤×ÊÐÅÏ¢Ìî³äµ½¹¤×ÊÁÐ±íÀïÃæ
+		//ÎªÁË²âÊÔ£¬×öµã¼ÙÊý¾Ý½øÈ¥
 		PayModel pm1 = new PayModel();
 		pm1.setPay(3800);
-		pm1.setUserName("ï¿½ï¿½ï¿½ï¿½");
+		pm1.setUserName("ÕÅÈý");
 		
 		PayModel pm2 = new PayModel();
 		pm2.setPay(5800);
-		pm2.setUserName("ï¿½ï¿½ï¿½ï¿½");
+		pm2.setUserName("ÀîËÄ");
 		
 		list.add(pm1);
 		list.add(pm2);

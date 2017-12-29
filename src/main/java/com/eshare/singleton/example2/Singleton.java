@@ -1,45 +1,45 @@
 package com.eshare.singleton.example2;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
+ * µ¥ÀýÊ¾Àý   ÀÁººÊ½
  */
 public class Singleton {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½Êµï¿½ï¿½
+	 * ¶¨ÒåÒ»¸ö±äÁ¿À´´æ´¢´´½¨ºÃµÄÀàÊµÀý
 	 */
 	private static Singleton uniqueInstance = null;
 	/**
-	 * Ë½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+	 * Ë½ÓÐ»¯¹¹Ôì·½·¨£¬ºÃÔÚÄÚ²¿¿ØÖÆ´´½¨ÊµÀýµÄÊýÄ¿
 	 */
 	private Singleton(){
 		//
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Í»ï¿½ï¿½ï¿½ï¿½á¹©ï¿½ï¿½Êµï¿½ï¿½
-	 * @return Ò»ï¿½ï¿½Singletonï¿½ï¿½Êµï¿½ï¿½
+	 * ¶¨ÒåÒ»¸ö·½·¨À´Îª¿Í»§¶ËÌá¹©ÀàÊµÀý
+	 * @return Ò»¸öSingletonµÄÊµÀý
 	 */
 	public static synchronized Singleton getInstance(){
-		//ï¿½Ð¶Ï´æ´¢Êµï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Öµ
+		//ÅÐ¶Ï´æ´¢ÊµÀýµÄ±äÁ¿ÊÇ·ñÓÐÖµ
 		if(uniqueInstance == null){
-			//ï¿½ï¿½ï¿½Ã»ï¿½Ð£ï¿½ï¿½Í´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Öµï¿½ï¿½ï¿½æ´¢ï¿½ï¿½Êµï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
+			//Èç¹ûÃ»ÓÐ£¬¾Í´´½¨Ò»¸öÀàÊµÀý£¬²¢°ÑÖµ¸³Öµ¸ø´æ´¢ÀàÊµÀýµÄ±äÁ¿
 			uniqueInstance = new Singleton();
 		}
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ç¾ï¿½Ö±ï¿½ï¿½Ê¹ï¿½ï¿½
+		//Èç¹ûÓÐÖµ£¬ÄÇ¾ÍÖ±½ÓÊ¹ÓÃ
 		return uniqueInstance;
 	}
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
+	 * Ê¾Òâ·½·¨£¬µ¥Àý¿ÉÒÔÓÐ×Ô¼ºµÄ²Ù×÷
 	 */
 	public void singletonOperation(){
-		//ï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½
+		//¹¦ÄÜ´¦Àí
 	}
 	/**
-	 * Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ê¾ÒâÊôÐÔ£¬µ¥Àý¿ÉÒÔÓÐ×Ô¼ºµÄÊôÐÔ
 	 */
 	private String singletonData;
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â²¿Í¨ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½Öµ
-	 * @return ï¿½ï¿½ï¿½Ôµï¿½Öµ
+	 * Ê¾Òâ·½·¨£¬ÈÃÍâ²¿Í¨¹ýÕâÐ©·½·¨À´·ÃÎÊÊôÐÔµÄÖµ
+	 * @return ÊôÐÔµÄÖµ
 	 */
 	public String getSingletonData(){
 		return singletonData;

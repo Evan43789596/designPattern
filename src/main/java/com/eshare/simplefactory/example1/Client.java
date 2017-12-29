@@ -1,10 +1,12 @@
 package com.eshare.simplefactory.example1;
 /**
- * ï¿½Í»ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Apiï¿½Ó¿ï¿½
+ * ¿Í»§¶Ë£º²âÊÔÊ¹ÓÃApi½Ó¿Ú
  */
 public class Client {
 	public static void main(String[] args) {
 		Api api = new Impl();
-		api.test1("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Å£ï¿½Ö»ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ñ£ï¿½");
+		
+		
+		api.test1("¹þ¹þ£¬²»Òª½ôÕÅ£¬Ö»ÊÇ¸ö²âÊÔ¶øÒÑ£¡");
 	}
 }

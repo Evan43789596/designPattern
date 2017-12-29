@@ -2,9 +2,13 @@ package com.eshare.factorymethod.example3;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½Ãµï¿½Creatorï¿½ï¿½ï¿½ï¿½
-		ExportOperate operate = new ExportDBOperate();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¹ï¿½ï¿½Ü·ï¿½ï¿½ï¿½
-		operate.export("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+//		//´´½¨ÐèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+//		ExportOperate operate = new ExportXmlFileOperate();
+//		//µ÷ÓÃÊä³öÊý¾ÝµÄ¹¦ÄÜ·½·¨
+//		operate.export("²âÊÔÊý¾Ý");
+		
+//		ABC abc = new ExportOperate().createABC("cc");
+		
+//		abc.test();
 	}
 }

@@ -1,11 +1,11 @@
 package com.eshare.templatemethod.example4;
 
 /**
- * ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æµï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÆÕÍ¨ÓÃ»§µÇÂ¼¿ØÖÆµÄÂß¼­´¦Àí
  */
 public class NormalLogin extends LoginTemplate{
 	public LoginModel findLoginUser(String loginId) {
-		// ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½Ô¾ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½İµÄ¶ï¿½ï¿½ï¿½
+		// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓĞÄ¬ÈÏÊı¾İµÄ¶ÔÏó
 		LoginModel lm = new LoginModel();
 		lm.setLoginId(loginId);
 		lm.setPwd("testpwd");

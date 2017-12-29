@@ -1,10 +1,10 @@
 package com.eshare.abstractfactory.example5;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ó¼ï¿½Â¼ï¿½ï¿½Ó¦ï¿½ï¿½DAOï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
+ * ¶©µ¥×Ó¼ÇÂ¼¶ÔÓ¦µÄDAO²Ù×÷½Ó¿Ú
  */
 public interface OrderDetailDAO {
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¶©ï¿½ï¿½ï¿½Ó¼ï¿½Â¼
+	 * Ê¾Òâ·½·¨£¬±£´æ¶©µ¥×Ó¼ÇÂ¼
 	 */
 	public void saveOrderDetail();
 }

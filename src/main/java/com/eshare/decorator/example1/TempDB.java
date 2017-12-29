@@ -1,19 +1,19 @@
 package com.eshare.decorator.example1;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½İ¿â£¬×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½Ã¼ï¿½ï¿½ã½±ï¿½ï¿½
+ * ÔÚÄÚ´æÖĞÄ£ÄâÊı¾İ¿â£¬×¼±¸µã²âÊÔÊı¾İ£¬ºÃ¼ÆËã½±½ğ
  */
 public class TempDB {
 	private TempDB(){}
 	/**
-	 * ï¿½ï¿½Â¼Ã¿ï¿½ï¿½ï¿½Ëµï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½Û¶î£¬Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Â·ï¿½Ã»ï¿½ï¿½ï¿½ï¿½
+	 * ¼ÇÂ¼Ã¿¸öÈËµÄÔÂ¶ÈÏúÊÛ¶î£¬Ö»ÓÃÁËÈËÔ±£¬ÔÂ·İÃ»ÓĞÓÃ
 	 */
 	public static Map<String,Double> mapMonthSaleMoney = new HashMap<String,Double>();
 	
 	static{
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		mapMonthSaleMoney.put("ï¿½ï¿½ï¿½ï¿½",10000.0);
-		mapMonthSaleMoney.put("ï¿½ï¿½ï¿½ï¿½",20000.0);
-		mapMonthSaleMoney.put("ï¿½ï¿½ï¿½ï¿½",30000.0);
+		//Ìî³ä²âÊÔÊı¾İ
+		mapMonthSaleMoney.put("ÕÅÈı",10000.0);
+		mapMonthSaleMoney.put("ÀîËÄ",20000.0);
+		mapMonthSaleMoney.put("ÍõÎå",30000.0);
 	}
 }

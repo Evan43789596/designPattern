@@ -2,7 +2,7 @@ package com.eshare.state.example3;
 
 public class BlackWarnVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
-		System.out.println("ï¿½ï¿½Ö¹ï¿½ï¿½Â¼ï¿½ï¿½Ê¹ï¿½ï¿½ÏµÍ³3ï¿½ï¿½");
+		//´ý½øºÚÃûµ¥¾¯¸æ×´Ì¬
+		System.out.println("½ûÖ¹µÇÂ¼ºÍÊ¹ÓÃÏµÍ³3Ìì");
 	}
 }

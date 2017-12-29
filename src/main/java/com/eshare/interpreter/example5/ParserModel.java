@@ -1,20 +1,21 @@
 package com.eshare.interpreter.example5;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°Ã¿Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÓÃÀ´·â×°Ã¿Ò»¸ö½âÎö³öÀ´µÄÔªËØ¶ÔÓ¦µÄÊôĞÔ
  */
 public class ParserModel {
 	/**
-	 * ï¿½Ç·ñµ¥¸ï¿½Öµ
+	 * ÊÇ·ñµ¥¸öÖµ
 	 */
 	private boolean singleVlaue;
 	/**
-	 * ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+	 * ÊÇ·ñÊôĞÔ£¬²»ÊÇÊôĞÔ¾ÍÊÇÔªËØ
 	 */
 	private boolean propertyValue;
 	/**
-	 * ï¿½Ç·ï¿½ï¿½Õ½ï¿½ï¿½
+	 * ÊÇ·ñÖÕ½á·û
 	 */
 	private boolean end;
+	
 	public boolean isEnd() {
 		return end;
 	}

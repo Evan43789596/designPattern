@@ -3,14 +3,14 @@ import java.util.*;
 import java.sql.*;
 
 /**
- * й╣О©╫О©╫й╬О©╫О©╫р╙О©╫О©╫д╧О©╫О©╫О©╫
+ * й╣ожй╬юЩр╙гС╣д╧╕дэ
  */
 public class UserManager {
 	
 	/**
-	 * О©╫О©╫О©╫щ╡О©╫О©╫е╠О©╫О©╫О©╫О©╫О©╫О©╫х║О©╫ц╡О©╫О©╫О©╫О©╫б╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╠
-	 * @param depId О©╫О©╫О©╫е╠О©╫О©╫
-	 * @return О©╫ц╡О©╫О©╫О©╫О©╫б╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╠
+	 * ╦Ы╬щ╡©це╠Ю╨ею╢╩Ях║╦ц╡©цеоб╣дкЫспхкт╠
+	 * @param depId ╡©це╠Ю╨е
+	 * @return ╦ц╡©цеоб╣дкЫспхкт╠
 	 */
 	public Collection<UserModel> getUserByDepId(String depId)throws Exception{
 		Collection<UserModel> col = new ArrayList<UserModel>();
@@ -42,8 +42,8 @@ public class UserManager {
 		return col;
 	}
 	/**
-	 * О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫щ©О©╫О©╫О©╫О©╫О©╫О©╫
-	 * @return О©╫О©╫О©╫щ©О©╫О©╫О©╫О©╫О©╫
+	 * ╩Ях║сКйЩ╬щ©Б╣да╛╫с
+	 * @return йЩ╬щ©Ба╛╫с
 	 */
 	private Connection getConnection() throws Exception {
 		Class.forName("oracle.jdbc.driver.OracleDriver");

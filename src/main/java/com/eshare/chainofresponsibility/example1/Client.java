@@ -4,20 +4,20 @@ public class Client {
 	public static void main(String[] args) {
 		FeeRequest request = new FeeRequest();
 		
-		//锟斤拷始锟斤拷锟斤拷
-		String ret1 = request.requestToProjectManager("小锟斤拷", 300);
+		//开始测试
+		String ret1 = request.requestToProjectManager("小李", 300);
 		System.out.println("the ret1="+ret1);		
-		String ret2 = request.requestToProjectManager("小锟斤拷", 300);
+		String ret2 = request.requestToProjectManager("小张", 300);
 		System.out.println("the ret2="+ret2);
 		
-		String ret3 = request.requestToProjectManager("小锟斤拷", 600);
+		String ret3 = request.requestToProjectManager("小李", 600);
 		System.out.println("the ret3="+ret3);		
-		String ret4 = request.requestToProjectManager("小锟斤拷", 600);
+		String ret4 = request.requestToProjectManager("小张", 600);
 		System.out.println("the ret4="+ret4);
 		
-		String ret5 = request.requestToProjectManager("小锟斤拷", 1200);
+		String ret5 = request.requestToProjectManager("小李", 1200);
 		System.out.println("the ret5="+ret5);		
-		String ret6 = request.requestToProjectManager("小锟斤拷", 1200);
+		String ret6 = request.requestToProjectManager("小张", 1200);
 		System.out.println("the ret6="+ret6);
 	}
 }

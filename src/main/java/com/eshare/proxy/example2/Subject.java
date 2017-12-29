@@ -1,10 +1,10 @@
 package com.eshare.proxy.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½ï¿½ÃµÄ½Ó¿ï¿½
+ * ³éÏóµÄÄ¿±ê½Ó¿Ú£¬¶¨Òå¾ßÌåµÄÄ¿±ê¶ÔÏóºÍ´úÀí¹«ÓÃµÄ½Ó¿Ú
  */
 public interface Subject {
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó·½·ï¿½
+	 * Ê¾Òâ·½·¨£ºÒ»¸ö³éÏóµÄÇëÇó·½·¨
 	 */
 	public void request();
 }

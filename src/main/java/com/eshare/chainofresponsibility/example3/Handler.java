@@ -1,24 +1,24 @@
 package com.eshare.chainofresponsibility.example3;
 /**
- * я┐╜я┐╜я┐╜я┐╜╓░я┐╜я┐╜я┐╜я┐╜я┐╜─╜╙┐я┐╜
+ * ╢и╥х╓░╘Ё╢╘╧є╡─╜╙┐┌
  */
 public abstract class Handler {
 	/**
-	 * я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╥╗я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜─╢я┐╜я┐╜я┐╜
+	 * │╓╙╨╧┬╥╗╕Ў┤ж└э╟ы╟є╡─╢╘╧є
 	 */
 	protected Handler successor = null;
 	/**
-	 * я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╥╗я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜─╢я┐╜я┐╜я┐╜
-	 * @param successor я┐╜я┐╜╥╗я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜─╢я┐╜я┐╜я┐╜
+	 * ╔ш╓├╧┬╥╗╕Ў┤ж└э╟ы╟є╡─╢╘╧є
+	 * @param successor ╧┬╥╗╕Ў┤ж└э╟ы╟є╡─╢╘╧є
 	 */
 	public void setSuccessor(Handler successor){
 		this.successor = successor;
 	}
 	/**
-	 * я┐╜я┐╜я┐╜я┐╜█▓═╖я┐╜я┐╜├╡я┐╜я┐╜я┐╜я┐╜я┐╜
-	 * @param user я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜
-	 * @param fee я┐╜я┐╜я┐╜я┐╜я┐╜╟оя┐╜я┐╜
-	 * @return я┐╜╔╣я┐╜я┐╜я┐╜╩зя┐╜▄╡─╛я┐╜я┐╜я┐╜═и╓к
+	 * ┤ж└э╛█▓═╖╤╙├╡─╔ъ╟ы
+	 * @param user ╔ъ╟ы╚╦
+	 * @param fee ╔ъ╟ы╡─╟о╩¤
+	 * @return │╔╣ж╗Є╩з░▄╡─╛▀╠х═и╓к
 	 */
 	public abstract String handleFeeRequest(String user,double fee);
 }

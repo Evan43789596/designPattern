@@ -1,15 +1,15 @@
 package com.eshare.iterator.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
+ * ÓÃÀ´ÊµÏÖ·ÃÎÊÊý×éµÄµü´ú½Ó¿Ú
  */
 public class ArrayIteratorImpl implements Iterator{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ÛºÏ¶ï¿½ï¿½ï¿½
+	 * ÓÃÀ´´æ·Å±»µü´úµÄ¾ÛºÏ¶ÔÏó
 	 */
 	private SalaryManager aggregate = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * -1ï¿½ï¿½Ê¾ï¿½Õ¿ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ò£¬µï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÛºÏ¶ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°
+	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òý
+	 * -1±íÊ¾¸Õ¿ªÊ¼µÄÊ±ºò£¬µü´úÆ÷Ö¸Ïò¾ÛºÏ¶ÔÏóµÚÒ»¸ö¶ÔÏóÖ®Ç°
 	 */
 	private int index = -1;
 	

@@ -1,6 +1,6 @@
 package com.eshare.builder.example5;
 /**
- * ï¿½ï¿½ï¿½ì±£ï¿½Õºï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¹¹Ôì±£ÏÕºÏÍ¬¶ÔÏóµÄ¹¹½¨Æ÷
  */
 public class ConcreteBuilder {
 	private String contractId;
@@ -10,10 +10,10 @@ public class ConcreteBuilder {
 	private long endDate;
 	private String otherData;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ÐµÄ²ï¿½ï¿½ï¿½
-	 * @param contractId ï¿½ï¿½ï¿½Õºï¿½Í¬ï¿½ï¿½ï¿½
-	 * @param beginDate ï¿½ï¿½ï¿½Õ¿ï¿½Ê¼ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param endDate ï¿½ï¿½ï¿½ï¿½Ê§Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë±ØÐëÒªÓÐµÄ²ÎÊý
+	 * @param contractId ±£ÏÕºÏÍ¬±àºÅ
+	 * @param beginDate ±£ÏÕ¿ªÊ¼ÉúÐ§µÄÈÕÆÚ
+	 * @param endDate ±£ÏÕÊ§Ð§µÄÈÕÆÚ
 	 */
 	public ConcreteBuilder(String contractId,long beginDate,long endDate){
 		this.contractId = contractId;
@@ -21,56 +21,56 @@ public class ConcreteBuilder {
 		this.endDate = endDate;
 	}
 	/**
-	 * Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param personName  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ñ¡ÌîÊý¾Ý£¬±»±£ÏÕÈËÔ±µÄÃû³Æ
+	 * @param personName  ±»±£ÏÕÈËÔ±µÄÃû³Æ
+	 * @return ¹¹½¨Æ÷¶ÔÏó
 	 */
 	public ConcreteBuilder setPersonName(String personName){
 		this.personName = personName;
 		return this;
 	}
 	/**
-	 *  Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param companyName ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 *  Ñ¡ÌîÊý¾Ý£¬±»±£ÏÕ¹«Ë¾µÄÃû³Æ
+	 * @param companyName ±»±£ÏÕ¹«Ë¾µÄÃû³Æ
+	 * @return ¹¹½¨Æ÷¶ÔÏó
 	 */
 	public ConcreteBuilder setCompanyName(String companyName){
 		this.companyName = companyName;
 		return this;
 	}
 	/**
-	 * Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param otherData ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ñ¡ÌîÊý¾Ý£¬ÆäËüÊý¾Ý
+	 * @param otherData ÆäËüÊý¾Ý
+	 * @return ¹¹½¨Æ÷¶ÔÏó
 	 */
 	public ConcreteBuilder setOtherData(String otherData){
 		this.otherData = otherData;
 		return this;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ó²¢·ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Õºï¿½Í¬ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ¹¹½¨ÕæÕýµÄ¶ÔÏó²¢·µ»Ø
+	 * @return ¹¹½¨µÄ±£ÏÕºÏÍ¬µÄ¶ÔÏó
 	 */
 	public InsuranceContract build(){
 		if(contractId==null || contractId.trim().length()==0){
-			throw new IllegalArgumentException("ï¿½ï¿½Í¬ï¿½ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½ï¿½");
+			throw new IllegalArgumentException("ºÏÍ¬±àºÅ²»ÄÜÎª¿Õ");
 		}
 		boolean signPerson = personName!=null && personName.trim().length()>0;
 		boolean signCompany = companyName!=null && companyName.trim().length()>0;
 		if(signPerson && signCompany){
-			throw new IllegalArgumentException("Ò»ï¿½Ý±ï¿½ï¿½Õºï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¬Ê±ï¿½ï¿½ï¿½ËºÍ¹ï¿½Ë¾Ç©ï¿½ï¿½");
+			throw new IllegalArgumentException("Ò»·Ý±£ÏÕºÏÍ¬²»ÄÜÍ¬Ê±ÓëÈËºÍ¹«Ë¾Ç©¶©");
 		}		
 		if(signPerson==false && signCompany==false){
-			throw new IllegalArgumentException("Ò»ï¿½Ý±ï¿½ï¿½Õºï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			throw new IllegalArgumentException("Ò»·Ý±£ÏÕºÏÍ¬²»ÄÜÃ»ÓÐÇ©¶©¶ÔÏó");
 		}
 		if(beginDate<=0){
-			throw new IllegalArgumentException("ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Õ¿ï¿½Ê¼ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			throw new IllegalArgumentException("ºÏÍ¬±ØÐëÓÐ±£ÏÕ¿ªÊ¼ÉúÐ§µÄÈÕÆÚ");
 		}
 		if(endDate<=0){
-			throw new IllegalArgumentException("ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½Ê§Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			throw new IllegalArgumentException("ºÏÍ¬±ØÐëÓÐ±£ÏÕÊ§Ð§µÄÈÕÆÚ");
 		}
 		if(endDate<=beginDate){
-			throw new IllegalArgumentException("ï¿½ï¿½ï¿½ï¿½Ê§Ð§ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½");
+			throw new IllegalArgumentException("±£ÏÕÊ§Ð§µÄÈÕÆÚ±ØÐë´óÓÚ±£ÏÕÉúÐ§ÈÕÆÚ");
 		}
 		
 		

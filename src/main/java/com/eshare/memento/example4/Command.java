@@ -1,25 +1,25 @@
 package com.eshare.memento.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+ * ¶¨ÒåÒ»¸öÃüÁîµÄ½Ó¿Ú
  */
 public interface Command {
 	/**
-	 * Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ö´ÐÐÃüÁî
 	 */
 	public void execute();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½×´Ì¬
-	 * @param m ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ³·ÏúÃüÁî£¬»Ö¸´µ½±¸ÍüÂ¼¶ÔÏó¼ÇÂ¼µÄ×´Ì¬
+	 * @param m ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public void undo(Memento m);
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½×´Ì¬
-	 * @param m ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ÖØ×öÃüÁî£¬»Ö¸´µ½±¸ÍüÂ¼¶ÔÏó¼ÇÂ¼µÄ×´Ì¬
+	 * @param m ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public void redo(Memento m);
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ÃµÄ±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ´´½¨±£´æÔ­·¢Æ÷¶ÔÏóµÄ×´Ì¬µÄ±¸ÍüÂ¼¶ÔÏó
+	 * @return ´´½¨ºÃµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public Memento createMemento();
 }

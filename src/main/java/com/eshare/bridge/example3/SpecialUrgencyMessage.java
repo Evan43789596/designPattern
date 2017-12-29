@@ -1,6 +1,6 @@
 package com.eshare.bridge.example3;
 /**
- * ï¿½Ø¼ï¿½ï¿½ï¿½Ï¢ï¿½Ä³ï¿½ï¿½ï¿½Ó¿ï¿½
+ * ÌØ¼±ÏûÏ¢µÄ³éÏó½Ó¿Ú
  */
 public interface SpecialUrgencyMessage extends Message{
 	public void hurry(String messageId);

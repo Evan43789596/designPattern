@@ -1,11 +1,11 @@
 package com.eshare.chainofresponsibility.example6;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ûµï¿½Òµï¿½ï¿½ï¿½Üµï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÕæÕı´¦ÀíÏúÊÛµÄÒµÎñ¹¦ÄÜµÄÖ°Ôğ¶ÔÏó
  */
 public class SaleMgr extends SaleHandler{
 	public boolean sale(String user, String customer, SaleModel saleModel) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½
-		System.out.println(user+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+customer+"ï¿½ï¿½ï¿½ï¿½ "+saleModel+" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		//½øĞĞÕæÕıµÄÒµÎñÂß¼­´¦Àí
+		System.out.println(user+"±£´æÁË"+customer+"¹ºÂò "+saleModel+" µÄÏúÊÛÊı¾İ");
 		return true;
 	}
 }

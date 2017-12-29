@@ -1,46 +1,46 @@
 package com.eshare.abstractfactory.example1;
 
 /**
- * ×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½
+ * ×°»ú¹¤³ÌÊ¦µÄÀà
  */
 public  class ComputerEngineer {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½CPU
+	 * ¶¨Òå×é×°»úÆ÷ÐèÒªµÄCPU
 	 */
 	private CPUApi cpu= null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¶¨Òå×é×°»úÆ÷ÐèÒªµÄÖ÷°å
 	 */
 	private MainboardApi mainboard = null;
 
 	/**
-	 * ×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param cpuType ï¿½Í»ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param mainboardType ï¿½Í»ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ×°»ú¹ý³Ì
+	 * @param cpuType ¿Í»§Ñ¡ÔñËùÐèCPUµÄÀàÐÍ
+	 * @param mainboardType ¿Í»§Ñ¡ÔñËùÐèÖ÷°åµÄÀàÐÍ
 	 */
 	public void makeComputer(int cpuType,int mainboardType){
-		//1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£ºÊ×ÏÈ×¼±¸ºÃ×°»úËùÐèÒªµÄÅä¼þ
 		prepareHardwares(cpuType,mainboardType);
-		//2ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
+		//2£º×é×°»úÆ÷
 		
-		//3ï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½
+		//3£º²âÊÔ»úÆ÷
 		
-		//4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½
+		//4£º½»¸¶¿Í»§
 	}
 	/**
-	 * ×¼ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param cpuType ï¿½Í»ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param mainboardType ï¿½Í»ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ×¼±¸×°»úËùÐèÒªµÄÅä¼þ
+	 * @param cpuType ¿Í»§Ñ¡ÔñËùÐèCPUµÄÀàÐÍ
+	 * @param mainboardType ¿Í»§Ñ¡ÔñËùÐèÖ÷°åµÄÀàÐÍ
 	 */
 	private void prepareHardwares(int cpuType,int mainboardType){
-		//ï¿½ï¿½ï¿½ï¿½ÒªÈ¥×¼ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½Îªï¿½ï¿½Ê¾ï¿½ï¿½ï¿½òµ¥£ï¿½ï¿½ï¿½ï¿½ï¿½Ö»×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½Ç£ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ø£ï¿½
+		//ÕâÀïÒªÈ¥×¼±¸CPUºÍÖ÷°åµÄ¾ßÌåÊµÏÖ£¬ÎªÁËÊ¾Àý¼òµ¥£¬ÕâÀïÖ»×¼±¸ÕâÁ½¸ö
+		//¿ÉÊÇ£¬×°»ú¹¤³ÌÊ¦²¢²»ÖªµÀÈçºÎÈ¥´´½¨£¬ÔõÃ´°ìÄØ£¿
 		
-		//Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½È¡
+		//Ö±½ÓÕÒÏàÓ¦µÄ¹¤³§»ñÈ¡
 		this.cpu = CPUFactory.createCPUApi(cpuType);
 		this.mainboard = MainboardFactory.createMainboardApi(mainboardType);
 		
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
+		//²âÊÔÒ»ÏÂÅä¼þÊÇ·ñºÃÓÃ
 		this.cpu.calculate();
 		this.mainboard.installCPU();
 	}

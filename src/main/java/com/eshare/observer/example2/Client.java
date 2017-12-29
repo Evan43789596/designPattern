@@ -2,25 +2,25 @@ package com.eshare.observer.example2;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½
+		//´´½¨Ò»¸ö±¨Ö½£¬×÷Îª±»¹Û²ìÕß
 		NewsPaper subject = new NewsPaper();
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ß£ï¿½Ò²ï¿½ï¿½ï¿½Ç¹Û²ï¿½ï¿½ï¿½
+		//´´½¨ÔÄ¶ÁÕß£¬Ò²¾ÍÊÇ¹Û²ìÕß
 		Reader reader1 = new Reader();
-		reader1.setName("ï¿½ï¿½ï¿½ï¿½");
+		reader1.setName("ÕÅÈý");
 		
 		Reader reader2 = new Reader();
-		reader2.setName("ï¿½ï¿½ï¿½ï¿½");
+		reader2.setName("ÀîËÄ");
 		
 		Reader reader3 = new Reader();
-		reader3.setName("ï¿½ï¿½ï¿½ï¿½");
+		reader3.setName("ÍõÎå");
 		
-		//×¢ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+		//×¢²áÔÄ¶ÁÕß
 		subject.attach(reader1);
-		subject.attach(reader2);
+//		subject.attach(reader2);
 		subject.attach(reader3);
 		
-		//Òªï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½
-		subject.setContent("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹Û²ï¿½ï¿½ï¿½Ä£Ê½");
+		//Òª³ö±¨Ö½À²
+		subject.setContent("±¾ÆÚÄÚÈÝÊÇ¹Û²ìÕßÄ£Ê½");
 	}
 }

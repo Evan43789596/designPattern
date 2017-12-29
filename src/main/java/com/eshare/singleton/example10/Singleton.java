@@ -2,18 +2,18 @@ package com.eshare.singleton.example10;
 
 public class Singleton {
 	/**
-	 * 锟皆憋拷锟斤拷实锟斤拷锟侥憋拷锟斤拷锟斤拷锟絭olatile锟斤拷锟斤拷锟斤拷
+	 * 对保存实例的变量添加volatile的修饰
 	 */
 	private volatile static Singleton instance = null;
 	private Singleton(){
 		
 	}
 	public static  Singleton getInstance(){
-		//锟饺硷拷锟绞碉拷锟斤拷欠锟斤拷锟节ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷诓沤锟斤拷锟斤拷锟斤拷锟斤拷同锟斤拷锟斤拷
+		//先检查实例是否存在，如果不存在才进入下面的同步块
 		if(instance == null){
-			//同锟斤拷锟介，锟竭程帮拷全锟侥达拷锟斤拷实锟斤拷
+			//同步块，线程安全的创建实例
 			synchronized(Singleton.class){
-				//锟劫次硷拷锟绞碉拷锟斤拷欠锟斤拷锟节ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷诓锟斤拷锟侥达拷锟斤拷实锟斤拷
+				//再次检查实例是否存在，如果不存在才真的创建实例
 				if(instance == null){
 					instance = new Singleton();
 				}

@@ -1,18 +1,18 @@
 package com.eshare.visitor.example1;
 /**
- * ï¿½ï¿½Òµï¿½Í»ï¿½
+ * ÆóÒµ¿Í»§
  */
 public class EnterpriseCustomer extends Customer{
 	/**
-	 * ï¿½ï¿½Ïµï¿½ï¿½
+	 * ÁªÏµÈË
 	 */
 	private String linkman;
 	/**
-	 * ï¿½ï¿½Ïµï¿½ç»°
+	 * ÁªÏµµç»°
 	 */
 	private String linkTelephone;
 	/**
-	 * ï¿½ï¿½Òµ×¢ï¿½ï¿½ï¿½Ö·
+	 * ÆóÒµ×¢²áµØÖ·
 	 */
 	private String registerAddress;
 	
@@ -42,10 +42,10 @@ public class EnterpriseCustomer extends Customer{
 	}
 	
 	/**
-	 * ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ÆóÒµ¿Í»§Ìá³ö·þÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public void serviceRequest(){
-		//ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		System.out.println(this.getName()+"ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		//ÆóÒµ¿Í»§Ìá³öµÄ¾ßÌå·þÎñÇëÇó
+		System.out.println(this.getName()+"ÆóÒµÌá³ö·þÎñÇëÇó");
 	}
 }

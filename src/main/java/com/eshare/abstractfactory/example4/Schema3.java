@@ -1,18 +1,18 @@
 package com.eshare.abstractfactory.example4;
 
 /**
- * ×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Intel ï¿½ï¿½CPU + ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ + ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ú´ï¿½
+ * ×°»ú·½°¸Èý£ºIntel µÄCPU + ¼¼¼ÎµÄÖ÷°å + ÏÖ´úµÄÄÚ´æ
  */
 public class Schema3 implements AbstractFactory{
 	public Object createProduct(int type) {
 		Object retObj = null;
-		//typeÎª1ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½typeÎª2ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬typeÎª3ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½
+		//typeÎª1±íÊ¾´´½¨CPU£¬typeÎª2±íÊ¾´´½¨Ö÷°å£¬typeÎª3±íÊ¾´´½¨ÄÚ´æ
 		if(type==1){
 			retObj = new IntelCPU(1156);
 		}else if(type==2){
 			retObj = new GAMainboard(1156);
 		}
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÓµÄ²ï¿½Æ·
+		//´´½¨ÐÂÌí¼ÓµÄ²úÆ·
 		else if(type==3){
 			retObj = new HyMemory();
 		}

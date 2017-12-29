@@ -2,7 +2,7 @@ package com.eshare.decorator.example4;
 
 import java.util.Date;
 /**
- * в╟О©╫О©╫О©╫О©╫О©╫О©╫О©╫Сё╛╪О©╫О©╫О©╫О©╫ш╪ф╫О©╫О©╫О©╫
+ * в╟йнфВ╤тоСё╛╪фкЦюш╪ф╫╠╫П
  */
 public class SumPrizeDecorator extends Decorator{
 	public SumPrizeDecorator(Component c){
@@ -10,12 +10,12 @@ public class SumPrizeDecorator extends Decorator{
 	}
 	
 	public double calcPrize(String user, Date begin, Date end) {
-		//1О©╫О©╫О©╫х╩О©╫х║г╟О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╫О©╫О©╫О©╫
+		//1ё╨ох╩Ях║г╟цФтккЦЁЖю╢╣д╫╠╫П
 		double money = super.calcPrize(user, begin, end);
-		//2О©╫О©╫х╩О©╫О©╫О©╫О©╫О©╫О©╫ш╪ф╫О©╫О©╫О©╫,О©╫О©╫й╣О©╫О©╫О©╫О©╫с╕О©╫ц╟О©╫О©╫О©╫О©╫О©╫т╠х╔О©╫О©╫х║О©╫ш╪ф╣О©╫р╣О©╫О©╫Нё╛х╩О©╫О©╫О©╫ыЁО©╫О©╫О©╫0.1%
-		//О©╫О©╫О©╫О©╫й╬р╩О©╫бёО©╫О©╫ы╤О©╫О©╫О©╫р╣О©╫О©╫ш╪О©╫р╣О©╫О©╫Н╤╪О©╫О©╫1000000т╙
+		//2ё╨х╩╨С╪фкЦюш╪ф╫╠╫П,фДй╣уБюОс╕╦ц╟╢уухкт╠х╔╩Ях║юш╪ф╣др╣нЯ╤Нё╛х╩╨СтыЁкрт0.1%
+		//╪Р╣╔ящй╬р╩обё╛╪ы╤╗╢С╪р╣дюш╪фр╣нЯ╤Н╤╪йг1000000т╙
 		double prize = 1000000 * 0.001;
-		System.out.println(user+"О©╫ш╪ф╫О©╫О©╫О©╫"+prize);
+		System.out.println(user+"юш╪ф╫╠╫П"+prize);
 		return money + prize;
 	}
 

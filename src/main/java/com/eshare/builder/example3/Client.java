@@ -4,44 +4,53 @@ import java.util.*;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸²âÊÔÊý¾Ý
 		ExportHeaderModel ehm = new ExportHeaderModel();
-		ehm.setDepId("Ò»ï¿½Ö¹ï¿½Ë¾");
+		ehm.setDepId("Ò»·Ö¹«Ë¾");
 		ehm.setExportDate("2010-05-18");
 		
 		Map<String,Collection<ExportDataModel>> mapData = new HashMap<String,Collection<ExportDataModel>>();
 		Collection<ExportDataModel> col = new ArrayList<ExportDataModel>();
 		
 		ExportDataModel edm1 = new ExportDataModel();
-		edm1.setProductId("ï¿½ï¿½Æ·001ï¿½ï¿½");
+		edm1.setProductId("²úÆ·001ºÅ");
 		edm1.setPrice(100);
 		edm1.setAmount(80);
 		
 		ExportDataModel edm2 = new ExportDataModel();
-		edm2.setProductId("ï¿½ï¿½Æ·002ï¿½ï¿½");
+		edm2.setProductId("²úÆ·002ºÅ");
 		edm2.setPrice(99);
 		edm2.setAmount(55);		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
+		//°ÑÊý¾Ý×é×°ÆðÀ´
 		col.add(edm1);
 		col.add(edm2);		
-		mapData.put("ï¿½ï¿½ï¿½Û¼ï¿½Â¼ï¿½ï¿½", col);
+		mapData.put("ÏúÊÛ¼ÇÂ¼±í", col);
 		
 		ExportFooterModel efm = new ExportFooterModel();
-		efm.setExportUser("ï¿½ï¿½ï¿½ï¿½");
+		efm.setExportUser("ÕÅÈý");
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Ä¼ï¿½
+		//²âÊÔÊä³öµ½ÎÄ±¾ÎÄ¼þ
 		TxtBuilder txtBuilder = new TxtBuilder();
-		//ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
+		//´´½¨Ö¸µ¼Õß¶ÔÏó
 		Director director = new Director(txtBuilder);
+		
 		director.construct(ehm, mapData, efm);
-		//ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½\n"+txtBuilder.getResult());
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xmlï¿½Ä¼ï¿½
+		//°ÑÒªÊä³öµÄÄÚÈÝÊä³öµ½¿ØÖÆÌ¨¿´¿´
+		System.out.println("Êä³öµ½ÎÄ±¾ÎÄ¼þµÄÄÚÈÝ£º\n"+txtBuilder.getResult());
+		
+		
+		//²âÊÔÊä³öµ½xmlÎÄ¼þ
 		XmlBuilder xmlBuilder = new XmlBuilder();
-		Director director2 = new Director(xmlBuilder);
-		director2.construct(ehm, mapData, efm);
-		//ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½XMLï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½\n"+xmlBuilder.getResult());
+		
+//		Director director2 = new Director(xmlBuilder);
+//		director2.construct(ehm, mapData, efm);
+		
+		xmlBuilder.buildHeader(ehm);
+		xmlBuilder.buildBody(mapData);
+		xmlBuilder.buildFooter(efm);
+		
+		//°ÑÒªÊä³öµÄÄÚÈÝÊä³öµ½¿ØÖÆÌ¨¿´¿´
+		System.out.println("Êä³öµ½XMLÎÄ¼þµÄÄÚÈÝ£º\n"+xmlBuilder.getResult());
 		
 	}
 }

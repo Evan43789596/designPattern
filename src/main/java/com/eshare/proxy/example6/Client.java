@@ -2,15 +2,15 @@ package com.eshare.proxy.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½Â¼ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		Order order = new OrderProxy("ï¿½ï¿½ï¿½Ä£Ê½",100,"ï¿½ï¿½ï¿½ï¿½");
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ş¸Ä£ï¿½ï¿½Ç¾Í»á±¨ï¿½ï¿½
-		order.setOrderNum(123, "ï¿½ï¿½ï¿½ï¿½");
-		//ï¿½ï¿½ï¿½order
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸Äºó¶©µï¿½ï¿½ï¿½Â¼Ã»ï¿½Ğ±ä»¯ï¿½ï¿½"+order);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸Ä¾Í²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		order.setOrderNum(123, "ï¿½ï¿½ï¿½ï¿½");
-		//ï¿½Ù´ï¿½ï¿½ï¿½ï¿½order
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸Äºó£¬¶ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½"+order);
+		//ÕÅÈıÏÈµÇÂ¼ÏµÍ³´´½¨ÁËÒ»¸ö¶©µ¥
+		Order order = new OrderProxy("Éè¼ÆÄ£Ê½",100,"ÕÅÈı");
+		//ÀîËÄÏëÒªÀ´ĞŞ¸Ä£¬ÄÇ¾Í»á±¨´í
+		order.setOrderNum(123, "ÀîËÄ");
+		//Êä³öorder
+		System.out.println("ÀîËÄĞŞ¸Äºó¶©µ¥¼ÇÂ¼Ã»ÓĞ±ä»¯£º"+order);
+		//ÕÅÈıĞŞ¸Ä¾Í²»»áÓĞÎÊÌâ
+		order.setOrderNum(123, "ÕÅÈı");
+		//ÔÙ´ÎÊä³öorder
+		System.out.println("ÕÅÈıĞŞ¸Äºó£¬¶©µ¥¼ÇÂ¼£º"+order);
 	}
 }

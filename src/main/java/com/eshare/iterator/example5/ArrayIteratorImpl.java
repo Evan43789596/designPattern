@@ -2,15 +2,15 @@ package com.eshare.iterator.example5;
 
 import java.util.Iterator;
 /**
- * ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
+ * ÓÃÀ´ÊµÏÖ·ÃÎÊÊý×éµÄµü´ú½Ó¿Ú
  */
 public class ArrayIteratorImpl implements Iterator{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ÛºÏ¶ï¿½ï¿½ï¿½
+	 * ÓÃÀ´´æ·Å±»µü´úµÄ¾ÛºÏ¶ÔÏó
 	 */
 	private SalaryManager aggregate = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òý
 	 */
 	private int index = 0;
 	
@@ -20,7 +20,7 @@ public class ArrayIteratorImpl implements Iterator{
 	
 	
 	public boolean hasNext() {
-		//ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
+		//ÅÐ¶ÏÊÇ·ñ»¹ÓÐÏÂÒ»¸öÔªËØ
 		if(aggregate!=null && index<aggregate.size()){
 			return true;
 		}
@@ -32,7 +32,7 @@ public class ArrayIteratorImpl implements Iterator{
 		Object retObj = null;
 		if(hasNext()){
 			retObj = aggregate.get(index);
-			//Ã¿È¡ï¿½ï¿½Ò»ï¿½ï¿½Öµï¿½ï¿½ï¿½Í°ï¿½ï¿½Ñ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1
+			//Ã¿È¡×ßÒ»¸öÖµ£¬¾Í°ÑÒÑ·ÃÎÊË÷Òý¼Ó1
 			index++;
 		}
 		return retObj;
@@ -40,6 +40,6 @@ public class ArrayIteratorImpl implements Iterator{
 
 	
 	public void remove() {
-		//ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ô²ï¿½Êµï¿½ï¿½		
+		//ÔÝÊ±¿ÉÒÔ²»ÊµÏÖ		
 	}
 }

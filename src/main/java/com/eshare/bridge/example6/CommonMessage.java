@@ -1,6 +1,6 @@
 package com.eshare.bridge.example6;
 /**
- * ï¿½ï¿½Í¨ï¿½ï¿½Ï¢
+ * ÆÕÍ¨ÏûÏ¢
  */
 public class CommonMessage extends AbstractMessage{
 	public CommonMessage(MessageImplementor impl) {
@@ -8,7 +8,7 @@ public class CommonMessage extends AbstractMessage{
 	}
 
 	public void sendMessage(String message, String toUser) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ï¢ï¿½ï¿½Ê²Ã´ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½Ö±ï¿½Óµï¿½ï¿½Ã¸ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Í³ï¿½È¥ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½
+		//¶ÔÓÚÆÕÍ¨ÏûÏ¢£¬Ê²Ã´¶¼²»¸É£¬Ö±½Óµ÷ÓÃ¸¸ÀàµÄ·½·¨£¬°ÑÏûÏ¢·¢ËÍ³öÈ¥¾Í¿ÉÒÔÁË
 		super.sendMessage(message, toUser);
 	}	
 }

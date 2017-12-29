@@ -1,14 +1,14 @@
 package com.eshare.visitor.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ß£ï¿½Êµï¿½Ö¶Ô¿Í»ï¿½ï¿½ï¿½Æ«ï¿½Ã·ï¿½ï¿½ï¿½
+ * ¾ßÌåµÄ·ÃÎÊÕß£¬ÊµÏÖ¶Ô¿Í»§µÄÆ«ºÃ·ÖÎö
  */
 public class PredilectionAnalyzeVisitor implements Visitor {
 	public void visitEnterpriseCustomer(EnterpriseCustomer ec){
-		//ï¿½ï¿½ï¿½İ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Ç±ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½Ô¼ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½Ä·ï¿½Õ¹ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½Í»ï¿½ï¿½Ä·ï¿½Õ¹Ô¤ï¿½ÚµÈµÄ·ï¿½ï¿½ï¿½
-		System.out.println("ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Òµï¿½Í»ï¿½"+ec.getName()+"ï¿½ï¿½ï¿½Ğ²ï¿½Æ·Æ«ï¿½Ã·ï¿½ï¿½ï¿½");
+		//¸ù¾İ¹ıÍù¹ºÂòµÄÀúÊ·¡¢Ç±ÔÚ¹ºÂòÒâÏò
+		//ÒÔ¼°¿Í»§ËùÔÚĞĞÒµµÄ·¢Õ¹Ç÷ÊÆ¡¢¿Í»§µÄ·¢Õ¹Ô¤ÆÚµÈµÄ·ÖÎö
+		System.out.println("ÏÖÔÚ¶ÔÆóÒµ¿Í»§"+ec.getName()+"½øĞĞ²úÆ·Æ«ºÃ·ÖÎö");
 	}
 	public void visitPersonalCustomer(PersonalCustomer pc){
-		System.out.println("ï¿½ï¿½ï¿½Ú¶Ô¸ï¿½ï¿½Ë¿Í»ï¿½"+pc.getName()+"ï¿½ï¿½ï¿½Ğ²ï¿½Æ·Æ«ï¿½Ã·ï¿½ï¿½ï¿½");
+		System.out.println("ÏÖÔÚ¶Ô¸öÈË¿Í»§"+pc.getName()+"½øĞĞ²úÆ·Æ«ºÃ·ÖÎö");
 	}
 }

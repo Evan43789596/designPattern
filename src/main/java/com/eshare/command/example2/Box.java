@@ -1,24 +1,24 @@
 package com.eshare.command.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬±ï¿½ï¿½ï¿½ï¿½Ð°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½Å¥ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * »úÏä¶ÔÏó£¬±¾ÉíÓÐ°´Å¥£¬³ÖÓÐ°´Å¥¶ÔÓ¦µÄÃüÁî¶ÔÏó
  */
 public class Box {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¿ª»úÃüÁî¶ÔÏó
 	 */
 	private Command openCommand;
 	/**
-	 * ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param command ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉèÖÃ¿ª»úÃüÁî¶ÔÏó
+	 * @param command ¿ª»úÃüÁî¶ÔÏó
 	 */
 	public void setOpenCommand(Command command){
 		this.openCommand = command;
 	}
 	/**
-	 * ï¿½á¹©ï¿½ï¿½ï¿½Í»ï¿½Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ü²ï¿½ï¿½ï¿½Ó¦ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½àµ±ï¿½Ú°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+	 * Ìá¹©¸ø¿Í»§Ê¹ÓÃ£¬½ÓÊÜ²¢ÏàÓ¦ÓÃ»§ÇëÇó£¬Ïàµ±ÓÚ°´Å¥±»°´ÏÂ´¥·¢µÄ·½·¨
 	 */
 	public void openButtonPressed(){
-		//ï¿½ï¿½ï¿½Â°ï¿½Å¥ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//°´ÏÂ°´Å¥£¬Ö´ÐÐÃüÁî
 		openCommand.execute();
 	}
 }

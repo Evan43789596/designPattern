@@ -1,38 +1,38 @@
 package com.eshare.command.example7;
 import java.util.*;
 /**
- * ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ²Ëµ¥¶ÔÏó£¬ÊÇ¸öºêÃüÁî¶ÔÏó
  */
 public class MenuCommand implements Command {
 	
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ï±ï¿½ï¿½Ëµï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃÀ´¼ÇÂ¼×éºÏ±¾²Ëµ¥µÄ¶àµÀ²ËÆ·£¬Ò²¾ÍÊÇ¶à¸öÃüÁî¶ÔÏó
 	 */
 	private Collection<Command> col = new ArrayList<Command>();
 	/**
-	 * ï¿½ï¿½Ë£ï¿½ï¿½Ñ²ï¿½Æ·ï¿½ï¿½ï¿½ëµ½ï¿½Ëµï¿½ï¿½ï¿½
-	 * @param cmd ï¿½Í»ï¿½ï¿½ï¿½Ä²ï¿½
+	 * µã²Ë£¬°Ñ²ËÆ·¼ÓÈëµ½²Ëµ¥ÖÐ
+	 * @param cmd ¿Í»§µãµÄ²Ë
 	 */
 	public void addCommand(Command cmd){
 		col.add(cmd);
 	}
 	public void setCookApi(CookApi cookApi){
-		//Ê²Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//Ê²Ã´¶¼²»ÓÃ×ö
 	}
 	public int getTableNum(){
-		//Ê²Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//Ê²Ã´¶¼²»ÓÃ×ö
 		return 0;
 	}
 	/**
-	 * ï¿½ï¿½È¡ï¿½Ëµï¿½ï¿½ÐµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½Ëµï¿½ï¿½ÐµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * »ñÈ¡²Ëµ¥ÖÐµÄ¶à¸öÃüÁî¶ÔÏó
+	 * @return ²Ëµ¥ÖÐµÄ¶à¸öÃüÁî¶ÔÏó
 	 */
 	public Collection<Command> getCommands(){
 		return this.col;
 	}	
 	
 	public void execute() {
-		//Ö´ï¿½Ð²Ëµï¿½ï¿½ï¿½ï¿½Ç°Ñ²Ëµï¿½ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½ï¿½ï¿½
+		//Ö´ÐÐ²Ëµ¥¾ÍÊÇ°Ñ²Ëµ¥´«µÝ¸øºó³ø
 		CommandQueue.addMenu(this);
 	}
 }

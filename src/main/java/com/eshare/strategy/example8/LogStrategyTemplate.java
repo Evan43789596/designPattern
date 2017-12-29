@@ -1,20 +1,20 @@
 package com.eshare.strategy.example8;
 import java.text.*;
 /**
- * Êµï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ÔµÄ³ï¿½ï¿½ï¿½Ä£ï¿½å£¬Êµï¿½Ö¸ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+ * ÊµÏÖÈÕÖ¾²ßÂÔµÄ³éÏóÄ£°å£¬ÊµÏÖ¸øÏûÏ¢Ìí¼ÓÊ±¼ä
  */
 public abstract class LogStrategyTemplate implements LogStrategy{
 	
 	public final void log(String msg) {
-		//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ó¼ï¿½Â¼ï¿½ï¿½Ö¾ï¿½ï¿½Ê±ï¿½ï¿½
+		//µÚÒ»²½£º¸øÏûÏ¢Ìí¼Ó¼ÇÂ¼ÈÕÖ¾µÄÊ±¼ä
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
-		msg = df.format(new java.util.Date())+" ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½"+ msg;
-		//ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Â¼
+		msg = df.format(new java.util.Date())+" ÄÚÈİÊÇ£º"+ msg;
+		//µÚ¶ş²½£ºÕæÕıÖ´ĞĞÈÕÖ¾¼ÇÂ¼
 		doLog(msg);
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
-	 * @param msg ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ï¢
+	 * ÕæÕıÖ´ĞĞÈÕÖ¾¼ÇÂ¼£¬ÈÃ×ÓÀàÈ¥¾ßÌåÊµÏÖ
+	 * @param msg Ğè¼ÇÂ¼µÄÈÕÖ¾ĞÅÏ¢
 	 */
 	protected abstract void doLog(String msg);
 }

@@ -4,22 +4,22 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 /**
- * Ê¹ï¿½ï¿½Javaï¿½ÐµÄ¶ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
+ * Ê¹ÓÃJavaÖÐµÄ¶¯Ì¬´úÀí
  */
 public class DynamicProxy implements InvocationHandler{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ±»´úÀíµÄ¶ÔÏó
 	 */
 	private OrderApi order = null;
 	/**
-	 * ï¿½ï¿½È¡ï¿½ó¶¨ºÃ´ï¿½ï¿½ï¿½Í¾ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
-	 * @param order ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½àµ±ï¿½Ú¾ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ó¶¨ºÃ´ï¿½ï¿½ï¿½Í¾ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+	 * »ñÈ¡°ó¶¨ºÃ´úÀíºÍ¾ßÌåÄ¿±ê¶ÔÏóºóµÄÄ¿±ê¶ÔÏóµÄ½Ó¿Ú
+	 * @param order ¾ßÌåµÄ¶©µ¥¶ÔÏó£¬Ïàµ±ÓÚ¾ßÌåÄ¿±ê¶ÔÏó
+	 * @return °ó¶¨ºÃ´úÀíºÍ¾ßÌåÄ¿±ê¶ÔÏóºóµÄÄ¿±ê¶ÔÏóµÄ½Ó¿Ú
 	 */
 	public OrderApi getProxyInterface(Order order){
-		//ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ó£¬ºÃ·ï¿½ï¿½ï¿½invokeï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
+		//ÉèÖÃ±»´úÀíµÄ¶ÔÏó£¬ºÃ·½±ãinvokeÀïÃæµÄ²Ù×÷
 		this.order = order;
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¶ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//°ÑÕæÕýµÄ¶©µ¥¶ÔÏóºÍ¶¯Ì¬´úÀí¹ØÁªÆðÀ´
 		OrderApi orderApi = (OrderApi) Proxy.newProxyInstance(
 				order.getClass().getClassLoader(),
 				order.getClass().getInterfaces(), 
@@ -29,17 +29,17 @@ public class DynamicProxy implements InvocationHandler{
 	
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable {
-		//ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½setterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½È¨ï¿½ï¿½
+		//Èç¹ûÊÇµ÷ÓÃsetter·½·¨¾ÍÐèÒª¼ì²éÈ¨ÏÞ
 		if(method.getName().startsWith("set")){
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½Ç¾Í²ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½
+			//Èç¹û²»ÊÇ´´½¨ÈË£¬ÄÇ¾Í²»ÄÜÐÞ¸Ä
 			if(order.getOrderUser()!=null && order.getOrderUser().equals(args[1])){
-				//ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½
+				//¿ÉÒÔ²Ù×÷
 				return method.invoke(order, args);
 			}else{
-				System.out.println("ï¿½Ô²ï¿½ï¿½ï¿½"+args[1]+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þ¸Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½");
+				System.out.println("¶Ô²»Æð£¬"+args[1]+"£¬ÄúÎÞÈ¨ÐÞ¸Ä±¾¶©µ¥ÖÐµÄÊý¾Ý");
 			}
 		}else{
-			//ï¿½ï¿½ï¿½Çµï¿½ï¿½Ãµï¿½setterï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//²»ÊÇµ÷ÓÃµÄsetter·½·¨¾Í¼ÌÐøÔËÐÐ
 			return method.invoke(order, args);
 		}
 		return null;

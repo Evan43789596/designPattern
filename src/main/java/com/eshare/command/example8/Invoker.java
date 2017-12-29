@@ -2,21 +2,21 @@ package com.eshare.command.example8;
 
 public class Invoker {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓĞÃüÁî¶ÔÏó
 	 */
 	private Command cmd = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param cmd ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉèÖÃÃüÁî¶ÔÏó
+	 * @param cmd ÃüÁî¶ÔÏó
 	 */
 	public void setCmd(Command cmd){
 		this.cmd = cmd;
 	}
 	/**
-	 * ï¿½ï¿½Ê¼ï¿½ï¿½Ó¡
+	 * ¿ªÊ¼´òÓ¡
 	 */
 	public void startPrint(){
-		//Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
+		//Ö´ĞĞÃüÁîµÄ¹¦ÄÜ
 		this.cmd.execute();
 	}
 }

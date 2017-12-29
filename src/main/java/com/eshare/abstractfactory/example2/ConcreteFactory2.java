@@ -1,6 +1,6 @@
 package com.eshare.abstractfactory.example2;
 /**
- * О©╫О©╫О©╫О©╫д╧О©╫О©╫О©╫й╣О©╫ж╤О©╫О©╫О©╫й╣О©╫ж╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╡О©╫ф╥О©╫О©╫О©╫О©╫д╡О©╫О©╫О©╫
+ * ╬ълЕ╣д╧╓Ё╖й╣ож╤тоСё╛й╣ож╢╢╫╗╬ълЕ╣д╡Зф╥╤тоС╣д╡ывВ
  */
 public class ConcreteFactory2 implements AbstractFactory {
 

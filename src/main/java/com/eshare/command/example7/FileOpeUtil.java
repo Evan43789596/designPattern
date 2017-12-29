@@ -3,19 +3,19 @@ package com.eshare.command.example7;
 import java.io.*;
 import java.util.*;
 /**
- * ï¿½ï¿½Ğ´ï¿½Ä¼ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¶ÁĞ´ÎÄ¼şµÄ¸¨Öú¹¤¾ßÀà
  */
 public class FileOpeUtil {
 	/**
-	 * Ë½ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â²¿ï¿½ï¿½Î½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à²»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+	 * Ë½ÓĞ»¯¹¹Ôì·½·¨£¬±ÜÃâÍâ²¿ÎŞÎ½µÄ´´½¨ÀàÊµÀı
+	 * Õâ¸ö¹¤¾ßÀà²»ĞèÒª´´½¨ÀàÊµÀı
 	 */
 	private FileOpeUtil() {
 	}
 	/**
-	 * ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½æ´¢ï¿½ï¿½Listï¿½ï¿½ï¿½ï¿½
-	 * @param pathName ï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
-	 * @return ï¿½æ´¢ï¿½ï¿½Listï¿½ï¿½ï¿½ï¿½
+	 * ¶ÁÎÄ¼ş£¬´ÓÎÄ¼şÀïÃæ»ñÈ¡´æ´¢µÄList¶ÔÏó
+	 * @param pathName ÎÄ¼şÂ·¾¶ºÍÎÄ¼şÃû
+	 * @return ´æ´¢µÄList¶ÔÏó
 	 */
 	public static List readFile(String pathName) {
 		List list = new ArrayList();
@@ -42,9 +42,9 @@ public class FileOpeUtil {
 		return list;
 	}
 	/**
-	 * Ğ´ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½listï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½È¥
-	 * @param pathName ï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
-	 * @param list ÒªĞ´ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½listï¿½ï¿½ï¿½ï¿½
+	 * Ğ´ÎÄ¼ş£¬°Ñlist¶ÔÏóĞ´³öµ½ÎÄ¼şÖĞÈ¥
+	 * @param pathName ÎÄ¼şÂ·¾¶ºÍÎÄ¼şÃû
+	 * @param list ÒªĞ´µ½ÎÄ¼şµÄlist¶ÔÏó
 	 */
 	public static void writeFile(String pathName,List list){
 		File f = new File(pathName);

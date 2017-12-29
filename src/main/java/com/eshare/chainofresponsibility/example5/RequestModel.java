@@ -1,15 +1,15 @@
 package com.eshare.chainofresponsibility.example5;
 /**
- * ═ия┐╜├╡я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜
+ * ═и╙├╡─╟ы╟є╢╘╧є
  */
 public class RequestModel {
 	/**
-	 * я┐╜я┐╜╩╛я┐╜я┐╜я┐╜я┐╜я┐╜╥╡я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜
+	 * ▒э╩╛╛▀╠х╡─╥╡╬ё└р╨═
 	 */
 	private String type;
 	/**
-	 * ═ия┐╜я┐╜я┐╜я┐╜я┐╜ь╖╜я┐╜я┐╜я┐╜╤╛я┐╜я┐╜я┐╜я┐╜╥╡я┐╜я┐╜я┐╜я┐╜я┐╜═┤я┐╜я┐╜▌╜я┐╜я┐╜я┐╜
-	 * @param type я┐╜я┐╜я┐╜я┐╜я┐╜╥╡я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜
+	 * ═и╣¤╣╣╘ь╖╜╖и░╤╛▀╠х╡─╥╡╬ё└р╨═┤л╡▌╜°└┤
+	 * @param type ╛▀╠х╡─╥╡╬ё└р╨═
 	 */
 	public RequestModel(String type){
 		this.type = type;

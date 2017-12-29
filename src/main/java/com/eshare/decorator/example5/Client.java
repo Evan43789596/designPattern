@@ -4,13 +4,15 @@ import java.io.*;
 
 public class Client {
 	public static void main(String[] args) throws Exception {
-		//ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
-		DataOutputStream dout = new DataOutputStream(
-			new EncryptOutputStream(
+		//Á÷Ê½Êä³öÎÄ¼þ
+		DataOutputStream dout = 
+		new DataOutputStream(
+				new EncryptOutputStream2(
 				new BufferedOutputStream(
+						
 					new FileOutputStream("MyEncrypt.txt"))));
-		//È»ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		dout.write("abcdxyz".getBytes());
+		//È»ºó¾Í¿ÉÒÔÊä³öÄÚÈÝÁË
+		dout.write("abcdxy".getBytes());
 		dout.close();
 	}
 }

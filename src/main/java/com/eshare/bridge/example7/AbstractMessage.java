@@ -1,16 +1,16 @@
 package com.eshare.bridge.example7;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
+ * ³éÏóµÄÏûÏ¢¶ÔÏó
  */
 public abstract class AbstractMessage {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Êµï¿½Ö²ï¿½ï¿½ÖµÄ¶ï¿½ï¿½ï¿½
+	 * ³ÖÓĞÒ»¸öÊµÏÖ²¿·ÖµÄ¶ÔÏó
 	 */
 	protected MessageImplementor impl;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Êµï¿½Ö²ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ 
-	 * @param type ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Êµï¿½Ö²ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«ÈëÑ¡ÔñÊµÏÖ²¿·ÖµÄÀàĞÍ 
+	 * @param type ´«ÈëÑ¡ÔñÊµÏÖ²¿·ÖµÄÀàĞÍ
 	 */
 	public AbstractMessage(int type){
 		if(type==1){
@@ -23,9 +23,9 @@ public abstract class AbstractMessage {
 	}
 	
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½×ªï¿½ï¿½Êµï¿½Ö²ï¿½ï¿½ÖµÄ·ï¿½ï¿½ï¿½
-	 * @param message Òªï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
-	 * @param toUser ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Íµï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ô±
+	 * ·¢ËÍÏûÏ¢£¬×ªµ÷ÊµÏÖ²¿·ÖµÄ·½·¨
+	 * @param message Òª·¢ËÍµÄÏûÏ¢ÄÚÈİ
+	 * @param toUser °ÑÏûÏ¢·¢ËÍµÄÄ¿µÄÈËÔ±
 	 */
 	public void sendMessage(String message,String toUser){
 		this.impl.send(message, toUser);

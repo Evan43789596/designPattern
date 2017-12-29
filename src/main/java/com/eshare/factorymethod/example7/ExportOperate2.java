@@ -1,23 +1,23 @@
 package com.eshare.factorymethod.example7;
 /**
- * О©╫О©╫у╧ExportOperateО©╫О©╫О©╫Сё╛╪О©╫О©╫О©╫О©╫О©╫т╣О©╫О©╫О©╫XMLО©╫д╪О©╫
+ * ю╘у╧ExportOperate╤тоСё╛╪схК©ирт╣╪ЁЖXMLнд╪Ч
  */
 public class ExportOperate2 extends ExportOperate{
 	/**
-	 * О©╫О©╫О©╫г╦О©╫О©╫О©╫д╧О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫д╫с©з╤О©╫О©╫О©╫
-	 * @param type О©╫ц╩О©╫я║О©╫О©╫д╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫
-	 * @return О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫д╫с©з╤О©╫О©╫О©╫
+	 * ╦╡╦г╦╦юЮ╣д╧╓Ё╖╥╫╥╗ё╛╢╢╫╗╣╪ЁЖ╣днд╪Ч╤тоС╣д╫с©з╤тоС
+	 * @param type сц╩╖я║тЯ╣д╣╪ЁЖюЮпм
+	 * @return ╣╪ЁЖ╣днд╪Ч╤тоС╣д╫с©з╤тоС
 	 */
-	protected ExportFileApi factoryMethod(int type){
-		ExportFileApi api = null;
-		//О©╫О©╫О©╫О©╫х╚О©╫О©╫О©╫О©╫О©╫гёО©╫р╡О©╫О©╫О©╫О©╫я║О©╫О©╫О©╫т╪О©╫О©╫О©╫О©╫О©╫х╓О©╫д╦О©╫О©╫гёО©╫
-		//О©╫О©╫О©╫О©╫ж╩О©╫О©╫О©╫О©╫О©╫О©╫т╪О©╫О©╫б╣О©╫й╣О©╫жёО©╫О©╫О©╫О©╫О©╫О©╫д╡О©╫О©╫О©╫
-		if(type==3){
-			api = new ExportXml();
-		}else{
-			//О©╫О©╫О©╫О©╫О©╫д╩О©╫О©╫О©╫О©╫ц╦О©╫О©╫О©╫О©╫О©╫й╣О©╫О©╫
-			api = super.factoryMethod(type); 
-		}
-		return api; 
-	}
+//	protected ExportFileApi factoryMethod(int type){
+//		ExportFileApi api = null;
+//		//©иртх╚╡©╦╡╦гё╛р╡©иртя║тЯвт╪╨╦ппкх╓╣д╦╡╦гё╛
+//		//уБюОж╩оКлМ╪свт╪╨пб╣дй╣ожё╛фДкШ╣д╡╩╧э
+//		if(type==3){
+//			api = new ExportXml();
+//		}else{
+//			//фДкШ╣д╩╧йгхц╦╦юЮю╢й╣ож
+//			api = super.factoryMethod(type); 
+//		}
+//		return api; 
+//	}
 }

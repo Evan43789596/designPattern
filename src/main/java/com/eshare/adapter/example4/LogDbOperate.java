@@ -2,7 +2,7 @@ package com.eshare.adapter.example4;
 
 import java.util.List;
 /**
- * DB锟芥储锟斤拷志锟斤拷实锟街ｏ拷为锟剿简单ｏ拷锟斤拷锟斤拷筒锟饺ワ拷锟斤拷实锟街猴拷锟斤拷锟捷库交锟斤拷锟剿ｏ拷示锟斤拷一锟斤拷
+ * DB存储日志的实现，为了简单，这里就不去真的实现和数据库交互了，示意一下
  */
 public class LogDbOperate implements LogDbOperateApi{
 
@@ -21,6 +21,10 @@ public class LogDbOperate implements LogDbOperateApi{
 
 	public void updateLog(LogModel lm) {
 		System.out.println("now in LogDbOperate updateLog,lm="+lm);
+	}
+	
+	public void removeAll(){
+		System.out.println("now in LogDbOperate removeAll");
 	}
 
 }

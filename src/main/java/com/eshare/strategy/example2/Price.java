@@ -1,50 +1,50 @@
 package com.eshare.strategy.example2;
 /**
- * ï¿½Û¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û¸ï¿½Ä¹ï¿½ï¿½ï¿½
+ * ¼Û¸ñ¹ÜÀí£¬Ö÷ÒªÍê³É¼ÆËãÏò¿Í»§Ëù±¨¼Û¸ñµÄ¹¦ÄÜ
  */
 public class Price {
 	/**
-	 * ï¿½ï¿½ï¿½Û£ï¿½ï¿½Ô²ï¿½Í¬ï¿½ï¿½ï¿½ÍµÄ£ï¿½ï¿½ï¿½ï¿½ã²»Í¬ï¿½Ä¼Û¸ï¿½
-	 * @param goodsPrice ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½
-	 * @param customerType ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½Ó¦ï¿½Ã¸ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½Ä¼Û¸ï¿½
+	 * ±¨¼Û£¬¶Ô²»Í¬ÀàÐÍµÄ£¬¼ÆËã²»Í¬µÄ¼Û¸ñ
+	 * @param goodsPrice ÉÌÆ·ÏúÊÛÔ­¼Û
+	 * @param customerType ¿Í»§ÀàÐÍ
+	 * @return ¼ÆËã³öÀ´µÄ£¬Ó¦¸Ã¸ø¿Í»§±¨µÄ¼Û¸ñ
 	 */
 	public double quote(double goodsPrice,String customerType){
-		if("ï¿½ï¿½Í¨ï¿½Í»ï¿½".equals(customerType)){
+		if("ÆÕÍ¨¿Í»§".equals(customerType)){
 			return this.calcPriceForNormal(goodsPrice);
-		}else if("ï¿½Ï¿Í»ï¿½".equals(customerType)){
+		}else if("ÀÏ¿Í»§".equals(customerType)){
 			return this.calcPriceForOld(goodsPrice);
-		}else if("ï¿½ï¿½Í»ï¿½".equals(customerType)){
+		}else if("´ó¿Í»§".equals(customerType)){
 			return this.calcPriceForLarge(goodsPrice);		
 		}
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ç±ï¿½Ô­ï¿½ï¿½
+		//ÆäÓàÈËÔ±¶¼ÊÇ±¨Ô­¼Û
 		return goodsPrice;
 	}
 	/**
-	 * Îªï¿½Â¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ä¼Û¸ï¿½
-	 * @param goodsPrice ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½Ó¦ï¿½Ã¸ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½Ä¼Û¸ï¿½
+	 * ÎªÐÂ¿Í»§»òÕßÊÇÆÕÍ¨¿Í»§¼ÆËãÓ¦±¨µÄ¼Û¸ñ
+	 * @param goodsPrice ÉÌÆ·ÏúÊÛÔ­¼Û
+	 * @return ¼ÆËã³öÀ´µÄ£¬Ó¦¸Ã¸ø¿Í»§±¨µÄ¼Û¸ñ
 	 */
 	private double calcPriceForNormal(double goodsPrice){
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Â¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½Í»ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Û¿ï¿½");
+		System.out.println("¶ÔÓÚÐÂ¿Í»§»òÕßÊÇÆÕÍ¨¿Í»§£¬Ã»ÓÐÕÛ¿Û");
 		return goodsPrice;
 	}
 	/**
-	 * Îªï¿½Ï¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ä¼Û¸ï¿½
-	 * @param goodsPrice ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½Ó¦ï¿½Ã¸ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½Ä¼Û¸ï¿½
+	 * ÎªÀÏ¿Í»§¼ÆËãÓ¦±¨µÄ¼Û¸ñ
+	 * @param goodsPrice ÉÌÆ·ÏúÊÛÔ­¼Û
+	 * @return ¼ÆËã³öÀ´µÄ£¬Ó¦¸Ã¸ø¿Í»§±¨µÄ¼Û¸ñ
 	 */
 	private double calcPriceForOld(double goodsPrice){
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿Í»ï¿½ï¿½ï¿½Í³Ò»ï¿½Û¿ï¿½5%");
+		System.out.println("¶ÔÓÚÀÏ¿Í»§£¬Í³Ò»ÕÛ¿Û5%");
 		return goodsPrice*(1-0.05);
 	}
 	/**
-	 * Îªï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ä¼Û¸ï¿½
-	 * @param goodsPrice ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½Ó¦ï¿½Ã¸ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½Ä¼Û¸ï¿½
+	 * Îª´ó¿Í»§¼ÆËãÓ¦±¨µÄ¼Û¸ñ
+	 * @param goodsPrice ÉÌÆ·ÏúÊÛÔ­¼Û
+	 * @return ¼ÆËã³öÀ´µÄ£¬Ó¦¸Ã¸ø¿Í»§±¨µÄ¼Û¸ñ
 	 */
 	private double calcPriceForLarge(double goodsPrice){
-		System.out.println("ï¿½ï¿½ï¿½Ú´ï¿½Í»ï¿½ï¿½ï¿½Í³Ò»ï¿½Û¿ï¿½10%");
+		System.out.println("¶ÔÓÚ´ó¿Í»§£¬Í³Ò»ÕÛ¿Û10%");
 		return goodsPrice*(1-0.1);	
 	}
 }

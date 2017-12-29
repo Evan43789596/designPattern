@@ -1,10 +1,10 @@
 package com.eshare.strategy.example4;
 /**
- * 锟斤拷锟斤拷锟姐法实锟街ｏ拷为战锟皆猴拷锟斤拷锟酵伙拷锟酵伙拷锟斤拷锟斤拷应锟斤拷锟侥价革拷
+ * 具体算法实现，为战略合作客户客户计算应报的价格
  */
 public class CooperateCustomerStrategy implements Strategy{
 	public double calcPrice(double goodsPrice) {
-		System.out.println("锟斤拷锟斤拷战锟皆猴拷锟斤拷锟酵伙拷锟斤拷统一8锟斤拷");
+		System.out.println("对于战略合作客户，统一8折");
 		return goodsPrice*0.8;
 	}
 }

@@ -1,21 +1,21 @@
 package com.eshare.observer.example5;
 /**
- * 水锟绞观诧拷锟竭接口讹拷锟斤拷
+ * 水质观察者接口定义
  */
 public interface WatcherObserver {
 	/**
-	 * 锟斤拷通知锟侥凤拷锟斤拷
-	 * @param subject 锟斤拷锟诫被锟桔诧拷锟侥匡拷锟斤拷锟斤拷
+	 * 被通知的方法
+	 * @param subject 传入被观察的目标对象
 	 */
 	public void update(WaterQualitySubject subject);
 	/**
-	 * 锟斤拷锟矫观诧拷锟斤拷员锟斤拷职锟斤拷
-	 * @param job 锟桔诧拷锟斤拷员锟斤拷职锟斤拷
+	 * 设置观察人员的职务
+	 * @param job 观察人员的职务
 	 */
 	public void setJob(String job);
 	/**
-	 * 锟斤拷取锟桔诧拷锟斤拷员锟斤拷职锟斤拷
-	 * @return 锟桔诧拷锟斤拷员锟斤拷职锟斤拷
+	 * 获取观察人员的职务
+	 * @return 观察人员的职务
 	 */
 	public String getJob();
 }

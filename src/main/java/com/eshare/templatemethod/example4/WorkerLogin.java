@@ -1,20 +1,20 @@
 package com.eshare.templatemethod.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æµï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¹¤×÷ÈËÔ±µÇÂ¼¿ØÖÆµÄÂß¼­´¦Àí
  */
 public class WorkerLogin extends LoginTemplate{
-
+	
 	public LoginModel findLoginUser(String loginId) {
-		// ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½Ô¾ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¶ï¿½ï¿½ï¿½
+		// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓÐÄ¬ÈÏÊý¾ÝµÄ¶ÔÏó
 		LoginModel lm = new LoginModel();
 		lm.setLoginId(loginId);
 		lm.setPwd("workerpwd");
 		return lm;
 	}
 	public String encryptPwd(String pwd){
-		//ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Êµï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã£ï¿½MD5ï¿½ï¿½3DESï¿½ÈµÈ£ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½
-		System.out.println("Ê¹ï¿½ï¿½MD5ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		//¸²¸Ç¸¸ÀàµÄ·½·¨£¬Ìá¹©ÕæÕýµÄ¼ÓÃÜÊµÏÖ
+		//ÕâÀï¶ÔÃÜÂë½øÐÐ¼ÓÃÜ£¬±ÈÈçÊ¹ÓÃ£ºMD5¡¢3DESµÈµÈ£¬Ê¡ÂÔÁË
+		System.out.println("Ê¹ÓÃMD5½øÐÐÃÜÂë¼ÓÃÜ");
 		return pwd;
 	}
 }

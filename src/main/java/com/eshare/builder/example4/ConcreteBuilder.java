@@ -1,6 +1,6 @@
 package com.eshare.builder.example4;
 /**
- * ï¿½ï¿½ï¿½ì±£ï¿½Õºï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¹¹Ôì±£ÏÕºÏÍ¬¶ÔÏóµÄ¹¹½¨Æ÷
  */
 public class ConcreteBuilder {
 	private String contractId;
@@ -10,10 +10,10 @@ public class ConcreteBuilder {
 	private long endDate;
 	private String otherData;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ĞµÄ²ï¿½ï¿½ï¿½
-	 * @param contractId ï¿½ï¿½ï¿½Õºï¿½Í¬ï¿½ï¿½ï¿½
-	 * @param beginDate ï¿½ï¿½ï¿½Õ¿ï¿½Ê¼ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param endDate ï¿½ï¿½ï¿½ï¿½Ê§Ğ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë±ØĞëÒªÓĞµÄ²ÎÊı
+	 * @param contractId ±£ÏÕºÏÍ¬±àºÅ
+	 * @param beginDate ±£ÏÕ¿ªÊ¼ÉúĞ§µÄÈÕÆÚ
+	 * @param endDate ±£ÏÕÊ§Ğ§µÄÈÕÆÚ
 	 */
 	public ConcreteBuilder(String contractId,long beginDate,long endDate){
 		this.contractId = contractId;
@@ -21,35 +21,35 @@ public class ConcreteBuilder {
 		this.endDate = endDate;
 	}
 	/**
-	 * Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param personName  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ñ¡ÌîÊı¾İ£¬±»±£ÏÕÈËÔ±µÄÃû³Æ
+	 * @param personName  ±»±£ÏÕÈËÔ±µÄÃû³Æ
+	 * @return ¹¹½¨Æ÷¶ÔÏó
 	 */
 	public ConcreteBuilder setPersonName(String personName){
 		this.personName = personName;
 		return this;
 	}
 	/**
-	 *  Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param companyName ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 *  Ñ¡ÌîÊı¾İ£¬±»±£ÏÕ¹«Ë¾µÄÃû³Æ
+	 * @param companyName ±»±£ÏÕ¹«Ë¾µÄÃû³Æ
+	 * @return ¹¹½¨Æ÷¶ÔÏó
 	 */
 	public ConcreteBuilder setCompanyName(String companyName){
 		this.companyName = companyName;
 		return this;
 	}
 	/**
-	 * Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param otherData ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ñ¡ÌîÊı¾İ£¬ÆäËüÊı¾İ
+	 * @param otherData ÆäËüÊı¾İ
+	 * @return ¹¹½¨Æ÷¶ÔÏó
 	 */
 	public ConcreteBuilder setOtherData(String otherData){
 		this.otherData = otherData;
 		return this;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ó²¢·ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Õºï¿½Í¬ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ¹¹½¨ÕæÕıµÄ¶ÔÏó²¢·µ»Ø
+	 * @return ¹¹½¨µÄ±£ÏÕºÏÍ¬µÄ¶ÔÏó
 	 */
 	public InsuranceContract build(){
 		return new InsuranceContract(this);

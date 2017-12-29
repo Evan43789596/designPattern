@@ -2,13 +2,13 @@ package com.eshare.state.example2;
 
 
 /**
- * ï¿½ï¿½×°ï¿½ï¿½Contextï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ø¶ï¿½×´Ì¬ï¿½ï¿½Øµï¿½ï¿½ï¿½Îª
+ * ·â×°ÓëContextµÄÒ»¸öÌØ¶¨×´Ì¬Ïà¹ØµÄÐÐÎª
  */
 public interface State {
 	/**
-	 * ×´Ì¬ï¿½ï¿½Ó¦ï¿½Ä´ï¿½ï¿½ï¿½
-	 * @param sampleParameter Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å´«ï¿½ï¿½
-	 *             Ê²Ã´ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¼¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ×´Ì¬¶ÔÓ¦µÄ´¦Àí
+	 * @param sampleParameter Ê¾Àý²ÎÊý£¬ËµÃ÷¿ÉÒÔ´«Èë²ÎÊý£¬¾ßÌå´«Èë
+	 *             Ê²Ã´ÑùµÄ²ÎÊý£¬´«Èë¼¸¸ö²ÎÊý£¬ÓÉ¾ßÌåÓ¦ÓÃÀ´¾ßÌå·ÖÎö
 	 */
 	public void handle(String sampleParameter);
 }

@@ -1,10 +1,10 @@
 package com.eshare.adapter.example1;
 /**
- * ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÄ½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¶¨Òå¿Í»§¶ËÊ¹ÓÃµÄ½Ó¿Ú£¬ÓëÌØ¶¨ÁìÓòÏà¹Ø
  */
 public interface Target {
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+	 * Ê¾Òâ·½·¨£¬¿Í»§¶ËÇëÇó´¦ÀíµÄ·½·¨
 	 */
 	public void request();
 }

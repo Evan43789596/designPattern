@@ -3,23 +3,23 @@ package com.eshare.adapter.example2;
 import java.io.*;
 
 /**
- * ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½
+ * ÈÕÖ¾Êý¾Ý¶ÔÏó
  */
 public class LogModel implements Serializable{
 	/**
-	 * ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½
+	 * ÈÕÖ¾±àºÅ
 	 */
 	private String logId;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±
+	 * ²Ù×÷ÈËÔ±
 	 */
 	private String operateUser;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½yyyy-MM-dd HH:mm:ssï¿½Ä¸ï¿½Ê½ï¿½ï¿½Â¼
+	 * ²Ù×÷Ê±¼ä£¬ÒÔyyyy-MM-dd HH:mm:ssµÄ¸ñÊ½¼ÇÂ¼
 	 */
 	private String operateTime;	
 	/**
-	 * ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½
+	 * ÈÕÖ¾ÄÚÈÝ
 	 */
 	private String logContent;
 	

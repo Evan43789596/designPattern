@@ -1,15 +1,15 @@
 package com.eshare.command.example4;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼Ó·ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½Ð³ï¿½ï¿½ï¿½ï¿½Í»Ö¸ï¿½ï¿½Ä°ï¿½Å¥
+ * ¼ÆËãÆ÷Àà£¬¼ÆËãÆ÷ÉÏÓÐ¼Ó·¨°´Å¥¡¢¼õ·¨°´Å¥£¬»¹ÓÐ³·ÏúºÍ»Ö¸´µÄ°´Å¥
  */
 public class Calculator {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+	 * ÃüÁîµÄ²Ù×÷µÄÀúÊ·¼ÇÂ¼£¬ÔÚ³·ÏúÊ±ºòÓÃ
 	 */
 	private List<Command> undoCmds = new ArrayList<Command>();
 	/**
-	 * ï¿½ï¿½ï¿½î±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ú»Ö¸ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+	 * ÃüÁî±»³·ÏúµÄÀúÊ·¼ÇÂ¼£¬ÔÚ»Ö¸´Ê±ºòÓÃ
 	 */
 	private List<Command> redoCmds = new ArrayList<Command>();
 	
@@ -23,38 +23,38 @@ public class Calculator {
 	}	
 	public void addPressed(){
 		this.addCmd.execute();
-		//ï¿½Ñ²ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+		//°Ñ²Ù×÷¼ÇÂ¼µ½ÀúÊ·¼ÇÂ¼ÀïÃæ
 		undoCmds.add(this.addCmd);
 	}
 	public void substractPressed(){
 		this.substractCmd.execute();
-		//ï¿½Ñ²ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+		//°Ñ²Ù×÷¼ÇÂ¼µ½ÀúÊ·¼ÇÂ¼ÀïÃæ
 		undoCmds.add(this.substractCmd);
 	}
 	public void undoPressed(){
 		if(this.undoCmds.size()>0){
-			//È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//È¡³ö×îºóÒ»¸öÃüÁîÀ´³·Ïú
 			Command cmd = this.undoCmds.get(this.undoCmds.size()-1);
 			cmd.undo();
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»Ö¸ï¿½ï¿½Ä¹ï¿½ï¿½Ü£ï¿½ï¿½Ç¾Í°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+			//Èç¹û»¹ÓÐ»Ö¸´µÄ¹¦ÄÜ£¬ÄÇ¾Í°ÑÕâ¸öÃüÁî¼ÇÂ¼µ½»Ö¸´µÄÀúÊ·¼ÇÂ¼ÀïÃæ
 			this.redoCmds.add(cmd );
-			//È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//È»ºó°Ñ×îºóÒ»¸öÃüÁîÉ¾³ýµô£¬
 			this.undoCmds.remove(cmd);
 		}else{
-			System.out.println("ï¿½Ü±ï¿½Ç¸ï¿½ï¿½Ã»ï¿½Ð¿É³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			System.out.println("ºÜ±§Ç¸£¬Ã»ÓÐ¿É³·ÏúµÄÃüÁî");
 		}
 	}
 	public void redoPressed(){
 		if(this.redoCmds.size()>0){
-			//È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//È¡³ö×îºóÒ»¸öÃüÁîÀ´ÖØ×ö
 			Command cmd = this.redoCmds.get(this.redoCmds.size()-1);
 			cmd.execute();		
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½É³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+			//°ÑÕâ¸öÃüÁî¼ÇÂ¼µ½¿É³·ÏúµÄÀúÊ·¼ÇÂ¼ÀïÃæ
 			this.undoCmds.add(cmd);
-			//È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½
+			//È»ºó°Ñ×îºóÒ»¸öÃüÁîÉ¾³ýµô
 			this.redoCmds.remove(cmd);
 		}else{
-			System.out.println("ï¿½Ü±ï¿½Ç¸ï¿½ï¿½Ã»ï¿½Ð¿É»Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			System.out.println("ºÜ±§Ç¸£¬Ã»ÓÐ¿É»Ö¸´µÄÃüÁî");
 		}
 	}
 }

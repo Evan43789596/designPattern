@@ -2,30 +2,30 @@ package com.eshare.flyweight.example2;
 
 import java.util.*;
 /**
- * ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½
+ * ÏíÔª¹¤³§
  */
 public class FlyweightFactory {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½flyweightï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * »º´æ¶à¸öflyweight¶ÔÏó£¬ÕâÀïÖ»ÊÇÊ¾ÒâÒ»ÏÂ
 	 */
 	private Map<String,Flyweight> fsMap = new HashMap<String,Flyweight>();
 	/**
-	 * ï¿½ï¿½È¡keyï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½
-	 * @param key ï¿½ï¿½È¡ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½keyï¿½ï¿½Ö»ï¿½ï¿½Ê¾ï¿½ï¿½
-	 * @return keyï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½
+	 * »ñÈ¡key¶ÔÓ¦µÄÏíÔª¶ÔÏó
+	 * @param key »ñÈ¡ÏíÔª¶ÔÏóµÄkey£¬Ö»ÊÇÊ¾Òâ
+	 * @return key¶ÔÓ¦µÄÏíÔª¶ÔÏó
 	 */
 	public Flyweight getFlyweight(String key) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½		
-		//1ï¿½ï¿½ï¿½È´Ó»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò£ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½keyï¿½ï¿½Ó¦ï¿½ï¿½Flyweightï¿½ï¿½ï¿½ï¿½
+		//Õâ¸ö·½·¨ÀïÃæ»ù±¾µÄÊµÏÖ²½ÖèÈçÏÂ£º		
+		//1£ºÏÈ´Ó»º´æÀïÃæ²éÕÒ£¬ÊÇ·ñ´æÔÚkey¶ÔÓ¦µÄFlyweight¶ÔÏó
 		Flyweight f = fsMap.get(key);
-		//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Flyweightï¿½ï¿½ï¿½ï¿½
+		//2£ºÈç¹û´æÔÚ£¬¾Í·µ»ØÏà¶ÔÓ¦µÄFlyweight¶ÔÏó
 		if(f==null){
-			//3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			//3.1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Âµï¿½Flyweightï¿½ï¿½ï¿½ï¿½
+			//3£ºÈç¹û²»´æÔÚ
+			//3.1£º´´½¨Ò»¸öÐÂµÄFlyweight¶ÔÏó
 			f = new ConcreteFlyweight(key);
-			//3.2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½Flyweightï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//3.2£º°ÑÕâ¸öÐÂµÄFlyweight¶ÔÏóÌí¼Óµ½»º´æÀïÃæ
 			fsMap.put(key,f);
-			//3.3ï¿½ï¿½È»ï¿½ó·µ»ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½Flyweightï¿½ï¿½ï¿½ï¿½
+			//3.3£ºÈ»ºó·µ»ØÕâ¸öÐÂµÄFlyweight¶ÔÏó
 		}
 		return f;
 	}

@@ -1,14 +1,14 @@
 package com.eshare.command.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ÐµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½Ö¿É³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÃüÁî½Ó¿Ú£¬ÉùÃ÷Ö´ÐÐµÄ²Ù×÷£¬Ö§³Ö¿É³·Ïú²Ù×÷
  */
 public interface Command {
 	/**
-	 * Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä²ï¿½ï¿½ï¿½
+	 * Ö´ÐÐÃüÁî¶ÔÓ¦µÄ²Ù×÷
 	 */
 	public void execute();
 	/**
-	 * Ö´ï¿½Ð³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä²ï¿½ï¿½ï¿½
+	 * Ö´ÐÐ³·ÏúÃüÁî¶ÔÓ¦µÄ²Ù×÷
 	 */
 	public void undo();
 }

@@ -1,21 +1,21 @@
 package com.eshare.chainofresponsibility.example5;
 /**
- * я┐╜я┐╜╫░я┐╜я┐╜╘д╓зя┐╜я┐╜я┐╜├╖я┐╜я┐╜я┐╜я┐╜я┐╜╥╡я┐╜я┐╜я┐╜я┐╜╪╡я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜
+ * ╖т╫░╕·╘д╓з▓ю┬├╖╤╔ъ╟ы╥╡╬ё╧р╣╪╡─╟ы╟є╩¤╛▌
  */
 public class PreFeeRequestModel extends RequestModel{
 	/**
-	 * ╘╝я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╥╡я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜
+	 * ╘╝╢и╛▀╠х╡─╥╡╬ё└р╨═
 	 */
 	public final static String FEE_TYPE = "preFee";
 	public PreFeeRequestModel() {
 		super(FEE_TYPE);
 	}
 	/**
-	 * я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜
+	 * ╔ъ╟ы╚╦
 	 */
 	private String user;
 	/**
-	 * я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜
+	 * ╔ъ╟ы╜Ё╢ю
 	 */
 	private double fee;
 	public String getUser() {

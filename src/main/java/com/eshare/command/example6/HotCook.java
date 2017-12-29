@@ -1,47 +1,47 @@
 package com.eshare.command.example6;
 
 /**
- * ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È²ËµÄ³ï¿½Ê¦
+ * ³øÊ¦¶ÔÏó£¬×öÈÈ²ËµÄ³øÊ¦
  */
 public class HotCook implements CookApi,Runnable{
 	/**
-	 * ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½
+	 * ³øÊ¦ÐÕÃû
 	 */
 	private String name;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½
-	 * @param name ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë³øÊ¦ÐÕÃû
+	 * @param name ³øÊ¦ÐÕÃû
 	 */
 	public HotCook(String name){
 		this.name = name;
 	}
 	
 	public void cook(int tableNum,String name) {
-		//Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½Ê±ï¿½ï¿½ï¿½Ç²ï¿½Ò»ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ò»ï¿½ï¿½
+		//Ã¿´Î×ö²ËµÄÊ±¼äÊÇ²»Ò»¶¨µÄ£¬ÓÃ¸öËæ»úÊýÀ´Ä£ÄâÒ»ÏÂ
 		int cookTime = (int)(20 * Math.random());
-		System.out.println(this.name+"ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½Îª"+tableNum+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+name);
+		System.out.println(this.name+"³øÊ¦ÕýÔÚÎª"+tableNum+"ºÅ×À×ö£º"+name);
 		try {
-			//ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ã´ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//ÈÃÏß³ÌÐÝÏ¢ÕâÃ´³¤Ê±¼ä£¬±íÊ¾ÕýÔÚ×ö²Ë
 			Thread.sleep(cookTime);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println(this.name+"ï¿½ï¿½Ê¦Îª"+tableNum+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½"+name+",ï¿½ï¿½ï¿½Æºï¿½Ê±="+cookTime+"ï¿½ï¿½");
+		System.out.println(this.name+"³øÊ¦Îª"+tableNum+"ºÅ×À×öºÃÁË£º"+name+",¹²¼ÆºÄÊ±="+cookTime+"Ãë");
 	}
 	
 	public void run() {
 		while(true){
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//µ½ÃüÁî¶ÓÁÐÀïÃæ»ñÈ¡ÃüÁî¶ÔÏó
 			Command cmd = CommandQueue.getOneCommand();
 			if(cmd != null){
-				//Ëµï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½ï¿½ï¿½
-				//ï¿½ï¿½ÎªÇ°ï¿½æ¶¼ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-				//ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½Çµï¿½Ç°ï¿½ï¿½Ê¦Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//ËµÃ÷È¡µ½ÃüÁî¶ÔÏóÁË£¬Õâ¸öÃüÁî¶ÔÏó»¹Ã»ÓÐÉèÖÃ½ÓÊÕÕß
+				//ÒòÎªÇ°Ãæ¶¼»¹²»ÖªµÀµ½µ×ÄÄÒ»¸ö³øÊ¦À´ÕæÕýÖ´ÐÐÕâ¸öÃüÁî
+				//ÏÖÔÚÖªµÀÁË£¬¾ÍÊÇµ±Ç°³øÊ¦ÊµÀý£¬ÉèÖÃµ½ÃüÁî¶ÔÏóÀïÃæ
 				cmd.setCookApi(this);
-				//È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//È»ºóÕæÕýÖ´ÐÐÕâ¸öÃüÁî
 				cmd.execute();
 			}
-			//ï¿½ï¿½Ï¢1ï¿½ï¿½
+			//ÐÝÏ¢1Ãë
 			try {
 				Thread.sleep(1000L);
 			} catch (InterruptedException e) {

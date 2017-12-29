@@ -2,20 +2,20 @@ package com.eshare.state.example8;
 
 public class Client {
 	public static void main(String[] args) {
-		//О©╫О©╫О©╫О©╫р╣О©╫О©╫О©╫О©╫Сё╛╡О©╫О©╫О©╫О©╫О©╫р╣О©╫О©╫О©╫О©╫О©╫О©╫
+		//╢╢╫╗р╣нЯ╤тоСё╛╡╒иХжцр╣нЯйЩ╬щ
 		LeaveRequestModel lrm = new LeaveRequestModel();
-		lrm.setUser("п║О©╫О©╫");
+		lrm.setUser("п║юН");
 		lrm.setBeginDate("2010-02-08");
 		lrm.setLeaveDays(5);
 		
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╤О©╫О©╫О©╫
+		//╢╢╫╗иообнд╤тоС
 		LeaveRequestContext request = new LeaveRequestContext();
-		//н╙О©╫О©╫О©╫О©╫О©╫д╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫р╣О©╫О©╫О©╫О©╫О©╫щ╤О©╫О©╫О©╫
+		//н╙иообнд╤тоСиХжцр╣нЯйЩ╬щ╤тоС
 		request.setBusinessVO(lrm);
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫н╙О©╫О©╫й╪О©╫О©╫в╢л╛О©╫О©╫О©╫т╨О©╫м╡О©╫О©╫О©╫О©╫О©╫
+		//еДжциообндё╛вВн╙©╙й╪╣дв╢л╛ё╛рт╨С╬м╡╩╧эак
 		request.setState(new ProjectManagerState());
 		
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д©О©╫й╪О©╫О©╫О©╫О©╫О©╫О©╫
+		//гКгСиообндё╛хциообнд©╙й╪╢╕юМ╧╓вВ
 		request.doWork();
 	}
 }

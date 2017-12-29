@@ -1,16 +1,16 @@
 package com.eshare.visitor.example6;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½á¹¹ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ß½Ó¿ï¿½
+ * ·ÃÎÊ×éºÏ¶ÔÏó½á¹¹µÄ·ÃÎÊÕß½Ó¿Ú
  */
 public interface Visitor {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½àµ±ï¿½Ú¸ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ßµÄ¹ï¿½ï¿½ï¿½
-	 * @param composite ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½
+	 * ·ÃÎÊ×éºÏ¶ÔÏó£¬Ïàµ±ÓÚ¸ø×éºÏ¶ÔÏóÌí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
+	 * @param composite ×éºÏ¶ÔÏó
 	 */
 	public void visitComposite(Composite composite);
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½àµ±ï¿½Ú¸ï¿½Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ßµÄ¹ï¿½ï¿½ï¿½
-	 * @param leaf Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½
+	 * ·ÃÎÊÒ¶×Ó¶ÔÏó£¬Ïàµ±ÓÚ¸øÒ¶×Ó¶ÔÏóÌí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
+	 * @param leaf Ò¶×Ó¶ÔÏó
 	 */
 	public void visitLeaf(Leaf leaf);
 }

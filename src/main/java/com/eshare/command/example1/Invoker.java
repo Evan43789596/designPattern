@@ -1,24 +1,24 @@
 package com.eshare.command.example1;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * µ÷ÓÃÕß
  */
 public class Invoker {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓĞÃüÁî¶ÔÏó
 	 */
 	private Command command = null;
 	/**
-	 * ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param command ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉèÖÃµ÷ÓÃÕß³ÖÓĞµÄÃüÁî¶ÔÏó
+	 * @param command ÃüÁî¶ÔÏó
 	 */
 	public void setCommand(Command command) {
 		this.command = command;
 	}
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ê¾Òâ·½·¨£¬ÒªÇóÃüÁîÖ´ĞĞÇëÇó
 	 */
 	public void runCommand() {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğ·ï¿½ï¿½ï¿½
+		//µ÷ÓÃÃüÁî¶ÔÏóµÄÖ´ĞĞ·½·¨
 		command.execute();
 	}
 }

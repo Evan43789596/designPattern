@@ -1,11 +1,11 @@
 package com.eshare.command.example5;
 /**
- * 锟斤拷师锟侥接匡拷
+ * 厨师的接口
  */
 public interface CookApi {
 	/**
-	 * 示锟解，锟斤拷锟剿的凤拷锟斤拷
-	 * @param name 锟斤拷锟斤拷
+	 * 示意，做菜的方法
+	 * @param name 菜名
 	 */
 	public void cook(String name);
 }

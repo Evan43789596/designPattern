@@ -2,20 +2,20 @@ package com.eshare.mediator.example2;
 
 public class Client {
 	public static void main(String[] args) {
-		//1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ß¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£º´´½¨ÖÐ½éÕß¡ª¡ªÖ÷°å¶ÔÏó
 		MotherBoard mediator = new MotherBoard();
-		//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½
+		//2£º´´½¨Í¬ÊÂÀà
 		CDDriver cd = new CDDriver(mediator);
 		CPU cpu = new CPU(mediator);
 		VideoCard vc = new VideoCard(mediator);
 		SoundCard sc = new SoundCard(mediator);
-		//3ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Í¬ï¿½ï¿½
+		//3£ºÈÃÖÐ½éÕßÖªµÀËùÓÐµÄÍ¬ÊÂ
 		mediator.setCdDriver(cd);
 		mediator.setCpu(cpu);
 		mediator.setVideoCard(vc);
 		mediator.setSoundCard(sc);
 		
-		//4ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+		//4£º¿ªÊ¼¿´µçÓ°£¬°Ñ¹âÅÌ·ÅÈë¹âÇý£¬¹âÇý¿ªÊ¼¶ÁÅÌ
 		cd.readCD();
 	}
 }

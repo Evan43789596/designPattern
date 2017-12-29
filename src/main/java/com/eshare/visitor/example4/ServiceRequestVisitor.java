@@ -1,14 +1,14 @@
 package com.eshare.visitor.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ß£ï¿½Êµï¿½Ö¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
+ * ¾ßÌåµÄ·ÃÎÊÕß£¬ÊµÏÖ¿Í»§Ìá³ö·şÎñÇëÇóµÄ¹¦ÄÜ
  */
 public class ServiceRequestVisitor implements Visitor {
 	public void visitEnterpriseCustomer(EnterpriseCustomer ec){
-		//ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		System.out.println(ec.getName()+"ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		//ÆóÒµ¿Í»§Ìá³öµÄ¾ßÌå·şÎñÇëÇó
+		System.out.println(ec.getName()+"ÆóÒµÌá³ö·şÎñÇëÇó");
 	}
 	public void visitPersonalCustomer(PersonalCustomer pc){
-		//ï¿½ï¿½ï¿½Ë¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		System.out.println("ï¿½Í»ï¿½"+pc.getName()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		//¸öÈË¿Í»§Ìá³öµÄ¾ßÌå·şÎñÇëÇó
+		System.out.println("¿Í»§"+pc.getName()+"Ìá³ö·şÎñÇëÇó");
 	}
 }

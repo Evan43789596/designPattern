@@ -1,7 +1,7 @@
 package com.eshare.flyweight.example5;
 import java.util.*;
 /**
- * ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö³Éµï¿½ï¿½ï¿½
+ * °²È«¹ÜÀí£¬ÊµÏÖ³Éµ¥Àý
  */
 public class SecurityMgr {
 	private static SecurityMgr securityMgr = new SecurityMgr();
@@ -11,16 +11,16 @@ public class SecurityMgr {
 		return securityMgr;
 	}
 	/**
-	 * ï¿½Ð¶ï¿½Ä³ï¿½Ã»ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½È«Êµï¿½ï¿½ï¿½Ç·ï¿½Óµï¿½ï¿½Ä³È¨ï¿½ï¿½
-	 * @param user ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þµï¿½ï¿½Ã»ï¿½ 
-	 * @param securityEntity ï¿½ï¿½È«Êµï¿½ï¿½
-	 * @param permit È¨ï¿½ï¿½
-	 * @return trueï¿½ï¿½Ê¾Óµï¿½ï¿½ï¿½ï¿½Ó¦È¨ï¿½Þ£ï¿½falseï¿½ï¿½Ê¾Ã»ï¿½ï¿½ï¿½ï¿½Ó¦È¨ï¿½ï¿½
+	 * ÅÐ¶ÏÄ³ÓÃ»§¶ÔÄ³¸ö°²È«ÊµÌåÊÇ·ñÓµÓÐÄ³È¨ÏÞ
+	 * @param user ±»¼ì²âÈ¨ÏÞµÄÓÃ»§ 
+	 * @param securityEntity °²È«ÊµÌå
+	 * @param permit È¨ÏÞ
+	 * @return true±íÊ¾ÓµÓÐÏàÓ¦È¨ÏÞ£¬false±íÊ¾Ã»ÓÐÏàÓ¦È¨ÏÞ
 	 */
 	public boolean hasPermit(String user,String securityEntity,String permit){
 		Collection<Flyweight> col = this.queryByUser(user);
 		if(col==null || col.size()==0){
-			System.out.println(user+"Ã»ï¿½Ðµï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½È¨ï¿½ï¿½");
+			System.out.println(user+"Ã»ÓÐµÇÂ¼»òÊÇÃ»ÓÐ±»·ÖÅäÈÎºÎÈ¨ÏÞ");
 			return false;
 		}
 		for(Flyweight fm : col){
@@ -31,9 +31,9 @@ public class SecurityMgr {
 		return false;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ð»ï¿½È¡Ä³ï¿½ï¿½ï¿½ï¿½Óµï¿½Ðµï¿½È¨ï¿½ï¿½
-	 * @param user ï¿½ï¿½Òªï¿½ï¿½È¡ï¿½ï¿½Óµï¿½Ðµï¿½È¨ï¿½Þµï¿½ï¿½ï¿½Ô±
-	 * @return Ä³ï¿½ï¿½ï¿½ï¿½Óµï¿½Ðµï¿½È¨ï¿½ï¿½
+	 * ´ÓÊý¾Ý¿âÖÐ»ñÈ¡Ä³ÈËËùÓµÓÐµÄÈ¨ÏÞ
+	 * @param user ÐèÒª»ñÈ¡ËùÓµÓÐµÄÈ¨ÏÞµÄÈËÔ±
+	 * @return Ä³ÈËËùÓµÓÐµÄÈ¨ÏÞ
 	 */
 	private Collection<Flyweight> queryByUser(String user){
 		Collection<Flyweight> col = new ArrayList<Flyweight>();
@@ -43,13 +43,13 @@ public class SecurityMgr {
 			if(ss[0].equals(user)){
 				Flyweight fm = null;
 				if(ss[3].equals("2")){
-					//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½
+					//±íÊ¾ÊÇ×éºÏ
 					fm = new UnsharedConcreteFlyweight();
-					//ï¿½ï¿½È¡ï¿½ï¿½Òªï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½
+					//»ñÈ¡ÐèÒª×éºÏµÄÊý¾Ý
 					String tempSs[] = TestDB.mapDB.get(ss[1]);
 					for(String tempS : tempSs){
 						Flyweight tempFm = FlyweightFactory.getInstance().getFlyweight(tempS);
-						//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½
+						//°ÑÕâ¸ö¶ÔÏó¼ÓÈëµ½×éºÏ¶ÔÏóÖÐ
 						fm.add(tempFm);
 					}
 				}else{

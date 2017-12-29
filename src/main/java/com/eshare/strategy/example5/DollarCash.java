@@ -1,10 +1,10 @@
 package com.eshare.strategy.example5;
 /**
- * 锟斤拷元锟街斤拷支锟斤拷
+ * 美元现金支付
  */
 public class DollarCash implements PaymentStrategy{
 	
 	public void pay(PaymentContext ctx) {
-		System.out.println("锟斤拷锟节革拷"+ctx.getUserName()+"锟斤拷元锟街斤拷支锟斤拷"+ctx.getMoney()+"元");
+		System.out.println("现在给"+ctx.getUserName()+"美元现金支付"+ctx.getMoney()+"元");
 	}
 }

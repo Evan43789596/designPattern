@@ -4,15 +4,15 @@ import java.util.*;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 /**
- * т╙О©╫О©╫О©╫О©╫н╙О©╫О©╫О©╫у╫О©╫О©╫О©╫О©╫с╕О©╫д╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫м╡О©╫ж╢О©╫О©╫О©╫п╪О©╫т╙О©╫О©╫
+ * т╙кьвВн╙╥гжу╫А╥Ш╤тс╕╣д╫БймфВё╛╫Бйм╡╒ж╢ппжп╪Дт╙кь
  */
 public class ElementExpression extends ReadXmlExpression{
 	/**
-	 * О©╫О©╫О©╫О©╫О©╫О©╫б╪О©╫О©╫о╣О©╫ReadXmlExpressionт╙О©╫О©╫
+	 * сцю╢╪гб╪вИ╨о╣дReadXmlExpressionт╙кь
 	 */
 	private Collection<ReadXmlExpression> eles = new ArrayList<ReadXmlExpression>();
 	/**
-	 * т╙О©╫ь╣О©╫О©╫О©╫О©╫О©╫
+	 * т╙кь╣дцШЁф
 	 */
 	private String eleName = "";
 	public ElementExpression(String eleName){
@@ -28,20 +28,20 @@ public class ElementExpression extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╣О©╫г╟т╙О©╫О©╫О©╫О©╫н╙О©╫О©╫О©╫О©╫т╙О©╫О©╫
-		//О©╫О©╫О©╫р╣О©╫О©╫О©╫г╟т╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫с╕О©╫О©╫xmlт╙О©╫ьёО©╫О©╫О©╫О©╫О©╫О©╫ц╩ь╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+		//охх║ЁЖиообндюО╣д╣╠г╟т╙кьвВн╙╦╦╪╤т╙кь
+		//╡Иур╣╫╣╠г╟т╙кьцШЁфкЫ╤тс╕╣дxmlт╙кьё╛╡╒иХжц╩ь╣╫иообнджп
 		Element pEle = c.getPreEle();
 		if(pEle==null){
-			//к╣О©╫О©╫О©╫О©╫О©╫з╩О©╫х║О©╫О©╫О©╫г╦О©╫т╙О©╫О©╫
+			//к╣цВожтз╩Ях║╣дйг╦Ыт╙кь
 			c.setPreEle(c.getDocument().getDocumentElement());
 		}else{
-			//О©╫О©╫О©╫щ╦О©╫О©╫О©╫т╙О©╫ь╨О©╫р╙О©╫О©╫О©╫р╣О©╫т╙О©╫ь╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫х║О©╫О©╫г╟О©╫О©╫т╙О©╫О©╫
+			//╦Ы╬щ╦╦╪╤т╙кь╨мр╙╡Иур╣дт╙кь╣дцШЁфю╢╩Ях║╣╠г╟╣дт╙кь
 			Element nowEle = c.getNowEle(pEle, eleName);
-			//О©╫я╣О©╫г╟О©╫О©╫х║О©╫О©╫т╙О©╫ь╥е╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+			//╟я╣╠г╟╩Ях║╣дт╙кь╥е╣╫иообндюОцФ
 			c.setPreEle(nowEle);
 		}
 		
-		//я╜О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╙О©╫ь╣О©╫interpretО©╫О©╫О©╫О©╫
+		//я╜╩╥╣Всцвст╙кь╣дinterpret╥╫╥╗
 		String [] ss = null;
 		for(ReadXmlExpression ele : eles){
 			ss = ele.interpret(c);

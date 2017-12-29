@@ -1,75 +1,76 @@
 package com.eshare.prototype.example1;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½
+ * ´¦Àí¶©µ¥µÄÒµÎñ¶ÔÏó
  */
 public class OrderBusiness {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
-	 * @param order ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿Ú¶ï¿½ï¿½ï¿½
+	 * ´´½¨¶©µ¥µÄ·½·¨
+	 * @param order ¶©µ¥µÄ½Ó¿Ú¶ÔÏó
 	 */
 	public void saveOrder(OrderApi order){
-		//ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Òªï¿½ó£¬µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½Ä²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1000ï¿½ï¿½Ê±ï¿½ò£¬¾ï¿½ï¿½ï¿½Òªï¿½Ñ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½
-		//ï¿½ï¿½È»ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1000Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½É³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½
+		//¸ù¾ÝÒµÎñÒªÇó£¬µ±¶©µ¥µÄÔ¤¶¨µÄ²úÆ·ÊýÁ¿³¬¹ý1000µÄÊ±ºò£¬¾ÍÐèÒª°Ñ¶©µ¥²ð³ÉÁ½·Ý¶©µ¥
+		//µ±È»Èç¹ûÒª×öºÃ£¬ÕâÀïµÄ1000Ó¦¸Ã×ö³É³£Á¿£¬ÕâÃ´×öÊÇÎªÁËÑÝÊ¾¼òµ¥
 		
-		//1ï¿½ï¿½ï¿½Ð¶Ïµï¿½Ç°ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½1000
+		//1£ºÅÐ¶Ïµ±Ç°µÄÔ¤¶¨²úÆ·ÊýÁ¿ÊÇ·ñ´óÓÚ1000
 		while(order.getOrderProductNum() > 1000){
-			//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			//2.1ï¿½ï¿½ï¿½Â½ï¿½Ò»ï¿½Ý¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬
+			//2£ºÈç¹û´óÓÚ£¬»¹ÐèÒª¼ÌÐø²ð·Ö
+			//2.1ÔÙÐÂ½¨Ò»·Ý¶©µ¥£¬¸ú´«ÈëµÄ¶©µ¥³ýÁËÊýÁ¿²»Ò»ÑùÍâ£¬ÆäËû¶¼ÏàÍ¬
 			OrderApi newOrder = null;
+			
 			if(order instanceof PersonalOrder){
-				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ÂµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//´´½¨ÏàÓ¦µÄÐÂµÄ¶©µ¥¶ÔÏó
 				PersonalOrder p2 = new PersonalOrder();
-				//È»ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Îª1000
+				//È»ºó½øÐÐ¸³Öµ£¬µ«ÊÇ²úÆ·ÊýÁ¿Îª1000
 				PersonalOrder p1 = (PersonalOrder)order;
 				p2.setCustomerName(p1.getCustomerName());
 				p2.setProductId(p1.getProductId());			
 				p2.setOrderProductNum(1000);
-				//È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½newOrder
+				//È»ºóÔÙÉèÖÃ¸ønewOrder
 				newOrder = p2;
 			}else if(order instanceof EnterpriseOrder){
-				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//´´½¨ÏàÓ¦µÄ¶©µ¥¶ÔÏó
 				EnterpriseOrder e2 = new EnterpriseOrder();
-				//È»ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Îª1000
+				//È»ºó½øÐÐ¸³Öµ£¬µ«ÊÇ²úÆ·ÊýÁ¿Îª1000
 				EnterpriseOrder e1 = (EnterpriseOrder)order;
 				e2.setEnterpriseName(e1.getEnterpriseName());
 				e2.setProductId(e1.getProductId());
 				e2.setOrderProductNum(1000);
-				//È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½newOrder
+				//È»ºóÔÙÉèÖÃ¸ønewOrder
 				newOrder = e2;
-			}			
+			}
 			
-			//2.2Ô­ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã³É¼ï¿½ï¿½ï¿½1000
+			//2.2Ô­À´µÄ¶©µ¥±£Áô£¬°ÑÊýÁ¿ÉèÖÃ³É¼õÉÙ1000
 			order.setOrderProductNum(order.getOrderProductNum()-1000);
 			
-			//È»ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
-			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½=="+newOrder);
+			//È»ºóÊÇÒµÎñ¹¦ÄÜ´¦Àí£¬Ê¡ÂÔÁË£¬´òÓ¡Êä³ö£¬¿´Ò»ÏÂ
+			System.out.println("²ð·ÖÉú³É¶©µ¥=="+newOrder);
 		}
 		
-		//3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½Ö±ï¿½ï¿½Òµï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
-		System.out.println("ï¿½ï¿½ï¿½ï¿½=="+order);
+		//3£º²»³¬¹ý£¬ÄÇ¾ÍÖ±½ÓÒµÎñ¹¦ÄÜ´¦Àí£¬Ê¡ÂÔÁË£¬´òÓ¡Êä³ö£¬¿´Ò»ÏÂ
+		System.out.println("¶©µ¥=="+order);
 		
 	}
 	
 //	public void saveOrder2(OrderApi order){
 //		int oldNum = order.getOrderProductNum();
 //		while(oldNum > 1000){
-//			//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ö³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//			//¶¨ÒåÒ»¸ö±íÊ¾±»²ð·Ö³öÀ´µÄÐÂ¶©µ¥¶ÔÏó
 //			OrderApi newOrder = null;
 //			
 //			if(order instanceof PersonalOrder){
-//				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//				//´´½¨ÏàÓ¦µÄ¶©µ¥¶ÔÏó
 //				PersonalOrder p2 = new PersonalOrder();
-//				//È»ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½Öµï¿½È£ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½
-//				//È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½newOrder
+//				//È»ºó½øÐÐ¸³ÖµµÈ£¬Ê¡ÂÔÁË
+//				//È»ºóÔÙÉèÖÃ¸ønewOrder
 //				newOrder = p2;
 //			}else if(order instanceof EnterpriseOrder){
-//				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//				//´´½¨ÏàÓ¦µÄ¶©µ¥¶ÔÏó
 //				EnterpriseOrder e2 = new EnterpriseOrder();
-//				//È»ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½Öµï¿½È£ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½
-//				//È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½newOrder
+//				//È»ºó½øÐÐ¸³ÖµµÈ£¬Ê¡ÂÔÁË
+//				//È»ºóÔÙÉèÖÃ¸ønewOrder
 //				newOrder = e2;
 //			}			
-//			//È»ï¿½ï¿½ï¿½ï¿½Ð²ï¿½Öºï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½Ü´ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½
+//			//È»ºó½øÐÐ²ð·ÖºÍÆäËûÒµÎñ¹¦ÄÜ´¦Àí£¬Ê¡ÂÔÁË
 //		}		
 //	}
 }

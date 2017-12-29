@@ -1,14 +1,14 @@
 package com.eshare.chainofresponsibility.example6;
 /**
- * ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þ¼ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ½øÐÐÈ¨ÏÞ¼ì²éµÄÖ°Ôð¶ÔÏó
  */
 public class SaleSecurityCheck extends SaleHandler{
 	public boolean sale(String user, String customer, SaleModel saleModel) {
-		//ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þ¼ï¿½é£¬ï¿½òµ¥µã£¬ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½
-		if("Ð¡ï¿½ï¿½".equals(user)){
+		//½øÐÐÈ¨ÏÞ¼ì²é£¬¼òµ¥µã£¬¾ÍÐ¡ÀîÄÜÍ¨¹ý
+		if("Ð¡Àî".equals(user)){
 			return this.successor.sale(user, customer, saleModel);
 		}else{
-			System.out.println("ï¿½Ô²ï¿½ï¿½ï¿½"+user+"ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½È¨ï¿½ï¿½");
+			System.out.println("¶Ô²»Æð"+user+"£¬ÄãÃ»ÓÐ±£´æÏúÊÛÐÅÏ¢µÄÈ¨ÏÞ");
 			return false;
 		}		
 	}

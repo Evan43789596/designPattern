@@ -1,42 +1,42 @@
 package com.eshare.proxy.example4;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¶©µ¥µÄ´úÀí¶ÔÏó
  */
 public class OrderProxy implements OrderApi{
 	/**
-	 * ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓÐ±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
 	 */
 	private Order order=null;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë±»ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param realSubject ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
+	 * @param realSubject ±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
 	 */
 	public OrderProxy(Order realSubject){
 		this.order = realSubject;
 	}
 	public void setProductName(String productName,String user) {
-		//ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½È¨ï¿½Þ£ï¿½Ö»ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½Þ¸ï¿½
+		//¿ØÖÆ·ÃÎÊÈ¨ÏÞ£¬Ö»ÓÐ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ÐÞ¸Ä
 		if(user!=null && user.equals(this.getOrderUser())){
 			order.setProductName(productName, user);
 		}else{
-			System.out.println("ï¿½Ô²ï¿½ï¿½ï¿½"+user+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þ¸Ä¶ï¿½ï¿½ï¿½ï¿½ÐµÄ²ï¿½Æ·ï¿½ï¿½ï¿½Æ¡ï¿½");
+			System.out.println("¶Ô²»Æð"+user+"£¬ÄúÎÞÈ¨ÐÞ¸Ä¶©µ¥ÖÐµÄ²úÆ·Ãû³Æ¡£");
 		}
 	}
 	public void setOrderNum(int orderNum,String user) {
-		//ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½È¨ï¿½Þ£ï¿½Ö»ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½Þ¸ï¿½
+		//¿ØÖÆ·ÃÎÊÈ¨ÏÞ£¬Ö»ÓÐ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ÐÞ¸Ä
 		if(user!=null && user.equals(this.getOrderUser())){
 			order.setOrderNum(orderNum, user);
 		}else{
-			System.out.println("ï¿½Ô²ï¿½ï¿½ï¿½"+user+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þ¸Ä¶ï¿½ï¿½ï¿½ï¿½ÐµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			System.out.println("¶Ô²»Æð"+user+"£¬ÄúÎÞÈ¨ÐÞ¸Ä¶©µ¥ÖÐµÄ¶©¹ºÊýÁ¿¡£");
 		}
 	}
 	public void setOrderUser(String orderUser,String user) {
-		//ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½È¨ï¿½Þ£ï¿½Ö»ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½Þ¸ï¿½
+		//¿ØÖÆ·ÃÎÊÈ¨ÏÞ£¬Ö»ÓÐ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ÐÞ¸Ä
 		if(user!=null && user.equals(this.getOrderUser())){
 			order.setOrderUser(orderUser, user);
 		}else{
-			System.out.println("ï¿½Ô²ï¿½ï¿½ï¿½"+user+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þ¸Ä¶ï¿½ï¿½ï¿½ï¿½ÐµÄ¶ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½");
+			System.out.println("¶Ô²»Æð"+user+"£¬ÄúÎÞÈ¨ÐÞ¸Ä¶©µ¥ÖÐµÄ¶©¹ºÈË¡£");
 		}
 	}
 	public int getOrderNum() {

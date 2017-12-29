@@ -5,29 +5,29 @@ import java.util.Collection;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸µã²âÊÔÊý¾Ý
 		Collection<Customer> colCustomer = preparedTestData();
-		//Ñ­ï¿½ï¿½ï¿½Ô¿Í»ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½
+		//Ñ­»·¶Ô¿Í»§½øÐÐ²Ù×÷
 		for(Customer cm : colCustomer){
-			//ï¿½ï¿½ï¿½ï¿½Æ«ï¿½Ã·ï¿½ï¿½ï¿½
+			//½øÐÐÆ«ºÃ·ÖÎö
 			cm.predilectionAnalyze();
-			//ï¿½ï¿½ï¿½Ð¼ï¿½Öµï¿½ï¿½ï¿½ï¿½
+			//½øÐÐ¼ÛÖµ·ÖÎö
 			cm.worthAnalyze();
 		}
 	}
 	private static Collection<Customer> preparedTestData(){
 		Collection<Customer> colCustomer = new ArrayList<Customer>();
-		//Îªï¿½Ë²ï¿½ï¿½Ô·ï¿½ï¿½ã£¬×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÎªÁË²âÊÔ·½±ã£¬×¼±¸µãÊý¾Ý
 		Customer cm1 = new EnterpriseCustomer();
-		cm1.setName("ABCï¿½ï¿½ï¿½ï¿½");
+		cm1.setName("ABC¼¯ÍÅ");
 		colCustomer.add(cm1);
 		
 		Customer cm2 = new EnterpriseCustomer();
-		cm2.setName("CDEï¿½ï¿½Ë¾");
+		cm2.setName("CDE¹«Ë¾");
 		colCustomer.add(cm2);
 		
 		Customer cm3 = new PersonalCustomer();
-		cm3.setName("ï¿½ï¿½ï¿½ï¿½");
+		cm3.setName("ÕÅÈý");
 		colCustomer.add(cm3);
 		
 		return colCustomer;

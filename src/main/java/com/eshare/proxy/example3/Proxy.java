@@ -4,22 +4,22 @@ import java.sql.*;
 import java.util.*;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½İ¶ï¿½ï¿½ï¿½
+ * ´úÀí¶ÔÏó,´úÀíÓÃ»§Êı¾İ¶ÔÏó
  */
 public class Proxy implements UserModelApi{
 	/**
-	 * ï¿½ï¿½ï¿½Ğ±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓĞ±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
 	 */
 	private UserModel realSubject=null;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë±»ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param realSubject ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
+	 * @param realSubject ±»´úÀíµÄ¾ßÌåµÄÄ¿±ê¶ÔÏó
 	 */
 	public Proxy(UserModel realSubject){
 		this.realSubject = realSubject;
 	}
 	/**
-	 * ï¿½ï¿½Ê¾ï¿½Ç·ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½Ø¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ±êÊ¾ÊÇ·ñÒÑ¾­ÖØĞÂ×°ÔØ¹ıÊı¾İÁË
 	 */
 	private boolean loaded = false;
 	
@@ -46,11 +46,11 @@ public class Proxy implements UserModelApi{
 	}
 	
 	public String getDepId() {
-		//ï¿½ï¿½Òªï¿½Ğ¶ï¿½ï¿½Ç·ï¿½ï¿½Ñ¾ï¿½×°ï¿½Ø¹ï¿½ï¿½ï¿½
+		//ĞèÒªÅĞ¶ÏÊÇ·ñÒÑ¾­×°ÔØ¹ıÁË
 		if(!this.loaded){
-			//ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½
+			//´ÓÊı¾İ¿âÖĞÖØĞÂ×°ÔØ
 			reload();
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ØµÄ±ï¿½Ö¾Îªtrue
+			//ÉèÖÃÖØĞÂ×°ÔØµÄ±êÖ¾Îªtrue
 			this.loaded = true;
 		}
 		return realSubject.getDepId();
@@ -64,10 +64,10 @@ public class Proxy implements UserModelApi{
 	}
 	
 	/**
-	 * ï¿½ï¿½ï¿½Â²ï¿½Ñ¯ï¿½ï¿½ï¿½İ¿ï¿½ï¿½Ô»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÖØĞÂ²éÑ¯Êı¾İ¿âÒÔ»ñÈ¡ÍêÕûµÄÓÃ»§Êı¾İ
 	 */
 	private void reload(){
-		System.out.println("ï¿½ï¿½ï¿½Â²ï¿½Ñ¯ï¿½ï¿½ï¿½İ¿ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½İ£ï¿½userId=="+realSubject.getUserId());
+		System.out.println("ÖØĞÂ²éÑ¯Êı¾İ¿â»ñÈ¡ÍêÕûµÄÓÃ»§Êı¾İ£¬userId=="+realSubject.getUserId());
 		Connection conn = null;
 		try{
 			conn = this.getConnection();
@@ -78,7 +78,7 @@ public class Proxy implements UserModelApi{
 			
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()){
-				//Ö»ï¿½ï¿½Òªï¿½ï¿½ï¿½Â»ï¿½È¡ï¿½ï¿½ï¿½ï¿½userIdï¿½ï¿½nameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//Ö»ĞèÒªÖØĞÂ»ñÈ¡³ıÁËuserIdºÍnameÍâµÄÊı¾İ
 				realSubject.setDepId(rs.getString("depId"));
 				realSubject.setSex(rs.getString("sex"));
 			}

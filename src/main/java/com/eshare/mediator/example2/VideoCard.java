@@ -1,6 +1,6 @@
 package com.eshare.mediator.example2;
 /**
- * 锟皆匡拷锟洁，一锟斤拷同锟斤拷锟斤拷
+ * 显卡类，一个同事类
  */
 public class VideoCard extends Colleague{
 	public VideoCard(Mediator mediator) {
@@ -8,11 +8,10 @@ public class VideoCard extends Colleague{
 	}
 	
 	/**
-	 * 锟斤拷示锟斤拷频锟斤拷锟斤拷
-	 * @param data 锟斤拷锟斤拷示锟斤拷锟斤拷锟斤拷
+	 * 显示视频数据
+	 * @param data 被显示的数据
 	 */
 	public void showData(String data){
-		System.out.println("锟斤拷锟斤拷锟桔匡拷锟斤拷锟角ｏ拷"+data);
-	}
-	
+		System.out.println("您正观看的是："+data);
+	}	
 }

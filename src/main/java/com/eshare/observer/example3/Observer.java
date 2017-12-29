@@ -1,11 +1,11 @@
 package com.eshare.observer.example3;
 /**
- * 锟桔诧拷锟竭ｏ拷锟斤拷锟界报纸锟侥讹拷锟斤拷
+ * 观察者，比如报纸的读者
  */
 public interface Observer {
 	/**
-	 * 锟斤拷通知锟侥凤拷锟斤拷锟斤拷直锟接把憋拷纸锟斤拷锟斤拷锟斤拷锟斤拷锟酵癸拷锟斤拷
-	 * @param content 锟斤拷纸锟斤拷锟斤拷锟斤拷
+	 * 被通知的方法，直接把报纸的内容推送过来
+	 * @param content 报纸的内容
 	 */
 	public void update(String content);
 }

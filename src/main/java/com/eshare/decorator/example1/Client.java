@@ -2,15 +2,15 @@ package com.eshare.decorator.example1;
 
 public class Client {
 	public static void main(String[] args) {
-		//О©╫х╢О©╫О©╫О©╫О©╫О©╫О©╫Ц╫╠О©╫О©╫д╤О©╫О©╫О©╫
+		//ох╢╢╫╗╪фкЦ╫╠╫П╣д╤тоС
 		Prize p = new Prize();
 		
-		//О©╫О©╫О©╫з╤О©╫О©╫О©╫ц╩О©╫О©╫О©╫О©╫О©╫оёО©╫О©╫О©╫О©╫т╢О©╫nullО©╫м©О©╫О©╫О©╫О©╫О©╫
-		double zs = p.calcPrize("О©╫О©╫О©╫О©╫",null,null);		
-		System.out.println("==========О©╫О©╫О©╫О©╫с╕О©╫ц╫О©╫О©╫О©╫"+zs);
-		double ls = p.calcPrize("О©╫О©╫О©╫О©╫",null,null);
-		System.out.println("==========О©╫О©╫О©╫О©╫с╕О©╫ц╫О©╫О©╫О©╫"+ls);		
-		double ww = p.calcPrize("О©╫О©╫О©╫О©╫",null,null);
-		System.out.println("==========О©╫О©╫О©╫О©╫О©╫О©╫с╕О©╫ц╫О©╫О©╫О©╫"+ww);
+		//хуфз╤тоС╤╪ц╩спсциоё╛кЫрт╢╚null╬м©иртак
+		double zs = p.calcPrize("уехЩ",null,null);		
+		System.out.println("==========уехЩс╕╣ц╫╠╫Пё╨"+zs);
+		double ls = p.calcPrize("юНкд",null,null);
+		System.out.println("==========юНкдс╕╣ц╫╠╫Пё╨"+ls);		
+		double ww = p.calcPrize("мУнЕ",null,null);
+		System.out.println("==========мУ╬╜юМс╕╣ц╫╠╫Пё╨"+ww);
 	}
 }

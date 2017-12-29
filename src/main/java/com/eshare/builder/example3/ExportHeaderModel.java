@@ -1,14 +1,14 @@
 package com.eshare.builder.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½İµÄ¶ï¿½ï¿½ï¿½
+ * ÃèÊöÊä³öµ½ÎÄ¼şÍ·µÄÄÚÈİµÄ¶ÔÏó
  */
 public class ExportHeaderModel {
 	/**
-	 * ï¿½Ö¹ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½ï¿½ï¿½
+	 * ·Ö¹«Ë¾»òÃÅÊĞµã±àºÅ
 	 */
 	private String depId;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * µ¼³öÊı¾İµÄÈÕÆÚ
 	 */
 	private String exportDate;
 	public String getDepId() {

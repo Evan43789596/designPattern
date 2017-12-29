@@ -1,10 +1,10 @@
 package com.eshare.interpreter.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÊôĞÔ×÷ÎªÖÕ½á·û¶ÔÓ¦µÄ½âÊÍÆ÷
  */
 public class PropertyTerminalExpression extends ReadXmlExpression{
 	/**
-	 * ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÊôĞÔµÄÃû×Ö
 	 */
 	private String propName;
 	public PropertyTerminalExpression(String propName){
@@ -12,7 +12,7 @@ public class PropertyTerminalExpression extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//Ö±ï¿½Ó»ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½Ôµï¿½Öµ
+		//Ö±½Ó»ñÈ¡×îºóµÄÔªËØµÄÊôĞÔµÄÖµ
 		String[] ss = new String[1];
 		ss[0] = c.getPreEle().getAttribute(this.propName);
 		return ss;

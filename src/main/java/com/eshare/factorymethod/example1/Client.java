@@ -3,6 +3,6 @@ package com.eshare.factorymethod.example1;
 public class Client {
 	public static void main(String[] args) {
 		ExportOperate operate = new ExportOperate();
-		operate.export(2, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		operate.export(1, "Òªµ¼³öµÄ²âÊÔÊý¾Ý");
 	}
 }

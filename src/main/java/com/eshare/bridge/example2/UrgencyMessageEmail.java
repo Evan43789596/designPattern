@@ -2,12 +2,12 @@ package com.eshare.bridge.example2;
 
 public class UrgencyMessageEmail implements UrgencyMessage{
 	public void send(String message, String toUser) {
-		message = "ï¿½Ó¼ï¿½ï¿½ï¿½"+message;
-		System.out.println("Ê¹ï¿½ï¿½Emailï¿½Ä·ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢'"+message+"'ï¿½ï¿½"+toUser);
+		message = "¼Ó¼±£º"+message;
+		System.out.println("Ê¹ÓÃEmailµÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
 	}
 
 	public Object watch(String messageId) {
-		//ï¿½ï¿½È¡ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½Ö¯ï¿½É¼ï¿½Øµï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½È»ï¿½ó·µ»ï¿½		
+		//»ñÈ¡ÏàÓ¦µÄÊý¾Ý£¬×éÖ¯³É¼à¿ØµÄÊý¾Ý¶ÔÏó£¬È»ºó·µ»Ø		
 		return null;
 	}	
 }

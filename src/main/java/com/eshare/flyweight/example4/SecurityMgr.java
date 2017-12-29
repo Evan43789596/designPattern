@@ -1,7 +1,7 @@
 package com.eshare.flyweight.example4;
 import java.util.*;
 /**
- * ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö³Éµï¿½ï¿½ï¿½
+ * °²È«¹ÜÀí£¬ÊµÏÖ³Éµ¥Àý
  */
 public class SecurityMgr {
 	private static SecurityMgr securityMgr = new SecurityMgr();
@@ -12,37 +12,37 @@ public class SecurityMgr {
 	}
 	
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½Â¼ï¿½ï¿½Ô±ï¿½ï¿½Ó¦ï¿½ï¿½È¨ï¿½Þ£ï¿½
-	 * ï¿½ï¿½WebÓ¦ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½sessionï¿½ï¿½
+	 * ÔÚÔËÐÐÆÚ¼ä£¬ÓÃÀ´´æ·ÅµÇÂ¼ÈËÔ±¶ÔÓ¦µÄÈ¨ÏÞ£¬
+	 * ÔÚWebÓ¦ÓÃÖÐ£¬ÕâÐ©Êý¾ÝÍ¨³£»á´æ·Åµ½sessionÖÐ
 	 */
 	private Map<String,Collection<Flyweight>> map = 
 		new HashMap<String,Collection<Flyweight>>();
 	
 	/**
-	 * Ä£ï¿½ï¿½ï¿½Â¼ï¿½Ä¹ï¿½ï¿½ï¿½
-	 * @param user ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ã»ï¿½
+	 * Ä£ÄâµÇÂ¼µÄ¹¦ÄÜ
+	 * @param user µÇÂ¼µÄÓÃ»§
 	 */
 	public void login(String user){
-		//ï¿½ï¿½Â¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ñ¸ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Óµï¿½Ðµï¿½È¨ï¿½Þ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥
+		//µÇÂ¼µÄÊ±ºò¾ÍÐèÒª°Ñ¸ÃÓÃ»§ËùÓµÓÐµÄÈ¨ÏÞ£¬´ÓÊý¾Ý¿âÖÐÈ¡³öÀ´£¬·Åµ½»º´æÖÐÈ¥
 		Collection<Flyweight> col = queryByUser(user);
 		map.put(user, col);
 	}
 	/**
-	 * ï¿½Ð¶ï¿½Ä³ï¿½Ã»ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½È«Êµï¿½ï¿½ï¿½Ç·ï¿½Óµï¿½ï¿½Ä³È¨ï¿½ï¿½
-	 * @param user ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½Þµï¿½ï¿½Ã»ï¿½ 
-	 * @param securityEntity ï¿½ï¿½È«Êµï¿½ï¿½
-	 * @param permit È¨ï¿½ï¿½
-	 * @return trueï¿½ï¿½Ê¾Óµï¿½ï¿½ï¿½ï¿½Ó¦È¨ï¿½Þ£ï¿½falseï¿½ï¿½Ê¾Ã»ï¿½ï¿½ï¿½ï¿½Ó¦È¨ï¿½ï¿½
+	 * ÅÐ¶ÏÄ³ÓÃ»§¶ÔÄ³¸ö°²È«ÊµÌåÊÇ·ñÓµÓÐÄ³È¨ÏÞ
+	 * @param user ±»¼ì²âÈ¨ÏÞµÄÓÃ»§ 
+	 * @param securityEntity °²È«ÊµÌå
+	 * @param permit È¨ÏÞ
+	 * @return true±íÊ¾ÓµÓÐÏàÓ¦È¨ÏÞ£¬false±íÊ¾Ã»ÓÐÏàÓ¦È¨ÏÞ
 	 */
 	public boolean hasPermit(String user,String securityEntity,String permit){
 		Collection<Flyweight> col = map.get(user);
-		System.out.println("ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½"+securityEntity+"ï¿½ï¿½"+permit+"È¨ï¿½Þ£ï¿½map.size="+map.size());
+		System.out.println("ÏÖÔÚ²âÊÔ"+securityEntity+"µÄ"+permit+"È¨ÏÞ£¬map.size="+map.size());
 		if(col==null || col.size()==0){
-			System.out.println(user+"Ã»ï¿½Ðµï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½È¨ï¿½ï¿½");
+			System.out.println(user+"Ã»ÓÐµÇÂ¼»òÊÇÃ»ÓÐ±»·ÖÅäÈÎºÎÈ¨ÏÞ");
 			return false;
 		}
 		for(Flyweight fm : col){
-			//ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Í¬Ò»ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//Êä³öµ±Ç°ÊµÀý£¬¿´¿´ÊÇ·ñÍ¬Ò»¸öÊµÀý¶ÔÏó
 			System.out.println("fm=="+fm);
 			if(fm.match(securityEntity, permit)){
 				return true;
@@ -51,9 +51,9 @@ public class SecurityMgr {
 		return false;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ð»ï¿½È¡Ä³ï¿½ï¿½ï¿½ï¿½Óµï¿½Ðµï¿½È¨ï¿½ï¿½
-	 * @param user ï¿½ï¿½Òªï¿½ï¿½È¡ï¿½ï¿½Óµï¿½Ðµï¿½È¨ï¿½Þµï¿½ï¿½ï¿½Ô±
-	 * @return Ä³ï¿½ï¿½ï¿½ï¿½Óµï¿½Ðµï¿½È¨ï¿½ï¿½
+	 * ´ÓÊý¾Ý¿âÖÐ»ñÈ¡Ä³ÈËËùÓµÓÐµÄÈ¨ÏÞ
+	 * @param user ÐèÒª»ñÈ¡ËùÓµÓÐµÄÈ¨ÏÞµÄÈËÔ±
+	 * @return Ä³ÈËËùÓµÓÐµÄÈ¨ÏÞ
 	 */
 	private Collection<Flyweight> queryByUser(String user){
 		Collection<Flyweight> col = new ArrayList<Flyweight>();
@@ -63,13 +63,13 @@ public class SecurityMgr {
 			if(ss[0].equals(user)){
 				Flyweight fm = null;
 				if(ss[3].equals("2")){
-					//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½
+					//±íÊ¾ÊÇ×éºÏ
 					fm = new UnsharedConcreteFlyweight();
-					//ï¿½ï¿½È¡ï¿½ï¿½Òªï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½
+					//»ñÈ¡ÐèÒª×éºÏµÄÊý¾Ý
 					String tempSs[] = TestDB.mapDB.get(ss[1]);
 					for(String tempS : tempSs){
 						Flyweight tempFm = FlyweightFactory.getInstance().getFlyweight(tempS);
-						//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½
+						//°ÑÕâ¸ö¶ÔÏó¼ÓÈëµ½×éºÏ¶ÔÏóÖÐ
 						fm.add(tempFm);
 					}
 				}else{

@@ -1,18 +1,18 @@
 package com.eshare.strategy.example5;
 /**
- * ï¿½ï¿½Õ¹ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+ * À©Õ¹µÄÖ§¸¶ÉÏÏÂÎÄ¶ÔÏó
  */
 public class PaymentContext2 extends PaymentContext {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½
+	 * ÒøĞĞÕÊºÅ
 	 */
 	private String account = null;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë±»Ö§ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ó¦Ö§ï¿½ï¿½ï¿½Ä½ï¿½ï¿½Í¾ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param userName ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Ô±
-	 * @param money Ó¦Ö§ï¿½ï¿½ï¿½Ä½ï¿½ï¿½
-	 * @param account Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½
-	 * @param strategy ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë±»Ö§¸¶¹¤×ÊµÄÈËÔ±£¬Ó¦Ö§¸¶µÄ½ğ¶îºÍ¾ßÌåµÄÖ§¸¶²ßÂÔ
+	 * @param userName ±»Ö§¸¶¹¤×ÊµÄÈËÔ±
+	 * @param money Ó¦Ö§¸¶µÄ½ğ¶î
+	 * @param account Ö§¸¶µ½µÄÒøĞĞÕÊºÅ
+	 * @param strategy ¾ßÌåµÄÖ§¸¶²ßÂÔ
 	 */
 	public PaymentContext2(String userName,double money,String account,PaymentStrategy strategy){
 		super(userName,money,strategy);

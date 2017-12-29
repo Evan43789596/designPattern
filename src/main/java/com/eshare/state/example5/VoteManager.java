@@ -1,53 +1,53 @@
 package com.eshare.state.example5;
 import java.util.*;
 /**
- * Í¶Æ±ï¿½ï¿½ï¿½ï¿½
+ * Í¶Æ±¹ÜÀí
  */
 public class VoteManager {
 	/**
-	 * ï¿½ï¿½Â¼ï¿½ï¿½Ç°Ã¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ç°ï¿½ï¿½×´Ì¬ï¿½Ç²ï¿½Í¬ï¿½ï¿½
-	 * Map<String,VoteState>ï¿½ï¿½Ó¦Map<ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ç°ï¿½ï¿½Ó¦ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½>
+	 * ¼ÇÂ¼µ±Ç°Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏó£¬Ã¿¸öÓÃ»§µ±Ç°µÄ×´Ì¬ÊÇ²»Í¬µÄ
+	 * Map<String,VoteState>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,µ±Ç°¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏó>
 	 */
 	private Map<String,VoteState> mapState = new HashMap<String,VoteState>();
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½Â¼Ã¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Map
-	 * @return ï¿½ï¿½Â¼Ã¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Map
+	 * »ñÈ¡¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏóµÄMap
+	 * @return ¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄ×´Ì¬´¦Àí¶ÔÏóµÄMap
 	 */
 	public Map<String, VoteState> getMapState() {
 		return mapState;
 	}
 	/**
-	 * ï¿½ï¿½Â¼ï¿½Ã»ï¿½Í¶Æ±ï¿½Ä½ï¿½ï¿½,Map<String,String>ï¿½ï¿½Ó¦Map<ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½,Í¶Æ±ï¿½ï¿½Ñ¡ï¿½ï¿½>
+	 * ¼ÇÂ¼ÓÃ»§Í¶Æ±µÄ½á¹û,Map<String,String>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,Í¶Æ±µÄÑ¡Ïî>
 	 */
 	private Map<String,String> mapVote = new HashMap<String,String>();
 	/**
-	 * ï¿½ï¿½Â¼ï¿½Ã»ï¿½Í¶Æ±ï¿½ï¿½ï¿½ï¿½,Map<String,Integer>ï¿½ï¿½Ó¦Map<ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½,Í¶Æ±ï¿½Ä´ï¿½ï¿½ï¿½>
+	 * ¼ÇÂ¼ÓÃ»§Í¶Æ±´ÎÊý,Map<String,Integer>¶ÔÓ¦Map<ÓÃ»§Ãû³Æ,Í¶Æ±µÄ´ÎÊý>
 	 */
 	private Map<String,Integer> mapVoteCount = new HashMap<String,Integer>();
 	
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½Â¼ï¿½Ã»ï¿½Í¶Æ±ï¿½ï¿½ï¿½ï¿½ï¿½Map
-	 * @return ï¿½ï¿½Â¼ï¿½Ã»ï¿½Í¶Æ±ï¿½ï¿½ï¿½ï¿½ï¿½Map
+	 * »ñÈ¡¼ÇÂ¼ÓÃ»§Í¶Æ±½á¹ûµÄMap
+	 * @return ¼ÇÂ¼ÓÃ»§Í¶Æ±½á¹ûµÄMap
 	 */
 	public Map<String, String> getMapVote() {
 		return mapVote;
 	}
 
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½Â¼Ã¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Í¶Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Map
-	 * @return ï¿½ï¿½Â¼Ã¿ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Í¶Æ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Map
+	 * »ñÈ¡¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄÍ¶Æ±´ÎÊýµÄMap
+	 * @return ¼ÇÂ¼Ã¿¸öÓÃ»§¶ÔÓ¦µÄÍ¶Æ±´ÎÊýµÄMap
 	 */
 	public Map<String, Integer> getMapVoteCount() {
 		return mapVoteCount;
 	}
 	/**
 	 * Í¶Æ±
-	 * @param user Í¶Æ±ï¿½Ë£ï¿½Îªï¿½Ë¼òµ¥£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param voteItem Í¶Æ±ï¿½ï¿½Ñ¡ï¿½ï¿½
+	 * @param user Í¶Æ±ÈË£¬ÎªÁË¼òµ¥£¬¾ÍÊÇÓÃ»§Ãû³Æ
+	 * @param voteItem Í¶Æ±µÄÑ¡Ïî
 	 */
 	public void vote(String user,String voteItem)throws Exception{
-		//1ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Í¶Æ±ï¿½Ä´ï¿½ï¿½ï¿½
-		//ï¿½È´Ó¼ï¿½Â¼ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Í¶Æ±ï¿½ï¿½ï¿½ï¿½
+		//1£ºÏÈÎª¸ÃÓÃ»§Ôö¼ÓÍ¶Æ±µÄ´ÎÊý
+		//ÏÈ´Ó¼ÇÂ¼ÖÐÈ¡³öÒÑÓÐµÄÍ¶Æ±´ÎÊý
 		Integer oldVoteCount = mapVoteCount.get(user);
 		if(oldVoteCount==null){
 			oldVoteCount = 0;
@@ -56,26 +56,26 @@ public class VoteManager {
 		mapVoteCount.put(user, oldVoteCount);
 
 		VoteState state = null;
-		//2ï¿½ï¿½Ö±ï¿½Ó´ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½×´Ì¬ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½
-		String stateId = "ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ð»ï¿½È¡ï¿½ï¿½ï¿½Öµ";
-		//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½
+		//2£ºÖ±½Ó´ÓÊý¾Ý¿â»ñÈ¡¸ÃÓÃ»§¶ÔÓ¦µÄÏÂÒ»¸ö×´Ì¬µÄ×´Ì¬±àÂë
+		String stateId = "´ÓÊý¾Ý¿âÖÐ»ñÈ¡Õâ¸öÖµ";
+		//¿ªÊ¼¸ù¾Ý×´Ì¬±àÂëÀ´´´½¨ÐèÓÃµÄ×´Ì¬¶ÔÏó
 		
-		//ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
-		String className = "ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½";
-		//Ê¹ï¿½Ã·ï¿½ï¿½ä´´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+		//¸ù¾Ý×´Ì¬±àÂëÈ¥»ñÈ¡ÏàÓ¦µÄÀà
+		String className = "¸ù¾Ý×´Ì¬±àÂëÈ¥»ñÈ¡ÏàÓ¦µÄÀà";
+		//Ê¹ÓÃ·´Éä´´½¨¶ÔÏóÊµÀý£¬¼òµ¥Ê¾ÒâÒ»ÏÂ
 		Class c = Class.forName(className);
 		state = (VoteState)c.newInstance();
 		
-		if("ï¿½ï¿½ï¿½ï¿½Í¶Æ±".equals(stateId)){
-			state = new NormalVoteState();
-		}else if("ï¿½Ø¸ï¿½Í¶Æ±".equals(stateId)){
-			state = new RepeatVoteState(); 
-		}else if("ï¿½ï¿½ï¿½ï¿½Í¶Æ±".equals(stateId)){
-			state = new SpiteVoteState(); 
-		}else if("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½".equals(stateId)){
-			state = new BlackVoteState(); 
-		}
-		//È»ï¿½ï¿½×ªï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä²ï¿½ï¿½ï¿½
+//		if("Õý³£Í¶Æ±".equals(stateId)){
+//			state = new NormalVoteState();
+//		}else if("ÖØ¸´Í¶Æ±".equals(stateId)){
+//			state = new RepeatVoteState(); 
+//		}else if("¶ñÒâÍ¶Æ±".equals(stateId)){
+//			state = new SpiteVoteState(); 
+//		}else if("ºÚÃûµ¥".equals(stateId)){
+//			state = new BlackVoteState(); 
+//		}
+		//È»ºó×ªµ÷×´Ì¬¶ÔÏóÀ´½øÐÐÏàÓ¦µÄ²Ù×÷
 		state.vote(user, voteItem, this);
 	}
 }

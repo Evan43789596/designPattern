@@ -1,40 +1,40 @@
 package com.eshare.singleton.example3;
 /**
- * 锟斤拷锟斤拷式锟斤拷锟斤拷实锟街碉拷示锟斤拷
+ * 饿汉式单例实现的示例
  */
 public class Singleton {
 	/**
-	 * 锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷锟芥储锟斤拷锟斤拷锟矫碉拷锟斤拷实锟斤拷锟斤拷直锟斤拷锟斤拷锟斤拷锟斤创锟斤拷锟斤拷实锟斤拷锟斤拷只锟结创锟斤拷一锟斤拷
+	 * 定义一个变量来存储创建好的类实例，直接在这里创建类实例，只会创建一次
 	 */
 	private static Singleton uniqueInstance = new Singleton();
 	/**
-	 * 私锟叫伙拷锟斤拷锟届方锟斤拷锟斤拷锟斤拷锟斤拷锟节诧拷锟斤拷锟狡达拷锟斤拷实锟斤拷锟斤拷锟斤拷目
+	 * 私有化构造方法，好在内部控制创建实例的数目
 	 */
 	private Singleton(){
 		//
 	}
 	/**
-	 * 锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷为锟酵伙拷锟斤拷锟结供锟斤拷实锟斤拷
-	 * @return 一锟斤拷Singleton锟斤拷实锟斤拷
+	 * 定义一个方法来为客户端提供类实例
+	 * @return 一个Singleton的实例
 	 */
 	public static Singleton getInstance(){
-		//直锟斤拷使锟斤拷锟窖撅拷锟斤拷锟斤拷锟矫碉拷实锟斤拷
+		//直接使用已经创建好的实例
 		return uniqueInstance;
 	}
 	
 	/**
-	 * 示锟解方锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟皆硷拷锟侥诧拷锟斤拷
+	 * 示意方法，单例可以有自己的操作
 	 */
 	public void singletonOperation(){
-		//锟斤拷锟杰达拷锟斤拷
+		//功能处理
 	}
 	/**
-	 * 示锟斤拷锟斤拷锟皆ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟皆硷拷锟斤拷锟斤拷锟斤拷
+	 * 示意属性，单例可以有自己的属性
 	 */
 	private String singletonData;
 	/**
-	 * 示锟解方锟斤拷锟斤拷锟斤拷锟解部通锟斤拷锟斤拷些锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟皆碉拷值
-	 * @return 锟斤拷锟皆碉拷值
+	 * 示意方法，让外部通过这些方法来访问属性的值
+	 * @return 属性的值
 	 */
 	public String getSingletonData(){
 		return singletonData;

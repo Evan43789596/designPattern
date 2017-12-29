@@ -3,28 +3,36 @@ package com.eshare.adapter.example3;
 import java.util.List;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬°Ñ¼ï¿½Â¼ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉµÚ¶ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½É¾ï¿½Ä²ï¿½Ä¹ï¿½ï¿½ï¿½
+ * ÊÊÅäÆ÷¶ÔÏó£¬°Ñ¼ÇÂ¼ÈÕÖ¾µ½ÎÄ¼şµÄ¹¦ÄÜÊÊÅä³ÉµÚ¶ş°æĞèÒªµÄÔöÉ¾¸Ä²éµÄ¹¦ÄÜ
  */
-public class Adapter implements LogDbOperateApi{
+public class Adapter  implements LogDbOperateApi{
+	//ÓÅÏÈÊ¹ÓÃ¶ÔÏó×éºÏ£¬¶ø²»ÊÇÊ¹ÓÃ¶ÔÏó¼Ì³Ğ
+	
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿Ú¶ï¿½ï¿½ï¿½
+	 * ³ÖÓĞĞèÒª±»ÊÊÅäµÄ½Ó¿Ú¶ÔÏó
 	 */
 	private LogFileOperateApi adaptee;
+	
+	private TimeUtil adaptee2 = null;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
-	 * @param adaptee ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«ÈëĞèÒª±»ÊÊÅäµÄ¶ÔÏó
+	 * @param adaptee ĞèÒª±»ÊÊÅäµÄ¶ÔÏó
 	 */
-	public Adapter(LogFileOperateApi adaptee) {
+	public Adapter(LogFileOperateApi adaptee,TimeUtil times) {
 		this.adaptee = adaptee;
+		this.adaptee2 = times;
 	}
 	
 	public void createLog(LogModel lm) {
-		//1ï¿½ï¿½ï¿½È¶ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		this.adaptee2.begin();
+		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
 		List<LogModel> list = adaptee.readLogFile();
-		//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½
+		//2£º¼ÓÈëĞÂµÄÈÕÖ¾¶ÔÏó
 		list.add(lm);
-		//3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Ä¼ï¿½
+		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
 		adaptee.writeLogFile(list);
+		this.adaptee2.end();
+		this.adaptee2.show();
 	}
 
 	public List<LogModel> getAllLog() {
@@ -32,25 +40,25 @@ public class Adapter implements LogDbOperateApi{
 	}
 
 	public void removeLog(LogModel lm) {
-		//1ï¿½ï¿½ï¿½È¶ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
 		List<LogModel> list = adaptee.readLogFile();
-		//2ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½
+		//2£ºÉ¾³ıÏàÓ¦µÄÈÕÖ¾¶ÔÏó
 		list.remove(lm);
-		//3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Ä¼ï¿½
+		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
 		adaptee.writeLogFile(list);
 	}
 
 	public void updateLog(LogModel lm) {
-		//1ï¿½ï¿½ï¿½È¶ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
 		List<LogModel> list = adaptee.readLogFile();
-		//2ï¿½ï¿½ï¿½Ş¸ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½
+		//2£ºĞŞ¸ÄÏàÓ¦µÄÈÕÖ¾¶ÔÏó
 		for(int i=0;i<list.size();i++){
 			if(list.get(i).getLogId().equals(lm.getLogId())){
 				list.set(i, lm);
 				break;
 			}
 		}
-		//3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Ä¼ï¿½
+		//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
 		adaptee.writeLogFile(list);
 	}
 }

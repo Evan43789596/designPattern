@@ -2,16 +2,16 @@ package com.eshare.composite.example2;
 
 public class Client {
 	public static void main(String[] args) {
-		//锟斤拷锟斤拷锟斤拷Composite锟斤拷锟斤拷
+		//定义多个Composite对象
 		Component root = new Composite();
 		Component c1 = new Composite();
 		Component c2 = new Composite();
-		//锟斤拷锟斤拷锟斤拷叶锟接讹拷锟斤拷
+		//定义多个叶子对象
 		Component leaf1 = new Leaf();
 		Component leaf2 = new Leaf();
 		Component leaf3 = new Leaf();
 		
-		//锟斤拷统锟轿拷锟斤拷蔚亩锟斤拷锟结构
+		//组和成为树形的对象结构
 		root.addChild(c1);
 		root.addChild(c2);
 		root.addChild(leaf1);
@@ -19,7 +19,7 @@ public class Client {
 		c1.addChild(leaf2);
 		c2.addChild(leaf3);
 		
-		//锟斤拷锟斤拷Component锟斤拷锟斤拷
+		//操作Component对象
 		Component o = root.getChildren(1);
 		System.out.println(o);
 	}

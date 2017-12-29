@@ -1,10 +1,10 @@
 package com.eshare.strategy.example4;
 /**
- * 锟斤拷锟斤拷锟姐法实锟街ｏ拷为锟铰客伙拷锟斤拷锟斤拷锟斤拷锟斤拷通锟酵伙拷锟斤拷锟斤拷应锟斤拷锟侥价革拷
+ * 具体算法实现，为新客户或者是普通客户计算应报的价格
  */
 public class NormalCustomerStrategy implements Strategy{
 	public double calcPrice(double goodsPrice) {
-		System.out.println("锟斤拷锟斤拷锟铰客伙拷锟斤拷锟斤拷锟斤拷锟斤拷通锟酵伙拷锟斤拷没锟斤拷锟桔匡拷");
+		System.out.println("对于新客户或者是普通客户，没有折扣");
 		return goodsPrice;
 	}
 }

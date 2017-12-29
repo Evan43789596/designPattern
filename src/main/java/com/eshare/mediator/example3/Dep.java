@@ -3,15 +3,15 @@ package com.eshare.mediator.example3;
 import java.util.ArrayList;
 import java.util.Collection;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ²¿ÃÅÀà
  */
 public class Dep{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½
+	 * ÃèÊö²¿ÃÅ±àºÅ
 	 */
 	private String depId;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÃèÊö²¿ÃÅÃû³Æ
 	 */
 	private String depName;
 	public String getDepId() {
@@ -27,17 +27,18 @@ public class Dep{
 		this.depName = depName;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½Ç·ï¿½ï¿½ï¿½ï¿½É¹ï¿½
+	 * ³·Ïú²¿ÃÅ
+	 * @return ÊÇ·ñ³·Ïú³É¹¦
 	 */
 	public boolean deleteDep(){
-		//1ï¿½ï¿½Òªï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØµÄ²ï¿½ï¿½Åºï¿½ï¿½ï¿½Ô±ï¿½Ä¹ï¿½Ïµ
+		//1£ºÒªÏÈÍ¨¹ýÖÐ½éÕßÈ¥Çå³ýµôËùÓÐÓëÕâ¸ö²¿ÃÅÏà¹ØµÄ²¿ÃÅºÍÈËÔ±µÄ¹ØÏµ
 		DepUserMediatorImpl mediator = DepUserMediatorImpl.getInstance();
 		mediator.deleteDep(depId);
-		//2ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½Êµï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ð©Òµï¿½ï¿½ï¿½Ü¿ï¿½ï¿½Ü»ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½È¥ï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½Êµï¿½Ê¿ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½Ê¹ï¿½Ãµï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Ç²ï¿½ï¿½á±»É¾ï¿½ï¿½ï¿½Ä£ï¿½
-		//ï¿½ï¿½ï¿½Ç»á±»ï¿½ï¿½Îªï¿½ï¿½Ê·ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½
+		//2£ºÈ»ºó²ÅÄÜÕæµÄÇå³ýµôÕâ¸ö²¿ÃÅ
+		//Çë×¢ÒâÔÚÊµ¼Ê¿ª·¢ÖÐ£¬ÕâÐ©ÒµÎñ¹¦ÄÜ¿ÉÄÜ»á×öµ½ÒµÎñ²ãÈ¥£¬
+		//¶øÇÒÊµ¼Ê¿ª·¢ÖÐ¶ÔÓÚÒÑ¾­Ê¹ÓÃµÄÒµÎñÊý¾ÝÍ¨³£ÊÇ²»»á±»É¾³ýµÄ£¬
+		//¶øÊÇ»á±»×öÎªÀúÊ·Êý¾Ý±£Áô
+		
 		return true;
 	}
 }

@@ -2,13 +2,13 @@ package com.eshare.state.example7;
 
 import java.util.Scanner;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ´¦ÀíÉóºË½áÊøµÄÀà
  */
 public class AuditOverState implements LeaveRequestState{
 	public void doWork(StateMachine request) {
-		//ï¿½È°ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½
+		//ÏÈ°ÑÒµÎñ¶ÔÏóÔìĞÍ»ØÀ´
 		LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
 
-		//Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½		
+		//ÒµÎñ´¦Àí£¬ÔÚÊı¾İÀïÃæ¼ÇÂ¼Õû¸öÁ÷³Ì½áÊø		
 	}
 }

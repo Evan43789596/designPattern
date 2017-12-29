@@ -5,11 +5,11 @@ import java.util.List;
 
 import org.w3c.dom.Element;
 /**
- * ï¿½Ô¶ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Îªï¿½Õ½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½Í´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÒÔ¶à¸öÔªËØ×÷ÎªÖÕ½á·ûµÄ½âÊÍ´¦Àí¶ÔÏó
  */
 public class ElementsTerminalExpression  extends ReadXmlExpression{
 	/**
-	 * Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÔªËØµÄÃû³Æ
 	 */
 	private String eleName = "";
 	public ElementsTerminalExpression(String name){
@@ -17,16 +17,16 @@ public class ElementsTerminalExpression  extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+		//ÏÈÈ¡³öÉÏÏÂÎÄÀïµÄ¸¸¼¶ÔªËØ
 		List<Element> pEles = c.getPreEles();
-		//ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½Ä¶ï¿½ï¿½Ôªï¿½ï¿½
+		//»ñÈ¡µ±Ç°µÄ¶à¸öÔªËØ
 		List<Element> nowEles = new ArrayList<Element>();
 		
 		for(Element ele : pEles){
 			nowEles.addAll(c.getNowEles(ele, eleName));
 		}
 
-		//È»ï¿½ï¿½ï¿½ï¿½ÒªÈ¥ï¿½ï¿½È¡ï¿½ï¿½Ğ©Ôªï¿½Øµï¿½Öµ
+		//È»ºóĞèÒªÈ¥»ñÈ¡ÕâĞ©ÔªËØµÄÖµ
 		String[] ss = new String[nowEles.size()];
 		for(int i=0;i<ss.length;i++){
 			ss[i] = nowEles.get(i).getFirstChild().getNodeValue();

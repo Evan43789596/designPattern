@@ -1,24 +1,24 @@
 package com.eshare.prototype.example2;
 /**
- * 使锟斤拷原锟酵的客伙拷锟斤拷
+ * 使用原型的客户端
  */
 public class Client {
 	/**
-	 * 锟斤拷锟斤拷锟斤拷要使锟矫碉拷原锟酵接口讹拷锟斤拷
+	 * 持有需要使用的原型接口对象
 	 */
 	private Prototype prototype;
 	/**
-	 * 锟斤拷锟届方锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷要使锟矫碉拷原锟酵接口讹拷锟斤拷
-	 * @param prototype 锟斤拷要使锟矫碉拷原锟酵接口讹拷锟斤拷
+	 * 构造方法，传入需要使用的原型接口对象
+	 * @param prototype 需要使用的原型接口对象
 	 */
 	public Client(Prototype prototype){
 		this.prototype = prototype;
 	}
 	/**
-	 * 示锟解方锟斤拷锟斤拷执锟斤拷某锟斤拷锟斤拷锟杰诧拷锟斤拷
+	 * 示意方法，执行某个功能操作
 	 */
 	public void operation(){
-		//锟斤拷锟斤拷要锟斤拷锟斤拷原锟酵接口的讹拷锟斤拷
+		//会需要创建原型接口的对象
 		Prototype newPrototype = prototype.clone();
 	}
 }

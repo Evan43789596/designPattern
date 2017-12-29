@@ -1,23 +1,23 @@
 package com.eshare.memento.example2;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ğ±£´æ±¸ï¿½ï¿½Â¼ï¿½Ä¶ï¿½ï¿½ï¿½
+ * ¸ºÔğ±£´æ±¸ÍüÂ¼µÄ¶ÔÏó
  */
 public class Caretaker{
 	/**
-	 * ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ¼ÇÂ¼±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	private Memento memento = null;
 	/**
-	 * ï¿½ï¿½ï¿½æ±¸ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @param memento ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ±£´æ±¸ÍüÂ¼¶ÔÏó
+	 * @param memento ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public void saveMemento(Memento memento){
 		this.memento = memento;
 	}
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * »ñÈ¡±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
+	 * @return ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public Memento retriveMemento(){
 		return this.memento;

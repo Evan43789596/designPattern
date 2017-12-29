@@ -1,10 +1,10 @@
 package com.eshare.strategy.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨Êµï¿½Ö£ï¿½Îªï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ä¼Û¸ï¿½
+ * ¾ßÌåËã·¨ÊµÏÖ£¬Îª´ó¿Í»§¼ÆËãÓ¦±¨µÄ¼Û¸ñ
  */
 public class LargeCustomerStrategy implements Strategy{
 	public double calcPrice(double goodsPrice) {
-		System.out.println("ï¿½ï¿½ï¿½Ú´ï¿½Í»ï¿½ï¿½ï¿½Í³Ò»ï¿½Û¿ï¿½10%");
+		System.out.println("¶ÔÓÚ´ó¿Í»§£¬Í³Ò»ÕÛ¿Û10%");
 		return goodsPrice*(1-0.1);
 	}
 }

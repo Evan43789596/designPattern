@@ -1,20 +1,20 @@
 package com.eshare.decorator.example3;
 
 /**
- * ×°ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Êµï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½
+ * ×°ÊÎÆ÷µÄ¾ßÌåÊµÏÖ¶ÔÏó£¬Ïò×é¼ş¶ÔÏóÌí¼ÓÖ°Ôğ
  */
 public class ConcreteDecoratorB extends Decorator {
 	public ConcreteDecoratorB(Component component) {
 		super(component);
 	}
 	/**
-	 * ï¿½ï¿½Òªï¿½ï¿½Óµï¿½Ö°ï¿½ï¿½
+	 * ĞèÒªÌí¼ÓµÄÖ°Ôğ
 	 */
 	private void addedBehavior() {
-		//ï¿½ï¿½Òªï¿½ï¿½Óµï¿½Ö°ï¿½ï¿½Êµï¿½ï¿½
+		//ĞèÒªÌí¼ÓµÄÖ°ÔğÊµÏÖ
 	}
 	public void operation() {
-		//ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ö´ï¿½ï¿½Ò»Ğ©ï¿½ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½
+		//µ÷ÓÃ¸¸ÀàµÄ·½·¨£¬¿ÉÒÔÔÚµ÷ÓÃÇ°ºóÖ´ĞĞÒ»Ğ©¸½¼Ó¶¯×÷
 		super.operation();
 		addedBehavior();
 	}

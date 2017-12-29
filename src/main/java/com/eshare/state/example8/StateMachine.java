@@ -1,24 +1,24 @@
 package com.eshare.state.example8;
 /**
- * ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½àµ±ï¿½ï¿½×´Ì¬Ä£Ê½ï¿½ï¿½Context
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½×´Ì¬Ä£Ê½Ê±ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¹«¹²×´Ì¬´¦Àí»ú£¬Ïàµ±ÓÚ×´Ì¬Ä£Ê½µÄContext
+ * °üº¬ËùÓÐÁ÷³ÌÊ¹ÓÃ×´Ì¬Ä£Ê½Ê±µÄ¹«¹²¹¦ÄÜ
  */
 public  class StateMachine {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓÐÒ»¸ö×´Ì¬¶ÔÏó
 	 */
 	private State state = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ó£¬²ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,
-	 * ï¿½ï¿½Objectï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½Ç´ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * °üº¬Á÷³Ì´¦ÀíÐèÒªµÄÒµÎñÊý¾Ý¶ÔÏó£¬²»ÖªµÀ¾ßÌåÀàÐÍ,
+	 * ÓÃObject£¬·´ÕýÖ»ÊÇ´«µÝµ½¾ßÌåµÄ×´Ì¬¶ÔÏóÀïÃæ
 	 */
 	private Object businessVO = null;
 	/**
-	 * Ö´ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÌµÄ½Ó¿Ú·ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * ï¿½Ú¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ö´ÐÐ¹¤×÷£¬¿Í»§¶Ë´¦ÀíÁ÷³ÌµÄ½Ó¿Ú·½·¨¡£
+	 * ÔÚ¿Í»§Íê³É×Ô¼ºµÄÒµÎñ¹¤×÷ºóµ÷ÓÃ
 	 */
 	public void doWork(){
-		//×ªï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½Ü´ï¿½ï¿½ï¿½
+		//×ªµ÷ÏàÓ¦µÄ×´Ì¬¶ÔÏóÕæÕýÍê³É¹¦ÄÜ´¦Àí
 		this.state.doWork(this);
 	}
 	

@@ -1,14 +1,14 @@
 package com.eshare.decorator.example3;
 
 /**
- * ×°ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Êµï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½
+ * ×°ÊÎÆ÷µÄ¾ßÌåÊµÏÖ¶ÔÏó£¬Ïò×é¼þ¶ÔÏóÌí¼ÓÖ°Ôð
  */
 public class ConcreteDecoratorA extends Decorator {
 	public ConcreteDecoratorA(Component component) {
 		super(component);
 	}
 	/**
-	 * ï¿½ï¿½Óµï¿½×´Ì¬
+	 * Ìí¼ÓµÄ×´Ì¬
 	 */
 	private String addedState;
 	
@@ -21,9 +21,11 @@ public class ConcreteDecoratorA extends Decorator {
 	}
 
 	public void operation() {
-		//ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ö´ï¿½ï¿½Ò»Ð©ï¿½ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ò£¬¿ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Óµï¿½×´Ì¬
+		//µ÷ÓÃ¸¸ÀàµÄ·½·¨£¬¿ÉÒÔÔÚµ÷ÓÃÇ°ºóÖ´ÐÐÒ»Ð©¸½¼Ó¶¯×÷
+		//ÔÚÕâÀï½øÐÐ´¦ÀíµÄÊ±ºò£¬¿ÉÒÔÊ¹ÓÃÌí¼ÓµÄ×´Ì¬
+		System.out.println("begin---------->");
 		super.operation();
+		System.out.println("begin---------->");
 	}
 }
 

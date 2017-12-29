@@ -1,16 +1,16 @@
 package com.eshare.observer.example3;
 /**
- * 锟斤拷锟斤拷锟侥讹拷锟竭ｏ拷为锟剿简单撅拷锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷
+ * 真正的读者，为了简单就描述一下姓名
  */
 public class Reader implements Observer{
 	/**
-	 * 锟斤拷锟竭碉拷锟斤拷锟斤拷
+	 * 读者的姓名
 	 */
 	private String name;
 
 	public void update(String content) {
-		//锟斤拷锟角诧拷锟斤拷锟狡的凤拷式
-		System.out.println(name+"锟秸碉拷锟斤拷纸锟剿ｏ拷锟侥讹拷锟饺★拷锟斤拷锟斤拷锟斤拷==="+content);
+		//这是采用推的方式
+		System.out.println(name+"收到报纸了，阅读先。推模型 内容是==="+content);
 	}
 	public String getName() {
 		return name;

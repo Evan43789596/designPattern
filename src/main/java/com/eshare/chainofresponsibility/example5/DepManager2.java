@@ -1,27 +1,27 @@
 package com.eshare.chainofresponsibility.example5;
 /**
- * Êµï¿½Ö²ï¿½ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½Ô¤Ö§ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ 
+ * ÊµÏÖ²¿ÃÅ¾­Àí´¦ÀíÔ¤Ö§²îÂÃ·ÑÓÃÉêÇëµÄ¶ÔÏó 
  */
 public class DepManager2 extends DepManager{
 	public Object handleRequest(RequestModel request){
 		if(PreFeeRequestModel.FEE_TYPE.equals(request.getType())){
-			//ï¿½ï¿½Ê¾Ô¤Ö§ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//±íÊ¾Ô¤Ö§²îÂÃ·ÑÓÃÉêÇë
 			return myHandler(request);
 		}else{
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½
+			//ÆäËûµÄÈÃ¸¸ÀàÈ¥´¦Àí
 			return super.handleRequest(request);
 		}
 	}
 	private Object myHandler(RequestModel request) {
-		//ï¿½È°ï¿½Í¨ï¿½ÃµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½
+		//ÏÈ°ÑÍ¨ÓÃµÄ¶ÔÏóÔìĞÍ»ØÀ´
 		PreFeeRequestModel fr = (PreFeeRequestModel)request;
-		//ï¿½ï¿½ï¿½Å¾ï¿½ï¿½ï¿½ï¿½È¨ï¿½Ş±È½ï¿½Ğ¡ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½20000ï¿½ï¿½ï¿½ï¿½
+		//²¿ÃÅ¾­ÀíµÄÈ¨ÏŞ±È½ÏĞ¡£¬Ö»ÄÜÔÚ20000ÒÔÄÚ
 		if(fr.getFee() < 20000){
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï£¬Í³Í³Í¬ï¿½ï¿½
-			System.out.println("ï¿½ï¿½ï¿½Å¾ï¿½ï¿½ï¿½Í¬ï¿½ï¿½"+fr.getUser()+"Ô¤Ö§ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½"+fr.getFee()+"Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			//¹¤×÷ĞèÒªÂï£¬Í³Í³Í¬Òâ
+			System.out.println("²¿ÃÅ¾­ÀíÍ¬Òâ"+fr.getUser()+"Ô¤Ö§²îÂÃ·ÑÓÃ"+fr.getFee()+"ÔªµÄÇëÇó");
 			return true;
 		}else{
-			//ï¿½ï¿½ï¿½ï¿½20000ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßµï¿½ï¿½Ë´ï¿½ï¿½ï¿½
+			//³¬¹ı20000£¬¼ÌĞø´«µİ¸ø¼¶±ğ¸ü¸ßµÄÈË´¦Àí
 			if(this.successor != null){
 				return this.successor.handleRequest(request);
 			}

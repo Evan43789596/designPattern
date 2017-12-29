@@ -1,32 +1,23 @@
 package com.eshare.factorymethod.example7;
 /**
- * Êµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½Òµï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½
+ * ÊµÏÖµ¼³öÊý¾ÝµÄÒµÎñ¹¦ÄÜ¶ÔÏó
  */
 public class ExportOperate {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
-	 * @param type ï¿½Ã»ï¿½Ñ¡ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param data ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½Ç·ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+	 * µ¼³öÎÄ¼þ
+	 * @param type ÓÃ»§Ñ¡ÔñµÄµ¼³öÀàÐÍ
+	 * @param data ÐèÒª±£´æµÄÊý¾Ý
+	 * @return ÊÇ·ñ³É¹¦µ¼³öÎÄ¼þ
 	 */
 	public boolean export(int type,String data){
-		//Ê¹ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		ExportFileApi api = factoryMethod(type);
+		//Ê¹ÓÃ¹¤³§·½·¨
+		ExportFileApi api = MyFactory.factoryMethod(type);
 		return api.export(data);
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿Ú¶ï¿½ï¿½ï¿½
-	 * @param type ï¿½Ã»ï¿½Ñ¡ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿Ú¶ï¿½ï¿½ï¿½
+	 * ¹¤³§·½·¨£¬´´½¨µ¼³öµÄÎÄ¼þ¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
+	 * @param type ÓÃ»§Ñ¡ÔñµÄµ¼³öÀàÐÍ
+	 * @return µ¼³öµÄÎÄ¼þ¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
 	 */
-	protected ExportFileApi factoryMethod(int type){
-		ExportFileApi api = null;
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ñ¾¿¾ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Öµï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
-		if(type==1){
-			api = new ExportTxtFile();
-		}else if(type==2){
-			api = new ExportDB();
-		}
-		return api;
-	}
+
 }

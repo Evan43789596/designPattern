@@ -2,11 +2,26 @@ package com.eshare.builder.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//´´½¨¹¹½¨Æ÷
 		ConcreteBuilder builder = new ConcreteBuilder("001",12345L,67890L);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½È»ï¿½ó¹¹½ï¿½ï¿½ï¿½ï¿½Õºï¿½Í¬ï¿½ï¿½ï¿½ï¿½
-		InsuranceContract contract = builder.setPersonName("ï¿½ï¿½ï¿½ï¿½").setOtherData("test").build();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õºï¿½Í¬ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+		//ÉèÖÃÐèÒªµÄÊý¾Ý£¬È»ºó¹¹½¨±£ÏÕºÏÍ¬¶ÔÏó
+		InsuranceContract contract = 
+				builder.setPersonName("ÕÅÈý")
+				.setOtherData("test")
+				.build();
+		
+		//²Ù×÷±£ÏÕºÏÍ¬¶ÔÏóµÄ·½·¨
 		contract.someOperation();
+		
+		ConcreteBuilder builder2 = new ConcreteBuilder("001",12345L,67890L);
+		InsuranceContract contract2 = 
+				builder2
+					.setPersonName("ÀîËÄ")
+					.setCompanyName("cc")
+					.setOtherData("company")
+					.build();
+		contract2.someOperation();
+		
+		
 	}
 }

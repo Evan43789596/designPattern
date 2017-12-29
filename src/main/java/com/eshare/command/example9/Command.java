@@ -3,8 +3,8 @@ package com.eshare.command.example9;
 public interface Command {
 	public void execute();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param s Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉèÖÃÒªÊä³öµÄÄÚÈİ
+	 * @param s ÒªÊä³öµÄÄÚÈİ
 	 */
 	public void setStr(String s);
 }

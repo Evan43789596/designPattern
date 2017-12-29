@@ -1,6 +1,6 @@
 package com.eshare.templatemethod.example2;
 /**
- * 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷员锟斤拷息锟斤拷锟斤拷锟斤拷模锟斤拷
+ * 描述工作人员信息的数据模型
  */
 public class WorkerModel {
 	private String uuid,workerId,pwd,name;

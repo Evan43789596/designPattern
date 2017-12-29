@@ -1,7 +1,7 @@
 package com.eshare.command.example5;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÃüÁî¶ÔÏó£¬ËâÄà°×Èâ
  */
 public class PorkCommand implements Command {
 	private CookApi cookApi = null;
@@ -12,6 +12,6 @@ public class PorkCommand implements Command {
 
 	
 	public void execute() {
-		this.cookApi.cook("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		this.cookApi.cook("ËâÄà°×Èâ");
 	}
 }

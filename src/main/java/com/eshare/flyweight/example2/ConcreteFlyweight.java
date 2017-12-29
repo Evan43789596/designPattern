@@ -1,20 +1,20 @@
 package com.eshare.flyweight.example2;
 /**
- * ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½
+ * ÏíÔª¶ÔÏó
  */
 public class ConcreteFlyweight implements Flyweight{
 	/**
-	 * Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½×´Ì¬
+	 * Ê¾Àı£¬ÃèÊöÄÚ²¿×´Ì¬
 	 */
 	private String intrinsicState;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param state ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«ÈëÏíÔª¶ÔÏóµÄÄÚ²¿×´Ì¬µÄÊı¾İ
+	 * @param state ÏíÔª¶ÔÏóµÄÄÚ²¿×´Ì¬µÄÊı¾İ
 	 */
 	public ConcreteFlyweight(String state){
 		this.intrinsicState = state;
 	}
 	public void operation(String extrinsicState) {
-		//ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½Ü´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü»ï¿½ï¿½Ãµï¿½ï¿½ï¿½Ôªï¿½Ú²ï¿½ï¿½ï¿½ï¿½â²¿ï¿½ï¿½×´Ì¬
+		//¾ßÌåµÄ¹¦ÄÜ´¦Àí£¬¿ÉÄÜ»áÓÃµ½ÏíÔªÄÚ²¿¡¢Íâ²¿µÄ×´Ì¬
 	}	
 }

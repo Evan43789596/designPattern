@@ -1,14 +1,17 @@
 package com.eshare.facade.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½Û¶ï¿½ï¿½ï¿½
+ * ´úÂëÉú³É×ÓÏµÍ³µÄÍâ¹Û¶ÔÏó
  */
 public class Facade {
+	private Facade(){
+		
+	}
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä£ï¿½Ò»ï¿½ï¿½ï¿½òµ¥µÄµï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉµÄ¹ï¿½ï¿½ï¿½
+	 * ¿Í»§¶ËĞèÒªµÄ£¬Ò»¸ö¼òµ¥µÄµ÷ÓÃ´úÂëÉú³ÉµÄ¹¦ÄÜ
 	 */
-	public void generate(){
+	public static void generate(){
 		new Presentation().generate();
 		new Business().generate();
-		new DAO().generate();
+		new DAO(2).generate();
 	}
 }

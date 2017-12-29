@@ -3,7 +3,7 @@ package com.eshare.decorator.example6;
 public class GoodsSaleEbo implements GoodsSaleEbi{
 	
 	public boolean sale(String user,String customer, SaleModel saleModel) {
-		System.out.println(user+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+customer+"ï¿½ï¿½ï¿½ï¿½ "+saleModel+" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		System.out.println(user+"±£´æÁË"+customer+"¹ºÂò "+saleModel+" µÄÏúÊÛÊı¾İ");
 		return true;
 	}
 }

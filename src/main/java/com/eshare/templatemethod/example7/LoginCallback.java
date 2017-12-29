@@ -1,31 +1,31 @@
 package com.eshare.templatemethod.example7;
 /**
- * ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æµï¿½Ä£ï¿½å·½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä»Øµï¿½ï¿½Ó¿Ú£ï¿½
- * ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ÜµÄ°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä½Ó¿Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,
- * ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Õ¹ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * µÇÂ¼¿ØÖÆµÄÄ£°å·½·¨ÐèÒªµÄ»Øµ÷½Ó¿Ú£¬
+ * ÐèÒª¾¡¿ÉÄÜµÄ°ÑËùÓÐÐèÒªµÄ½Ó¿Ú·½·¨¶¼¶¨Òå³öÀ´,
+ * »òÕßËµÊÇËùÓÐ¿ÉÒÔ±»À©Õ¹µÄ·½·¨¶¼ÐèÒª±»¶¨Òå³öÀ´
  */
 public interface LoginCallback {
 	/**
-	 * ï¿½ï¿½ï¿½Ýµï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒºÍ»ï¿½È¡ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param loginId ï¿½ï¿½Â¼ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ú´æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¸ù¾ÝµÇÂ¼±àºÅÀ´²éÕÒºÍ»ñÈ¡´æ´¢ÖÐÏàÓ¦µÄÊý¾Ý
+	 * @param loginId µÇÂ¼±àºÅ
+	 * @return µÇÂ¼±àºÅÔÚ´æ´¢ÖÐÏà¶ÔÓ¦µÄÊý¾Ý
 	 */
 	public LoginModel findLoginUser(String loginId);
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
-	 * @param pwd ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param template LoginTemplateï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * 				LoginTemplateï¿½Ð¶ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È±Ê¡Êµï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¶ÔÃÜÂëÊý¾Ý½øÐÐ¼ÓÃÜ
+	 * @param pwd ÃÜÂëÊý¾Ý
+	 * @param template LoginTemplate¶ÔÏó£¬Í¨¹ýËüÀ´µ÷ÓÃÔÚ
+	 * 				LoginTemplateÖÐ¶¨ÒåµÄ¹«¹²·½·¨»òÈ±Ê¡ÊµÏÖ
+	 * @return ¼ÓÃÜºóµÄÃÜÂëÊý¾Ý
 	 */
 	public String encryptPwd(String pwd, LoginTemplate template);
 	/**
-	 * ï¿½Ð¶ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ð´ï¿½Äµï¿½Â¼ï¿½ï¿½ï¿½ÝºÍ´æ´¢ï¿½Ð¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param lm ï¿½Ã»ï¿½ï¿½ï¿½Ð´ï¿½Äµï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @param dbLm ï¿½Ú´æ´¢ï¿½Ð¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param template LoginTemplateï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * 				LoginTemplateï¿½Ð¶ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È±Ê¡Êµï¿½ï¿½
-	 * @return trueï¿½ï¿½Ê¾Æ¥ï¿½ï¿½É¹ï¿½ï¿½ï¿½falseï¿½ï¿½Ê¾Æ¥ï¿½ï¿½Ê§ï¿½ï¿½
+	 * ÅÐ¶ÏÓÃ»§ÌîÐ´µÄµÇÂ¼Êý¾ÝºÍ´æ´¢ÖÐ¶ÔÓ¦µÄÊý¾ÝÊÇ·ñÆ¥ÅäµÃÉÏ
+	 * @param lm ÓÃ»§ÌîÐ´µÄµÇÂ¼Êý¾Ý
+	 * @param dbLm ÔÚ´æ´¢ÖÐ¶ÔÓ¦µÄÊý¾Ý
+	 * @param template LoginTemplate¶ÔÏó£¬Í¨¹ýËüÀ´µ÷ÓÃÔÚ
+	 * 				LoginTemplateÖÐ¶¨ÒåµÄ¹«¹²·½·¨»òÈ±Ê¡ÊµÏÖ
+	 * @return true±íÊ¾Æ¥Åä³É¹¦£¬false±íÊ¾Æ¥ÅäÊ§°Ü
 	 */
 	public boolean match(LoginModel lm, LoginModel dbLm, LoginTemplate template);
 }

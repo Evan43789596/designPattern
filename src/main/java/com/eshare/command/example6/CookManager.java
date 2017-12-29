@@ -1,24 +1,24 @@
 package com.eshare.command.example6;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½à£¬Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½Ä³ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+ * ºó³øµÄ¹ÜÀíÀà£¬Í¨¹ý´ËÀàÈÃºó³øµÄ³øÊ¦½øÐÐÔËÐÐ×´Ì¬
  */
 public class CookManager {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¾Í²ï¿½Òªï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃÀ´¿ØÖÆÊÇ·ñÐèÒª´´½¨³øÊ¦£¬Èç¹ûÒÑ¾­´´½¨¹ýÁË¾Í²»ÒªÔÙÖ´ÐÐÁË
 	 */
 	private static boolean runFlag = false;
 	/**
-	 * ï¿½ï¿½ï¿½Ð³ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ö³Ì£ï¿½
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ù´Î£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ÌµÄ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ÔËÐÐ³øÊ¦¹ÜÀí£¬´´½¨³øÊ¦¶ÔÏó²¢Æô¶¯ËûÃÇÏàÓ¦µÄÏÖ³Ì£¬
+	 * ÎÞÂÛÔËÐÐ¶àÉÙ´Î£¬´´½¨³øÊ¦¶ÔÏóºÍÆô¶¯Ïß³ÌµÄ¹¤×÷¾ÍÖ»×öÒ»´Î
 	 */
 	public static void runCookManager(){
 		if(!runFlag){
 			runFlag = true;
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ê¦
-			HotCook cook1 = new HotCook("ï¿½ï¿½ï¿½ï¿½");
-			HotCook cook2 = new HotCook("ï¿½ï¿½ï¿½ï¿½");
-			HotCook cook3 = new HotCook("ï¿½ï¿½ï¿½ï¿½");
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ß³ï¿½
+			//´´½¨ÈýÎ»³øÊ¦
+			HotCook cook1 = new HotCook("ÕÅÈý");
+			HotCook cook2 = new HotCook("ÀîËÄ");
+			HotCook cook3 = new HotCook("ÍõÎå");
+			//Æô¶¯ËûÃÇµÄÏß³Ì
 			Thread t1 = new Thread(cook1);
 			t1.start();
 			Thread t2 = new Thread(cook2);

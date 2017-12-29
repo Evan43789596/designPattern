@@ -1,7 +1,7 @@
 package com.eshare.strategy.example7;
 
 /**
- * Êµï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨
+ * ÊµÏÖ¾ßÌåµÄËã·¨
  */
 public class ConcreteStrategyA extends AbstractClass {
 	protected  void stepOneOpe(){}

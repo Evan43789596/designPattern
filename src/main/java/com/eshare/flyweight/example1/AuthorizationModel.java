@@ -1,18 +1,18 @@
 package com.eshare.flyweight.example1;
 /**
- * 锟斤拷锟斤拷锟斤拷权锟斤拷锟捷碉拷锟斤拷锟斤拷model
+ * 描述授权数据的数据model
  */
 public class AuthorizationModel {
 	/**
-	 * 锟斤拷员
+	 * 人员
 	 */
 	private String user;
 	/**
-	 * 锟斤拷全实锟斤拷
+	 * 安全实体
 	 */
 	private String securityEntity;
 	/**
-	 * 权锟斤拷
+	 * 权限
 	 */
 	private String permit;
 	
@@ -34,5 +34,7 @@ public class AuthorizationModel {
 	public void setPermit(String permit) {
 		this.permit = permit;
 	}
-	
+	public String toString(){
+		return "user="+user+",se="+securityEntity+",permit="+permit;
+	}
 }

@@ -3,20 +3,20 @@ import java.util.*;
 import java.sql.*;
 
 /**
- * й╣О©╫О©╫й╬О©╫О©╫р╙О©╫О©╫д╧О©╫О©╫О©╫
+ * й╣ожй╬юЩр╙гС╣д╧╕дэ
  */
 public class UserManager {	
 	/**
-	 * О©╫О©╫О©╫щ╡О©╫О©╫е╠О©╫О©╫О©╫О©╫О©╫О©╫х║О©╫ц╡О©╫О©╫О©╫О©╫б╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╠
-	 * @param depId О©╫О©╫О©╫е╠О©╫О©╫
-	 * @return О©╫ц╡О©╫О©╫О©╫О©╫б╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╠
+	 * ╦Ы╬щ╡©це╠Ю╨ею╢╩Ях║╦ц╡©цеоб╣дкЫспхкт╠
+	 * @param depId ╡©це╠Ю╨е
+	 * @return ╦ц╡©цеоб╣дкЫспхкт╠
 	 */
 	public Collection<UserModelApi> getUserByDepId(String depId)throws Exception{
 		Collection<UserModelApi> col = new ArrayList<UserModelApi>();
 		Connection conn = null;
 		try{
 			conn = this.getConnection();
-			//ж╩О©╫О©╫р╙О©╫О©╫я╞userIdО©╫О©╫nameО©╫О©╫О©╫О©╫ж╣О©╫м©О©╫О©╫О©╫О©╫О©╫
+			//ж╩пХр╙╡Ия╞userId╨мnameа╫╦Жж╣╬м©иртак
 			String sql = "select u.userId,u.name "
 				+"from tbl_user u,tbl_dep d "
 				+"where u.depId=d.depId and d.depId like ?";
@@ -26,9 +26,9 @@ public class UserManager {
 			
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()){
-				//О©╫О©╫О©╫О©╫О©╫г╢О©╫О©╫О©╫О©╫д╢О©╫О©╫О©╫О©╫О©╫Сё╛╤О©╫О©╫О©╫О©╫О©╫ж╠О©╫с╢О©╫О©╫О©╫UserModelО©╫д╤О©╫О©╫О©╫
+				//уБюОйг╢╢╫╗╣д╢ЗюМ╤тоСё╛╤Ь╡╩йгж╠╫с╢╢╫╗UserModel╣д╤тоС
 				Proxy proxy = new Proxy(new UserModel());
-				//ж╩О©╫О©╫О©╫О©╫О©╫О©╫userIdО©╫О©╫nameО©╫О©╫О©╫О©╫ж╣О©╫м©О©╫О©╫О©╫О©╫О©╫
+				//ж╩йгиХжцuserId╨мnameа╫╦Жж╣╬м©иртак
 				proxy.setUserId(rs.getString("userId"));
 				proxy.setName(rs.getString("name"));
 				
@@ -43,8 +43,8 @@ public class UserManager {
 		return col;
 	}
 	/**
-	 * О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫щ©О©╫О©╫О©╫О©╫О©╫О©╫
-	 * @return О©╫О©╫О©╫щ©О©╫О©╫О©╫О©╫О©╫
+	 * ╩Ях║сКйЩ╬щ©Б╣да╛╫с
+	 * @return йЩ╬щ©Ба╛╫с
 	 */
 	private Connection getConnection() throws Exception {
 		Class.forName("oracle.jdbc.driver.OracleDriver");

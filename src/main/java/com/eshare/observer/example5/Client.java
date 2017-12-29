@@ -2,26 +2,26 @@ package com.eshare.observer.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½Ë®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//´´½¨Ë®ÖÊÖ÷Ìâ¶ÔÏó
 		WaterQuality subject = new WaterQuality();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½
+		//´´½¨¼¸¸ö¹Û²ìÕß
 		WatcherObserver watcher1 = new Watcher();
-		watcher1.setJob("ï¿½ï¿½ï¿½ï¿½ï¿½Ô±");
+		watcher1.setJob("¼à²âÈËÔ±");
 		WatcherObserver watcher2 = new Watcher();
-		watcher2.setJob("Ô¤ï¿½ï¿½ï¿½ï¿½Ô±");
+		watcher2.setJob("Ô¤¾¯ÈËÔ±");
 		WatcherObserver watcher3 = new Watcher();
-		watcher3.setJob("ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ìµ¼");
-		//×¢ï¿½ï¿½Û²ï¿½ï¿½ï¿½
+		watcher3.setJob("¼à²â²¿ÃÅÁìµ¼");
+		//×¢²á¹Û²ìÕß
 		subject.attach(watcher1);
 		subject.attach(watcher2);
 		subject.attach(watcher3);
 		
-		//ï¿½ï¿½Ð´Ë®ï¿½Ê±ï¿½ï¿½ï¿½
-		System.out.println("ï¿½ï¿½Ë®ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½------------------ï¿½ï¿½");
+		//ÌîÐ´Ë®ÖÊ±¨¸æ
+		System.out.println("µ±Ë®ÖÊÎªÕý³£µÄÊ±ºò------------------¡µ");
 		subject.setPolluteLevel(0);
-		System.out.println("ï¿½ï¿½Ë®ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½È¾ï¿½ï¿½Ê±ï¿½ï¿½---------------ï¿½ï¿½");
+		System.out.println("µ±Ë®ÖÊÎªÇá¶ÈÎÛÈ¾µÄÊ±ºò---------------¡µ");
 		subject.setPolluteLevel(1);
-		System.out.println("ï¿½ï¿½Ë®ï¿½ï¿½Îªï¿½Ð¶ï¿½ï¿½ï¿½È¾ï¿½ï¿½Ê±ï¿½ï¿½---------------ï¿½ï¿½");
+		System.out.println("µ±Ë®ÖÊÎªÖÐ¶ÈÎÛÈ¾µÄÊ±ºò---------------¡µ");
 		subject.setPolluteLevel(2);
 	}
 }

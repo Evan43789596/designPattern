@@ -2,23 +2,23 @@ package com.eshare.memento.example3;
 
 
 /**
- * ï¿½ï¿½ï¿½ğ±£´ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Ä¶ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+ * ¸ºÔğ±£´æÄ£ÄâÔËĞĞÁ÷³ÌAµÄ¶ÔÏóµÄ±¸ÍüÂ¼¶ÔÏó
  */
 public class FlowAMementoCareTaker {
 	/**
-	 * ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ¼ÇÂ¼±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	private FlowAMockMemento memento = null;
 	/**
-	 * ï¿½ï¿½ï¿½æ±¸ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @param memento ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ±£´æ±¸ÍüÂ¼¶ÔÏó
+	 * @param memento ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public void saveMemento(FlowAMockMemento memento){
 		this.memento = memento;
 	}
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * »ñÈ¡±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
+	 * @return ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public FlowAMockMemento retriveMemento(){
 		return this.memento;

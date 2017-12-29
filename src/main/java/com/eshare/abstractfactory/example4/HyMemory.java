@@ -1,9 +1,9 @@
 package com.eshare.abstractfactory.example4;
 /**
- * ï¿½Ö´ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½
+ * ÏÖ´úÄÚ´æµÄÀà
  */
 public class HyMemory implements MemoryApi{
 	public void cacheData() {
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ö´ï¿½ï¿½Ú´ï¿½");
+		System.out.println("ÏÖÔÚÕıÔÚÊ¹ÓÃÏÖ´úÄÚ´æ");
 	}
 }

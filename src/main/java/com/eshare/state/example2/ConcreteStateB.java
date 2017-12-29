@@ -2,10 +2,10 @@ package com.eshare.state.example2;
 
 
 /**
- * Êµï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Contextï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ø¶ï¿½×´Ì¬ï¿½ï¿½Øµï¿½ï¿½ï¿½Îª
+ * ÊµÏÖÒ»¸öÓëContextµÄÒ»¸öÌØ¶¨×´Ì¬Ïà¹ØµÄĞĞÎª
  */
 public class ConcreteStateB implements State {
 	public void handle(String sampleParameter) {
-		//Êµï¿½Ö¾ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
+		//ÊµÏÖ¾ßÌåµÄ´¦Àí
 	}
 }

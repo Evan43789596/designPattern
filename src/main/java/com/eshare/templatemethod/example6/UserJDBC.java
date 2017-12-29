@@ -6,26 +6,26 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½Ä²é¹¦ï¿½ï¿½
+ * ¾ßÌåµÄÊµÏÖÓÃ»§¹ÜÀíµÄÔöÉ¾¸Ä²é¹¦ÄÜ
  */
 public class UserJDBC extends JDBCTemplate{	
 	protected String getMainSql(int type) {
-		//ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½ï¿½
+		//¸ù¾Ý²Ù×÷ÀàÐÍ£¬·µ»ØÏàÓ¦µÄÖ÷¸ÉsqlÓï¾ä
 		String sql = "";
 		if(type == TYPE_CREATE){
-			sql = "insert into tbl_testuser values(?,?,?)";
+			sql = "insert into tbl_user values(?,?,?)";
 		}else if(type == TYPE_DELETE){
-			sql = "delete from tbl_testuser where uuid=?";
+			sql = "delete from tbl_user where uuid=?";
 		}else if(type == TYPE_UPDATE){
-			sql = "update tbl_testuser set name=?,age=? where uuid=?";
+			sql = "update tbl_user set name=?,age=? where uuid=?";
 		}else if(type == TYPE_CONDITION){
-			sql = "select * from tbl_testuser where 1=1 ";
+			sql = "select * from tbl_user where 1=1 ";
 		}
 		return sql;
 	}
 	protected void setUpdateSqlValue(int type, PreparedStatement pstmt,
 			Object obj) throws Exception{
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½"?"ï¿½ï¿½Ó¦ï¿½ï¿½Öµ
+		//ÉèÖÃÔö¡¢É¾¡¢¸Ä²Ù×÷µÄsqlÖÐ"?"¶ÔÓ¦µÄÖµ
 		if(type == TYPE_CREATE){
 			this.setCreateValue(pstmt, (UserModel)obj);
 		}else if(type == TYPE_DELETE){
@@ -50,15 +50,15 @@ public class UserJDBC extends JDBCTemplate{
 		UserQueryModel uqm = (UserQueryModel)qm;
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(sql);
-		//ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½
+		//¾ø¶ÔÆ¥Åä
 		if(uqm.getUuid()!=null && uqm.getUuid().trim().length()>0){
 			buffer.append(" and uuid=? ");
 		}
-		//Ä£ï¿½ï¿½Æ¥ï¿½ï¿½
+		//Ä£ºýÆ¥Åä
 		if(uqm.getName()!=null && uqm.getName().trim().length()>0){
 			buffer.append(" and name like ? ");
 		}
-		//ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½
+		//Çø¼äÆ¥Åä
 		if(uqm.getAge() > 0){
 			buffer.append(" and age >=? ");
 		}

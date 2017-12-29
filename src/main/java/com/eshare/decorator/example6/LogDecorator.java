@@ -2,7 +2,7 @@ package com.eshare.decorator.example6;
 import java.text.*;
 import java.util.Date;
 /**
- * Êµï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Â¼
+ * ÊµÏÖÈÕÖ¾¼ÇÂ¼
  */
 public class LogDecorator extends Decorator{
 	public LogDecorator(GoodsSaleEbi ebi){
@@ -10,11 +10,11 @@ public class LogDecorator extends Decorator{
 	}
 	
 	public boolean sale(String user,String customer, SaleModel saleModel) {
-		//Ö´ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½
+		//Ö´ÐÐÒµÎñ¹¦ÄÜ
 		boolean f = this.ebi.sale(user, customer, saleModel);
-		//ï¿½ï¿½Ö´ï¿½ï¿½Òµï¿½ï¿½ï¿½Ü¹ï¿½ï¿½ó£¬¼ï¿½Â¼ï¿½ï¿½Ö¾
+		//ÔÚÖ´ÐÐÒµÎñ¹¦ÄÜ¹ýºó£¬¼ÇÂ¼ÈÕÖ¾
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
-		System.out.println("ï¿½ï¿½Ö¾ï¿½ï¿½Â¼ï¿½ï¿½"+user+"ï¿½ï¿½"+df.format(new Date())+"Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Û¼ï¿½Â¼ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½"+customer+",ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½"+saleModel);
+		System.out.println("ÈÕÖ¾¼ÇÂ¼£º"+user+"ÓÚ"+df.format(new Date())+"Ê±±£´æÁËÒ»ÌõÏúÊÛ¼ÇÂ¼£¬¿Í»§ÊÇ"+customer+",¹ºÂò¼ÇÂ¼ÊÇ"+saleModel);
 		return f;
 	}
 

@@ -1,38 +1,38 @@
 package com.eshare.command.example5;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï²Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°Ã¿ï¿½ï¿½ï¿½ËºÍ¾ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ß£ï¿½
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ðµï¿½ï¿½Ã£ï¿½ï¿½àµ±ï¿½Ú±ï¿½×¼CommandÄ£Ê½ï¿½ï¿½Client+Invoker
+ * ·þÎñÔ±£¬¸ºÔð×éºÏ²Ëµ¥£¬¸ºÔð×é×°Ã¿¸ö²ËºÍ¾ßÌåµÄÊµÏÖÕß£¬
+ * »¹¸ºÔðÖ´ÐÐµ÷ÓÃ£¬Ïàµ±ÓÚ±ê×¼CommandÄ£Ê½µÄClient+Invoker
  */
 public class Waiter {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó¡ª¡ï¿½ï¿½Ëµï¿½
+	 * ³ÖÓÐÒ»¸öºêÃüÁî¶ÔÏó¡ª¡ª²Ëµ¥
 	 */
 	private MenuCommand menuCommand = new MenuCommand();
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½
-	 * @param cmd ï¿½Í»ï¿½ï¿½ï¿½Ä²Ë£ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¿Í»§µã²Ë
+	 * @param cmd ¿Í»§µãµÄ²Ë£¬Ã¿µÀ²ËÊÇÒ»¸öÃüÁî¶ÔÏó
 	 */
 	public void orderDish(Command cmd){
-		//ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ÐºÍ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½
+		//¿Í»§´«¹ýÀ´µÄÃüÁî¶ÔÏóÊÇÃ»ÓÐºÍ½ÓÊÕÕß×é×°µÄ
+		//ÔÚÕâÀï×é×°°É
 		CookApi hotCook = new HotCook();
 		CookApi coolCook = new CoolCook();
-		//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È²ï¿½Ê¦ï¿½ï¿½
-		//ï¿½òµ¥µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
+		//ÅÐ¶Áµ½µ×ÊÇ×éºÏÁ¹²ËÊ¦¸µ»¹ÊÇÈÈ²ËÊ¦¸µ
+		//¼òµ¥µã¸ù¾ÝÃüÁîµÄÔ­Ê¼¶ÔÏóµÄÀàÐÍÀ´ÅÐ¶Ï
 		if(cmd instanceof DuckCommand){
 			((DuckCommand)cmd).setCookApi(hotCook);
 		}else if(cmd instanceof ChopCommand){
 			((ChopCommand)cmd).setCookApi(hotCook);
 		}else if(cmd instanceof PorkCommand){
-			//ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½Ê¦ï¿½ï¿½
+			//ÕâÊÇ¸öÁ¹²Ë£¬ËùÒÔÒª×éºÏÁ¹²ËµÄÊ¦¸µ
 			((PorkCommand)cmd).setCookApi(coolCook);
 		}
-		//ï¿½ï¿½Óµï¿½ï¿½Ëµï¿½ï¿½ï¿½
+		//Ìí¼Óµ½²Ëµ¥ÖÐ
 		menuCommand.addCommand(cmd);
 	}
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½Ê¾ÒªÖ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð²Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¿Í»§µã²ËÍê±Ï£¬±íÊ¾ÒªÖ´ÐÐÃüÁîÁË£¬ÕâÀï¾ÍÊÇÖ´ÐÐ²Ëµ¥Õâ¸ö×éºÏÃüÁî
 	 */
 	public void orderOver(){
 		this.menuCommand.execute();

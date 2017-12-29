@@ -1,14 +1,14 @@
 package com.eshare.visitor.example2;
 /**
- * ï¿½ï¿½ï¿½Ö¿Í»ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+ * ¸÷ÖÖ¿Í»§µÄ¸¸Àà
  */
 public abstract class Customer {
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½
+	 * ¿Í»§±àºÅ
 	 */
 	private String customerId;
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¿Í»§Ãû³Æ
 	 */
 	private String name;
 	
@@ -25,15 +25,15 @@ public abstract class Customer {
 		this.name = name;
 	}	
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ¿Í»§Ìá³ö·þÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public abstract void serviceRequest();
 	/**
-	 * ï¿½Í»ï¿½ï¿½Ô¹ï¿½Ë¾ï¿½ï¿½Æ·ï¿½ï¿½Æ«ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ¿Í»§¶Ô¹«Ë¾²úÆ·µÄÆ«ºÃ·ÖÎö£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public abstract void predilectionAnalyze();
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ¿Í»§¼ÛÖµ·ÖÎö£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public abstract void worthAnalyze();
 }

@@ -1,32 +1,40 @@
 package com.eshare.singleton.example8;
 import java.util.*;
 /**
- * Ê¹ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Êµï¿½Öµï¿½ï¿½ï¿½
+ * Ê¹ÓÃ»º´æÀ´Ä£ÄâÊµÏÖµ¥Àý
  */
 public class Singleton {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½È±Ê¡ï¿½ï¿½keyÖµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ÐµÄ´ï¿½ï¿½
+	 * ¶¨ÒåÒ»¸öÈ±Ê¡µÄkeyÖµ£¬ÓÃÀ´±êÊ¶ÔÚ»º´æÖÐµÄ´æ·Å
 	 */
 	private final static String DEFAULT_KEY = "One";
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * »º´æÊµÀýµÄÈÝÆ÷
 	 */
 	private static Map<String,Singleton> map = new HashMap<String,Singleton>();
 	/**
-	 * Ë½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ì·½ï¿½ï¿½
+	 * Ë½ÓÐ»¯¹¹Ôì·½·¨
 	 */
 	private Singleton(){
 		//
 	}
 	public static Singleton getInstance(){
-		//ï¿½È´Ó»ï¿½ï¿½ï¿½ï¿½Ð»ï¿½È¡
+		//ÏÈ´Ó»º´æÖÐ»ñÈ¡
 		Singleton instance = (Singleton)map.get(DEFAULT_KEY);
-		//ï¿½ï¿½ï¿½Ã»ï¿½Ð£ï¿½ï¿½ï¿½ï¿½Â½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½Ã»Ø»ï¿½ï¿½ï¿½ï¿½ï¿½
+		//Èç¹ûÃ»ÓÐ£¬¾ÍÐÂ½¨Ò»¸ö£¬È»ºóÉèÖÃ»Ø»º´æÖÐ
 		if(instance==null){
 			instance = new Singleton();
 			map.put(DEFAULT_KEY, instance);
 		}
-		//ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½Ö±ï¿½ï¿½Ê¹ï¿½ï¿½
+		//Èç¹ûÓÐ¾ÍÖ±½ÓÊ¹ÓÃ
 		return instance;
+	}
+	
+	public static void main(String[] args) {
+		
+		for(int i=0;i<3;i++){
+			System.out.println(Singleton.getInstance());
+		}
+		
 	}
 }

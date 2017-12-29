@@ -1,26 +1,30 @@
 package com.eshare.singleton.example9;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ä¿Îª3ï¿½ï¿½ 
+ * ¼òµ¥ÑÝÊ¾ÈçºÎÀ©Õ¹µ¥ÀýÄ£Ê½£¬¿ØÖÆÊµÀýÊýÄ¿Îª3¸ö 
  */
 public class OneExtend {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½È±Ê¡ï¿½ï¿½keyÖµï¿½ï¿½Ç°×º
+	 * ¶¨ÒåÒ»¸öÈ±Ê¡µÄkeyÖµµÄÇ°×º
 	 */
 	private final static String DEFAULT_PREKEY = "Cache";
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * »º´æÊµÀýµÄÈÝÆ÷
 	 */
+	
+	//ÊµÀýµ÷¶ÈµÄÎÊÌâ
 	private static Map<String,OneExtend> map = new HashMap<String,OneExtend>();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÚ¼ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¿ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ø´ï¿½1ï¿½ï¿½Ê¼
+	 * ÓÃÀ´¼ÇÂ¼µ±Ç°ÕýÔÚÊ¹ÓÃµÚ¼¸¸öÊµÀý£¬µ½ÁË¿ØÖÆµÄ×î´óÊýÄ¿£¬¾Í·µ»Ø´Ó1¿ªÊ¼
 	 */
 	private static int num = 1;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+	 * ¶¨Òå¿ØÖÆÊµÀýµÄ×î´óÊýÄ¿
 	 */
 	private final static int NUM_MAX = 3; 
+	
 	private OneExtend(){}
+	
 	public static OneExtend getInstance(){
 		String key = DEFAULT_PREKEY+num;
 		OneExtend oneExtend = map.get(key);
@@ -28,10 +32,10 @@ public class OneExtend {
 			oneExtend = new OneExtend();
 			map.put(key, oneExtend);
 		}
-		//ï¿½Ñµï¿½Ç°Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¼ï¿½1
+		//°Ñµ±Ç°ÊµÀýµÄÐòºÅ¼Ó1
 		num++;
 		if(num > NUM_MAX){
-			//ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ïµ½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ë£ï¿½ï¿½Ç¾ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½1ï¿½ï¿½Ê¼ï¿½ï¿½È¡
+			//Èç¹ûÊµÀýµÄÐòºÅÒÑ¾­´ïµ½×î´óÊýÄ¿ÁË£¬ÄÇ¾ÍÖØ¸´´Ó1¿ªÊ¼»ñÈ¡
 			num = 1;
 		}
 		return oneExtend;		

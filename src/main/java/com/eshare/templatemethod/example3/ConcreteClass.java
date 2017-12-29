@@ -1,14 +1,14 @@
 package com.eshare.templatemethod.example3;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½à£¬Êµï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¾ßÌåÊµÏÖÀà£¬ÊµÏÖÔ­Óï²Ù×÷
  */
 public class ConcreteClass extends AbstractClass {
 	public void doPrimitiveOperation1() { 
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+		//¾ßÌåµÄÊµÏÖ
 	}
 	public void doPrimitiveOperation2() { 
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+		//¾ßÌåµÄÊµÏÖ
 	}
 }
 

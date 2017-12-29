@@ -1,27 +1,27 @@
 package com.eshare.visitor.example5;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½á¹¹,Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü·ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ðµï¿½Ôªï¿½ï¿½
+ * ¶ÔÏó½á¹¹,Í¨³£ÔÚÕâÀï¶ÔÔªËØ¶ÔÏó½øÐÐ±éÀú£¬ÈÃ·ÃÎÊÕßÄÜ·ÃÎÊµ½ËùÓÐµÄÔªËØ
  */
 public class ObjectStructure {
 	/**
-	 * ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ï½á¹¹
+	 * ±íÊ¾¶ÔÏó½á¹¹£¬¿ÉÒÔÊÇÒ»¸ö×éºÏ½á¹¹
 	 */
 	private Component root = null;
 	/**
-	 * ï¿½á¹©ï¿½ï¿½ï¿½Í»ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½Ä¸ß²ï¿½Ó¿ï¿½
-	 * @param visitor ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ìá¹©¸ø¿Í»§¶Ë²Ù×÷µÄ¸ß²ã½Ó¿Ú
+	 * @param visitor ¿Í»§¶ËÐèÒªÊ¹ÓÃµÄ·ÃÎÊÕß
 	 */
 	public void handleRequest(Visitor visitor){
-		//ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½á¹¹ï¿½ÐµÄ¸ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½Ñ¾ï¿½Êµï¿½ï¿½ï¿½ï¿½Ôªï¿½ØµÄ±ï¿½ï¿½ï¿½
+		//ÈÃ×éºÏ¶ÔÏó½á¹¹ÖÐµÄ¸ùÔªËØ£¬½ÓÊÜ·ÃÎÊ
+		//ÔÚ×éºÏ¶ÔÏó½á¹¹ÖÐÒÑ¾­ÊµÏÖÁËÔªËØµÄ±éÀú
 		if(root!=null){
 			root.accept(visitor);
 		}
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½á¹¹
-	 * @param ele ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½á¹¹
+	 * ´«Èë×éºÏ¶ÔÏó½á¹¹
+	 * @param ele ×éºÏ¶ÔÏó½á¹¹
 	 */
 	public void setRoot(Component ele){
 		this.root = ele;

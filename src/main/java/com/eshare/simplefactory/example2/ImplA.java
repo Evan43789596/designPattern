@@ -1,10 +1,10 @@
 package com.eshare.simplefactory.example2;
 /**
- * 锟接口的撅拷锟斤拷实锟街讹拷锟斤拷A 
+ * 接口的具体实现对象A 
  */
 public class ImplA implements Api{
 	public void operation(String s) {
-		//实锟街癸拷锟杰的达拷锟诫，示锟斤拷一锟斤拷
+		//实现功能的代码，示意一下
 		System.out.println("ImplA s=="+s);
 	}
 }

@@ -2,8 +2,8 @@ package com.eshare.state.example3;
 
 public class RepeatVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//锟截革拷投票
-		//锟斤拷时锟斤拷锟斤拷锟斤拷锟斤拷
-		System.out.println("锟诫不要锟截革拷投票");
+		//重复投票
+		//暂时不做处理
+		System.out.println("请不要重复投票");
 	}
 }

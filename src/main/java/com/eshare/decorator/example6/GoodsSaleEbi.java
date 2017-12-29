@@ -1,14 +1,14 @@
 package com.eshare.decorator.example6;
 /**
- * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Û¹ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Ó¿ï¿½
+ * ÉÌÆ·ÏúÊÛ¹ÜÀíµÄÒµÎñ½Ó¿Ú
  */
 public interface GoodsSaleEbi {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½ï¿½ï¿½ï¿½Ì«ï¿½é·³ï¿½Ë£ï¿½Îªï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½òµ¥µï¿½
-	 * @param user ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±
-	 * @param customer ï¿½Í»ï¿½
-	 * @param saleModel ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½Ç·ñ±£´ï¿½É¹ï¿½
+	 * ±£´æÏúÊÛĞÅÏ¢£¬±¾À´ÏúÊÛÊı¾İÓ¦¸ÃÊÇ¶àÌõ£¬Ì«Âé·³ÁË£¬ÎªÁËÑİÊ¾£¬¼òµ¥µã
+	 * @param user ²Ù×÷ÈËÔ±
+	 * @param customer ¿Í»§
+	 * @param saleModel ÏúÊÛÊı¾İ
+	 * @return ÊÇ·ñ±£´æ³É¹¦
 	 */
 	public boolean sale(String user, String customer, SaleModel saleModel);
 }

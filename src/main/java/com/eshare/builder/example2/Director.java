@@ -1,24 +1,24 @@
 package com.eshare.builder.example2;
 /**
- * 指锟斤拷锟竭ｏ拷指锟斤拷使锟矫癸拷锟斤拷锟斤拷锟侥接匡拷锟斤拷锟斤拷锟斤拷锟斤拷品锟侥讹拷锟斤拷
+ * 指导者，指导使用构建器的接口来构建产品的对象
  */
 public class Director {
 	/**
-	 * 锟斤拷锟叫碉拷前锟斤拷要使锟矫的癸拷锟斤拷锟斤拷锟斤拷锟斤拷
+	 * 持有当前需要使用的构建器对象
 	 */
 	private Builder builder;
 	/**
-	 * 锟斤拷锟届方锟斤拷锟斤拷锟斤拷锟诫构锟斤拷锟斤拷锟斤拷锟斤拷
-	 * @param builder 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+	 * 构造方法，传入构建器对象
+	 * @param builder 构建器对象
 	 */
 	public Director(Builder builder) {
 		this.builder = builder;
 	}
 	/**
-	 * 示锟解方锟斤拷锟斤拷指锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟秸的诧拷品锟斤拷锟斤拷
+	 * 示意方法，指导构建器构建最终的产品对象
 	 */
 	public void construct() {
-		//通锟斤拷使锟矫癸拷锟斤拷锟斤拷锟接匡拷锟斤拷锟斤拷锟斤拷锟斤拷锟秸的诧拷品锟斤拷锟斤拷
+		//通过使用构建器接口来构建最终的产品对象
 		builder.buildPart();
 	}
 }

@@ -1,10 +1,10 @@
 package com.eshare.abstractfactory.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+ * Ö÷°åµÄ½Ó¿Ú
  */
 public interface MainboardApi {
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¶¼ï¿½ï¿½ï¿½Ð°ï¿½×°CPUï¿½Ä¹ï¿½ï¿½ï¿½
+	 * Ê¾Òâ·½·¨£¬Ö÷°å¶¼¾ßÓÐ°²×°CPUµÄ¹¦ÄÜ
 	 */
 	public void installCPU();	
 }

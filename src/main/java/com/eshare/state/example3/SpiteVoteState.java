@@ -2,12 +2,12 @@ package com.eshare.state.example3;
 
 public class SpiteVoteState implements VoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//锟斤拷锟斤拷投票
-		//取锟斤拷锟矫伙拷锟斤拷投票锟绞格，诧拷取锟斤拷投票锟斤拷录
+		//恶意投票
+		//取消用户的投票资格，并取消投票记录
 		String s = voteManager.getMapVote().get(user);
 		if(s!=null){
 			voteManager.getMapVote().remove(user);
 		}
-		System.out.println("锟斤拷锟叫讹拷锟斤拷刷票锟斤拷为锟斤拷取锟斤拷投票锟绞革拷");
+		System.out.println("你有恶意刷票行为，取消投票资格");
 	}
 }

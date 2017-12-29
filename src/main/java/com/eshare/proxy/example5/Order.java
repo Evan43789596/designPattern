@@ -1,27 +1,27 @@
 package com.eshare.proxy.example5;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¶©µ¥¶ÔÏó
  */
 public class Order implements OrderApi{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ¶©µ¥¶©¹ºµÄ²úÆ·Ãû³Æ
 	 */
 	private String productName;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¶©µ¥¶©¹ºµÄÊýÁ¿
 	 */
 	private int orderNum;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±
+	 * ´´½¨¶©µ¥µÄÈËÔ±
 	 */
 	private String orderUser;
 	
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¹¹ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param productName ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
-	 * @param orderNum ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param orderUser ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±
+	 * ¹¹Ôì·½·¨£¬´«Èë¹¹½¨ÐèÒªµÄÊý¾Ý
+	 * @param productName ¶©µ¥¶©¹ºµÄ²úÆ·Ãû³Æ
+	 * @param orderNum ¶©µ¥¶©¹ºµÄÊýÁ¿
+	 * @param orderUser ´´½¨¶©µ¥µÄÈËÔ±
 	 */
 	public Order(String productName,int orderNum,String orderUser){
 		this.productName = productName;

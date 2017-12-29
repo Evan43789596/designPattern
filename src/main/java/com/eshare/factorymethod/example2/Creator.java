@@ -1,20 +1,19 @@
 package com.eshare.factorymethod.example2;
 /**
- * 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+ * 创建器，声明工厂方法
  */
 public abstract class Creator {
 	/**
-	 * 锟斤拷锟斤拷Product锟侥癸拷锟斤拷锟斤拷锟斤拷
-	 * @return Product锟斤拷锟斤拷
+	 * 创建Product的工厂方法
+	 * @return Product对象
 	 */
 	protected abstract Product factoryMethod();
 	/**
-	 * 示锟解方锟斤拷锟斤拷实锟斤拷某些锟斤拷锟杰的凤拷锟斤拷 
+	 * 示意方法，实现某些功能的方法 
 	 */
 	public void someOperation() {
-		//通锟斤拷锟斤拷锟斤拷些锟斤拷锟斤拷实锟斤拷锟叫ｏ拷锟斤拷要锟斤拷锟矫癸拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷取Product锟斤拷锟斤拷
+		//通常在这些方法实现中，需要调用工厂方法来获取Product对象
 		Product product = factoryMethod();
 	}
-
 }
 

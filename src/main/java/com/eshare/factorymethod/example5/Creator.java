@@ -1,27 +1,27 @@
 package com.eshare.factorymethod.example5;
 /**
- * ï¿½Í»ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Creatorï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½Creatorï¿½Ä»ï¿½ï¿½ï¿½Êµï¿½Ö½á¹¹
+ * ¿Í»§¶ËÊ¹ÓÃCreatorÀ´´´½¨¿Í»§¶ËÐèÒªµÄ¶ÔÏóµÄÇé¿öÏÂ£¬CreatorµÄ»ù±¾ÊµÏÖ½á¹¹
  */
 public abstract class Creator {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã²»ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
+	 * ¹¤³§·½·¨£¬Ò»°ã²»¶ÔÍâ£¬´´½¨Ò»¸ö²¿¼þ¶ÔÏó
+	 * @return ´´½¨µÄ²úÆ·¶ÔÏó£¬Ò»°ãÊÇÁíÒ»¸ö²úÆ·¶ÔÏóµÄ²¿¼þ
 	 */
 	protected abstract Product1 factoryMethod1();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã²»ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
+	 * ¹¤³§·½·¨£¬Ò»°ã²»¶ÔÍâ£¬´´½¨Ò»¸ö²¿¼þ¶ÔÏó
+	 * @return ´´½¨µÄ²úÆ·¶ÔÏó£¬Ò»°ãÊÇÁíÒ»¸ö²úÆ·¶ÔÏóµÄ²¿¼þ
 	 */
 	protected abstract Product2 factoryMethod2();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä¶ï¿½ï¿½ó£¬¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½Ã²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä¹ï¿½ï¿½ï¿½
-	 * @return ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ´´½¨¿Í»§¶ËÐèÒªµÄ¶ÔÏó£¬¿Í»§¶ËÖ÷ÒªÊ¹ÓÃ²úÆ·¶ÔÏóÀ´Íê³ÉËùÐèÒªµÄ¹¦ÄÜ
+	 * @return ¿Í»§¶ËÐèÒªµÄ¶ÔÏó
 	 */
 	public Product createProduct(){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÔÚÕâÀïÊ¹ÓÃ¹¤³§·½·¨£¬µÃµ½¿Í»§¶ËËùÐè¶ÔÏóµÄ²¿¼þ¶ÔÏó
 		Product1 p1 = factoryMethod1();
 		Product2 p2 = factoryMethod2();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½
+		//¹¤³§·½·¨´´½¨µÄ¶ÔÏóÊÇ´´½¨¿Í»§¶Ë¶ÔÏóËùÐèÒªµÄ
 		Product p = new ConcreteProduct();
 		p.setProduct1(p1);
 		p.setProduct2(p2);

@@ -1,18 +1,18 @@
 package com.eshare.visitor.example2;
 /**
- * ï¿½ï¿½Òµï¿½Í»ï¿½
+ * ÆóÒµ¿Í»§
  */
 public class EnterpriseCustomer extends Customer{
 	/**
-	 * ï¿½ï¿½Ïµï¿½ï¿½
+	 * ÁªÏµÈË
 	 */
 	private String linkman;
 	/**
-	 * ï¿½ï¿½Ïµï¿½ç»°
+	 * ÁªÏµµç»°
 	 */
 	private String linkTelephone;
 	/**
-	 * ï¿½ï¿½Òµ×¢ï¿½ï¿½ï¿½Ö·
+	 * ÆóÒµ×¢²áµØÖ·
 	 */
 	private String registerAddress;
 	
@@ -42,26 +42,26 @@ public class EnterpriseCustomer extends Customer{
 	}
 	
 	/**
-	 * ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ÆóÒµ¿Í»§Ìá³ö·þÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public void serviceRequest(){
-		//ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		System.out.println(this.getName()+"ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		//ÆóÒµ¿Í»§Ìá³öµÄ¾ßÌå·þÎñÇëÇó
+		System.out.println(this.getName()+"ÆóÒµÌá³ö·þÎñÇëÇó");
 	}
 	/**
-	 * ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½Ô¹ï¿½Ë¾ï¿½ï¿½Æ·ï¿½ï¿½Æ«ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ÆóÒµ¿Í»§¶Ô¹«Ë¾²úÆ·µÄÆ«ºÃ·ÖÎö£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public void predilectionAnalyze(){
-		//ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½Ç±ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½Ô¼ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½Ä·ï¿½Õ¹ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½Í»ï¿½ï¿½Ä·ï¿½Õ¹Ô¤ï¿½ÚµÈµÄ·ï¿½ï¿½ï¿½
-		System.out.println("ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Òµï¿½Í»ï¿½"+this.getName()+"ï¿½ï¿½ï¿½Ð²ï¿½Æ·Æ«ï¿½Ã·ï¿½ï¿½ï¿½");
+		//¸ù¾Ý¹ýÍù¹ºÂòµÄÀúÊ·¡¢Ç±ÔÚ¹ºÂòÒâÏò
+		//ÒÔ¼°¿Í»§ËùÔÚÐÐÒµµÄ·¢Õ¹Ç÷ÊÆ¡¢¿Í»§µÄ·¢Õ¹Ô¤ÆÚµÈµÄ·ÖÎö
+		System.out.println("ÏÖÔÚ¶ÔÆóÒµ¿Í»§"+this.getName()+"½øÐÐ²úÆ·Æ«ºÃ·ÖÎö");
 	}
 	/**
-	 * ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ÆóÒµ¿Í»§¼ÛÖµ·ÖÎö£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public void worthAnalyze(){
-		//ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ·ï¿½Í·ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½Ù¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ÊµÈ½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½
-		//ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½Ä±ï¿½×¼ï¿½ï¿½È¸ï¿½ï¿½Ë¿Í»ï¿½ï¿½Ä¸ï¿½
-		System.out.println("ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Òµï¿½Í»ï¿½"+this.getName()+"ï¿½ï¿½ï¿½Ð¼ï¿½Öµï¿½ï¿½ï¿½ï¿½");
+		//¸ù¾Ý¹ºÂòµÄ½ð¶î´óÐ¡¡¢¹ºÂòµÄ²úÆ·ºÍ·þÎñµÄ¶àÉÙ¡¢¹ºÂòµÄÆµÂÊµÈ½øÐÐ·ÖÎö
+		//ÆóÒµ¿Í»§µÄ±ê×¼»á±È¸öÈË¿Í»§µÄ¸ß
+		System.out.println("ÏÖÔÚ¶ÔÆóÒµ¿Í»§"+this.getName()+"½øÐÐ¼ÛÖµ·ÖÎö");
 	}
 }

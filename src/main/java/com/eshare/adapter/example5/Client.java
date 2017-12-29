@@ -2,24 +2,24 @@ package com.eshare.adapter.example5;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//в╪О©╫О©╫О©╫О©╫ж╬О©╫О©╫О©╫щёО©╫р╡О©╫О©╫О©╫г╡О©╫О©╫т╣О©╫О©╫О©╫О©╫О©╫
+		//в╪╠╦хуж╬дзхщё╛р╡╬мйг╡Бйт╣дйЩ╬щ
 		LogModel lm1 = new LogModel();
 		lm1.setLogId("001");
 		lm1.setOperateUser("admin");
 		lm1.setOperateTime("2010-03-02 10:08:18");
-		lm1.setLogContent("О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫");
+		lm1.setLogContent("уБйгр╩╦Ж╡Бйт");
 		
 		List<LogModel> list = new ArrayList<LogModel>();
 		list.add(lm1);
 
 		
-		//О©╫О©╫О©╫О©╫О©╫б╟О©╫д╡О©╫О©╫О©╫О©╫О©╫ж╬О©╫д╫с©з╤О©╫О©╫О©╫
+		//╢╢╫╗пб╟Ф╣д╡ывВхуж╬╣д╫с©з╤тоС
 		LogDbOperateApi api = new ClassAdapter(""); 
 		
-		//О©╫О©╫О©╫О©╫О©╫О©╫ж╬О©╫д╪О©╫
+		//╠ё╢Фхуж╬нд╪Ч
 		api.createLog(lm1);
 		
-		//О©╫О©╫х║О©╫О©╫ж╬О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+		//╤ах║хуж╬нд╪Ч╣ддзхщ
 		List<LogModel> allLog = api.getAllLog();
 		System.out.println("allLog="+allLog);
 	}

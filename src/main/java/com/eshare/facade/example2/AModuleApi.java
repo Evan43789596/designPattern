@@ -1,10 +1,10 @@
 package com.eshare.facade.example2;
 /**
- * AÄ£ï¿½ï¿½Ä½Ó¿ï¿½
+ * AÄ£¿éµÄ½Ó¿Ú
  */
 public interface AModuleApi {
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½AÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½
+	 * Ê¾Òâ·½·¨£¬AÄ£¿é¶ÔÍâµÄÒ»¸ö¹¦ÄÜ·½·¨
 	 */
 	public void testA();
 }

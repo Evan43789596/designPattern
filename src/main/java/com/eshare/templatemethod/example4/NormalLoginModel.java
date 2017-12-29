@@ -1,15 +1,15 @@
 package com.eshare.templatemethod.example4;
 /**
- * ï¿½ï¿½×°ï¿½ï¿½ï¿½Ðµï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ»ï¿½ï¿½ï¿½ï¿½Ï£ï¿½
- * ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ·â×°½øÐÐµÇÂ¼¿ØÖÆËùÐèÒªµÄÊý¾Ý£¬ÔÚ¹«¹²Êý¾ÝµÄ»ù´¡ÉÏ£¬
+ * Ìí¼Ó¾ßÌåÄ£¿éÐèÒªµÄÊý¾Ý
  */
 public class NormalLoginModel extends LoginModel{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½
+	 * ÃÜÂëÑéÖ¤ÎÊÌâ
 	 */
 	private String question;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½
+	 * ÃÜÂëÑéÖ¤´ð°¸
 	 */
 	private String answer;
 	public String getQuestion() {

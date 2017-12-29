@@ -2,16 +2,16 @@ package com.eshare.prototype.example3;
 
 public class OrderClient {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ê¾ï¿½òµ¥£ï¿½Ö±ï¿½ï¿½newï¿½ï¿½
+		//´´½¨¶©µ¥¶ÔÏó£¬ÕâÀïÎªÁËÑİÊ¾¼òµ¥£¬Ö±½ÓnewÁË
 		PersonalOrder op = new PersonalOrder();
-		//ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		op.setOrderProductNum(3925);
-		op.setCustomerName("ï¿½ï¿½ï¿½ï¿½");
+		//ÉèÖÃ¶©µ¥Êı¾İ
+		op.setOrderProductNum(1925);
+		op.setCustomerName("ÕÅÈı");
 		op.setProductId("P0001");
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½È¡Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£¬Ò²Ö±ï¿½ï¿½newï¿½Ë£ï¿½Îªï¿½Ë¼òµ¥£ï¿½ï¿½ï¿½Òµï¿½ï¿½Ó¿Ú¶ï¿½Ã»ï¿½ï¿½ï¿½ï¿½
+		//ÕâÀï»ñÈ¡ÒµÎñ´¦ÀíµÄÀà£¬Ò²Ö±½ÓnewÁË£¬ÎªÁË¼òµ¥£¬Á¬ÒµÎñ½Ó¿Ú¶¼Ã»ÓĞ×ö
 		OrderBusiness ob = new OrderBusiness();
-		//ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¶©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//µ÷ÓÃÒµÎñÀ´±£´æ¶©µ¥¶ÔÏó
 		ob.saveOrder(op);
 	}
 }

@@ -1,22 +1,25 @@
 package com.eshare.templatemethod.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ä£ï¿½å·½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÈµÄ³ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¶¨ÒåÄ£°å·½·¨¡¢Ô­Óï²Ù×÷µÈµÄ³éÏóÀà
  */
 public abstract class AbstractClass {
 	/**
-	 * Ô­ï¿½ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½Î½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹©Êµï¿½ï¿½
+	 * Ô­Óï²Ù×÷1£¬ËùÎ½Ô­Óï²Ù×÷¾ÍÊÇ³éÏóµÄ²Ù×÷£¬±ØÐëÒªÓÉ×ÓÀàÌá¹©ÊµÏÖ
 	 */
 	public abstract void doPrimitiveOperation1();
 	/**
-	 * Ô­ï¿½ï¿½ï¿½ï¿½ï¿½2
+	 * Ô­Óï²Ù×÷2
 	 */
 	public abstract void doPrimitiveOperation2();
 	/**
-	 * Ä£ï¿½å·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½Ç¼ï¿½
+	 * Ä£°å·½·¨£¬¶¨ÒåËã·¨¹Ç¼Ü
 	 */
 	public final void templateMethod() {
+		//1
 		doPrimitiveOperation1();
+		//2
 		doPrimitiveOperation2();
+		
 	}
 }
 

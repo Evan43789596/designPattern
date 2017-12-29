@@ -1,11 +1,11 @@
 package com.eshare.bridge.example1;
 /**
- * 锟斤拷Email锟侥凤拷式锟斤拷锟斤拷锟斤拷通锟斤拷息
+ * 以Email的方式发送普通消息
  */
 public class CommonMessageEmail implements Message{
 
 	public void send(String message, String toUser) {
-		System.out.println("使锟斤拷Email锟侥凤拷式锟斤拷锟斤拷锟斤拷锟斤拷息'"+message+"'锟斤拷"+toUser);
+		System.out.println("使用Email的方式，发送消息'"+message+"'给"+toUser);
 	}
 
 }

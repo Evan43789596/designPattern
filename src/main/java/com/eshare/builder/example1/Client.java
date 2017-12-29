@@ -4,35 +4,35 @@ import java.util.*;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸²âÊÔÊý¾Ý
 		ExportHeaderModel ehm = new ExportHeaderModel();
-		ehm.setDepId("Ò»ï¿½Ö¹ï¿½Ë¾");
-		ehm.setExportDate("2010-05-18");
+		ehm.setDepId("Ò»·Ö¹«Ë¾");
+		ehm.setExportDate("2012-06-26");
 		
 		Map<String,Collection<ExportDataModel>> mapData = new HashMap<String,Collection<ExportDataModel>>();
 		Collection<ExportDataModel> col = new ArrayList<ExportDataModel>();
 		
 		ExportDataModel edm1 = new ExportDataModel();
-		edm1.setProductId("ï¿½ï¿½Æ·001ï¿½ï¿½");
+		edm1.setProductId("²úÆ·001ºÅ");
 		edm1.setPrice(100);
 		edm1.setAmount(80);
 		
 		ExportDataModel edm2 = new ExportDataModel();
-		edm2.setProductId("ï¿½ï¿½Æ·002ï¿½ï¿½");
+		edm2.setProductId("²úÆ·002ºÅ");
 		edm2.setPrice(99);
 		edm2.setAmount(55);		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
+		//°ÑÊý¾Ý×é×°ÆðÀ´
 		col.add(edm1);
 		col.add(edm2);		
-		mapData.put("ï¿½ï¿½ï¿½Û¼ï¿½Â¼ï¿½ï¿½", col);
+		mapData.put("ÏúÊÛ¼ÇÂ¼±í", col);
 		
 		ExportFooterModel efm = new ExportFooterModel();
-		efm.setExportUser("ï¿½ï¿½ï¿½ï¿½");
+		efm.setExportUser("ÕÅÈý");
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Ä¼ï¿½
+		//²âÊÔÊä³öµ½ÎÄ±¾ÎÄ¼þ
 		ExportToTxt toTxt = new ExportToTxt();
 		toTxt.export(ehm, mapData, efm);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xmlï¿½Ä¼ï¿½
+		//²âÊÔÊä³öµ½xmlÎÄ¼þ
 		ExportToXml toXml = new ExportToXml();
 		toXml.export(ehm, mapData, efm);
 		

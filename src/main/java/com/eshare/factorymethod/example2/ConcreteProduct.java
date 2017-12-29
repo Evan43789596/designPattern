@@ -1,7 +1,7 @@
 package com.eshare.factorymethod.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Productï¿½ï¿½ï¿½ï¿½
+ * ¾ßÌåµÄProduct¶ÔÏó
  */
 public class ConcreteProduct implements Product {
-	//Êµï¿½ï¿½ProductÒªï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+	//ÊµÏÖProductÒªÇóµÄ·½·¨
 }

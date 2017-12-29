@@ -1,16 +1,16 @@
 package com.eshare.abstractfactory.example1;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼òµ¥¹ï¿½ï¿½ï¿½
+ * ´´½¨Ö÷°åµÄ¼òµ¥¹¤³§
  */
 public class MainboardFactory {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Ú¶ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
-	 * @param type Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍµÄ²ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½Ó¿Ú¶ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
+	 * ´´½¨Ö÷°å½Ó¿Ú¶ÔÏóµÄ·½·¨
+	 * @param type Ñ¡ÔñÖ÷°åÀàÐÍµÄ²ÎÊý
+	 * @return Ö÷°å½Ó¿Ú¶ÔÏóµÄ·½·¨
 	 */
 	public static MainboardApi createMainboardApi(int type){
 		MainboardApi mainboard = null;
-		//ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ñ²¢´ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//¸ù¾Ý²ÎÊýÀ´Ñ¡Ôñ²¢´´½¨ÏàÓ¦µÄÖ÷°å¶ÔÏó
 		if(type==1){
 			mainboard = new GAMainboard(1156);
 		}else if(type==2){

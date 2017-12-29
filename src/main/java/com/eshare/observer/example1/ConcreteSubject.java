@@ -1,12 +1,12 @@
 package com.eshare.observer.example1;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ó£¬¸ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½×´Ì¬ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½Ó¦ï¿½Ä¹Û²ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ê±ï¿½ï¿½Í¨Öªï¿½ï¿½ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½
+ * ¾ßÌåµÄÄ¿±ê¶ÔÏó£¬¸ºÔð°ÑÓÐ¹Ø×´Ì¬´æÈëµ½ÏàÓ¦µÄ¹Û²ìÕß¶ÔÏó£¬
+ * ²¢ÔÚ×Ô¼º×´Ì¬·¢Éú¸Ä±äÊ±£¬Í¨Öª¸÷¸ö¹Û²ìÕß
  */
 public class ConcreteSubject extends Subject {
 	/**
-	 * Ê¾ï¿½â£¬Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	 * Ê¾Òâ£¬Ä¿±ê¶ÔÏóµÄ×´Ì¬
 	 */
 	private String subjectState;
 	public String getSubjectState() {
@@ -14,7 +14,7 @@ public class ConcreteSubject extends Subject {
 	}
 	public void setSubjectState(String subjectState) {
 		this.subjectState = subjectState;
-		//×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ë¸Ä±ä£¬Í¨Öªï¿½ï¿½ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½
+		//×´Ì¬·¢ÉúÁË¸Ä±ä£¬Í¨Öª¸÷¸ö¹Û²ìÕß
 		this.notifyObservers();
 	}
 }

@@ -1,5 +1,5 @@
 package com.eshare.state.example8;
 
 public class LeaveRequestContext extends StateMachine{
-	//锟斤拷锟斤拷锟斤拷锟斤拷锟秸癸拷锟斤拷约锟斤拷锟斤拷锟斤拷锟截的达拷锟斤拷
+	//这里可以扩展跟自己流程相关的处理
 }

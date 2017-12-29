@@ -2,7 +2,7 @@ package com.eshare.factorymethod.example6;
 
 public class A2 extends A1 {
 	protected C1 createC1() {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÕæÕýµÄÑ¡Ôñ¾ßÌåÊµÏÖ£¬²¢´´½¨¶ÔÏó
 		return new C2();
 	}
 }

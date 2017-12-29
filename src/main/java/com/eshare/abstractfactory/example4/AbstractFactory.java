@@ -1,14 +1,14 @@
 package com.eshare.abstractfactory.example4;
 
 /**
- * 锟斤拷锟斤拷展锟侥筹拷锟襟工筹拷锟侥接匡拷
+ * 可扩展的抽象工厂的接口
  */
 public interface AbstractFactory {
 	/**
-	 * 一锟斤拷通锟矫的达拷锟斤拷锟斤拷品锟斤拷锟斤拷姆锟斤拷锟斤拷锟轿拷思虻ィ锟街憋拷臃锟斤拷锟絆bject
-	 * 也锟斤拷锟斤拷为锟斤拷锟叫憋拷锟斤拷锟斤拷锟侥诧拷品锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟侥接匡拷
-	 * @param type 锟斤拷锟藉创锟斤拷锟侥诧拷品锟斤拷锟酵憋拷识
-	 * @return 锟斤拷锟斤拷锟斤拷锟侥诧拷品锟斤拷锟斤拷
+	 * 一个通用的创建产品对象的方法，为了简单，直接返回Object
+	 * 也可以为所有被创建的产品定义一个公共的接口
+	 * @param type 具体创建的产品类型标识
+	 * @return 创建出的产品对象
 	 */
 	public Object createProduct(int type);
 }

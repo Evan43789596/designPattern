@@ -2,15 +2,15 @@ package com.eshare.chainofresponsibility.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½
+		//´´½¨ÒµÎñ¶ÔÏó
 		GoodsSaleEbo ebo = new GoodsSaleEbo();
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸²âÊÔÊý¾Ý
 		SaleModel saleModel = new SaleModel();
-		saleModel.setGoods("ï¿½ï¿½Ñ§ï¿½Ñ»ï¿½ï¿½É¾ï¿½ï¿½ï¿½");
+		saleModel.setGoods("ÕÅÑ§ÓÑ»³¾É¾­µä");
 		saleModel.setSaleNum(10);
 		
-		//ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½
-		ebo.sale("Ð¡ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", saleModel);
-		ebo.sale("Ð¡ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½", saleModel);
+		//µ÷ÓÃÒµÎñ¹¦ÄÜ
+		ebo.sale("Ð¡Àî", "ÕÅÈý", saleModel);
+		ebo.sale("Ð¡ÕÅ", "ÀîËÄ", saleModel);
 	}
 }

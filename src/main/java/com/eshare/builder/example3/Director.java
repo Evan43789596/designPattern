@@ -4,32 +4,36 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * Ö¸ï¿½ï¿½ï¿½ß£ï¿½Ö¸ï¿½ï¿½Ê¹ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+ * Ö¸µ¼Õß£¬Ö¸µ¼Ê¹ÓÃ¹¹½¨Æ÷µÄ½Ó¿ÚÀ´¹¹½¨Êä³öµÄÎÄ¼şµÄ¶ÔÏó
  */
 public class Director {
 	/**
-	 * ï¿½ï¿½ï¿½Ğµï¿½Ç°ï¿½ï¿½ÒªÊ¹ï¿½ÃµÄ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓĞµ±Ç°ĞèÒªÊ¹ÓÃµÄ¹¹½¨Æ÷¶ÔÏó
 	 */
 	private Builder builder;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param builder ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë¹¹½¨Æ÷¶ÔÏó
+	 * @param builder ¹¹½¨Æ÷¶ÔÏó
 	 */
 	public Director(Builder builder) {
 		this.builder = builder;
 	}
 	/**
-	 * Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
-	 * @param ehm ï¿½Ä¼ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param mapData ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param efm ï¿½Ä¼ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ö¸µ¼¹¹½¨Æ÷¹¹½¨×îÖÕµÄÊä³öµÄÎÄ¼şµÄ¶ÔÏó
+	 * @param ehm ÎÄ¼şÍ·µÄÄÚÈİ
+	 * @param mapData Êı¾İµÄÄÚÈİ
+	 * @param efm ÎÄ¼şÎ²µÄÄÚÈİ
 	 */
 	public void construct(ExportHeaderModel ehm,Map<String,Collection<ExportDataModel>> mapData,ExportFooterModel efm) {
-		//1ï¿½ï¿½ï¿½È¹ï¿½ï¿½ï¿½Header
+		//½øĞĞÊı¾İĞ£Ñé
+		
+		//1£ºÏÈ¹¹½¨Header
 		builder.buildHeader(ehm);
-		//2ï¿½ï¿½È»ï¿½ó¹¹½ï¿½Body
+		//ÊµÏÖÒ»¸öHeaderµÄºó´¦Àí
+		//¿ÉÒÔÔÚÕâÀïÊµÏÖÒ»Ğ©ÒµÎñ
+		//2£ºÈ»ºó¹¹½¨Body
 		builder.buildBody(mapData);
-		//3ï¿½ï¿½È»ï¿½ó¹¹½ï¿½Footer
+		//3£ºÈ»ºó¹¹½¨Footer
 		builder.buildFooter(efm);
 	}
 }

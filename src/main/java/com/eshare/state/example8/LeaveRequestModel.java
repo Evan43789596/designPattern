@@ -1,22 +1,22 @@
 package com.eshare.state.example8;
 /**
- * ï¿½ï¿½Ùµï¿½ï¿½ï¿½ï¿½ï¿½
+ * Çë¼Ùµ¥¶ÔÏó
  */
 public class LeaveRequestModel {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Çë¼ÙÈË
 	 */
 	private String user;
 	/**
-	 * ï¿½ï¿½Ù¿ï¿½Ê¼Ê±ï¿½ï¿½
+	 * Çë¼Ù¿ªÊ¼Ê±¼ä
 	 */
 	private String beginDate;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Çë¼ÙÌìÊý
 	 */
 	private int leaveDays;
 	/**
-	 * ï¿½ï¿½Ë½ï¿½ï¿½
+	 * ÉóºË½á¹û
 	 */
 	private String result;
 	

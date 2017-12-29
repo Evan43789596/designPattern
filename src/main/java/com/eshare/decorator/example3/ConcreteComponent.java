@@ -1,12 +1,12 @@
 package com.eshare.decorator.example3;
 
 /**
- * 锟斤拷锟斤拷实锟斤拷锟斤拷锟斤拷锟斤拷锟接口的讹拷锟斤拷
+ * 具体实现组件对象接口的对象
  */
 public class ConcreteComponent extends Component {
 
 	public void operation() {
-		//锟斤拷应锟侥癸拷锟杰达拷锟斤拷
+		//相应的功能处理
 	}
 
 }

@@ -2,7 +2,7 @@ package com.eshare.flyweight.example3;
 
 import java.util.*;
 /**
- * ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Êµï¿½Ö³ï¿½Îªï¿½ï¿½ï¿½ï¿½
+ * ÏíÔª¹¤³§£¬Í¨³£ÊµÏÖ³ÉÎªµ¥Àý
  */
 public class FlyweightFactory {
 	private static FlyweightFactory factory = new FlyweightFactory();
@@ -13,17 +13,17 @@ public class FlyweightFactory {
 		return factory;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½flyweightï¿½ï¿½ï¿½ï¿½
+	 * »º´æ¶à¸öflyweight¶ÔÏó
 	 */
 	private Map<String,Flyweight> fsMap = new HashMap<String,Flyweight>();
 	/**
-	 * ï¿½ï¿½È¡keyï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½
-	 * @param key ï¿½ï¿½È¡ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½key
-	 * @return keyï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½
+	 * »ñÈ¡key¶ÔÓ¦µÄÏíÔª¶ÔÏó
+	 * @param key »ñÈ¡ÏíÔª¶ÔÏóµÄkey
+	 * @return key¶ÔÓ¦µÄÏíÔª¶ÔÏó
 	 */
 	public Flyweight getFlyweight(String key) {
 		Flyweight f = fsMap.get(key);
-		//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½òµ¥µï¿½ï¿½Ð´ï¿½ï¿½
+		//»»Ò»¸ö¸ü¼òµ¥µãµÄÐ´·¨
 		if(f==null){
 			f = new AuthorizationFlyweight(key);
 			fsMap.put(key,f);

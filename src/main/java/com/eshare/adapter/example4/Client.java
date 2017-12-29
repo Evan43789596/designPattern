@@ -2,30 +2,31 @@ package com.eshare.adapter.example4;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//в╪О©╫О©╫О©╫О©╫ж╬О©╫О©╫О©╫щёО©╫р╡О©╫О©╫О©╫г╡О©╫О©╫т╣О©╫О©╫О©╫О©╫О©╫
+		//в╪╠╦хуж╬дзхщё╛р╡╬мйг╡Бйт╣дйЩ╬щ
 		LogModel lm1 = new LogModel();
 		lm1.setLogId("001");
 		lm1.setOperateUser("admin");
 		lm1.setOperateTime("2010-03-02 10:08:18");
-		lm1.setLogContent("О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫");
+		lm1.setLogContent("уБйгр╩╦Ж╡Бйт");
 		
 		List<LogModel> list = new ArrayList<LogModel>();
 		list.add(lm1);
 
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ж╬О©╫д╪О©╫О©╫д╤О©╫О©╫О©╫
+		//╢╢╫╗╡ывВхуж╬нд╪Ч╣д╤тоС
 		LogFileOperateApi fileLogApi = new LogFileOperate("");
 		LogDbOperateApi dbLogApi = new LogDbOperate();
 		
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫к╚О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╡О©╫О©╫О©╫О©╫О©╫ж╬О©╫д╫с©з╤О©╫О©╫О©╫
+		//╢╢╫╗╬╜╧Щк╚оРййеД╨С╣д╡ывВхуж╬╣д╫с©з╤тоС
 		LogFileOperateApi fileLogApi2 = new TwoDirectAdapter(fileLogApi,dbLogApi); 
 		LogDbOperateApi dbLogApi2 = new TwoDirectAdapter(fileLogApi,dbLogApi); 
 		
-		//О©╫х╡О©╫О©╫т╢О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫Д╣╫О©╫з╤О©╫О©╫Фё╛О©╫О©╫х╩О©╫О©╫О©╫ц╣О©╫О©╫г╣з╤О©╫О©╫О©╫д╫с©зёО©╫О©╫О©╫й╣О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╣О©╫О©╫
+		//ох╡Бйт╢снд╪Ч╡ывВййеД╣╫╣з╤Ч╟Фё╛кДх╩╣Всц╣дйг╣з╤Ч╟Ф╣д╫с©зё╛фДй╣йгнд╪Ч╡ывВтзй╣ож
 		dbLogApi2.createLog(lm1);
 		List<LogModel> allLog = dbLogApi2.getAllLog();
-		System.out.println("allLog="+allLog);
+		System.out.println("allLog555="+allLog);
 		
-		//О©╫ы╡О©╫О©╫т╢О©╫О©╫О©╫О©╫щ©О©╫Ф╢╒О©╫О©╫О©╫О©╫и╣О©╫р╩О©╫О©╫д╫с©зёО©╫р╡О©╫О©╫О©╫г╣О©╫О©╫ц╣О©╫р╩О©╫О©╫д╫с©зёО©╫О©╫О©╫й╣О©╫О©╫О©╫О©╫О©╫О©╫й╣О©╫О©╫
+		//ты╡Бйт╢сйЩ╬щ©Б╢Ф╢╒ййеДЁи╣зр╩╟Ф╣д╫с©зё╛р╡╬мйг╣Всц╣зр╩╟Ф╣д╫с©зё╛фДй╣йгйЩ╬щй╣ож
+		System.out.println("--------------------------->File Api  ");
 		fileLogApi2.writeLogFile(list);
 		fileLogApi2.readLogFile();
 	}

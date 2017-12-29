@@ -2,34 +2,34 @@ package com.eshare.command.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//1ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½Í½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£º×é×°ÃüÁîºÍ½ÓÊÕÕß
+		//´´½¨½ÓÊÕÕß
 		OperationApi operation = new Operation();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬²ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½Í½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//´´½¨ÃüÁî¶ÔÏó£¬²¢×é×°ÃüÁîºÍ½ÓÊÕÕß
 		AddCommand addCmd = new AddCommand(operation,5);
 		SubstractCommand substractCmd = new SubstractCommand(operation,3);
 		
-		//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½Ç¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//2£º°ÑÃüÁîÉèÖÃµ½³ÖÓĞÕß£¬¾ÍÊÇ¼ÆËãÆ÷ÀïÃæ
 		Calculator calculator = new Calculator();
 		calculator.setAddCmd(addCmd);
 		calculator.setSubstractCmd(substractCmd);
 		
-		//3:Ä£ï¿½â°´ï¿½Â°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+		//3:Ä£Äâ°´ÏÂ°´Å¥£¬²âÊÔÒ»ÏÂ
 		calculator.addPressed();
-		System.out.println("Ò»ï¿½Î¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½Îªï¿½ï¿½"+operation.getResult());
+		System.out.println("Ò»´Î¼Ó·¨ÔËËãºóµÄ½á¹ûÎª£º"+operation.getResult());
 		calculator.substractPressed();
-		System.out.println("Ò»ï¿½Î¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½Îªï¿½ï¿½"+operation.getResult());
+		System.out.println("Ò»´Î¼õ·¨ÔËËãºóµÄ½á¹ûÎª£º"+operation.getResult());
 		
-		//ï¿½ï¿½ï¿½Ô³ï¿½ï¿½ï¿½
+		//²âÊÔ³·Ïû
 		calculator.undoPressed();
-		System.out.println("ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Îºï¿½Ä½ï¿½ï¿½Îªï¿½ï¿½"+operation.getResult());
+		System.out.println("³·ÏúÒ»´ÎºóµÄ½á¹ûÎª£º"+operation.getResult());
 		calculator.undoPressed();
-		System.out.println("ï¿½Ù³ï¿½ï¿½ï¿½Ò»ï¿½Îºï¿½Ä½ï¿½ï¿½Îªï¿½ï¿½"+operation.getResult());
+		System.out.println("ÔÙ³·ÏúÒ»´ÎºóµÄ½á¹ûÎª£º"+operation.getResult());
 		
-		//ï¿½ï¿½ï¿½Ô»Ö¸ï¿½
+		//²âÊÔ»Ö¸´
 		calculator.redoPressed();
-		System.out.println("ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Îºï¿½Ä½ï¿½ï¿½Îªï¿½ï¿½"+operation.getResult());
+		System.out.println("»Ö¸´²Ù×÷Ò»´ÎºóµÄ½á¹ûÎª£º"+operation.getResult());
 		calculator.redoPressed();
-		System.out.println("ï¿½Ù»Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Îºï¿½Ä½ï¿½ï¿½Îªï¿½ï¿½"+operation.getResult());
+		System.out.println("ÔÙ»Ö¸´²Ù×÷Ò»´ÎºóµÄ½á¹ûÎª£º"+operation.getResult());
 	}
 }

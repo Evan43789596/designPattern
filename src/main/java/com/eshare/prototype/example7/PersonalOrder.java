@@ -1,18 +1,18 @@
 package com.eshare.prototype.example7;
 /**
- * ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¸öÈË¶©µ¥¶ÔÏó
  */
 public class PersonalOrder implements Cloneable , OrderApi{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½
+	 * ¶©¹ºÈËÔ±ÐÕÃû
 	 */
 	private String customerName;
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ²úÆ·¶ÔÏó
 	 */
 	private Product product = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ¶©µ¥²úÆ·ÊýÁ¿
 	 */
 	private int orderProductNum = 0;
 	
@@ -36,16 +36,16 @@ public class PersonalOrder implements Cloneable , OrderApi{
 	}
 	
 	public String toString(){
-		//ï¿½òµ¥µï¿½ï¿½ï¿½ï¿½
-		return "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½="+this.product.getName()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª="+this.orderProductNum;
+		//¼òµ¥µãÊä³ö
+		return "¶©¹º²úÆ·ÊÇ="+this.product.getName()+"£¬¶©¹ºÊýÁ¿Îª="+this.orderProductNum;
 	}
 	
 	public Object clone(){
 		PersonalOrder obj=null;
 		try {
 			obj =(PersonalOrder)super.clone();
-			//ï¿½ï¿½Ò»ï¿½ä»°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-//			obj.setProduct((Product)this.product.clone());
+			//ÕâÒ»¾ä»°²»¿ÉÉÙ
+			obj.setProduct((Product)this.product.clone());
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}		

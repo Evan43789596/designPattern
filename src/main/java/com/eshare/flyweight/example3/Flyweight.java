@@ -1,13 +1,13 @@
 package com.eshare.flyweight.example3;
 /***
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½Ôªï¿½Ó¿ï¿½
+ * ÃèÊöÊÚÈ¨Êı¾İµÄÏíÔª½Ó¿Ú
  */
 public interface Flyweight {
 	/**
-	 * ï¿½Ğ¶Ï´ï¿½ï¿½ï¿½Ä°ï¿½È«Êµï¿½ï¿½ï¿½È¨ï¿½Ş£ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½×´Ì¬Æ¥ï¿½ï¿½
-	 * @param securityEntity ï¿½ï¿½È«Êµï¿½ï¿½
-	 * @param permit È¨ï¿½ï¿½
-	 * @return trueï¿½ï¿½Ê¾Æ¥ï¿½ä£¬falseï¿½ï¿½Ê¾ï¿½ï¿½Æ¥ï¿½ï¿½
+	 * ÅĞ¶Ï´«ÈëµÄ°²È«ÊµÌåºÍÈ¨ÏŞ£¬ÊÇ·ñºÍÏíÔª¶ÔÏóÄÚ²¿×´Ì¬Æ¥Åä
+	 * @param securityEntity °²È«ÊµÌå
+	 * @param permit È¨ÏŞ
+	 * @return true±íÊ¾Æ¥Åä£¬false±íÊ¾²»Æ¥Åä
 	 */
 	public boolean match(String securityEntity, String permit);
 }

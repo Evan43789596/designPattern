@@ -2,7 +2,7 @@ package com.eshare.decorator.example4;
 
 import java.util.Date;
 /**
- * в╟О©╫О©╫О©╫О©╫О©╫О©╫О©╫Сё╛╪О©╫О©╫Ц╣╠О©╫О©╫О©╫е╤О©╫р╣О©╫Я╫╠╫О©╫
+ * в╟йнфВ╤тоСё╛╪фкЦ╣╠тбме╤ср╣нЯ╫╠╫П
  */
 public class GroupPrizeDecorator extends Decorator{
 	public GroupPrizeDecorator(Component c){
@@ -10,16 +10,16 @@ public class GroupPrizeDecorator extends Decorator{
 	}
 	
 	public double calcPrize(String user, Date begin, Date end) {
-		//1О©╫О©╫О©╫х╩О©╫х║г╟О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╫О©╫О©╫О©╫
+		//1ё╨ох╩Ях║г╟цФтккЦЁЖю╢╣д╫╠╫П
 		double money = super.calcPrize(user, begin, end);
-		//2О©╫О©╫х╩О©╫О©╫О©╫О©╫Ц╣╠О©╫О©╫О©╫е╤О©╫р╣О©╫Я╫╠╫О©╫О©╫х╪О©╫О©╫О©╫О©╫О©╫е╤О©╫О©╫э╣О©╫р╣О©╫О©╫Нё╛х╩О©╫О©╫О©╫ыЁО©╫О©╫О©╫1%
-		//О©╫О©╫О©╫Х╤╪О©╫О©╫р╩О©╫О©╫О©╫е╤с╣О©╫
+		//2ё╨х╩╨С╪фкЦ╣╠тбме╤ср╣нЯ╫╠╫Пё╛ох╪фкЦЁЖме╤свэ╣др╣нЯ╤Нё╛х╩╨СтыЁкрт1%
+		//╪ыиХ╤╪йгр╩╦Жме╤с╣д
 		double group = 0.0;
 		for(double d : TempDB.mapMonthSaleMoney.values()){
 			group += d;
 		}
 		double prize = group * 0.01;
-		System.out.println(user+"О©╫О©╫О©╫О©╫О©╫е╤О©╫р╣О©╫Я╫╠╫О©╫"+prize);
+		System.out.println(user+"╣╠тбме╤ср╣нЯ╫╠╫П"+prize);
 		return money + prize;
 	}
 

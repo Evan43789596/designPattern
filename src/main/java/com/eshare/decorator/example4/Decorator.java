@@ -3,23 +3,23 @@ package com.eshare.decorator.example4;
 import java.util.Date;
 
 /**
- * в╟О©╫О©╫О©╫О©╫О©╫д╫с©зёО©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫в╟О©╫н╣д╤О©╫О©╫О©╫й╣О©╫О©╫м╛О©╫О©╫О©╫д╫с©О©╫
+ * в╟йнфВ╣д╫с©зё╛пХр╙╦З╠╩в╟йн╣д╤тоСй╣ожм╛яЫ╣д╫с©з
  */
 public abstract class Decorator extends Component{
 	/**
-	 * О©╫О©╫О©╫п╠О©╫в╟О©╫н╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+	 * Ёжсп╠╩в╟йн╣двИ╪Ч╤тоС
 	 */
 	protected Component c;
 	/**
-	 * м╗О©╫О©╫О©╫О©╫О©╫Л╥╫О©╫О©╫О©╫О©╫О©╫К╠╩в╟О©╫н╣д╤О©╫О©╫О©╫
-	 * @param cО©╫О©╫в╟О©╫н╣д╤О©╫О©╫О©╫
+	 * м╗╧Щ╧╧тЛ╥╫╥╗╢╚хК╠╩в╟йн╣д╤тоС
+	 * @param c╠╩в╟йн╣д╤тоС
 	 */
 	public Decorator(Component c){
 		this.c = c;
 	}
 
 	public double calcPrize(String user, Date begin, Date end) {
-		//в╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╥О©╫О©╫О©╫
+		//в╙╣ВвИ╪Ч╤тоС╣д╥╫╥╗
 		return c.calcPrize(user, begin, end);
 	}
 }

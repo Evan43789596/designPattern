@@ -2,16 +2,16 @@ package com.eshare.memento.example3;
 
 import java.io.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ğ±ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Ä¶ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+ * ¸ºÔğÔÚÎÄ¼şÖĞ±£´æÄ£ÄâÔËĞĞÁ÷³ÌAµÄ¶ÔÏóµÄ±¸ÍüÂ¼¶ÔÏó
  */
 public class FlowAMementoFileCareTaker {
 
 	/**
-	 * ï¿½ï¿½ï¿½æ±¸ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @param memento ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ±£´æ±¸ÍüÂ¼¶ÔÏó
+	 * @param memento ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public void saveMemento(FlowAMockMemento memento){
-		//Ğ´ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
+		//Ğ´µ½ÎÄ¼şÖĞ
 		ObjectOutputStream out = null;
 		try{
 			out = new ObjectOutputStream(
@@ -20,6 +20,7 @@ public class FlowAMementoFileCareTaker {
 					)
 			);
 			out.writeObject(memento);
+			System.out.println("now write file==========");
 		}catch(Exception err){
 			err.printStackTrace();
 		}finally{
@@ -31,12 +32,12 @@ public class FlowAMementoFileCareTaker {
 		}
 	}
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * »ñÈ¡±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
+	 * @return ±»±£´æµÄ±¸ÍüÂ¼¶ÔÏó
 	 */
 	public FlowAMockMemento retriveMemento(){
 		FlowAMockMemento memento = null;
-		//ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ğ»ï¿½È¡ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+		//´ÓÎÄ¼şÖĞ»ñÈ¡±¸ÍüÂ¼Êı¾İ
 		ObjectInputStream in = null;
 		try{
 			in = new ObjectInputStream(

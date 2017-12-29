@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.w3c.dom.Element;
 /**
- * ï¿½Ô¶ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½Í´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÒÔ¶à¸öÔªËØµÄÊôĞÔ×öÎªÖÕ½á·ûµÄ½âÊÍ´¦Àí¶ÔÏó
  */
 public class PropertysTerminalExpression extends ReadXmlExpression{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÊôĞÔÃû×Ö
 	 */
 	private String propName;
 	public PropertysTerminalExpression(String propName){
@@ -16,11 +16,11 @@ public class PropertysTerminalExpression extends ReadXmlExpression{
 	}
 	
 	public String[] interpret(Context c) {
-		//ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½Ôªï¿½ï¿½
+		//»ñÈ¡×îºóµÄ¶à¸öÔªËØ
 		List<Element> eles = c.getPreEles();
 		
 		String[] ss = new String[eles.size()];
-		//Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½È¡Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½Öµ
+		//Ñ­»·¶à¸öÔªËØ£¬»ñÈ¡Ã¿¸öµÄÊôĞÔµÄÖµ
 		for(int i=0;i<ss.length;i++){
 			ss[i] = eles.get(i).getAttribute(this.propName);
 		}

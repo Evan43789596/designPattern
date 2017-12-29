@@ -1,12 +1,12 @@
 package com.eshare.interpreter.example2;
 
 /**
- * 锟斤拷锟斤拷锟斤拷式
+ * 抽象表达式
  */
 public abstract class AbstractExpression {
 	/**
-	 * 锟斤拷锟酵的诧拷锟斤拷
-	 * @param ctx 锟斤拷锟斤拷锟侥讹拷锟斤拷
+	 * 解释的操作
+	 * @param ctx 上下文对象
 	 */
 	public abstract void interpret(Context ctx);
 }

@@ -1,10 +1,10 @@
 package com.eshare.bridge.example6;
 /**
- * 锟斤拷站锟节讹拷锟斤拷息锟侥凤拷式锟斤拷锟斤拷锟斤拷息
+ * 以站内短消息的方式发送消息
  */
 public  class MessageSMS implements MessageImplementor{
 
 	public void send(String message, String toUser) {
-		System.out.println("使锟斤拷站锟节讹拷锟斤拷息锟侥凤拷式锟斤拷锟斤拷锟斤拷锟斤拷息'"+message+"'锟斤拷"+toUser);
+		System.out.println("使用站内短消息的方式，发送消息'"+message+"'给"+toUser);
 	}
 }

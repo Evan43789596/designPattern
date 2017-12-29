@@ -3,9 +3,9 @@ package com.eshare.abstractfactory.example2;
 public class Client {
 
 	public static void main(String[] args) {
-		//锟斤拷锟斤拷锟斤拷锟襟工筹拷锟斤拷锟斤拷
+		//创建抽象工厂对象
 		AbstractFactory af = new ConcreteFactory1();
-		//通锟斤拷锟斤拷锟襟工筹拷锟斤拷锟斤拷取一系锟叫的讹拷锟斤拷锟斤拷锟狡稟锟酵诧拷品B
+		//通过抽象工厂来获取一系列的对象，如产品A和产品B
 		af.createProductA();
 		af.createProductB();
 	}

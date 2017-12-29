@@ -5,32 +5,32 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.*;
 /**
- * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+ * ¶ÁÈ¡ÅäÖÃÎÄ¼þ
  */
 public class ReadAppXml {
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param filePathName ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
+	 * ¶ÁÈ¡ÅäÖÃÎÄ¼þÄÚÈÝ
+	 * @param filePathName ÅäÖÃÎÄ¼þµÄÂ·¾¶ºÍÎÄ¼þÃû
 	 * @throws Exception
 	 */
 	public void read(String filePathName)throws Exception{
 		Document doc = null;
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//½¨Á¢Ò»¸ö½âÎöÆ÷¹¤³§
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		//ï¿½ï¿½ï¿½Ò»ï¿½ï¿½DocumentBuilderï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½DOMï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//»ñµÃÒ»¸öDocumentBuilder¶ÔÏó£¬Õâ¸ö¶ÔÏó´ú±íÁË¾ßÌåµÄDOM½âÎöÆ÷
 		DocumentBuilder builder=factory.newDocumentBuilder();
-		//ï¿½Ãµï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾XMLï¿½Äµï¿½ï¿½ï¿½Documentï¿½ï¿½ï¿½ï¿½
+		//µÃµ½Ò»¸ö±íÊ¾XMLÎÄµµµÄDocument¶ÔÏó
 		doc=builder.parse(filePathName);
-		//È¥ï¿½ï¿½XMLï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¿Õ°×¶ï¿½Ó³ï¿½ï¿½ï¿½ï¿½DOMï¿½ï¿½ï¿½ÐµÄ²ï¿½ï¿½ï¿½Òªï¿½ï¿½Text Nodeï¿½ï¿½ï¿½ï¿½
+		//È¥µôXMLÎÄµµÖÐ×÷Îª¸ñÊ½»¯ÄÚÈÝµÄ¿Õ°×¶øÓ³ÉäÔÚDOMÊ÷ÖÐµÄ²»±ØÒªµÄText Node¶ÔÏó
 		doc.normalize();
 		
-//		//ï¿½ï¿½È¡jdbc
+		//»ñÈ¡jdbc
 //		NodeList jdbc = doc.getElementsByTagName("jdbc");
-//		//Ö»ï¿½ï¿½Ò»ï¿½ï¿½jdbc,ï¿½ï¿½È¡jdbcï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		//Ö»ÓÐÒ»¸öjdbc,»ñÈ¡jdbcÖÐµÄÇý¶¯ÀàµÄÃû³Æ
 //		NodeList driverClassNode = ((Element)jdbc.item(0)).getElementsByTagName("driver-class");
 //		String driverClass = driverClassNode.item(0).getFirstChild().getNodeValue();
 //		System.out.println("driverClass=="+driverClass);
-//		//Í¬ï¿½ï¿½ï¿½È¡urlï¿½ï¿½userï¿½ï¿½passwordï¿½ï¿½Öµ
+//		//Í¬Àí»ñÈ¡url¡¢user¡¢passwordµÈÖµ
 //		NodeList urlNode = ((Element)jdbc.item(0)).getElementsByTagName("url");
 //		String url = urlNode.item(0).getFirstChild().getNodeValue();
 //		System.out.println("url=="+url);
@@ -42,17 +42,19 @@ public class ReadAppXml {
 //		NodeList passwordNode = ((Element)jdbc.item(0)).getElementsByTagName("password");
 //		String password = passwordNode.item(0).getFirstChild().getNodeValue();
 //		System.out.println("password=="+password);
-//		//ï¿½ï¿½È¡application-xml
+//		
+//		
+//		//»ñÈ¡application-xml
 //		NodeList applicationXmlNode = doc.getElementsByTagName("application-xml");
 //		String applicationXml = applicationXmlNode.item(0).getFirstChild().getNodeValue();
 //		System.out.println("applicationXml=="+applicationXml);
 
-		//ï¿½ï¿½Òªï¿½ï¿½È¡spring-defaultï¿½ï¿½È»ï¿½ï¿½ï¿½È¡application-xmls
-		//È»ï¿½ï¿½ï¿½ï¿½Ü»ï¿½È¡application-xml		
+		//ÏÈÒª»ñÈ¡spring-default£¬È»ºó»ñÈ¡application-xmls
+		//È»ºó²ÅÄÜ»ñÈ¡application-xml		
 		NodeList springDefaultNode = doc.getElementsByTagName("spring-default");
 		NodeList appXmlsNode = ((Element)springDefaultNode.item(0)).getElementsByTagName("application-xmls");
 		NodeList appXmlNode = ((Element)appXmlsNode.item(0)).getElementsByTagName("application-xml");
-		//Ñ­ï¿½ï¿½ï¿½ï¿½È¡Ã¿ï¿½ï¿½application-xmlÔªï¿½Øµï¿½Öµ
+		//Ñ­»·»ñÈ¡Ã¿¸öapplication-xmlÔªËØµÄÖµ
 		for(int i=0;i<appXmlNode.getLength();i++){
 			String applicationXml = appXmlNode.item(i).getFirstChild().getNodeValue();
 			System.out.println("applicationXml=="+applicationXml);

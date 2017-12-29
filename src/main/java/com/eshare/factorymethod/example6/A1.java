@@ -2,13 +2,13 @@ package com.eshare.factorymethod.example6;
 
 public abstract class A1 {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½C1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¾ï¿½ï¿½
-	 * @return C1ï¿½Ä¶ï¿½ï¿½ï¿½Êµï¿½ï¿½
+	 * ¹¤³§·½·¨£¬´´½¨C1£¬ÀàËÆÓÚ´Ó×ÓÀà×¢Èë½øÀ´µÄÍ¾¾¶
+	 * @return C1µÄ¶ÔÏóÊµÀý
 	 */
 	protected abstract C1 createC1();
 	public void t1(){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ï¿½C1ï¿½à£¬ï¿½ï¿½ï¿½Ç²ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ò²ï¿½Í²ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½C1ï¿½Ë£ï¿½ï¿½ï¿½Ã´ï¿½ì£¿
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï²»ï¿½Ã¹ï¿½ï¿½ï¿½Ã´ï¿½ï¿½È¡C1ï¿½ï¿½Ö±ï¿½ï¿½Ê¹ï¿½Ã¾Íºï¿½ï¿½ï¿½
+		//ÕâÀïÐèÒªÊ¹ÓÃC1£¬¿ÉÊÇ²»ÖªµÀ¾¿¾¹ÊÇÓÃÄÄÒ»¸ö£¬Ò²¾Í²»Ö÷¶¯È¥´´½¨C1ÁË£¬ÔõÃ´°ì£¿
+		//·´Õý»áÔÚ×ÓÀàÀïÃæÊµÏÖ£¬ÕâÑù¸üÊ¡ÐÄ£¬ÕâÀï²»ÓÃ¹ÜÔõÃ´»ñÈ¡C1£¬Ö±½ÓÊ¹ÓÃ¾ÍºÃÁË
 		createC1().tc();
 	}
 }

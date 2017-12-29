@@ -2,27 +2,27 @@ package com.eshare.strategy.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//´´½¨ÏàÓ¦µÄÖ§¸¶²ßÂÔ
 		PaymentStrategy strategyRMB = new RMBCash();
 		PaymentStrategy strategyDollar = new DollarCash();
 		
-		//×¼ï¿½ï¿½Ğ¡ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		PaymentContext ctx1 = new PaymentContext("Ğ¡ï¿½ï¿½",5000,strategyRMB);
-		//ï¿½ï¿½Ğ¡ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸Ğ¡ÀîµÄÖ§¸¶¹¤×ÊÉÏÏÂÎÄ
+		PaymentContext ctx1 = new PaymentContext("Ğ¡Àî",5000,strategyRMB);
+		//ÏòĞ¡ÀîÖ§¸¶¹¤×Ê
 		ctx1.payNow();
 		
-		//ï¿½Ğ»ï¿½Ò»ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½petterÖ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÇĞ»»Ò»¸öÈË£¬¸øpetterÖ§¸¶¹¤×Ê
 		PaymentContext ctx2 = new PaymentContext("Petter",8000,strategyDollar);
 		ctx2.payNow();
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ö§ï¿½ï¿½ï¿½ï¿½Ê½
+		//²âÊÔĞÂÌí¼ÓµÄÖ§¸¶·½Ê½
 		PaymentStrategy strategyCard = new Card();
-		PaymentContext ctx3 = new PaymentContext2("Ğ¡ï¿½ï¿½",9000,"010998877656",strategyCard);
+		PaymentContext ctx3 = new PaymentContext2("Ğ¡Íõ",9000,"010998877656",strategyCard);
 		ctx3.payNow();
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ö§ï¿½ï¿½ï¿½ï¿½Ê½
+		//²âÊÔĞÂÌí¼ÓµÄÖ§¸¶·½Ê½
 		PaymentStrategy strategyCard2 = new Card2("010998877656");
-		PaymentContext ctx4 = new PaymentContext("Ğ¡ï¿½ï¿½",9000,strategyCard2);
+		PaymentContext ctx4 = new PaymentContext("Ğ¡ÕÅ",9000,strategyCard2);
 		ctx4.payNow();
 	}
 }

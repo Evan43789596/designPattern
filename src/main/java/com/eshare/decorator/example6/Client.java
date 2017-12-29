@@ -2,14 +2,14 @@ package com.eshare.decorator.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½Ãµï¿½Òµï¿½ï¿½Ó¿ï¿½,ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
-		GoodsSaleEbi ebi = new CheckDecorator(new LogDecorator(new GoodsSaleEbo()));
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//µÃµ½ÒµÎñ½Ó¿Ú,×éºÏ×°ÊÎÆ÷
+		GoodsSaleEbi ebi = new LogDecorator(new CheckDecorator(new GoodsSaleEbo()));
+		//×¼±¸²âÊÔÊý¾Ý
 		SaleModel saleModel = new SaleModel();
-		saleModel.setGoods("Motoï¿½Ö»ï¿½");
+		saleModel.setGoods("MotoÊÖ»ú");
 		saleModel.setSaleNum(2);
-		//ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½
-		ebi.sale("ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", saleModel);
-		ebi.sale("ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", saleModel);
+		//µ÷ÓÃÒµÎñ¹¦ÄÜ
+		ebi.sale("ÕÅÈý","ÕÅÈý·á", saleModel);
+		ebi.sale("ÀîËÄ","ÕÅÈý·á", saleModel);
 	}
 }

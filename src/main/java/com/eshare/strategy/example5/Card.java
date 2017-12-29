@@ -1,13 +1,13 @@
 package com.eshare.strategy.example5;
 /**
- * ж╖О©╫О©╫О©╫О©╫О©╫О©╫О©╫п©О©╫
+ * ж╖╦╤╣╫рЬпп©╗
  */
 public class Card implements PaymentStrategy{
 	
 	public void pay(PaymentContext ctx) {
-		//О©╫О©╫О©╫О©╫б╣О©╫О©╫Ц╥╗О©╫т╪О©╫ж╙О©╫О©╫р╙й╧О©╫О©╫О©╫О©╫у╧О©╫О©╫ж╖О©╫О©╫О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫О©╫О©╫г©О©╫О©╫О©╫О©╫О©╫О©╫р╩О©╫О©╫
+		//уБ╦Жпб╣дкЦ╥╗вт╪╨ж╙╣юр╙й╧сцю╘у╧╣дж╖╦╤иообндё╛кЫртг©жфтЛпмр╩об
 		PaymentContext2 ctx2 = (PaymentContext2)ctx;
-		System.out.println("О©╫О©╫О©╫з╦О©╫"+ctx2.getUserName()+"О©╫О©╫"+ctx2.getAccount()+"О©╫й╨О©╫ж╖О©╫О©╫О©╫О©╫"+ctx2.getMoney()+"т╙");
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫пёО©╫О©╫О©╫О©╫О©╫в╙О©╫йёО©╫О©╫м╡О©╫х╔О©╫О©╫О©╫О©╫
+		System.out.println("ожтз╦Ь"+ctx2.getUserName()+"╣д"+ctx2.getAccount()+"уй╨еж╖╦╤ак"+ctx2.getMoney()+"т╙");
+		//а╛╫срЬппё╛╫Ьппв╙уйё╛╬м╡╩х╔╧эак
 	}
 }

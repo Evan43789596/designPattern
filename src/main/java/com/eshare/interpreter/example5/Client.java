@@ -9,23 +9,25 @@ import org.w3c.dom.Element;
 
 public class Client {
 	public static void main(String[] args) throws Exception {
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸ÉÏÏÂÎÄ
 		Context c = new Context("InterpreterTest.xml");
-		//Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½
-		ReadXmlExpression re = Parser.parse("root/a/b/d$.id$");
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Öµ
+		//Í¨¹ı½âÎöÆ÷»ñÈ¡³éÏóÓï·¨Ê÷
+		ReadXmlExpression re = Parser.parse("root/a/b/c");
+		
+		
+		//ÇëÇó½âÎö£¬»ñÈ¡·µ»ØÖµ
 		String ss[] = re.interpret(c);
 		for (String s : ss) {
-			System.out.println("dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½idÖµï¿½ï¿½=" + s);
+			System.out.println("dµÄÊôĞÔidÖµÊÇ=" + s);
 		}
 		
-		//ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Â³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+		//Èç¹ûÒªÊ¹ÓÃÍ¬Ò»¸öÉÏÏÂÎÄ£¬Á¬Ğø½øĞĞ½âÎö£¬ĞèÒªÖØĞÂ³õÊ¼»¯ÉÏÏÂÎÄ¶ÔÏó
 		c.reInit();
-		ReadXmlExpression re2 = Parser.parse("root/a/b/d$");
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Öµ
+		ReadXmlExpression re2 = Parser.parse("root/a/e/d$");
+		//ÇëÇó½âÎö£¬»ñÈ¡·µ»ØÖµ
 		String ss2[] = re2.interpret(c);
 		for (String s : ss2) {
-			System.out.println("dï¿½ï¿½Öµï¿½ï¿½=" + s);
+			System.out.println("dµÄÖµÊÇ=" + s);
 		}
 	}
 }

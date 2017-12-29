@@ -1,8 +1,8 @@
 package com.eshare.abstractfactory.example3;
 
 /**
- * 装锟斤拷锟斤拷锟斤拷一锟斤拷Intel 锟斤拷CPU + 锟斤拷锟轿碉拷锟斤拷锟斤拷
- * 锟斤拷锟斤创锟斤拷CPU锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷时锟斤拷锟角讹拷应锟侥ｏ拷锟斤拷匹锟斤拷锟较碉拷
+ * 装机方案一：Intel 的CPU + 技嘉的主板
+ * 这里创建CPU和主板对象的时候，是对应的，能匹配上的
  */
 public class Schema1 implements AbstractFactory{
 	public CPUApi createCPUApi() {

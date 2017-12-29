@@ -4,7 +4,7 @@ public class CModuleImpl implements CModuleApi{
 
 	
 	public void testC() {
-		System.out.println("锟斤拷锟斤拷锟斤拷C模锟斤拷锟斤拷锟斤拷锟斤拷锟絫estC锟斤拷锟斤拷");
+		System.out.println("现在在C模块里面操作testC方法");
 	}
 
 }

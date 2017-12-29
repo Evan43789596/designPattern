@@ -4,7 +4,7 @@ public class BModuleImpl implements BModuleApi{
 
 	
 	public void testB() {
-		System.out.println("锟斤拷锟斤拷锟斤拷B模锟斤拷锟斤拷锟斤拷锟斤拷锟絫estB锟斤拷锟斤拷");
+		System.out.println("现在在B模块里面操作testB方法");
 	}
 
 }

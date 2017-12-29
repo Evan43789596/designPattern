@@ -1,24 +1,27 @@
 package com.eshare.visitor.example6;
 /**
- * Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½àµ±ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½Ä¾ï¿½ï¿½ï¿½ElementÊµï¿½Ö¶ï¿½ï¿½ï¿½
+ * Ò¶×Ó¶ÔÏó£¬Ïàµ±ÓÚ·ÃÎÊÕßÄ£Ê½µÄ¾ßÌåElementÊµÏÖ¶ÔÏó
  */
 public class Leaf extends Component{
 	public void accept(Visitor visitor) {
-		//ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
+		//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
 		visitor.visitLeaf(this);
 	}
 	/**
-	 * Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ò¶×Ó¶ÔÏóµÄÃû×Ö
 	 */
 	private String name = "";
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param name Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«ÈëÒ¶×Ó¶ÔÏóµÄÃû×Ö
+	 * @param name Ò¶×Ó¶ÔÏóµÄÃû×Ö
 	 */
 	public Leaf(String name){
 		this.name = name;
 	}
 	public String getName() {
 		return name;
+	}
+	public void setName(String name){
+		this.name = name;
 	}
 }

@@ -1,12 +1,19 @@
 package com.eshare.interpreter.example2;
 
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * 锟斤拷锟秸斤拷锟斤拷锟斤拷式
+ * 非终结符表达式===相当于组合对象
  */
 public class NonterminalExpression extends AbstractExpression{
+	private List<AbstractExpression> list = new ArrayList<AbstractExpression>();
+	
+	public void addAbstractExpression(AbstractExpression ae){
+		list.add(ae);
+	}
+	
 	public void interpret(Context ctx) {
-		//实锟斤拷锟斤拷锟斤法锟斤拷锟斤拷锟叫的凤拷锟秸斤拷锟斤拷锟斤拷锟斤拷锟侥斤拷锟酵诧拷锟斤拷
+		//实现与语法规则中的非终结符相关联的解释操作
 	}
 }

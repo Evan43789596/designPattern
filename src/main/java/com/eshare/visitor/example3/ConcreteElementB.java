@@ -1,17 +1,17 @@
 package com.eshare.visitor.example3;
 /**
- * О©╫О©╫О©╫О©╫т╙О©╫ь╣О©╫й╣О©╫ж╤О©╫О©╫О©╫
+ * ╬ълЕт╙кь╣дй╣ож╤тоС
  */
 public class ConcreteElementB extends Element {
 	public void accept(Visitor visitor) {
-		//О©╫ь╣О©╫О©╫О©╫О©╫О©╫О©╫ъ╤О©╫О©╫О©╫О©╫О©╫О©╫с╕О©╫О©╫О©╫О©╫
+		//╩ь╣В╥цнйуъ╤тоС╣доЮс╕╥╫╥╗
 		visitor.visitConcreteElementB(this);
 	}
 	/**
-	 * й╬О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╬т╙О©╫О©╫О©╫О©╫О©╫п╣д╧О©╫О©╫О©╫й╣О©╫О©╫
+	 * й╬юЩ╥╫╥╗ё╛╠Мй╬т╙кьрясп╣д╧╕дэй╣ож
 	 */
 	public void opertionB(){
-		//О©╫О©╫О©╫п╣д╧О©╫О©╫О©╫й╣О©╫О©╫
+		//рясп╣д╧╕дэй╣ож
 	}
 }
 

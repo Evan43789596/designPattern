@@ -3,7 +3,7 @@ package com.eshare.adapter.example5;
 import java.util.List;
 
 /**
- * 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+ * 类适配器对象
  */
 public class ClassAdapter extends LogFileOperate implements LogDbOperateApi{
 	
@@ -12,11 +12,11 @@ public class ClassAdapter extends LogFileOperate implements LogDbOperateApi{
 	}
 
 	public void createLog(LogModel lm) {
-		//1锟斤拷锟饺讹拷取锟侥硷拷锟斤拷锟斤拷锟斤拷
+		//1：先读取文件的内容
 		List<LogModel> list = this.readLogFile();
-		//2锟斤拷锟斤拷锟斤拷锟铰碉拷锟斤拷志锟斤拷锟斤拷
+		//2：加入新的日志对象
 		list.add(lm);
-		//3锟斤拷锟斤拷锟斤拷写锟斤拷锟侥硷拷
+		//3：重新写入文件
 		this.writeLogFile(list);
 	}
 
@@ -25,25 +25,25 @@ public class ClassAdapter extends LogFileOperate implements LogDbOperateApi{
 	}
 
 	public void removeLog(LogModel lm) {
-		//1锟斤拷锟饺讹拷取锟侥硷拷锟斤拷锟斤拷锟斤拷
+		//1：先读取文件的内容
 		List<LogModel> list = this.readLogFile();
-		//2锟斤拷删锟斤拷锟斤拷应锟斤拷锟斤拷志锟斤拷锟斤拷
+		//2：删除相应的日志对象
 		list.remove(lm);
-		//3锟斤拷锟斤拷锟斤拷写锟斤拷锟侥硷拷
+		//3：重新写入文件
 		this.writeLogFile(list);
 	}
 
 	public void updateLog(LogModel lm) {
-		//1锟斤拷锟饺讹拷取锟侥硷拷锟斤拷锟斤拷锟斤拷
+		//1：先读取文件的内容
 		List<LogModel> list = this.readLogFile();
-		//2锟斤拷锟睫革拷锟斤拷应锟斤拷锟斤拷志锟斤拷锟斤拷
+		//2：修改相应的日志对象
 		for(int i=0;i<list.size();i++){
 			if(list.get(i).getLogId().equals(lm.getLogId())){
 				list.set(i, lm);
 				break;
 			}
 		}
-		//3锟斤拷锟斤拷锟斤拷写锟斤拷锟侥硷拷
+		//3：重新写入文件
 		this.writeLogFile(list);
 	}
 }

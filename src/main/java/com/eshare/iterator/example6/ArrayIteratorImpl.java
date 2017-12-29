@@ -5,27 +5,27 @@ import java.util.Collection;
 import java.util.Iterator;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½Ó¿ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÓÃÀ´ÊµÏÖ·ÃÎÊÊı×éµÄµü´ú½Ó¿Ú,¼ÓÈëÁËµü´ú²ßÂÔ
  */
 public class ArrayIteratorImpl implements Iterator{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃÀ´´æ·Å±»µü´úµÄÊı×é
 	 */
 	private PayModel[] pms = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òı
 	 */
 	private int index = 0;
 	
 	public ArrayIteratorImpl(SalaryManager aggregate){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¶Ô¾ÛºÏ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ½ï¿½ï¿½Ğ¹ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ç¹¤ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½3000ï¿½ï¿½ï¿½ï¿½
+		//ÔÚÕâÀïÏÈ¶Ô¾ÛºÏ¶ÔÏóµÄÊı¾İ½øĞĞ¹ıÂË£¬±ÈÈç¹¤×Ê±ØĞëÔÚ3000ÒÔÏÂ
 		Collection<PayModel> tempCol = new ArrayList<PayModel>();
 		for(PayModel pm : aggregate.getPays()){
 			if(pm.getPay() < 3000){
 				tempCol.add(pm);
 			}
 		}
-		//È»ï¿½ï¿½Ñ·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ´ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//È»ºó°Ñ·ûºÏÒªÇóµÄÊı¾İ´æ·Åµ½ÓÃÀ´µü´úµÄÊı×é
 		this.pms = new PayModel[tempCol.size()];
 		int i=0;
 		for(PayModel pm : tempCol){
@@ -36,7 +36,7 @@ public class ArrayIteratorImpl implements Iterator{
 	
 	
 	public boolean hasNext() {
-		//ï¿½Ğ¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
+		//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÔªËØ
 		if(pms!=null && index<=(pms.length-1)){
 			return true;
 		}
@@ -48,11 +48,11 @@ public class ArrayIteratorImpl implements Iterator{
 		Object retObj = null;
 		if(hasNext()){
 			retObj = pms[index];
-			//Ã¿È¡ï¿½ï¿½Ò»ï¿½ï¿½Öµï¿½ï¿½ï¿½Í°ï¿½ï¿½Ñ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1
+			//Ã¿È¡×ßÒ»¸öÖµ£¬¾Í°ÑÒÑ·ÃÎÊË÷Òı¼Ó1
 			index++;
 		}
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½İ½ï¿½ï¿½Ğ¹ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ç²»ï¿½Ã²é¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÔÚÕâÀï¶ÔÒª·µ»ØµÄÊı¾İ½øĞĞ¹ıÂË£¬±ÈÈç²»ÈÃ²é¿´¹¤×ÊÊı¾İ
 		((PayModel)retObj).setPay(0.0);
 		
 		return retObj;
@@ -60,6 +60,6 @@ public class ArrayIteratorImpl implements Iterator{
 
 	
 	public void remove() {
-		//ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ô²ï¿½Êµï¿½ï¿½		
+		//ÔİÊ±¿ÉÒÔ²»ÊµÏÖ		
 	}
 }

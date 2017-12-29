@@ -1,11 +1,13 @@
 package com.eshare.simplefactory.example2;
 /**
- * 锟酵伙拷锟剿ｏ拷使锟斤拷Api锟接匡拷
+ * 客户端，使用Api接口
  */
 public class Client {
 	public static void main(String[] args) {
-		//通锟斤拷锟津单癸拷锟斤拷锟斤拷锟斤拷取锟接口讹拷锟斤拷
+		//通过简单工厂来获取接口对象
 		Api api = Factory.createApi(1);
-		api.operation("锟斤拷锟斤拷使锟矫简单癸拷锟斤拷");
+		
+		
+		api.operation("正在使用简单工厂");
 	}
 }

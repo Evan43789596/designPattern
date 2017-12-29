@@ -4,22 +4,22 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½å´´ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
+ * ¹¹½¨Æ÷½Ó¿Ú£¬¶¨Òå´´½¨Ò»¸öÊä³öÎÄ¼ş¶ÔÏóËùĞèµÄ¸÷¸ö²¿¼şµÄ²Ù×÷
  */
 public interface Builder {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Headerï¿½ï¿½ï¿½ï¿½
-	 * @param ehm ï¿½Ä¼ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹½¨Êä³öÎÄ¼şµÄHeader²¿·Ö
+	 * @param ehm ÎÄ¼şÍ·µÄÄÚÈİ
 	 */
 	public void buildHeader(ExportHeaderModel ehm);
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Bodyï¿½ï¿½ï¿½ï¿½
-	 * @param mapData Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹½¨Êä³öÎÄ¼şµÄBody²¿·Ö
+	 * @param mapData ÒªÊä³öµÄÊı¾İµÄÄÚÈİ
 	 */
 	public void buildBody(Map<String, Collection<ExportDataModel>> mapData);
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Footerï¿½ï¿½ï¿½ï¿½
-	 * @param efm ï¿½Ä¼ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹½¨Êä³öÎÄ¼şµÄFooter²¿·Ö
+	 * @param efm ÎÄ¼şÎ²µÄÄÚÈİ
 	 */
 	public void buildFooter(ExportFooterModel efm);
 }

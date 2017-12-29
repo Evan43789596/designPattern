@@ -9,7 +9,6 @@ public class JDBCTest {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		return DriverManager.getConnection(
 				"jdbc:oracle:thin:@localhost:1521:orcl", "test", "test");
-		
 	}
 
 	public void create(UserModel um) {
@@ -42,8 +41,11 @@ public class JDBCTest {
 			conn = this.getConnection();
 			String sql = "select * from tbl_user where 1=1 ";
 			sql = this.prepareSql(sql, uqm);
+			
 			PreparedStatement pstmt = conn.prepareStatement(sql);
+			
 			this.setValue(pstmt, uqm);
+			
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()){
 				col.add(this.rs2Object(rs));
@@ -60,24 +62,24 @@ public class JDBCTest {
 		return col;
 	}
 	/**
-	 * ÎªÍ¨ï¿½Ã²ï¿½Ñ¯ï¿½ï¿½Ì¬ï¿½ï¿½Æ´ï¿½ï¿½sqlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½Ç£ï¿½
-	 * ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½ï¿½ï¿½Ó¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param sql sqlï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½ï¿½
-	 * @param uqm ï¿½ï¿½×°ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
-	 * @return Æ´ï¿½ÓºÃµï¿½sqlï¿½ï¿½ï¿½
+	 * ÎªÍ¨ÓÃ²éÑ¯¶¯Ì¬µÄÆ´½ÓsqlµÄÌõ¼þ²¿·Ö£¬»ù±¾Ë¼Â·ÊÇ£º
+	 * Èç¹ûÓÃ»§ÌîÐ´ÁËÏàÓ¦µÄÌõ¼þ£¬ÄÇÃ´²ÅÔÚsqlÖÐÌí¼Ó¶ÔÓ¦µÄÌõ¼þ
+	 * @param sql sqlµÄÖ÷¸É²¿·Ö
+	 * @param uqm ·â×°²éÑ¯Ìõ¼þµÄÊý¾ÝÄ£ÐÍ
+	 * @return Æ´½ÓºÃµÄsqlÓï¾ä
 	 */
 	private String prepareSql(String sql,UserQueryModel uqm){
 		StringBuffer buffer = new StringBuffer();
 		buffer.append(sql);
-		//ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½
+		//¾ø¶ÔÆ¥Åä
 		if(uqm.getUuid()!=null && uqm.getUuid().trim().length()>0){
 			buffer.append(" and uuid=? ");
 		}
-		//Ä£ï¿½ï¿½Æ¥ï¿½ï¿½
+		//Ä£ºýÆ¥Åä
 		if(uqm.getName()!=null && uqm.getName().trim().length()>0){
 			buffer.append(" and name like ? ");
 		}
-		//ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½
+		//Çø¼äÆ¥Åä
 		if(uqm.getAge() > 0){
 			buffer.append(" and age >=? ");
 		}
@@ -87,9 +89,9 @@ public class JDBCTest {
 		return buffer.toString();
 	}
 	/**
-	 * ÎªÍ¨ï¿½Ã²ï¿½Ñ¯ï¿½ï¿½sqlï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
-	 * @param pstmt Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯sqlï¿½Ä¶ï¿½ï¿½ï¿½
-	 * @param uqm ï¿½ï¿½×°ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
+	 * ÎªÍ¨ÓÃ²éÑ¯µÄsql¶¯Ì¬ÉèÖÃÌõ¼þµÄÖµ
+	 * @param pstmt Ô¤´¦Àí²éÑ¯sqlµÄ¶ÔÏó
+	 * @param uqm ·â×°²éÑ¯Ìõ¼þµÄÊý¾ÝÄ£ÐÍ
 	 * @throws Exception
 	 */
 	private void setValue(PreparedStatement pstmt,UserQueryModel uqm)throws Exception{
@@ -112,9 +114,9 @@ public class JDBCTest {
 		}
 	}
 	/**
-	 * ï¿½Ñ²ï¿½Ñ¯ï¿½ï¿½ï¿½ØµÄ½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
-	 * @param rs ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ØµÄ½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ØµÄ½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+	 * °Ñ²éÑ¯·µ»ØµÄ½á¹û¼¯×ª»»³ÉÎª¶ÔÏó
+	 * @param rs ²éÑ¯·µ»ØµÄ½á¹û¼¯
+	 * @return ²éÑ¯·µ»ØµÄ½á¹û¼¯×ª»»³ÉÎª¶ÔÏó
 	 * @throws Exception
 	 */
 	private UserModel rs2Object(ResultSet rs)throws Exception{
@@ -132,28 +134,29 @@ public class JDBCTest {
 	
 	public static void main(String[] args) {
 		JDBCTest uj = new JDBCTest();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÏÈÐÂÔö¼¸Ìõ
 		UserModel um1 = new UserModel();
 		um1.setUuid("u1");
-		um1.setName("ï¿½ï¿½ï¿½ï¿½");
+		um1.setName("ÕÅÈý");
 		um1.setAge(22);		
-		uj.create(um1);		
+//		uj.create(um1);		
 		
 		UserModel um2 = new UserModel();
 		um2.setUuid("u2");
-		um2.setName("ï¿½ï¿½ï¿½ï¿½");
+		um2.setName("ÀîËÄ");
 		um2.setAge(25);		
-		uj.create(um2);
+//		uj.create(um2);
 		
 		UserModel um3 = new UserModel();
 		um3.setUuid("u3");
-		um3.setName("ï¿½ï¿½ï¿½ï¿½");
+		um3.setName("ÍõÎå");
 		um3.setAge(32);		
-		uj.create(um3);
+//		uj.create(um3);
 		
 		
-		//ï¿½ï¿½ï¿½Ô²ï¿½Ñ¯
+		//²âÊÔ²éÑ¯
 		UserQueryModel uqm = new UserQueryModel();
+		uqm.setName("Àî");
 		uqm.setAge(25);
 		uqm.setAge2(36);
 		Collection<UserModel> col = uj.getByCondition(uqm);

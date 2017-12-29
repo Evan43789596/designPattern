@@ -1,14 +1,14 @@
 package com.eshare.visitor.example4;
 /**
- * ï¿½ï¿½ï¿½Ë¿Í»ï¿½
+ * ¸öÈË¿Í»§
  */
 public class PersonalCustomer extends Customer{
 	/**
-	 * ï¿½ï¿½Ïµï¿½ç»°
+	 * ÁªÏµµç»°
 	 */
 	private String telephone;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½
+	 * ÄêÁä
 	 */
 	private int age;
 	
@@ -25,7 +25,7 @@ public class PersonalCustomer extends Customer{
 		this.age = age;
 	}
 	public void accept(Visitor visitor) {
-		//ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
+		//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
 		visitor.visitPersonalCustomer(this);
 	}
 }

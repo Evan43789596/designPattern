@@ -1,6 +1,6 @@
 package com.eshare.simplefactory.example1;
 /**
- * 锟皆接口碉拷实锟斤拷 
+ * 对接口的实现 
  */
 public class Impl implements Api{
 	

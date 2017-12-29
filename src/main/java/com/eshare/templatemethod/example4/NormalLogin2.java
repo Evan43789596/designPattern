@@ -1,12 +1,12 @@
 package com.eshare.templatemethod.example4;
 
 /**
- * ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æ¼ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÆÕÍ¨ÓÃ»§µÇÂ¼¿ØÖÆ¼ÓÇ¿°æµÄÂß¼­´¦Àí
  */
 public class NormalLogin2 extends LoginTemplate{
 	public LoginModel findLoginUser(String loginId) {
-		// ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½Ô¾ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¶ï¿½ï¿½ï¿½
-		//×¢ï¿½ï¿½Ò»ï¿½ã£ºï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½
+		// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓÐÄ¬ÈÏÊý¾ÝµÄ¶ÔÏó
+		//×¢ÒâÒ»µã£ºÕâÀïÊ¹ÓÃµÄÊÇ×Ô¼ºÐèÒªµÄÊý¾ÝÄ£ÐÍÁË
 		NormalLoginModel nlm = new NormalLoginModel();
 		nlm.setLoginId(loginId);
 		nlm.setPwd("testpwd");
@@ -16,18 +16,18 @@ public class NormalLogin2 extends LoginTemplate{
 		return nlm;
 	}
 	public boolean match(LoginModel lm,LoginModel dbLm){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ú½ï¿½ï¿½Ðµï¿½Â¼ï¿½ï¿½ï¿½Æµï¿½Ê±ï¿½ï¿½
-		//ï¿½ï¿½Òªï¿½ï¿½ï¿½4ï¿½ï¿½Öµï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È±Ê¡ï¿½ï¿½2ï¿½ï¿½
+		//Õâ¸ö·½·¨ÐèÒª¸²¸Ç£¬ÒòÎªÏÖÔÚ½øÐÐµÇÂ¼¿ØÖÆµÄÊ±ºò£¬
+		//ÐèÒª¼ì²â4¸öÖµÊÇ·ñÕýÈ·£¬¶ø²»½ö½öÊÇÈ±Ê¡µÄ2¸ö
 		
-		//ï¿½Èµï¿½ï¿½Ã¸ï¿½ï¿½ï¿½Êµï¿½ÖºÃµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·
+		//ÏÈµ÷ÓÃ¸¸ÀàÊµÏÖºÃµÄ£¬¼ì²â±àºÅºÍÃÜÂëÊÇ·ñÕýÈ·
 		boolean f1 = super.match(lm, dbLm);
 		if(f1){
-			//ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·
+			//Èç¹û±àºÅºÍÃÜÂëÕýÈ·£¬¼ÌÐø¼ì²éÎÊÌâºÍ´ð°¸ÊÇ·ñÕýÈ·
 			
-			//ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//ÏÈ°ÑÊý¾Ý×ª»»³É×Ô¼ºÐèÒªµÄÊý¾Ý
 			NormalLoginModel nlm = (NormalLoginModel)lm;
 			NormalLoginModel dbNlm = (NormalLoginModel)dbLm;
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·
+			//¼ì²éÎÊÌâºÍ´ð°¸ÊÇ·ñÕýÈ·
 			if(dbNlm.getQuestion().equals(nlm.getQuestion())
 					&& dbNlm.getAnswer().equals(nlm.getAnswer())){
 				return true;

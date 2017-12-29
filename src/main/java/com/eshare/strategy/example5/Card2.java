@@ -1,21 +1,21 @@
 package com.eshare.strategy.example5;
 /**
- * 支锟斤拷锟斤拷锟斤拷锟叫匡拷
+ * 支付到银行卡
  */
 public class Card2 implements PaymentStrategy{
 	/**
-	 * 锟绞猴拷锟斤拷息
+	 * 帐号信息
 	 */
 	private String account = "";
 	/**
-	 * 锟斤拷锟届方锟斤拷锟斤拷锟斤拷锟斤拷锟绞猴拷锟斤拷息
-	 * @param account 锟绞猴拷锟斤拷息
+	 * 构造方法，传入帐号信息
+	 * @param account 帐号信息
 	 */
 	public Card2(String account){
 		this.account = account;
 	}
 	public void pay(PaymentContext ctx) {
-		System.out.println("锟斤拷锟节革拷"+ctx.getUserName()+"锟斤拷"+this.account+"锟绞猴拷支锟斤拷锟斤拷"+ctx.getMoney()+"元");
-		//锟斤拷锟斤拷锟斤拷锟叫ｏ拷锟斤拷锟斤拷转锟绞ｏ拷锟酵诧拷去锟斤拷锟斤拷
+		System.out.println("现在给"+ctx.getUserName()+"的"+this.account+"帐号支付了"+ctx.getMoney()+"元");
+		//连接银行，进行转帐，就不去管了
 	}
 }

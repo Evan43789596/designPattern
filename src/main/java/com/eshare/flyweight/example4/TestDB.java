@@ -1,29 +1,29 @@
 package com.eshare.flyweight.example4;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ðµï¿½Öµ
+ * ¹©²âÊÔÓÃ£¬ÔÚÄÚ´æÖÐÄ£ÄâÊý¾Ý¿âÖÐµÄÖµ
  */
 public class TestDB {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åµï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½Ýµï¿½Öµ
+	 * ÓÃÀ´´æ·Åµ¥¶ÀÊÚÈ¨Êý¾ÝµÄÖµ
 	 */
 	public static Collection<String> colDB = new ArrayList<String>();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½Ýµï¿½Öµï¿½ï¿½keyÎªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½idï¿½ï¿½valueÎªï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½Ýµï¿½Öµ
+	 * ÓÃÀ´´æ·Å×éºÏÊÚÈ¨Êý¾ÝµÄÖµ£¬keyÎª×éºÏÊý¾ÝµÄid£¬valueÎª¸Ã×éºÏ°üº¬µÄ¶àÌõÊÚÈ¨Êý¾ÝµÄÖµ
 	 */
 	public static Map<String,String[]> mapDB = new HashMap<String,String[]>();
 	
 	static{
-		//Í¨ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½
-		colDB.add("ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ô±ï¿½Ð±ï¿½,ï¿½é¿´,1");
-		colDB.add("ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ô±ï¿½Ð±ï¿½,ï¿½é¿´,1");
-		colDB.add("ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,,2");
+		//Í¨¹ý¾²Ì¬¿éÀ´Ìî³äÄ£ÄâµÄÊý¾Ý£¬Ôö¼ÓÒ»¸ö±êÊ¶À´±íÃ÷ÊÇ·ñ×éºÏÊÚÈ¨Êý¾Ý
+		colDB.add("ÕÅÈý,ÈËÔ±ÁÐ±í,²é¿´,1");
+		colDB.add("ÀîËÄ,ÈËÔ±ÁÐ±í,²é¿´,1");
+		colDB.add("ÀîËÄ,²Ù×÷Ð½×ÊÊý¾Ý,,2");
 		
-		mapDB.put("ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",new String[]{"Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½é¿´","Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½Þ¸ï¿½"});
+		mapDB.put("²Ù×÷Ð½×ÊÊý¾Ý",new String[]{"Ð½×ÊÊý¾Ý,²é¿´","Ð½×ÊÊý¾Ý,ÐÞ¸Ä"});
 		
-		//ï¿½ï¿½ï¿½Ó¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½
+		//Ôö¼Ó¸ü¶àµÄÊÚÈ¨Êý¾Ý
 		for(int i=0;i<3;i++){
-			colDB.add("ï¿½ï¿½ï¿½ï¿½"+i+",ï¿½ï¿½Ô±ï¿½Ð±ï¿½,ï¿½é¿´,1");
+			colDB.add("ÕÅÈý"+i+",ÈËÔ±ÁÐ±í,²é¿´,1");
 		}
 	}	
 }

@@ -1,6 +1,6 @@
 package com.eshare.mediator.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½à£¬Ò»ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½
+ * Éù¿¨Àà£¬Ò»¸öÍ¬ÊÂÀà
  */
 public class SoundCard extends Colleague{
 	public SoundCard(Mediator mediator) {
@@ -8,11 +8,11 @@ public class SoundCard extends Colleague{
 	}
 	
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½İ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param data ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * °´ÕÕÉùÆµÊı¾İ·¢³öÉùÒô
+	 * @param data ·¢³öÉùÒôµÄÊı¾İ
 	 */
 	public void soundData(String data){
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+data);
+		System.out.println("»­ÍâÒô£º"+data);
 	}
 	
 }

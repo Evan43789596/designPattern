@@ -1,10 +1,10 @@
 package com.eshare.prototype.example2;
 /**
- * 锟斤拷隆锟侥撅拷锟斤拷实锟街讹拷锟斤拷
+ * 克隆的具体实现对象
  */
 public class ConcretePrototype1 implements Prototype {
 	public Prototype clone() {
-		//锟斤拷虻サ目锟铰★拷锟斤拷陆锟揭伙拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷没锟斤拷锟斤拷锟皆ｏ拷锟酵诧拷去锟斤拷锟斤拷值锟斤拷
+		//最简单的克隆，新建一个自身对象，由于没有属性，就不去复制值了
 		Prototype prototype = new ConcretePrototype1();
 		return prototype;
 	}

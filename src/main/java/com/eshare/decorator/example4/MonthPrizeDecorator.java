@@ -2,7 +2,7 @@ package com.eshare.decorator.example4;
 
 import java.util.Date;
 /**
- * в╟О©╫О©╫О©╫О©╫О©╫О©╫О©╫Сё╛╪О©╫О©╫Ц╣╠О©╫О©╫р╣О©╫Я╫╠╫О©╫
+ * в╟йнфВ╤тоСё╛╪фкЦ╣╠тбр╣нЯ╫╠╫П
  */
 public class MonthPrizeDecorator extends Decorator{
 	public MonthPrizeDecorator(Component c){
@@ -10,11 +10,11 @@ public class MonthPrizeDecorator extends Decorator{
 	}
 	
 	public double calcPrize(String user, Date begin, Date end) {
-		//1О©╫О©╫О©╫х╩О©╫х║г╟О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╫О©╫О©╫О©╫
+		//1ё╨ох╩Ях║г╟цФтккЦЁЖю╢╣д╫╠╫П
 		double money = super.calcPrize(user, begin, end);
-		//2О©╫О©╫х╩О©╫О©╫О©╫О©╫Ц╣╠О©╫О©╫р╣О©╫Я╫╠╫О©╫,О©╫О©╫О©╫О©╫О©╫О©╫т╠О©╫О©╫й╠О©╫О©╫х╔О©╫О©╫х║О©╫О©╫О©╫б╣О©╫р╣О©╫О©╫Нё╛х╩О©╫О©╫О©╫ыЁО©╫О©╫О©╫3%
+		//2ё╨х╩╨С╪фкЦ╣╠тбр╣нЯ╫╠╫П,╟╢уухкт╠╨мй╠╪Дх╔╩Ях║╣╠тб╣др╣нЯ╤Нё╛х╩╨СтыЁкрт3%
 		double prize = TempDB.mapMonthSaleMoney.get(user) * 0.03;
-		System.out.println(user+"О©╫О©╫О©╫О©╫р╣О©╫Я╫╠╫О©╫"+prize);
+		System.out.println(user+"╣╠тбр╣нЯ╫╠╫П"+prize);
 		return money + prize;
 	}
 

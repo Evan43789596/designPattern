@@ -2,16 +2,16 @@ package com.eshare.composite.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╣О©╫О©╫О©╫о╤О©╫О©╫О©╫
-		Component root = new Composite("О©╫О©╫в╟");
-		Component c1 = new Composite("О©╫О©╫в╟");
+		//╤╗рЕкЫсп╣двИ╨о╤тоС
+		Component root = new Composite("╥Чв╟");
+		Component c1 = new Composite("дпв╟");
 		Component c2 = new Composite("е╝в╟");
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╣О©╫р╤О©╫с╤О©╫О©╫О©╫
-		Component leaf1 = new Leaf("О©╫О©╫О©╫О©╫");
-		Component leaf2 = new Leaf("О©╫п©О©╫");
-		Component leaf3 = new Leaf("х╧О©╫О©╫");
-		Component leaf4 = new Leaf("О©╫О©╫в╟");
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╫А╧╧О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╤О©╫О©╫О©╫О©╫р╤О©╫с╤О©╫О©╫О©╫
+		//╤╗рЕкЫсп╣др╤вс╤тоС
+		Component leaf1 = new Leaf("Ёдрб");
+		Component leaf2 = new Leaf("╪п©к");
+		Component leaf3 = new Leaf("х╧вс");
+		Component leaf4 = new Leaf("лвв╟");
+		//╟╢ууйВ╣д╫А╧╧ю╢вИ╨овИ╨о╤тоС╨мр╤вс╤тоС
 		root.addChild(c1);
 		root.addChild(c2);		
 		c1.addChild(leaf1);
@@ -19,14 +19,14 @@ public class Client {
 		c2.addChild(leaf3);
 		c2.addChild(leaf4);
 		
-		//О©╫О©╫О©╫ц╦О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
-		root.printStruct("");
+		//╣Всц╦Ы╤тоС╣дйДЁЖ╧╕дэю╢йДЁЖуШ©цйВ
+		root.printStruct("  ");
 		
 		System.out.println("---------------------------->");
 		
-		//х╩О©╫О©╫и╬О©╫О©╫р╩О©╫О©╫О©╫з╣О©╫
+		//х╩╨Си╬ЁЩр╩╦Ж╫з╣Ц
 		root.removeChild(c1);
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+		//жьпбйДЁЖуШ©цйВ
 		root.printStruct("");
 	}
 }

@@ -1,22 +1,22 @@
 package com.eshare.iterator.example1;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö¶ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ç¾ÛºÏ¶ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½
- * ï¿½ï¿½Í¬ï¿½Ä¾ÛºÏ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Ç²ï¿½Ò»ï¿½ï¿½ï¿½ï¿½
+ * ¾ßÌåµü´úÆ÷ÊµÏÖ¶ÔÏó£¬Ê¾ÒâµÄÊÇ¾ÛºÏ¶ÔÏóÎªÊý×éµÄµü´úÆ÷
+ * ²»Í¬µÄ¾ÛºÏ¶ÔÏóÏàÓ¦µÄµü´úÆ÷ÊµÏÖÊÇ²»Ò»ÑùµÄ
  */
 public class ConcreteIterator implements Iterator {
 	/**
-	 * ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Ä¾ÛºÏ¶ï¿½ï¿½ï¿½
+	 * ³ÖÓÐ±»µü´úµÄ¾ßÌåµÄ¾ÛºÏ¶ÔÏó
 	 */
 	private ConcreteAggregate aggregate;
 	/**
-	 * ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã¡ï¿½
-	 * -1ï¿½ï¿½Ê¾ï¿½Õ¿ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ò£¬µï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÛºÏ¶ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°
+	 * ÄÚ²¿Ë÷Òý£¬¼ÇÂ¼µ±Ç°µü´úµ½µÄË÷ÒýÎ»ÖÃ¡£
+	 * -1±íÊ¾¸Õ¿ªÊ¼µÄÊ±ºò£¬µü´úÆ÷Ö¸Ïò¾ÛºÏ¶ÔÏóµÚÒ»¸ö¶ÔÏóÖ®Ç°
 	 */
 	private int index = -1;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë±»ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Ä¾ÛºÏ¶ï¿½ï¿½ï¿½
-	 * @param aggregate ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Ä¾ÛºÏ¶ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë±»µü´úµÄ¾ßÌåµÄ¾ÛºÏ¶ÔÏó
+	 * @param aggregate ±»µü´úµÄ¾ßÌåµÄ¾ÛºÏ¶ÔÏó
 	 */
 	public ConcreteIterator(ConcreteAggregate aggregate) {
 		this.aggregate = aggregate;

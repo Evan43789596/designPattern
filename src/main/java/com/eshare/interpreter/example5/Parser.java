@@ -2,77 +2,77 @@ package com.eshare.interpreter.example5;
 
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ó¦ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½
+ * ¸ù¾ÝÓï·¨À´½âÎö±í´ïÊ½£¬×ª»»³ÉÎªÏàÓ¦µÄ³éÏóÓï·¨Ê÷
  */
 public class Parser {
 	/**
-	 * Ë½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â²¿ï¿½ï¿½Î½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+	 * Ë½ÓÐ»¯¹¹ÔìÆ÷£¬±ÜÃâÍâ²¿ÎÞÎ½µÄ´´½¨¶ÔÏóÊµÀý
 	 */
 	private Parser(){
 		//
 	}
-	//ï¿½ï¿½ï¿½å¼¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½Ê¹ï¿½ï¿½
+	//¶¨Òå¼¸¸ö³£Á¿£¬ÄÚ²¿Ê¹ÓÃ
 	private final static String BACKLASH = "/";
 	private final static String DOT = ".";
 	private final static String DOLLAR = "$";
 	/**
-	 * ï¿½ï¿½ï¿½Õ·Ö½ï¿½ï¿½ï¿½Èºï¿½ï¿½Â¼ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * °´ÕÕ·Ö½âµÄÏÈºó¼ÇÂ¼ÐèÒª½âÎöµÄÔªËØµÄÃû³Æ
 	 */
 	private static List<String> listEle = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï³ï¿½ÎªÒ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½
-	 * @param expr ï¿½ï¿½ï¿½ï¿½ÒªÈ¡Öµï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
-	 * @return ï¿½ï¿½Ó¦ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½
+	 * ´«ÈëÒ»¸ö×Ö·û´®±í´ïÊ½£¬Í¨¹ý½âÎö£¬×éºÏ³ÉÎªÒ»¸ö³éÏóµÄÓï·¨Ê÷
+	 * @param expr ÃèÊöÒªÈ¡ÖµµÄ×Ö·û´®±í´ïÊ½
+	 * @return ¶ÔÓ¦µÄ³éÏóÓï·¨Ê÷
 	 */
 	public static ReadXmlExpression parse(String expr){
-		//ï¿½È³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ÆµÄ¼ï¿½ï¿½ï¿½
+		//ÏÈ³õÊ¼»¯¼ÇÂ¼Ðè½âÎöµÄÔªËØµÄÃû³ÆµÄ¼¯»á
 		listEle = new ArrayList<String>();
 		
-		//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ÆºÍ¸ï¿½Ôªï¿½Ø¶ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
+		//µÚÒ»²½£º·Ö½â±í´ïÊ½£¬µÃµ½ÐèÒª½âÎöµÄÔªËØÃû³ÆºÍ¸ÃÔªËØ¶ÔÓ¦µÄ½âÎöÄ£ÐÍ
 		Map<String,ParserModel> mapPath = parseMapPath(expr);
 		
-		//ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//µÚ¶þ²½£º¸ù¾Ý½ÚµãµÄÊôÐÔ×ª»»³ÉÎªÏàÓ¦µÄ½âÊÍÆ÷¶ÔÏó
 		List<ReadXmlExpression> list = mapPath2Interpreter(mapPath);
 
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï³ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Èºï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä°ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//µÚÈý²½£º×éºÏ³éÏóÓï·¨Ê÷£¬Ò»¶¨Òª°´ÕÕÏÈºóË³ÐòÀ´×éºÏ£¬
+		//·ñÔò¶ÔÏóµÄ°üº¬¹ØÏµ¾ÍÂÒÁË
 		ReadXmlExpression returnRe = buildTree(list);
 	
 		return returnRe;			
 	}
 
 	
-/*----------------------ï¿½ï¿½Ê¼Êµï¿½Öµï¿½Ò»ï¿½ï¿½-----------------------*/			
+/*----------------------¿ªÊ¼ÊµÏÖµÚÒ»²½-----------------------*/			
 	/**
-	 * ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½
-	 * ï¿½ï¿½ï¿½Ð¸ï¿½Ôªï¿½Ø¶ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
-	 * @param expr ï¿½ï¿½Òªï¿½Ö½ï¿½Ä±ï¿½ï¿½Ê½
-	 * @return ï¿½Ãµï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½Ôªï¿½Ø¶ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
+	 * °´ÕÕ´Ó×óµ½ÓÒË³ÐòÀ´·Ö½â±í´ïÊ½£¬µÃµ½ÐèÒª½âÎöµÄÔªËØÃû³Æ£¬
+	 * »¹ÓÐ¸ÃÔªËØ¶ÔÓ¦µÄ½âÎöÄ£ÐÍ
+	 * @param expr ÐèÒª·Ö½âµÄ±í´ïÊ½
+	 * @return µÃµ½ÐèÒª½âÎöµÄÔªËØÃû³Æ£¬»¹ÓÐ¸ÃÔªËØ¶ÔÓ¦µÄ½âÎöÄ£ÐÍ
 	 */
 	private static Map<String,ParserModel> parseMapPath(String expr){
-		//ï¿½È°ï¿½ï¿½ï¿½/ï¿½Ö¸ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+		//ÏÈ°´ÕÕ/·Ö¸î×Ö·û´®
 		StringTokenizer tokenizer = new StringTokenizer(expr, BACKLASH);
-		//ï¿½ï¿½Ê¼ï¿½ï¿½Ò»ï¿½ï¿½mapï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å·Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+		//³õÊ¼»¯Ò»¸ömapÓÃÀ´´æ·Å·Ö½â³öÀ´µÄÖµ
 		Map<String,ParserModel> mapPath = new HashMap<String,ParserModel>();
 		while (tokenizer.hasMoreTokens()) {
 			String onePath = tokenizer.nextToken();
 			if (tokenizer.hasMoreTokens()) {
-				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµï¿½ï¿½Ëµï¿½ï¿½ï¿½â²»ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
-				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï·¨ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//»¹ÓÐÏÂÒ»¸öÖµ£¬ËµÃ÷Õâ²»ÊÇ×îºóÒ»¸öÔªËØ
+				//°´ÕÕÏÖÔÚµÄÓï·¨£¬ÊôÐÔ±ØÈ»ÔÚ×îºó£¬Òò´ËÒ²²»ÊÇÊôÐÔ
 				setParsePath(false,onePath,false,mapPath);
 			} else {
-				//Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//ËµÃ÷µ½×îºóÁË
 				int dotIndex = onePath.indexOf(DOT);
 				if (dotIndex > 0) {
-					//Ëµï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½È¡ï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½ï¿½Ç¾Í°ï¿½ï¿½ï¿½"."ï¿½ï¿½ï¿½Ö¸î£¬Ç°ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½
+					//ËµÃ÷ÊÇÒª»ñÈ¡ÊôÐÔµÄÖµ£¬ÄÇ¾Í°´ÕÕ"."À´·Ö¸î£¬Ç°ÃæµÄ¾ÍÊÇÔªËØÃû×Ö£¬ºóÃæµÄÊÇÊôÐÔµÄÃû×Ö
 					String eleName = onePath.substring(0, dotIndex);
 					String propName = onePath.substring(dotIndex + 1);
-					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					//ÉèÖÃÊôÐÔÇ°ÃæµÄÄÇ¸öÔªËØ£¬×ÔÈ»²»ÊÇ×îºóÒ»¸ö£¬Ò²²»ÊÇÊôÐÔ
 					setParsePath(false,eleName,false,mapPath);
-					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï·¨ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+					//ÉèÖÃÊôÐÔ£¬°´ÕÕÏÖÔÚµÄÓï·¨¶¨Òå£¬ÊôÐÔÖ»ÄÜÊÇ×îºóÒ»¸ö
 					setParsePath(true,propName,true,mapPath);
 				} else {
-					//Ëµï¿½ï¿½ï¿½ï¿½È¡Ôªï¿½Øµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½Øµï¿½Öµ
+					//ËµÃ÷ÊÇÈ¡ÔªËØµÄÖµ£¬¶øÇÒÊÇ×îºóÒ»¸öÔªËØµÄÖµ
 					setParsePath(true,onePath,false,mapPath);
 				}
 				break;
@@ -81,85 +81,85 @@ public class Parser {
 		return mapPath;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½Õ·Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ãºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½
-	 * ï¿½ï¿½ï¿½Ð¸ï¿½Ôªï¿½Ø¶ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
-	 * @param end ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
-	 * @param ele Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param propertyValue ï¿½Ç·ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
-	 * @param mapPath ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½Ôªï¿½Ø¶ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½Ä£ï¿½Íµï¿½Mapï¿½ï¿½ï¿½ï¿½
+	 * °´ÕÕ·Ö½â³öÀ´µÄÎ»ÖÃºÍÃû³ÆÀ´ÉèÖÃÐèÒª½âÎöµÄÔªËØÃû³Æ£¬
+	 * »¹ÓÐ¸ÃÔªËØ¶ÔÓ¦µÄ½âÎöÄ£ÐÍ
+	 * @param end ÊÇ·ñÊÇ×îºóÒ»¸ö
+	 * @param ele ÔªËØÃû³Æ
+	 * @param propertyValue ÊÇ·ñÊÇÈ¡ÊôÐÔ
+	 * @param mapPath ÉèÖÃÐèÒª½âÎöµÄÔªËØÃû³Æ£¬»¹ÓÐ¸ÃÔªËØ¶ÔÓ¦µÄ½âÎöÄ£ÐÍµÄMap¶ÔÏó
 	 */
 	private static void setParsePath(boolean end,String ele,boolean propertyValue,Map<String,ParserModel> mapPath){
 		ParserModel pm = new ParserModel();
 		pm.setEnd(end);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$ï¿½ï¿½ï¿½Å¾ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµ
+		//Èç¹û´øÓÐ$·ûºÅ¾ÍËµÃ÷²»ÊÇÒ»¸öÖµ
 		pm.setSingleVlaue(!(ele.indexOf(DOLLAR)>0));
 		pm.setPropertyValue(propertyValue);				
-		//È¥ï¿½ï¿½$
+		//È¥µô$
 		ele = ele.replace(DOLLAR, "");
 		mapPath.put(ele,pm);
 		listEle.add(ele);
 	}
-/*----------------------ï¿½ï¿½Ò»ï¿½ï¿½Êµï¿½Ö½ï¿½ï¿½ï¿½-----------------------*/
+/*----------------------µÚÒ»²½ÊµÏÖ½áÊø-----------------------*/
 
-/*----------------------ï¿½ï¿½Ê¼Êµï¿½ÖµÚ¶ï¿½ï¿½ï¿½-----------------------*/	
+/*----------------------¿ªÊ¼ÊµÏÖµÚ¶þ²½-----------------------*/	
 	/**
-	 * ï¿½Ñ·Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param mapPath ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½Ôªï¿½Ø¶ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
-	 * @return ï¿½ï¿½Ã¿ï¿½ï¿½Ôªï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ó¦ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
+	 * °Ñ·Ö½â³öÀ´µÄÔªËØÃû³Æ£¬¸ù¾Ý¶ÔÓ¦µÄ½âÎöÄ£ÐÍ×ª»»³ÉÎªÏàÓ¦µÄ½âÊÍÆ÷¶ÔÏó
+	 * @param mapPath ·Ö½â³öÀ´µÄÐèÒª½âÎöµÄÔªËØÃû³Æ£¬»¹ÓÐ¸ÃÔªËØ¶ÔÓ¦µÄ½âÎöÄ£ÐÍ
+	 * @return °ÑÃ¿¸öÔªËØ×ª»»³ÉÎªÏàÓ¦µÄ½âÊÍÆ÷¶ÔÏóºóµÄ¼¯ºÏ
 	 */
 	private static List<ReadXmlExpression> mapPath2Interpreter(Map<String,ParserModel> mapPath){
 		List<ReadXmlExpression> list = new ArrayList<ReadXmlExpression>();
-		//Ò»ï¿½ï¿½Òªï¿½ï¿½ï¿½Õ·Ö½ï¿½ï¿½ï¿½Èºï¿½Ë³ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½É½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//Ò»¶¨Òª°´ÕÕ·Ö½âµÄÏÈºóË³ÐòÀ´×ª»»³É½âÊÍÆ÷¶ÔÏó
 		for(String key : listEle){
 			ParserModel pm = mapPath.get(key);
 			ReadXmlExpression obj = null;
 			if(!pm.isEnd()){
 				if(pm.isSingleVlaue()){
-					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµï¿½ï¿½×ªï¿½ï¿½Îª
+					//²»ÊÇ×îºóÒ»¸ö£¬ÊÇÒ»¸öÖµ£¬×ª»¯Îª
 					obj = new ElementExpression(key);					
 				}else{
-					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½Öµï¿½ï¿½×ªï¿½ï¿½Îª
+					//²»ÊÇ×îºóÒ»¸ö£¬ÊÇ¶à¸öÖµ£¬×ª»¯Îª
 					obj = new ElementsExpression(key);
 				}
 			}else{
 				if(pm.isPropertyValue()){
 					if(pm.isSingleVlaue()){
-						//ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµï¿½ï¿½È¡ï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½×ªï¿½ï¿½Îª
+						//ÊÇ×îºóÒ»¸ö£¬ÊÇÒ»¸öÖµ£¬È¡ÊôÐÔµÄÖµ£¬×ª»¯Îª
 						obj = new PropertyTerminalExpression(key);
 					}else{
-						//ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½Öµï¿½ï¿½È¡ï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½×ªï¿½ï¿½Îª
+						//ÊÇ×îºóÒ»¸ö£¬ÊÇ¶à¸öÖµ£¬È¡ÊôÐÔµÄÖµ£¬×ª»¯Îª
 						obj = new PropertysTerminalExpression(key);
 					}
 				}else{
 					if(pm.isSingleVlaue()){
-						//ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµï¿½ï¿½È¡Ôªï¿½Øµï¿½Öµï¿½ï¿½×ªï¿½ï¿½Îª
+						//ÊÇ×îºóÒ»¸ö£¬ÊÇÒ»¸öÖµ£¬È¡ÔªËØµÄÖµ£¬×ª»¯Îª
 						obj = new ElementTerminalExpression(key);
 					}else{
-						//ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½Öµï¿½ï¿½È¡Ôªï¿½Øµï¿½Öµï¿½ï¿½×ªï¿½ï¿½Îª
+						//ÊÇ×îºóÒ»¸ö£¬ÊÇ¶à¸öÖµ£¬È¡ÔªËØµÄÖµ£¬×ª»¯Îª
 						obj = new ElementsTerminalExpression(key);
 					}
 				}
 			}
-			//ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//°Ñ×ª»»ºóµÄ¶ÔÏóÌí¼Óµ½¼¯ºÏÖÐ
 			list.add(obj);
 		}
 		return list;
 	}
-/*----------------------ï¿½Ú¶ï¿½ï¿½ï¿½Êµï¿½Ö½ï¿½ï¿½ï¿½-----------------------*/	
+/*----------------------µÚ¶þ²½ÊµÏÖ½áÊø-----------------------*/	
 	
-/*----------------------ï¿½ï¿½Ê¼Êµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½-----------------------*/		
+/*----------------------¿ªÊ¼ÊµÏÖµÚÈý²½-----------------------*/		
 	private static ReadXmlExpression buildTree(List<ReadXmlExpression> list){
-		//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½Ç·ï¿½ï¿½ï¿½È¥ï¿½Ä¶ï¿½ï¿½ó£¬¾ï¿½ï¿½Ç³ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½ï¿½Ä¸ï¿½
+		//µÚÒ»¸ö¶ÔÏó£¬Ò²ÊÇ·µ»ØÈ¥µÄ¶ÔÏó£¬¾ÍÊÇ³éÏóÓï·¨Ê÷µÄ¸ù
 		ReadXmlExpression returnRe = null;
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//¶¨ÒåÉÏÒ»¸ö¶ÔÏó
 		ReadXmlExpression preRe = null;
 		for(ReadXmlExpression re : list){			
 			if(preRe==null){
-				//Ëµï¿½ï¿½ï¿½Çµï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
+				//ËµÃ÷ÊÇµÚÒ»¸öÔªËØ
 				preRe = re;
 				returnRe = re;
 			}else{
-				//ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ£¬Í¬Ê±ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ÎªoldReï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½
+				//°ÑÔªËØÌí¼Óµ½ÉÏÒ»¸ö¶ÔÏóÏÂÃæ£¬Í¬Ê±°Ñ±¾¶ÔÏóÉèÖÃ³ÉÎªpreRe£¬×÷ÎªÏÂÒ»¸ö¶ÔÏóµÄ¸¸½áµã
 				if(preRe instanceof ElementExpression){
 					ElementExpression ele = (ElementExpression)preRe;
 					ele.addEle(re);
@@ -173,5 +173,5 @@ public class Parser {
 		}
 		return returnRe;
 	}
-/*----------------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö½ï¿½ï¿½ï¿½-----------------------*/		
+/*----------------------µÚÈý²½ÊµÏÖ½áÊø-----------------------*/		
 }

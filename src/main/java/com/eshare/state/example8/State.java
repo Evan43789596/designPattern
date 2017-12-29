@@ -1,11 +1,11 @@
 package com.eshare.state.example8;
 /**
- * 锟斤拷锟斤拷状态锟接匡拷
+ * 公共状态接口
  */
 public interface State {
 	/**
-	 * 执锟斤拷状态锟斤拷应锟侥癸拷锟杰达拷锟斤拷
-	 * @param ctx 锟斤拷锟斤拷锟侥碉拷实锟斤拷锟斤拷锟斤拷
+	 * 执行状态对应的功能处理
+	 * @param ctx 上下文的实例对象
 	 */
 	public void doWork(StateMachine ctx);
 }

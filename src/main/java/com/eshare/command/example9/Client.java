@@ -2,7 +2,7 @@ package com.eshare.command.example9;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬Ã»ï¿½Ğ¾ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸Òª·¢³öµÄÃüÁî£¬Ã»ÓĞ¾ßÌåÊµÏÖÀàÁË
 		Command cmd = new Command(){
 			private String str = "";
 			public void setStr(String s){
@@ -10,14 +10,14 @@ public class Client {
 			}
 			
 			public void execute() {
-				System.out.println("ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª="+str);
+				System.out.println("´òÓ¡µÄÄÚÈİÎª="+str);
 			}
 		};
-		cmd.setStr("ï¿½Ë»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Javaï¿½Øµï¿½ï¿½ï¿½Ê¾ï¿½ï¿½");
+		cmd.setStr("ÍË»¯µÄÃüÁîÄ£Ê½ÀàËÆÓÚJava»Øµ÷µÄÊ¾Àı");
 		
-		//ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Invokerï¿½ï¿½ï¿½ï¿½Ã³ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//Õâ¸öÊ±ºòµÄInvoker»òĞí¸Ã³ÆÎª·şÎñÁË
 		Invoker invoker = new Invoker();
-		//ï¿½ï¿½ï¿½Â°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//°´ÏÂ°´Å¥£¬ÕæÕıÆô¶¯Ö´ĞĞÃüÁî
 		invoker.startPrint(cmd);
 	}
 }

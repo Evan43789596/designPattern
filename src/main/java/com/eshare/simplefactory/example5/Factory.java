@@ -2,24 +2,24 @@ package com.eshare.simplefactory.example5;
 import java.util.*;
 import java.io.*;
 /**
- * О©╫О©╫О©╫О©╫О©╫Юё╛О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ApiО©╫О©╫О©╫О©╫
+ * ╧╓Ё╖юЮё╛сцю╢╢╢тЛApi╤тоС
  */
 public class Factory {
 	/**
-	 * О©╫О©╫О©╫О©╫д╢О©╫О©╫О©╫ApiО©╫д╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫д╡О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫с©О©╫
-	 * @return О©╫О©╫О©╫О©╫ц╣О©╫ApiО©╫О©╫О©╫О©╫
+	 * ╬ълЕ╣д╢╢тЛApi╣д╥╫╥╗ё╛╦Ы╬щеДжцнд╪Ч╣д╡нйЩю╢╢╢╫╗╫с©з
+	 * @return ╢╢тЛ╨ц╣дApi╤тоС
 	 */
 	public static Api createApi(){
-		//ж╠О©╫с╤О©╫х║О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫х║О©╫О©╫р╙О©╫О©╫О©╫О©╫й╣О©╫О©╫О©╫О©╫О©╫О©╫
+		//ж╠╫с╤ах║еДжцнд╪Чю╢╩Ях║пХр╙╢╢╫╗й╣юЩ╣дюЮ
 		
-		//О©╫О©╫О©╫О©╫О©╫О©╫н╤О©╫х║PropertiesО©╫О©╫О©╫О©╫О©╫О©╫н╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫м╡О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+		//жасзхГ╨н╤ах║Properties╩╧спхГ╨н╥╢иДуБюО╬м╡╩╫Бймак
 		Properties p = new Properties(); 
 		InputStream in = null;
 		try {
 			in = Factory.class.getResourceAsStream("FactoryTest.properties");
 			p.load(in);
 		} catch (IOException e) {
-			System.out.println("в╟О©╫ь╧О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫кёО©╫О©╫О©╫О©╫О©╫д╤О©╫у╩О©╫О©╫о╒О©╫О©╫О©╫бёО©╫");
+			System.out.println("в╟ть╧╓Ё╖еДжцнд╪ЧЁЖ╢Макё╛╬ълЕ╣д╤яу╩пео╒хГобё╨");
 			e.printStackTrace();
 		}finally{
 			try {
@@ -28,7 +28,7 @@ public class Factory {
 				e.printStackTrace();
 			}
 		}
-		//О©╫ц╥О©╫О©╫О©╫х╔О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╘О©╫О©╫О©╫Б╢╕О©╫О©╫О©╫О©╫О©╫О©╫ф╣д╧О©╫О©╫О©╫О©╫О©╫О©╫О©╫м╡О©╫О©╫О©╫О©╫О©╫
+		//сц╥╢иДх╔╢╢╫╗ё╛дгп╘юЩмБ╢╕юМ╣хмЙиф╣д╧╓вВуБюО╬м╡╩вЖак
 		Api api = null;
 		try {
 			api = (Api)Class.forName(p.getProperty("ImplClass")).newInstance();

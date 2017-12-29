@@ -1,14 +1,14 @@
 package com.eshare.prototype.example6;
 /**
- * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+ * ²úÆ·¶ÔÏó
  */
 public class Product implements ProductPrototype{
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+	 * ²úÆ·±àºÅ
 	 */
 	private String productId;	
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ²úÆ·Ãû³Æ
 	 */
 	private String name;
 	
@@ -26,10 +26,10 @@ public class Product implements ProductPrototype{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "ï¿½ï¿½Æ·ï¿½ï¿½ï¿½="+this.productId+"ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½="+this.name;
+		return "²úÆ·±àºÅ="+this.productId+"£¬²úÆ·Ãû³Æ="+this.name;
 	}
 	public ProductPrototype cloneProduct() {
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ÂµÄ¶ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½Ñ±ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½Æ¹ï¿½È¥
+		//´´½¨Ò»¸öÐÂµÄ¶©µ¥£¬È»ºó°Ñ±¾ÊµÀýµÄÊý¾Ý¸´ÖÆ¹ýÈ¥
 		Product product = new Product();
 		product.setProductId(this.productId);
 		product.setName(this.name);		

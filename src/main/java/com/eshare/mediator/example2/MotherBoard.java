@@ -1,22 +1,22 @@
 package com.eshare.mediator.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½à£¬Êµï¿½ï¿½ï¿½Ð½ï¿½ï¿½ß½Ó¿ï¿½
+ * Ö÷°åÀà£¬ÊµÏÖÖÐ½éÕß½Ó¿Ú
  */
 public class MotherBoard implements Mediator{
 	/**
-	 * ï¿½ï¿½ÒªÖªï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½à¡ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÐèÒªÖªµÀÒª½»»¥µÄÍ¬ÊÂÀà¡ª¡ª¹âÇýÀà
 	 */
 	private CDDriver cdDriver = null;
 	/**
-	 * ï¿½ï¿½ÒªÖªï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½à¡ªï¿½ï¿½CPUï¿½ï¿½
+	 * ÐèÒªÖªµÀÒª½»»¥µÄÍ¬ÊÂÀà¡ª¡ªCPUÀà
 	 */
 	private CPU cpu = null;
 	/**
-	 * ï¿½ï¿½ÒªÖªï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½à¡ªï¿½ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½
+	 * ÐèÒªÖªµÀÒª½»»¥µÄÍ¬ÊÂÀà¡ª¡ªÏÔ¿¨Àà
 	 */
 	private VideoCard videoCard = null;
 	/**
-	 * ï¿½ï¿½ÒªÖªï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½à¡ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÐèÒªÖªµÀÒª½»»¥µÄÍ¬ÊÂÀà¡ª¡ªÉù¿¨Àà
 	 */
 	private SoundCard soundCard = null;
 
@@ -35,32 +35,32 @@ public class MotherBoard implements Mediator{
 	
 	public void changed(Colleague colleague) {
 		if(colleague == cdDriver){
-			//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//±íÊ¾¹âÇý¶ÁÈ¡Êý¾ÝÁË
 			this.opeCDDriverReadData((CDDriver)colleague);
 		}else if(colleague == cpu){
-			//ï¿½ï¿½Ê¾CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//±íÊ¾CPU´¦ÀíÍêÁË
 			this.opeCPU((CPU)colleague);
 		}
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½
-	 * @param cd ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Â¶ï¿½ï¿½ï¿½
+	 * ´¦Àí¹âÇý¶ÁÈ¡Êý¾Ý¹ýºóÓëÆäËû¶ÔÏóµÄ½»»¥
+	 * @param cd ¹âÇýÍ¬ÊÂ¶ÔÏó
 	 */
 	private void opeCDDriverReadData(CDDriver cd){
-		//1ï¿½ï¿½ï¿½È»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£ºÏÈ»ñÈ¡¹âÇý¶ÁÈ¡µÄÊý¾Ý
 		String data = cd.getData();
-		//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½Ý´ï¿½ï¿½Ý¸ï¿½CPUï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
+		//2£º°ÑÕâÐ©Êý¾Ý´«µÝ¸øCPU½øÐÐ´¦Àí
 		this.cpu.executeData(data);
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½
-	 * @param cpu CPUÍ¬ï¿½ï¿½ï¿½ï¿½
+	 * ´¦ÀíCPU´¦ÀíÍêÊý¾ÝºóÓëÆäËû¶ÔÏóµÄ½»»¥
+	 * @param cpu CPUÍ¬ÊÂÀà
 	 */
 	private void opeCPU(CPU cpu){
-		//1ï¿½ï¿½ï¿½È»ï¿½È¡CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£ºÏÈ»ñÈ¡CPU´¦Àí¹ýºóµÄÊý¾Ý
 		String videoData = cpu.getVideoData();
 		String soundData = cpu.getSoundData();
-		//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½Ý´ï¿½ï¿½Ý¸ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹Ê¾ï¿½ï¿½ï¿½ï¿½
+		//2£º°ÑÕâÐ©Êý¾Ý´«µÝ¸øÏÔ¿¨ºÍÉù¿¨Õ¹Ê¾³öÀ´
 		this.videoCard.showData(videoData);
 		this.soundCard.soundData(soundData);
 	}

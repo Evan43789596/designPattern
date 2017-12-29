@@ -9,47 +9,48 @@ import org.w3c.dom.Element;
 
 public class Client {
 	public static void main(String[] args) throws Exception {
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸ÉÏÏÂÎÄ
 		Context c = new Context("InterpreterTest.xml");
 		
-		//ï¿½ï¿½Òªï¿½ï¿½È¡cÔªï¿½Øµï¿½Öµï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½ï¿½Ê½ï¿½ï¿½Öµï¿½ï¿½"root/a/b/c"
+		//ÏëÒª»ñÈ¡cÔªËØµÄÖµ£¬Ò²¾ÍÊÇÈçÏÂ±í´ïÊ½µÄÖµ£º"root/a/b/c"
 		
-//		//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï·¨ï¿½ï¿½
+		//Ê×ÏÈÒª¹¹½¨½âÊÍÆ÷µÄ³éÏóÓï·¨Ê÷
+		ElementExpression root = new ElementExpression("root");
+//		ElementExpression aEle = new ElementExpression("a");
+//		ElementExpression bEle = new ElementExpression("b");
+		ElementTerminalExpression cEle = new ElementTerminalExpression("c");
+		//×éºÏÆğÀ´
+		root.addEle(cEle);
+//		aEle.addEle(bEle);
+//		bEle.addEle(cEle);
+
+		//µ÷ÓÃ
+		String ss[] = root.interpret(c);
+		System.out.println("cµÄÖµÊÇ="+ss[0]);
+		
+		
+//		//ÏëÒª»ñÈ¡cÔªËØµÄnameÊôĞÔ£¬Ò²¾ÍÊÇÈçÏÂ±í´ïÊ½µÄÖµ£º"root/a/b/c.name"
+//		//Õâ¸öÊ±ºòc²»ÊÇÖÕ½áÁË£¬ĞèÒª°ÑcĞŞ¸Ä³ÉElementExpressioin
 //		ElementExpression root = new ElementExpression("root");
 //		ElementExpression aEle = new ElementExpression("a");
 //		ElementExpression bEle = new ElementExpression("b");
-//		ElementTerminalExpression cEle = new ElementTerminalExpression("c");
-//		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		ElementExpression cEle = new ElementExpression("c");
+//		PropertyTerminalExpression prop = new PropertyTerminalExpression("name");
+//		//×éºÏ
 //		root.addEle(aEle);
 //		aEle.addEle(bEle);
 //		bEle.addEle(cEle);
+//		cEle.addEle(prop);
 //		
-//		//ï¿½ï¿½ï¿½ï¿½
+//		//µ÷ÓÃ
 //		String ss[] = root.interpret(c);
-//		System.out.println("cï¿½ï¿½Öµï¿½ï¿½="+ss[0]);
-		
-		//ï¿½ï¿½Òªï¿½ï¿½È¡cÔªï¿½Øµï¿½nameï¿½ï¿½ï¿½Ô£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½ï¿½Ê½ï¿½ï¿½Öµï¿½ï¿½"root/a/b/c.name"
-		//ï¿½ï¿½ï¿½Ê±ï¿½ï¿½cï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½Òªï¿½ï¿½cï¿½Ş¸Ä³ï¿½ElementExpressioin
-		ElementExpression root = new ElementExpression("root");
-		ElementExpression aEle = new ElementExpression("a");
-		ElementExpression bEle = new ElementExpression("b");
-		ElementExpression cEle = new ElementExpression("c");
-		PropertyTerminalExpression prop = new PropertyTerminalExpression("name");
-		//ï¿½ï¿½ï¿½
-		root.addEle(aEle);
-		aEle.addEle(bEle);
-		bEle.addEle(cEle);
-		cEle.addEle(prop);
-		
-		//ï¿½ï¿½ï¿½ï¿½
-		String ss[] = root.interpret(c);
-		System.out.println("cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nameï¿½ï¿½Öµï¿½ï¿½="+ss[0]);
-		
-		//ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Â³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù»ï¿½È¡Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nameï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½
-		//ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»Òªï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Â³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
-		c.reInit();
-		String ss2[] = root.interpret(c);
-		System.out.println("ï¿½ï¿½ï¿½Â»ï¿½È¡cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nameï¿½ï¿½Öµï¿½ï¿½="+ss2[0]);
+//		System.out.println("cµÄÊôĞÔnameµÄÖµÊÇ="+ss[0]);
+//		
+//		//Èç¹ûÒªÊ¹ÓÃÍ¬Ò»¸öÉÏÏÂÎÄ£¬Á¬Ğø½øĞĞ½âÎö£¬ĞèÒªÖØĞÂ³õÊ¼»¯ÉÏÏÂÎÄ¶ÔÏó
+//		//±ÈÈçÒªÁ¬ĞøµÄÖØĞÂÔÙ»ñÈ¡Ò»´ÎÊôĞÔnameµÄÖµ£¬µ±È»Äã¿ÉÒÔÖØĞÂ×éºÏÔªËØ£¬
+//		//ÖØĞÂ½âÎö£¬Ö»ÒªÊÇÔÚÊ¹ÓÃÍ¬Ò»¸öÉÏÏÂÎÄ£¬¾ÍĞèÒªÖØĞÂ³õÊ¼»¯ÉÏÏÂÎÄ¶ÔÏó
+//		c.reInit();
+//		String ss2[] = root.interpret(c);
+//		System.out.println("ÖØĞÂ»ñÈ¡cµÄÊôĞÔnameµÄÖµÊÇ="+ss2[0]);
 	}
 }

@@ -11,38 +11,38 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 /**
- *	ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ò»Ð©È«ï¿½ï¿½ï¿½ï¿½Ï¢
+ *	ÉÏÏÂÎÄ£¬ÓÃÀ´°üº¬½âÊÍÆ÷ÐèÒªµÄÒ»Ð©È«¾ÖÐÅÏ¢
  */
 public class Context {
 	/**
-	 * Domï¿½ï¿½ï¿½ï¿½Xmlï¿½ï¿½Documentï¿½ï¿½ï¿½ï¿½
+	 * Dom½âÎöXmlµÄDocument¶ÔÏó
 	 */
 	private Document document = null;
 	/**
-	 * ï¿½ï¿½Ò»ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½Ôªï¿½ï¿½
+	 * ÉÏÒ»´Î±»´¦ÀíµÄ¶à¸öÔªËØ
 	 */
 	private List<Element> preEles = new ArrayList<Element>();
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½
-	 * @param filePathName ï¿½ï¿½Òªï¿½ï¿½È¡ï¿½ï¿½xmlï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨
+	 * @param filePathName ÐèÒª¶ÁÈ¡µÄxmlµÄÂ·¾¶ºÍÃû×Ö
 	 * @throws Exception
 	 */
 	public Context(String filePathName) throws Exception{
-		//Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Xmlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xmlï¿½ï¿½Ó¦ï¿½ï¿½Documentï¿½ï¿½ï¿½ï¿½
+		//Í¨¹ý¸¨ÖúµÄXml¹¤¾ßÀàÀ´»ñÈ¡±»½âÎöµÄxml¶ÔÓ¦µÄDocument¶ÔÏó
 		this.document = XmlUtil.getRoot(filePathName);
 	}
 	/**
-	 * ï¿½ï¿½ï¿½Â³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÖØÐÂ³õÊ¼»¯ÉÏÏÂÎÄ
 	 */
 	public void reInit(){
 		preEles = new ArrayList<Element>();
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Expressionï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½,
-	 * ï¿½ï¿½ï¿½Ý¸ï¿½Ôªï¿½ØºÍµï¿½Ç°Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½Ä¶ï¿½ï¿½Ôªï¿½ØµÄ¼ï¿½ï¿½ï¿½
-	 * @param pEle ï¿½ï¿½Ôªï¿½ï¿½ 
-	 * @param eleName ï¿½ï¿½Ç°Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½Ç°ï¿½Ä¶ï¿½ï¿½Ôªï¿½ØµÄ¼ï¿½ï¿½ï¿½
+	 * ¸÷¸öExpression¹«¹²Ê¹ÓÃµÄ·½·¨,
+	 * ¸ù¾Ý¸¸ÔªËØºÍµ±Ç°ÔªËØµÄÃû³ÆÀ´»ñÈ¡µ±Ç°µÄ¶à¸öÔªËØµÄ¼¯ºÏ
+	 * @param pEle ¸¸ÔªËØ 
+	 * @param eleName µ±Ç°ÔªËØµÄÃû³Æ
+	 * @return µ±Ç°µÄ¶à¸öÔªËØµÄ¼¯ºÏ
 	 */
 	public List<Element> getNowEles(Element pEle,String eleName){
 		List<Element> elements = new ArrayList<Element>();

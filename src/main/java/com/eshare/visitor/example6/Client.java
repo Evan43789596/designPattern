@@ -2,16 +2,16 @@ package com.eshare.visitor.example6;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½
-		Component root = new Composite("ï¿½ï¿½×°");
-		Component c1 = new Composite("ï¿½ï¿½×°");
+		//¶¨ÒåËùÓÐµÄ×éºÏ¶ÔÏó
+		Component root = new Composite("·þ×°");
+		Component c1 = new Composite("ÄÐ×°");
 		Component c2 = new Composite("Å®×°");
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½
-		Component leaf1 = new Leaf("ï¿½ï¿½ï¿½ï¿½");
-		Component leaf2 = new Leaf("ï¿½Ð¿ï¿½");
-		Component leaf3 = new Leaf("È¹ï¿½ï¿½");
-		Component leaf4 = new Leaf("ï¿½ï¿½×°");
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½Ó¶ï¿½ï¿½ï¿½
+		//¶¨ÒåËùÓÐµÄÒ¶×Ó¶ÔÏó
+		Component leaf1 = new Leaf("³ÄÒÂ");
+		Component leaf2 = new Leaf("¼Ð¿Ë");
+		Component leaf3 = new Leaf("È¹×Ó");
+		Component leaf4 = new Leaf("Ì××°");
+		//°´ÕÕÊ÷µÄ½á¹¹À´×éºÏ×éºÏ¶ÔÏóºÍÒ¶×Ó¶ÔÏó
 		root.addChild(c1);
 		root.addChild(c2);
 		
@@ -22,7 +22,10 @@ public class Client {
 		c2.addChild(leaf4);
 		
 		
-		//ï¿½ï¿½ï¿½Ã¸ï¿½Ôªï¿½ØµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//µ÷ÓÃ¸ùÔªËØµÄ·½·¨À´½ÓÊÜÇëÇó¹¦ÄÜ
+		Visitor v = new PrintNameVisitor(); 
+		root.accept(v);
+		
 		Visitor psVisitor = new PrintStructVisitor(); 
 		root.accept(psVisitor);
 	}

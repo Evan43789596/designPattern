@@ -1,11 +1,11 @@
 package com.eshare.factorymethod.example3;
 /**
- * О©╫О©╫О©╫О©╫д╢О©╫О©╫О©╫О©╫О©╫й╣О©╫ж╤О©╫О©╫О©╫й╣О©╫ж╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╠О©╫О©╫д╪О©╫О©╫О©╫й╫О©╫д╤О©╫О©╫О©╫
+ * ╬ълЕ╣д╢╢╫╗фВй╣ож╤тоСё╛й╣ож╢╢╫╗╣╪ЁЖЁинд╠╬нд╪Ч╦Яй╫╣д╤тоС
  */
 public class ExportTxtFileOperate extends ExportOperate{
 
 	protected ExportFileApi factoryMethod() {
-		//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╠О©╫О©╫д╪О©╫О©╫О©╫й╫О©╫д╤О©╫О©╫О©╫
+		//╢╢╫╗╣╪ЁЖЁинд╠╬нд╪Ч╦Яй╫╣д╤тоС
 		return new ExportTxtFile();
 	}
 

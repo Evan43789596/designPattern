@@ -3,21 +3,21 @@ package com.eshare.decorator.example5;
 import java.io.*;
 
 /**
- * й╣О©╫ж╪Р╣╔╣д╪О©╫О©╫О©╫
+ * й╣ож╪Р╣╔╣д╪сцэ
  */
 public class EncryptOutputStream  extends OutputStream{
-	//О©╫О©╫О©╫п╠О©╫в╟О©╫н╣д╤О©╫О©╫О©╫
+	//Ёжсп╠╩в╟йн╣д╤тоС
 	private OutputStream os = null;
 	public EncryptOutputStream(OutputStream os){
 		this.os = os;
 	}
 	
 	public void write(int a) throws IOException {
-		//О©╫О©╫мЁр╩О©╫О©╫О©╫О©╫ф╤О©╫О©╫О©╫н╩
+		//охмЁр╩оР╨Срф╤╞а╫н╩
 		a = a+2;
-		//97О©╫О©╫п║п╢О©╫О©╫aО©╫О©╫О©╫О©╫ж╣
+		//97йгп║п╢╣дa╣дбКж╣
 		if(a >= (97+26)){
-			//О©╫О©╫О©╫О©╫О©╫О©╫зёО©╫О©╫О©╫й╬О©╫я╬О©╫О©╫О©╫yО©╫О©╫О©╫О©╫zО©╫кёО©╫О©╫О©╫х╔26О©╫м╩ь╣О©╫aО©╫О©╫О©╫О©╫bО©╫О©╫
+			//хГ╧Ш╢Ссзё╛╠Мй╬ря╬╜йгy╩Руъzакё╛╪Ух╔26╬м╩ь╣╫a╩Руъbак
 			a = a-26;
 		}
 		this.os.write(a);

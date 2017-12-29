@@ -1,6 +1,6 @@
 package com.eshare.bridge.example6;
 /**
- * 锟截硷拷锟斤拷息
+ * 特急消息
  */
 public class SpecialUrgencyMessage extends AbstractMessage{
 
@@ -9,12 +9,12 @@ public class SpecialUrgencyMessage extends AbstractMessage{
 	}
 
 	public void hurry(String messageId) {
-		//执锟叫催促碉拷业锟今，凤拷锟斤拷锟竭促碉拷锟斤拷息
+		//执行催促的业务，发出催促的信息
 	}
 
 	public void sendMessage(String message, String toUser) {
-		message = "锟截硷拷锟斤拷"+message;
+		message = "特急："+message;
 		super.sendMessage(message, toUser);
-		//锟斤拷锟斤拷要锟斤拷锟斤拷一锟斤拷锟斤拷锟竭促碉拷锟斤拷息
+		//还需要增加一条待催促的信息
 	}
 }

@@ -1,10 +1,10 @@
 package com.eshare.command.example5;
 /**
- * 锟斤拷师锟斤拷锟斤拷锟斤拷锟饺诧拷
+ * 厨师对象，做热菜
  */
 public class HotCook implements CookApi{
 	
 	public void cook(String name) {
-		System.out.println("锟斤拷锟斤拷师锟斤拷锟斤拷锟斤拷锟斤拷"+name);
+		System.out.println("本厨师正在做："+name);
 	}
 }

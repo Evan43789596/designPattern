@@ -1,18 +1,19 @@
 package com.eshare.singleton.example12;
 
 /**
- * 使锟斤拷枚锟斤拷锟斤拷实锟街碉拷锟斤拷模式锟斤拷示锟斤拷
+ * 使用枚举来实现单例模式的示例
  */
 public enum Singleton {	
 	/**
-	 * 锟斤拷锟斤拷一锟斤拷枚锟劫碉拷元锟斤拷,锟斤拷锟酵达拷锟斤拷锟斤拷Singleton锟斤拷一锟斤拷实锟斤拷
+	 * 定义一个枚举的元素,它就代表了Singleton的一个实例
 	 */
 	uniqueInstance;
 	
 	/**
-	 * 示锟解方锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟皆硷拷锟侥诧拷锟斤拷
+	 * 示意方法，单例可以有自己的操作
 	 */
 	public void singletonOperation(){
-		//锟斤拷锟杰达拷锟斤拷
+		//功能处理
+		System.out.println("aa=="+Singleton.uniqueInstance.hashCode());
 	}
 }

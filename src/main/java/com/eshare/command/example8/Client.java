@@ -2,13 +2,13 @@ package com.eshare.command.example8;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		Command cmd = new PrintService("ï¿½Ë»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½Ê¾ï¿½ï¿½");
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸Òª·¢³öµÄÃüÁî
+		Command cmd = new PrintService("ÍË»¯µÄÃüÁîÄ£Ê½Ê¾Àı");
+		//ÉèÖÃÃüÁî¸ø³ÖÓĞÕß
 		Invoker invoker = new Invoker();
 		invoker.setCmd(cmd);
 		
-		//ï¿½ï¿½ï¿½Â°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//°´ÏÂ°´Å¥£¬ÕæÕıÆô¶¯Ö´ĞĞÃüÁî
 		invoker.startPrint();
 	}
 }

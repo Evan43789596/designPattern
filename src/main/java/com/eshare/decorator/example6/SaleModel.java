@@ -1,14 +1,14 @@
 package com.eshare.decorator.example6;
 /**
- * 锟斤拷装锟斤拷锟桔碉拷锟斤拷锟斤拷锟捷ｏ拷锟津单碉拷示锟斤拷一些
+ * 封装销售单的数据，简单的示意一些
  */
 public class SaleModel {
 	/**
-	 * 锟斤拷锟桔碉拷锟斤拷品
+	 * 销售的商品
 	 */
 	private String goods;
 	/**
-	 * 锟斤拷锟桔碉拷锟斤拷锟斤拷
+	 * 销售的数量
 	 */
 	private int saleNum;
 	public String getGoods() {
@@ -25,6 +25,6 @@ public class SaleModel {
 	}
 	
 	public String toString(){
-		return "锟斤拷品锟斤拷锟斤拷="+goods+",锟斤拷锟斤拷锟斤拷锟斤拷="+saleNum;
+		return "商品名称="+goods+",购买数量="+saleNum;
 	}
 }

@@ -1,11 +1,11 @@
 package com.eshare.strategy.example6;
 /**
- * О©╫О©╫ж╬О©╫О©╫б╪О©╫О©╫О©╫т╣д╫с©О©╫
+ * хуж╬╪гб╪╡ъбт╣д╫с©з
  */
 public interface LogStrategy {
 	/**
-	 * О©╫О©╫б╪О©╫О©╫ж╬
-	 * @param msg О©╫О©╫О©╫б╪О©╫О©╫О©╫О©╫ж╬О©╫О©╫о╒
+	 * ╪гб╪хуж╬
+	 * @param msg пХ╪гб╪╣дхуж╬пео╒
 	 */
 	public void log(String msg);
 }

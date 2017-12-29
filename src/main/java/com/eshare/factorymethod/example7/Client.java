@@ -2,16 +2,16 @@ package com.eshare.factorymethod.example7;
 
 public class Client {
 	public static void main(String[] args) {
-//		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½Ãµï¿½Creatorï¿½ï¿½ï¿½ï¿½
-//		ExportOperate operate = new ExportOperate();
-//		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¹ï¿½ï¿½Ü·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ñµ½´ï¿½ï¿½ï¿½ï¿½ÍµÄ²ï¿½ï¿½ï¿½
-//		operate.export(1,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		//´´½¨ÐèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+		ExportOperate operate = new ExportOperate();
+		//µ÷ÓÃÊä³öÊý¾ÝµÄ¹¦ÄÜ·½·¨£¬´«ÈëÑ¡Ôñµ½´¦ÀàÐÍµÄ²ÎÊý
+		operate.export(1,"²âÊÔÊý¾Ý");
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½Ãµï¿½Creatorï¿½ï¿½ï¿½ï¿½
-		ExportOperate operate = new ExportOperate2();
-		//ï¿½ï¿½ï¿½ï¿½ä»»ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		operate.export(1,"Test1");
-		operate.export(2,"Test2");
-		operate.export(3,"Test3");
+//		//´´½¨ÐèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+//		ExportOperate operate = new ExportOperate2();
+//		//ÏÂÃæ±ä»»´«ÈëµÄ²ÎÊýÀ´²âÊÔ²ÎÊý»¯¹¤³§·½·¨
+//		operate.export(1,"Test1");
+//		operate.export(2,"Test2");
+//		operate.export(3,"Test3");
 	}
 }

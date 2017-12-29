@@ -3,7 +3,7 @@ package com.eshare.strategy.example8;
 public class Client {
 	public static void main(String[] args) {
 		LogContext log = new LogContext();
-		log.log("锟斤拷录锟斤拷志");
-		log.log("锟劫次硷拷录锟斤拷志");
+		log.log("记录日志");
+		log.log("再次记录日志");
 	}
 }

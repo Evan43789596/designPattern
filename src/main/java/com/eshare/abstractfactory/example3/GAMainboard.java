@@ -1,15 +1,15 @@
 package com.eshare.abstractfactory.example3;
 /**
- * ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ 
+ * ¼¼¼ÎµÄÖ÷°å 
  */
 public class GAMainboard implements MainboardApi {
 	/**
-	 * CPUï¿½ï¿½ÛµÄ¿ï¿½ï¿½ï¿½
+	 * CPU²å²ÛµÄ¿×Êý
 	 */
 	private int cpuHoles = 0;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ÛµÄ¿ï¿½ï¿½ï¿½
-	 * @param cpuHoles CPUï¿½ï¿½ÛµÄ¿ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«ÈëCPU²å²ÛµÄ¿×Êý
+	 * @param cpuHoles CPU²å²ÛµÄ¿×Êý
 	 */
 	public GAMainboard(int cpuHoles){
 		this.cpuHoles = cpuHoles;

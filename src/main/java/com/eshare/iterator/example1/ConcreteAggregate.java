@@ -1,30 +1,30 @@
 package com.eshare.iterator.example1;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Ä¾ÛºÏ¶ï¿½ï¿½ï¿½Êµï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
+ * ¾ßÌåµÄ¾ÛºÏ¶ÔÏó£¬ÊµÏÖ´´½¨ÏàÓ¦µü´úÆ÷¶ÔÏóµÄ¹¦ÄÜ
  */
 public class ConcreteAggregate extends Aggregate {
 	/**
-	 * Ê¾ï¿½â£¬ï¿½ï¿½Ê¾ï¿½ÛºÏ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ê¾Òâ£¬±íÊ¾¾ÛºÏ¶ÔÏó¾ßÌåµÄÄÚÈİ
 	 */
 	private String[] ss = null;
 	
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÛºÏ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param ss ï¿½ÛºÏ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë¾ÛºÏ¶ÔÏó¾ßÌåµÄÄÚÈİ
+	 * @param ss ¾ÛºÏ¶ÔÏó¾ßÌåµÄÄÚÈİ
 	 */
 	public ConcreteAggregate(String[] ss){
 		this.ss = ss;
 	}
 	
 	public Iterator createIterator() {
-		//Êµï¿½Ö´ï¿½ï¿½ï¿½Iteratorï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÊµÏÖ´´½¨IteratorµÄ¹¤³§·½·¨
 		return new ConcreteIterator(this);
 	}
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ôªï¿½ï¿½
-	 * @param index ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ôªï¿½ï¿½
+	 * »ñÈ¡Ë÷ÒıËù¶ÔÓ¦µÄÔªËØ
+	 * @param index Ë÷Òı
+	 * @return Ë÷ÒıËù¶ÔÓ¦µÄÔªËØ
 	 */
 	public Object get(int index){
 		Object retObj = null;
@@ -34,8 +34,8 @@ public class ConcreteAggregate extends Aggregate {
 		return retObj;
 	}
 	/**
-	 * ï¿½ï¿½È¡ï¿½ÛºÏ¶ï¿½ï¿½ï¿½Ä´ï¿½Ğ¡
-	 * @return ï¿½ÛºÏ¶ï¿½ï¿½ï¿½Ä´ï¿½Ğ¡
+	 * »ñÈ¡¾ÛºÏ¶ÔÏóµÄ´óĞ¡
+	 * @return ¾ÛºÏ¶ÔÏóµÄ´óĞ¡
 	 */
 	public int size(){
 		return this.ss.length;

@@ -1,14 +1,14 @@
 package com.eshare.prototype.example7;
 /**
- * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+ * ²úÆ·¶ÔÏó
  */
 public class Product implements Cloneable{
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+	 * ²úÆ·±àºÅ
 	 */
 	private String productId;	
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ²úÆ·Ãû³Æ
 	 */
 	private String name;
 	
@@ -26,7 +26,7 @@ public class Product implements Cloneable{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "ï¿½ï¿½Æ·ï¿½ï¿½ï¿½="+this.productId+"ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½="+this.name;
+		return "²úÆ·±àºÅ="+this.productId+"£¬²úÆ·Ãû³Æ="+this.name;
 	}
 	public Object clone() {
 		Object obj = null;

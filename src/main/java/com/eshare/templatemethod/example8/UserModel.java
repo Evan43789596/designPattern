@@ -1,6 +1,6 @@
 package com.eshare.templatemethod.example8;
 /**
- * ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½
+ * ÓÃ»§Êý¾ÝÄ£ÐÍ
  */
 public class UserModel {
 	private String userId,name;

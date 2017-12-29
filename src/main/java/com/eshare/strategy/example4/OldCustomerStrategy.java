@@ -1,10 +1,10 @@
 package com.eshare.strategy.example4;
 /**
- * 锟斤拷锟斤拷锟姐法实锟街ｏ拷为锟较客伙拷锟斤拷锟斤拷应锟斤拷锟侥价革拷
+ * 具体算法实现，为老客户计算应报的价格
  */
 public class OldCustomerStrategy implements Strategy{
 	public double calcPrice(double goodsPrice) {
-		System.out.println("锟斤拷锟斤拷锟较客伙拷锟斤拷统一锟桔匡拷5%");
+		System.out.println("对于老客户，统一折扣5%");
 		return goodsPrice*(1-0.05);
 	}
 }

@@ -2,47 +2,47 @@ package com.eshare.iterator.example7;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½Ë¾ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½
+		//·ÃÎÊĞÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁĞ±í
 		SalaryManager salaryManager = new SalaryManager();
-		//ï¿½È¼ï¿½ï¿½ï¿½ï¿½Ù»ï¿½È¡
+		//ÏÈ¼ÆËãÔÙ»ñÈ¡
 		salaryManager.calcSalary();
 		
-		//ï¿½Ãµï¿½Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//µÃµ½Ë«Ïòµü´úÆ÷
 		Iterator it = salaryManager.createIterator();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
+		//Ê×ÏÈÉèÖÃµü´úÆ÷µ½µÚÒ»¸öÔªËØ
 		it.first();
 		
-		//ï¿½ï¿½nextÒ»ï¿½ï¿½
+		//ÏÈnextÒ»¸ö
 		if(!it.isDone()){
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("next1 == "+pm);
-			//ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+			//ÏòÏÂµü´úÒ»¸ö
 			it.next();
 		}
-		//È»ï¿½ï¿½previousÒ»ï¿½ï¿½
+		//È»ºópreviousÒ»¸ö
 		if(!it.isFirst()){
-			//ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+			//ÏòÇ°µü´úÒ»¸ö
 			it.previous();
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("previous1 == "+pm);			
 		}
-		//ï¿½ï¿½nextÒ»ï¿½ï¿½
+		//ÔÙnextÒ»¸ö
 		if(!it.isDone()){
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("next2 == "+pm);
-			//ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+			//ÏòÏÂµü´úÒ»¸ö
 			it.next();
 		}
-		//ï¿½ï¿½ï¿½ï¿½nextÒ»ï¿½ï¿½
+		//¼ÌĞønextÒ»¸ö
 		if(!it.isDone()){
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("next3 == "+pm);
-			//ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+			//ÏòÏÂµü´úÒ»¸ö
 			it.next();
 		}
-		//È»ï¿½ï¿½previousÒ»ï¿½ï¿½
+		//È»ºópreviousÒ»¸ö
 		if(!it.isFirst()){
-			//ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+			//ÏòÇ°µü´úÒ»¸ö
 			it.previous();
 			PayModel pm = (PayModel)it.currentItem();
 			System.out.println("previous2 == "+pm);			

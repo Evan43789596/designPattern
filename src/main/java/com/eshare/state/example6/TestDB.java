@@ -11,7 +11,7 @@ class MemoryDB implements Runnable{
 	
 	public void run() {
 		while(true){
-			//一直锟斤拷锟斤拷锟斤拷
+			//一直运行着
 			try {
 				Thread.sleep(1000L);
 			} catch (InterruptedException e) {

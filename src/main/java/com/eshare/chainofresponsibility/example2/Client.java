@@ -1,15 +1,17 @@
 package com.eshare.chainofresponsibility.example2;
 /**
- * 职锟斤拷锟斤拷锟侥客伙拷锟剿ｏ拷锟斤拷锟斤拷只锟角革拷示锟斤拷
+ * 职责链的客户端，这里只是个示意
  */
 public class Client {
 	public static void main(String[] args) {
-		//锟斤拷要锟斤拷装职锟斤拷锟斤拷
+		//先要组装职责链
 		Handler h1 = new ConcreteHandler1();
 		Handler h2 = new ConcreteHandler2();
 		
-		h1.setSuccessor(h2);		
-		//然锟斤拷锟结交锟斤拷锟斤拷
+		h1.setSuccessor(h2);
+		
+		
+		//然后提交请求
 		h1.handleRequest();
 	}
 }

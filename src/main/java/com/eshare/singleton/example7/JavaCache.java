@@ -1,31 +1,54 @@
 package com.eshare.singleton.example7;
 import java.util.*;
 /**
- * Javaï¿½Ð»ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½Êµï¿½ï¿½Ê¾ï¿½ï¿½
+ * JavaÖÐ»º´æµÄ»ù±¾ÊµÏÖÊ¾Àý
  */
 public class JavaCache {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Mapï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½Ö±ï¿½Ó¸ï¿½ï¿½ï¿½Keyï¿½Í¿ï¿½ï¿½Ô»ï¿½È¡Valueï¿½ï¿½
-	 * keyÑ¡ï¿½ï¿½Stringï¿½ï¿½Îªï¿½Ë¼òµ¥£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
+	 * »º´æÊý¾ÝµÄÈÝÆ÷£¬¶¨Òå³ÉMapÊÇ·½±ã·ÃÎÊ£¬Ö±½Ó¸ù¾ÝKey¾Í¿ÉÒÔ»ñÈ¡ValueÁË
+	 * keyÑ¡ÓÃStringÊÇÎªÁË¼òµ¥£¬·½±ãÑÝÊ¾
 	 */
 	private Map<String,Object> map = new HashMap<String,Object>();
 	/**
-	 * ï¿½Ó»ï¿½ï¿½ï¿½ï¿½Ð»ï¿½È¡Öµ
-	 * @param key ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½keyÖµ
-	 * @return keyï¿½ï¿½Ó¦ï¿½ï¿½ValueÖµ
+	 * ´Ó»º´æÖÐ»ñÈ¡Öµ
+	 * @param key ÉèÖÃÊ±ºòµÄkeyÖµ
+	 * @return key¶ÔÓ¦µÄValueÖµ
 	 */
 	public Object getValue(String key){
-		//ï¿½È´Ó»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡Öµ
+		//ÏÈ´Ó»º´æÀïÃæÈ¡Öµ
 		Object obj = map.get(key);
-		//ï¿½Ð¶Ï»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Öµ
+		//ÅÐ¶Ï»º´æÀïÃæÊÇ·ñÓÐÖµ
 		if(obj == null){
-			//ï¿½ï¿½ï¿½Ã»ï¿½Ð£ï¿½ï¿½ï¿½Ã´ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
-			//ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Ùµï¿½Öµ
+			//Èç¹ûÃ»ÓÐ£¬ÄÇÃ´¾ÍÈ¥»ñÈ¡ÏàÓ¦µÄÊý¾Ý£¬±ÈÈç¶ÁÈ¡Êý¾Ý¿â»òÕßÎÄ¼þ
+			//ÕâÀïÖ»ÊÇÑÝÊ¾£¬ËùÒÔÖ±½ÓÐ´¸ö¼ÙµÄÖµ
 			obj = key+",value";
-			//ï¿½Ñ»ï¿½È¡ï¿½ï¿½Öµï¿½ï¿½ï¿½Ã»Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//°Ñ»ñÈ¡µÄÖµÉèÖÃ»Øµ½»º´æÀïÃæ
 			map.put(key, obj);
 		}
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ë£ï¿½ï¿½ï¿½Ö±ï¿½Ó·ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
+		//Èç¹ûÓÐÖµÁË£¬¾ÍÖ±½Ó·µ»ØÊ¹ÓÃ
 		return obj;
 	}
+	
+	//1:¶¨ÒåÒ»¸ö´æ·Å»º´æÊý¾ÝµÄÈÝÆ÷
+	
+	//2£º´Ó»º´æÖÐ»ñÈ¡Êý¾ÝµÄ×ö·¨
+	
+	//2.1£ºÏÈ´Ó»º´æÀïÃæÈ¡Öµ
+	//2.2£ºÅÐ¶Ï»º´æÀïÃæÊÇ·ñÓÐÖµ
+	//2.3£ºÈç¹ûÓÐÖµÁË£¬¾ÍÖ±½ÓÊ¹ÓÃÕâ¸öÖµ
+	//2.4£ºÈç¹ûÃ»ÓÐ£¬ÄÇÃ´¾ÍÈ¥»ñÈ¡ÏàÓ¦µÄÊý¾Ý£¬»òÕßÊÇ´´½¨ÏàÓ¦µÄ¶ÔÏó
+	//2.4.1£º°Ñ»ñÈ¡µÄÖµÉèÖÃ»Øµ½»º´æÀïÃæ
+	
+	//web¿ª·¢ Scope===¡µ¾ÍÊÇÊý¾ÝµÄ»º´æ·¶Î§
+	//<jsp:useBean name="aa" class="cn.javass.AModel" scope="request">
+//	Object obj = request.getAttribute("aa");
+//	AModel am = null;
+//	if(obj==null){
+//		am = new AModel();
+//		request.setAttribute("aa",am);
+//	}else{
+//		am = (AModel)obj
+//	}
+	
+	
 }

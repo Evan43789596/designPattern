@@ -1,16 +1,16 @@
 package com.eshare.flyweight.example2;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Flyweightï¿½ï¿½ï¿½ï¿½
- * Í¨ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ó½Úµã£¬ï¿½ï¿½Ï³ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+ * ²»ÐèÒª¹²ÏíµÄFlyweight¶ÔÏó£¬
+ * Í¨³£ÊÇ½«±»¹²ÏíµÄÏíÔª¶ÔÏó×÷Îª×Ó½Úµã£¬×éºÏ³öÀ´µÄ¶ÔÏó
  */
 public class UnsharedConcreteFlyweight implements Flyweight{
 	/**
-	 * Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	 * Ê¾Àý£¬ÃèÊö¶ÔÏóµÄ×´Ì¬
 	 */
 	private String allState;
 	
 	public void operation(String extrinsicState) {
-		// ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½Ü´ï¿½ï¿½ï¿½
+		// ¾ßÌåµÄ¹¦ÄÜ´¦Àí
 	}
 }

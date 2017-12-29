@@ -1,16 +1,16 @@
 package com.eshare.visitor.example3;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ß½Ó¿ï¿½
+ * ·ÃÎÊÕß½Ó¿Ú
  */
 public interface Visitor {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Aï¿½ï¿½ï¿½àµ±ï¿½Ú¸ï¿½Ôªï¿½ï¿½Aï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ßµÄ¹ï¿½ï¿½ï¿½
-	 * @param elementA Ôªï¿½ï¿½Aï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ·ÃÎÊÔªËØA£¬Ïàµ±ÓÚ¸øÔªËØAÌí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
+	 * @param elementA ÔªËØAµÄ¶ÔÏó
 	 */
 	public void visitConcreteElementA(ConcreteElementA elementA);
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Bï¿½ï¿½ï¿½àµ±ï¿½Ú¸ï¿½Ôªï¿½ï¿½Bï¿½ï¿½Ó·ï¿½ï¿½ï¿½ï¿½ßµÄ¹ï¿½ï¿½ï¿½
-	 * @param elementB Ôªï¿½ï¿½Bï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ·ÃÎÊÔªËØB£¬Ïàµ±ÓÚ¸øÔªËØBÌí¼Ó·ÃÎÊÕßµÄ¹¦ÄÜ
+	 * @param elementB ÔªËØBµÄ¶ÔÏó
 	 */
 	public void visitConcreteElementB(ConcreteElementB elementB);
 }

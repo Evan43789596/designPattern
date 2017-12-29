@@ -1,10 +1,10 @@
 package com.eshare.interpreter.example2;
 /**
- * 锟秸斤拷锟斤拷锟斤拷式
+ * 终结符表达式
  */
 public class TerminalExpression extends AbstractExpression{
 	
 	public void interpret(Context ctx) {
-		//实锟斤拷锟斤拷锟斤法锟斤拷锟斤拷锟叫碉拷锟秸斤拷锟斤拷锟斤拷锟斤拷锟侥斤拷锟酵诧拷锟斤拷
+		//实现与语法规则中的终结符相关联的解释操作
 	}
 }

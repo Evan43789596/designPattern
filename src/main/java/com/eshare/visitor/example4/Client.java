@@ -2,30 +2,30 @@ package com.eshare.visitor.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//锟斤拷锟斤拷ObjectStruct
+		//创建ObjectStruct
 		ObjectStructure os = new ObjectStructure();
-		//准锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷荩锟斤拷锟斤拷锟斤拷突锟斤拷锟斤拷螅锟斤拷锟斤拷锟絆bjectStructure
+		//准备点测试数据，创建客户对象，并加入ObjectStructure
 		Customer cm1 = new EnterpriseCustomer();
-		cm1.setName("ABC锟斤拷锟斤拷");
+		cm1.setName("ABC集团");
 		os.addElement(cm1);
 		
 		Customer cm2 = new EnterpriseCustomer();
-		cm2.setName("CDE锟斤拷司");
+		cm2.setName("CDE公司");
 		os.addElement(cm2);
 		
 		Customer cm3 = new PersonalCustomer();
-		cm3.setName("锟斤拷锟斤拷");
+		cm3.setName("张三");
 		os.addElement(cm3);
 		
-		//锟酵伙拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷螅锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟絍isitor
+		//客户提出服务请求，传入服务请求的Visitor
 		ServiceRequestVisitor srVisitor = new ServiceRequestVisitor();
 		os.handleRequest(srVisitor);
 		
-		//要锟皆客伙拷锟斤拷锟斤拷偏锟矫凤拷锟斤拷锟斤拷锟斤拷锟斤拷偏锟矫凤拷锟斤拷锟斤拷Visitor
+		//要对客户进行偏好分析，传入偏好分析的Visitor
 		PredilectionAnalyzeVisitor paVisitor = new PredilectionAnalyzeVisitor();
 		os.handleRequest(paVisitor);
 		
-		//要锟皆客伙拷锟斤拷锟叫硷拷值锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟街碉拷锟斤拷锟斤拷锟絍isitor
+		//要对客户进行价值分析，传入价值分析的Visitor
 		WorthAnalyzeVisitor waVisitor = new WorthAnalyzeVisitor();
 		os.handleRequest(waVisitor);
 		

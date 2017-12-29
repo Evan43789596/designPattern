@@ -1,23 +1,23 @@
 package com.eshare.command.example7;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï²Ëµï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ðµï¿½ï¿½ï¿½
+ * ·þÎñÔ±£¬¸ºÔð×éºÏ²Ëµ¥,»¹¸ºÔðÖ´ÐÐµ÷ÓÃ
  */
 public class Waiter {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó¡ª¡ï¿½ï¿½Ëµï¿½
+	 * ³ÖÓÐÒ»¸öºêÃüÁî¶ÔÏó¡ª¡ª²Ëµ¥
 	 */
 	private MenuCommand menuCommand = new MenuCommand();
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½
-	 * @param cmd ï¿½Í»ï¿½ï¿½ï¿½Ä²Ë£ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¿Í»§µã²Ë
+	 * @param cmd ¿Í»§µãµÄ²Ë£¬Ã¿µÀ²ËÊÇÒ»¸öÃüÁî¶ÔÏó
 	 */
 	public void orderDish(Command cmd){
-		//ï¿½ï¿½Óµï¿½ï¿½Ëµï¿½ï¿½ï¿½
+		//Ìí¼Óµ½²Ëµ¥ÖÐ
 		menuCommand.addCommand(cmd);
 	}
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½ï¿½ï¿½Ê¾ÒªÖ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð²Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¿Í»§µã²ËÍê±Ï£¬±íÊ¾ÒªÖ´ÐÐÃüÁîÁË£¬ÕâÀï¾ÍÊÇÖ´ÐÐ²Ëµ¥Õâ¸ö×éºÏÃüÁî
 	 */
 	public void orderOver(){
 		this.menuCommand.execute();

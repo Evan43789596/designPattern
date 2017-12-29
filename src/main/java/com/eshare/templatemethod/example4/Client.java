@@ -2,30 +2,30 @@ package com.eshare.templatemethod.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//×¼ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ëµï¿½ï¿½ï¿½Ï¢
+		//×¼±¸µÇÂ¼ÈËµÄÐÅÏ¢
 		LoginModel lm = new LoginModel();
 		lm.setLoginId("admin");
 		lm.setPwd("workerpwd");
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ÏµÄ¶ï¿½ï¿½ï¿½
+		//×¼±¸ÓÃÀ´½øÐÐÅÐ¶ÏµÄ¶ÔÏó
 		LoginTemplate lt = new WorkerLogin();
 		LoginTemplate lt2 = new NormalLogin();
-		//ï¿½ï¿½ï¿½Ðµï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+		//½øÐÐµÇÂ¼²âÊÔ
 		boolean flag = lt.login(lm);
-		System.out.println("ï¿½ï¿½ï¿½Ôµï¿½Â¼ï¿½ï¿½ï¿½ï¿½Æ½Ì¨="+flag);
+		System.out.println("¿ÉÒÔµÇÂ¼¹¤×÷Æ½Ì¨="+flag);
 		
 		boolean flag2 = lt2.login(lm);
-		System.out.println("ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ô±ï¿½ï¿½Â¼="+flag2);
+		System.out.println("¿ÉÒÔ½øÐÐÆÕÍ¨ÈËÔ±µÇÂ¼="+flag2);
 		
-		//×¼ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ëµï¿½ï¿½ï¿½Ï¢
+		//×¼±¸µÇÂ¼ÈËµÄÐÅÏ¢
 		NormalLoginModel nlm = new NormalLoginModel();
 		nlm.setLoginId("testUser");
 		nlm.setPwd("testpwd");
 		nlm.setQuestion("testQuestion");
 		nlm.setAnswer("testAnswer");
-		//×¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ÏµÄ¶ï¿½ï¿½ï¿½
+		//×¼±¸ÓÃÀ´½øÐÐÅÐ¶ÏµÄ¶ÔÏó
 		LoginTemplate lt3 = new NormalLogin2();
-		//ï¿½ï¿½ï¿½Ðµï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+		//½øÐÐµÇÂ¼²âÊÔ
 		boolean flag3 = lt3.login(nlm);
-		System.out.println("ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ô±ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½Â¼="+flag3);
+		System.out.println("¿ÉÒÔ½øÐÐÆÕÍ¨ÈËÔ±¼ÓÇ¿°æµÇÂ¼="+flag3);
 	}
 }

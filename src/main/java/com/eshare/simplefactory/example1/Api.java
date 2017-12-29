@@ -1,12 +1,12 @@
 package com.eshare.simplefactory.example1;
 /**
- * Ä³ï¿½ï¿½ï¿½Ó¿ï¿½(Í¨ï¿½ÃµÄ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½Üµï¿½) 
+ * Ä³¸ö½Ó¿Ú(Í¨ÓÃµÄ¡¢³éÏóµÄ¡¢·Ç¾ßÌåµÄ¹¦ÄÜµÄ) 
  */
 public interface Api {
 	/**
-	 * Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½Ü·ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½å£¬ï¿½ï¿½test1ï¿½ï¿½ï¿½ï¿½Ê¾Ò»ï¿½Â¡ï¿½
-	 * ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ÜºÜ¼òµ¥£ï¿½ï¿½Ñ´ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
-	 * @param s ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+	 * Ä³¸ö¾ßÌåµÄ¹¦ÄÜ·½·¨µÄ¶¨Òå£¬ÓÃtest1À´ÑÝÊ¾Ò»ÏÂ¡£
+	 * ÕâÀïµÄ¹¦ÄÜºÜ¼òµ¥£¬°Ñ´«ÈëµÄs´òÓ¡Êä³ö¼´¿É 
+	 * @param s ÈÎÒâÏëÒª´òÓ¡Êä³öµÄ×Ö·û´®
 	 */
 	public void test1(String s);
 }

@@ -1,22 +1,22 @@
 package com.eshare.adapter.example1;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÊÊÅäÆ÷
  */
 public class Adapter implements Target {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿Ú¶ï¿½ï¿½ï¿½
+	 * ³ÖÓĞĞèÒª±»ÊÊÅäµÄ½Ó¿Ú¶ÔÏó
 	 */
 	private Adaptee adaptee;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
-	 * @param adaptee ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«ÈëĞèÒª±»ÊÊÅäµÄ¶ÔÏó
+	 * @param adaptee ĞèÒª±»ÊÊÅäµÄ¶ÔÏó
 	 */
 	public Adapter(Adaptee adaptee) {
 		this.adaptee = adaptee;
 	}
 
 	public void request() {
-		//ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½Ñ¾ï¿½Êµï¿½ï¿½ï¿½ËµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//¿ÉÄÜ×ªµ÷ÒÑ¾­ÊµÏÖÁËµÄ·½·¨£¬½øĞĞÊÊÅä
 		adaptee.specificRequest();
 	}
 }

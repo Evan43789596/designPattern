@@ -1,14 +1,14 @@
 package com.eshare.visitor.example1;
 /**
- * ï¿½ï¿½ï¿½Ö¿Í»ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½
+ * ¸÷ÖÖ¿Í»§µÄ¸¸Àà
  */
 public abstract class Customer {
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½
+	 * ¿Í»§±àºÅ
 	 */
 	private String customerId;
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¿Í»§Ãû³Æ
 	 */
 	private String name;
 	
@@ -25,7 +25,7 @@ public abstract class Customer {
 		this.name = name;
 	}	
 	/**
-	 * ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
+	 * ¿Í»§Ìá³ö·þÎñÇëÇóµÄ·½·¨£¬Ê¾ÒâÒ»ÏÂ
 	 */
 	public abstract void serviceRequest();
 }

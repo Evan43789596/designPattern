@@ -4,27 +4,27 @@ import java.io.Serializable;
 
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½Å¹ï¿½ï¿½ï¿½
+ * ÃüÁî¶ÔÏó£¬ÂÌ¶¹ÅÅ¹ÇìÒ
  */
 public class ChopCommand implements Command,Serializable{
 	/**
-	 * ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËµÄ³ï¿½Ê¦ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ³ÖÓÐ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
 	 */
 	private CookApi cookApi = null;
 	/**
-	 * ï¿½ï¿½ï¿½Ã¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËµÄ³ï¿½Ê¦ï¿½Ä¶ï¿½ï¿½ï¿½
-	 * @param cookApi ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËµÄ³ï¿½Ê¦ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ÉèÖÃ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
+	 * @param cookApi ¾ßÌå×ö²ËµÄ³øÊ¦µÄ¶ÔÏó
 	 */
 	public void setCookApi(CookApi cookApi) {
 		this.cookApi = cookApi;
 	}
 	/**
-	 * ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * µã²ËµÄ×ÀºÅ
 	 */
 	private int tableNum;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param tableNum ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èëµã²ËµÄ×ÀºÅ
+	 * @param tableNum µã²ËµÄ×ÀºÅ
 	 */
 	public ChopCommand(int tableNum){
 		this.tableNum = tableNum;
@@ -34,6 +34,6 @@ public class ChopCommand implements Command,Serializable{
 	}
 	
 	public void execute() {
-		this.cookApi.cook(tableNum,"ï¿½Ì¶ï¿½ï¿½Å¹ï¿½ï¿½ï¿½");
+		this.cookApi.cook(tableNum,"ÂÌ¶¹ÅÅ¹ÇìÒ");
 	}
 }

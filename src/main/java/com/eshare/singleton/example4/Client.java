@@ -2,12 +2,15 @@ package com.eshare.singleton.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//锟斤拷锟斤拷锟斤拷取应锟斤拷锟斤拷锟矫的讹拷锟斤拷
-		AppConfig config = AppConfig.getInstance();
+		//创建读取应用配置的对象
 		
-		String paramA = config.getParameterA();
-		String paramB = config.getParameterB();
-		
-		System.out.println("paramA="+paramA+",paramB="+paramB);
+		for(int i=0;i<5;i++){
+			AppConfig config = AppConfig.getInstance();
+			
+			String paramA = config.getParameterA();
+			String paramB = config.getParameterB();
+			
+			System.out.println("i="+i+"paramA="+paramA+",paramB="+paramB);
+		}
 	}
 }

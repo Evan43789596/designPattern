@@ -3,20 +3,20 @@ package com.eshare.flyweight.example4;
 import java.util.Collection;
 
 /**
- * ï¿½ï¿½×°ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½Öµï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½
+ * ·â×°ÊÚÈ¨Êý¾ÝÖÐÖØ¸´³öÏÖ²¿·ÖµÄÏíÔª¶ÔÏó
  */
 public class AuthorizationFlyweight implements Flyweight{
 	/**
-	 * ï¿½Ú²ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½È«Êµï¿½ï¿½
+	 * ÄÚ²¿×´Ì¬£¬°²È«ÊµÌå
 	 */
 	private String securityEntity;
 	/**
-	 * ï¿½Ú²ï¿½×´Ì¬ï¿½ï¿½È¨ï¿½ï¿½
+	 * ÄÚ²¿×´Ì¬£¬È¨ÏÞ
 	 */
 	private String permit;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½
-	 * @param state ×´Ì¬ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«Êµï¿½ï¿½ï¿½È¨ï¿½Þµï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½","ï¿½Ö¸ï¿½
+	 * ¹¹Ôì·½·¨£¬´«Èë×´Ì¬Êý¾Ý
+	 * @param state ×´Ì¬Êý¾Ý£¬°üº¬°²È«ÊµÌåºÍÈ¨ÏÞµÄÊý¾Ý£¬ÓÃ","·Ö¸ô
 	 */
 	public AuthorizationFlyweight(String state){
 		String ss[] = state.split(",");
@@ -40,6 +40,6 @@ public class AuthorizationFlyweight implements Flyweight{
 	}
 
 	public void add(Flyweight f) {
-		throw new UnsupportedOperationException("ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
 	}
 }

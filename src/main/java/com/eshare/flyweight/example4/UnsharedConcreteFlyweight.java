@@ -3,11 +3,11 @@ package com.eshare.flyweight.example4;
 import java.util.*;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½Ðµï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½
+ * ²»ÐèÒª¹²ÏíµÄÏíÔª¶ÔÏóµÄÊµÏÖ£¬Ò²ÊÇ×éºÏÄ£Ê½ÖÐµÄ×éºÏ¶ÔÏó
  */
 public class UnsharedConcreteFlyweight implements Flyweight{
 	/**
-	 * ï¿½ï¿½Â¼Ã¿ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¼ÇÂ¼Ã¿¸ö×éºÏ¶ÔÏóËù°üº¬µÄ×Ó×é¼þ
 	 */
 	private List<Flyweight> list = new ArrayList<Flyweight>();
 	
@@ -17,7 +17,7 @@ public class UnsharedConcreteFlyweight implements Flyweight{
 	
 	public boolean match(String securityEntity, String permit) {
 		for(Flyweight f : list){
-			//ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½
+			//µÝ¹éµ÷ÓÃ
 			if(f.match(securityEntity, permit)){
 				return true;
 			}

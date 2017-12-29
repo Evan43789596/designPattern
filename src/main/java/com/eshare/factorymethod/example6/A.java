@@ -2,20 +2,20 @@ package com.eshare.factorymethod.example6;
 
 public class A {
 	/**
-	 * ï¿½È´ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * µÈ´ý±»×¢Èë½øÀ´
 	 */
 	private C c = null;
 	/**
-	 * ×¢ï¿½ï¿½ï¿½ï¿½Ô´Cï¿½Ä·ï¿½ï¿½ï¿½
-	 * @param c ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+	 * ×¢Èë×ÊÔ´CµÄ·½·¨
+	 * @param c ±»×¢ÈëµÄ×ÊÔ´
 	 */
 	public void setC(C c){
 		this.c = c;
 	}
 	public void t1(){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ï¿½Cï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½Cï¿½Ë£ï¿½ï¿½ï¿½Ã´ï¿½ì£¿
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½â²¿×¢ï¿½ë£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½Ä£ï¿½
-		//ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½Ã´ï¿½ï¿½È¡Cï¿½ï¿½Ö±ï¿½ï¿½Ê¹ï¿½Ã¾Íºï¿½ï¿½ï¿½
+		//ÕâÀïÐèÒªÊ¹ÓÃCÀà£¬¿ÉÊÇÓÖ²»ÈÃÖ÷¶¯È¥´´½¨CÁË£¬ÔõÃ´°ì£¿
+		//·´Õý¾ÍÒªÇó´ÓÍâ²¿×¢Èë£¬ÕâÑù¸üÊ¡ÐÄ£¬
+		//×Ô¼º²»ÓÃ¹ÜÔõÃ´»ñÈ¡C£¬Ö±½ÓÊ¹ÓÃ¾ÍºÃÁË
 		c.tc();
 	}
 }

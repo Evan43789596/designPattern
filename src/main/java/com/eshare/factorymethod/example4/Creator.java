@@ -1,19 +1,19 @@
 package com.eshare.factorymethod.example4;
 /**
- * ï¿½Í»ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Creatorï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½Creatorï¿½Ä»ï¿½ï¿½ï¿½Êµï¿½Ö½á¹¹
+ * ¿Í»§¶ËÊ¹ÓÃCreator¶ÔÏóµÄÇé¿öÏÂ£¬CreatorµÄ»ù±¾ÊµÏÖ½á¹¹
  */
 public abstract class Creator {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ã²»ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ¹¤³§·½·¨£¬Ò»°ã²»¶ÔÍâ
+	 * @return ´´½¨µÄ²úÆ·¶ÔÏó
 	 */
 	protected abstract Product factoryMethod();
 	/**
-	 * ï¿½á¹©ï¿½ï¿½ï¿½â²¿Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * ï¿½Í»ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ê¹ï¿½ï¿½Creatorï¿½á¹©ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä¹ï¿½ï¿½ï¿½
+	 * Ìá¹©¸øÍâ²¿Ê¹ÓÃµÄ·½·¨£¬
+	 * ¿Í»§¶ËÒ»°ãÊ¹ÓÃCreatorÌá¹©µÄÕâÐ©·½·¨À´Íê³ÉËùÐèÒªµÄ¹¦ÄÜ
 	 */
 	public void someOperation(){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÔÚÕâÀïÊ¹ÓÃ¹¤³§·½·¨
 		Product p = factoryMethod();
 	}
 }

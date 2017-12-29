@@ -5,18 +5,18 @@ public class GeneralManager extends Handler{
 	
 	public String handleFeeRequest(String user, double fee) {
 		String str = "";
-		//ï¿½Ü¾ï¿½ï¿½ï¿½ï¿½È¨ï¿½ÞºÜ´ï¿½Ö»Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½
+		//×Ü¾­ÀíµÄÈ¨ÏÞºÜ´ó£¬Ö»ÒªÇëÇóµ½ÁËÕâÀï£¬Ëû¶¼¿ÉÒÔ´¦Àí
 		if(fee >= 1000){
-			//Îªï¿½Ë²ï¿½ï¿½Ô£ï¿½ï¿½òµ¥µã£¬Ö»Í¬ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½
-			if("Ð¡ï¿½ï¿½".equals(user)){
-				str = "ï¿½Ü¾ï¿½ï¿½ï¿½Í¬ï¿½ï¿½"+user+"ï¿½Û²Í·ï¿½ï¿½ï¿½"+fee+"Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+			//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâÐ¡ÀîµÄ
+			if("Ð¡Àî".equals(user)){
+				str = "×Ü¾­ÀíÍ¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
 			}else{
-				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½É²ï¿½Í¬ï¿½ï¿½
-				str = "ï¿½Ü¾ï¿½ï¿½ï¿½Í¬ï¿½ï¿½"+user+"ï¿½Û²Í·ï¿½ï¿½ï¿½"+fee+"Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+				//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
+				str = "×Ü¾­Àí²»Í¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
 			}
 			return str;
 		}else{
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðºï¿½ÌµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//Èç¹û»¹ÓÐºó¼ÌµÄ´¦Àí¶ÔÏó£¬¼ÌÐø´«µÝ
 			if(this.successor!=null){
 				return successor.handleFeeRequest(user, fee);
 			}
@@ -26,11 +26,11 @@ public class GeneralManager extends Handler{
 	
 	public boolean handlePreFeeRequest(String user, double requestNum) {
 		if(requestNum >= 5000){
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï£¬Í³Í³Í¬ï¿½ï¿½
-			System.out.println("ï¿½Ü¾ï¿½ï¿½ï¿½Í¬ï¿½ï¿½"+user+"Ô¤Ö§ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½"+requestNum+"Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+			//¹¤×÷ÐèÒªÂï£¬Í³Í³Í¬Òâ
+			System.out.println("×Ü¾­ÀíÍ¬Òâ"+user+"Ô¤Ö§²îÂÃ·ÑÓÃ"+requestNum+"ÔªµÄÇëÇó");
 			return true;
 		}else{
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðºï¿½ÌµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//Èç¹û»¹ÓÐºó¼ÌµÄ´¦Àí¶ÔÏó£¬¼ÌÐø´«µÝ
 			if(this.successor!=null){
 				return this.successor.handlePreFeeRequest(user, requestNum);
 			}

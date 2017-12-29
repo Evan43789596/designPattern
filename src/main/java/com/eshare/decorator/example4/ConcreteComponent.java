@@ -3,12 +3,12 @@ package com.eshare.decorator.example4;
 import java.util.Date;
 
 /**
- * О©╫О©╫О©╫О©╫О©╫О©╫й╣О©╫ж╪О©╫О©╫Ц╫╠О©╫О©╫О©╫О©╫Юё╛р╡О©╫г╠О©╫в╟О©╫О©╫О©╫О©╫в╟О©╫н╣д╤О©╫О©╫О©╫
+ * ╩Ы╠╬╣дй╣ож╪фкЦ╫╠╫П╣дюЮё╛р╡йг╠╩в╟йнфВв╟йн╣д╤тоС
  */
 public class ConcreteComponent extends Component{
 	
 	public double calcPrize(String user, Date begin, Date end) {
-		//ж╩О©╫О©╫р╩О©╫О©╫д╛О©╫о╣О©╫й╣О©╫жёО©╫д╛О©╫О©╫ц╩О©╫п╫О©╫О©╫О©╫
+		//ж╩йгр╩╦Жд╛хо╣дй╣ожё╛д╛хоц╩сп╫╠╫П
 		return 0;
 	}
 }

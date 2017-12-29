@@ -4,19 +4,19 @@ import java.util.*;
 public class Client {
 	public static void main(String[] args) throws Exception{
 		SecurityMgr mgr = SecurityMgr.getInstance();
-		boolean f1 = mgr.hasPermit("ï¿½ï¿½ï¿½ï¿½","Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","ï¿½é¿´");
-		boolean f2 = mgr.hasPermit("ï¿½ï¿½ï¿½ï¿½","Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","ï¿½é¿´");
-		boolean f3 = mgr.hasPermit("ï¿½ï¿½ï¿½ï¿½","Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","ï¿½Þ¸ï¿½");
+		boolean f1 = mgr.hasPermit("ÕÅÈý","Ð½×ÊÊý¾Ý","²é¿´");
+		boolean f2 = mgr.hasPermit("ÀîËÄ","Ð½×ÊÊý¾Ý","²é¿´");
+		boolean f3 = mgr.hasPermit("ÀîËÄ","Ð½×ÊÊý¾Ý","ÐÞ¸Ä");
 
-//		Thread.sleep(4000);
+		Thread.sleep(4000L);
 		for(int i=0;i<3;i++){
-			mgr.hasPermit("ï¿½ï¿½ï¿½ï¿½"+i,"Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","ï¿½é¿´");
+			mgr.hasPermit("ÕÅÈý"+i,"Ð½×ÊÊý¾Ý","²é¿´");
 		}	
 		
-		//ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ñ£ï¿½ï¿½ï¿½ï¿½ï¿½é¿´ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÄ´ï¿½ï¿½ï¿½
-		//Ö¸ï¿½ï¿½ï¿½ï¿½SecurityMgrï¿½ï¿½queryByUserï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
-		System.out.println("Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½é¿´ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+FlyweightFactory.getInstance().getUseTimes("Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½é¿´")+"ï¿½ï¿½");
-		System.out.println("Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½Þ¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+FlyweightFactory.getInstance().getUseTimes("Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½Þ¸ï¿½")+"ï¿½ï¿½");
-		System.out.println("ï¿½ï¿½Ô±ï¿½Ð±ï¿½,ï¿½é¿´ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+FlyweightFactory.getInstance().getUseTimes("ï¿½ï¿½Ô±ï¿½Ð±ï¿½,ï¿½é¿´")+"ï¿½ï¿½");
+		//ÌØ±ðÌáÐÑ£ºÕâÀï²é¿´µÄÒýÓÃ´ÎÊý£¬²»ÊÇÖ¸²âÊÔÊ¹ÓÃµÄ´ÎÊý
+		//Ö¸µÄÊÇSecurityMgrµÄqueryByUser·½·¨Í¨¹ýÏíÔª¹¤³§È¥»ñÈ¡ÏíÔª¶ÔÏóµÄ´ÎÊý
+		System.out.println("Ð½×ÊÊý¾Ý,²é¿´ ±»ÒýÓÃÁË"+FlyweightFactory.getInstance().getUseTimes("Ð½×ÊÊý¾Ý,²é¿´")+"´Î");
+		System.out.println("Ð½×ÊÊý¾Ý,ÐÞ¸Ä ±»ÒýÓÃÁË"+FlyweightFactory.getInstance().getUseTimes("Ð½×ÊÊý¾Ý,ÐÞ¸Ä")+"´Î");
+		System.out.println("ÈËÔ±ÁÐ±í,²é¿´ ±»ÒýÓÃÁË"+FlyweightFactory.getInstance().getUseTimes("ÈËÔ±ÁÐ±í,²é¿´")+"´Î");
 	}
 }

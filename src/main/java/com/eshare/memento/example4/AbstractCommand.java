@@ -1,14 +1,14 @@
 package com.eshare.memento.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÃüÁî¶ÔÏóµÄ¹«¹²¶ÔÏó£¬ÊµÏÖ¸÷¸öÃüÁî¶ÔÏóµÄ¹«¹²·½·¨
  */
 public abstract class AbstractCommand implements Command{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï²»ï¿½ï¿½
+	 * ¾ßÌåµÄ¹¦ÄÜÊµÏÖ£¬ÕâÀï²»¹Ü
 	 */
 	public abstract void execute();
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
+	 * ³ÖÓĞÕæÕıµÄÃüÁîÊµÏÖÕß¶ÔÏó
 	 */
 	protected OperationApi operation = null;
 	public void setOperation(OperationApi operation) {

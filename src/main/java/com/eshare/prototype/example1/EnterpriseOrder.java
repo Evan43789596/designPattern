@@ -1,18 +1,18 @@
 package com.eshare.prototype.example1;
 /**
- * ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÆóÒµ¶©µ¥¶ÔÏó
  */
 public class EnterpriseOrder implements OrderApi{
 	/**
-	 * ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½
+	 * ÆóÒµÃû³Æ
 	 */
 	private String enterpriseName;
 	/**
-	 * ï¿½ï¿½Æ·ï¿½ï¿½ï¿½
+	 * ²úÆ·±àºÅ
 	 */
 	private String productId;	
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
+	 * ¶©µ¥²úÆ·ÊýÁ¿
 	 */
 	private int orderProductNum = 0;
 	public int getOrderProductNum() {
@@ -34,6 +34,6 @@ public class EnterpriseOrder implements OrderApi{
 		this.productId = productId;
 	}
 	public String toString(){
-		return "ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½="+this.enterpriseName+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½="+this.productId+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª="+this.orderProductNum;
+		return "±¾ÆóÒµ¶©µ¥µÄ¶©¹ºÆóÒµÊÇ="+this.enterpriseName+"£¬¶©¹º²úÆ·ÊÇ="+this.productId+"£¬¶©¹ºÊýÁ¿Îª="+this.orderProductNum;
 	}
 }

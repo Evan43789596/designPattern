@@ -1,12 +1,12 @@
 package com.eshare.bridge.example4;
 /**
- * 锟斤拷息锟斤拷统一锟接匡拷
+ * 消息的统一接口
  */
 public interface Message {
 	/**
-	 * 锟斤拷锟斤拷锟斤拷息
-	 * @param message 要锟斤拷锟酵碉拷锟斤拷息锟斤拷锟斤拷
-	 * @param toUser 锟斤拷锟斤拷息锟斤拷锟酵碉拷目锟斤拷锟斤拷员
+	 * 发送消息
+	 * @param message 要发送的消息内容
+	 * @param toUser 把消息发送的目的人员
 	 */
 	public void send(String message, String toUser);
 }

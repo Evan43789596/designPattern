@@ -1,22 +1,22 @@
 package com.eshare.chainofresponsibility.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¾ßÌåµÄÖ°Ôð¶ÔÏó£¬ÓÃÀ´´¦ÀíÇëÇó
  */
 public class ConcreteHandler1 extends Handler {
 	public void handleRequest() {
-		//ï¿½ï¿½ï¿½ï¿½Ä³Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½Î§
-		//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç£ºï¿½ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½ï¿½â²¿ï¿½ï¿½ï¿½Ý£ï¿½
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ð»ï¿½È¡ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä»°Ö»ï¿½Ç¸ï¿½Ê¾ï¿½ï¿½
+		//¸ù¾ÝÄ³Ð©Ìõ¼þÀ´ÅÐ¶ÏÊÇ·ñÊôÓÚ×Ô¼º´¦ÀíµÄÖ°Ôð·¶Î§
+		//ÅÐ¶ÏÌõ¼þ±ÈÈç£º´ÓÍâ²¿´«ÈëµÄ²ÎÊý£¬»òÕßÕâÀïÖ÷¶¯È¥»ñÈ¡µÄÍâ²¿Êý¾Ý£¬
+		//Èç´ÓÊý¾Ý¿âÖÐ»ñÈ¡µÈ£¬ÏÂÃæÕâ¾ä»°Ö»ÊÇ¸öÊ¾Òâ
 		boolean someCondition = false;
 		
 		if(someCondition){
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½Î§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï´¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			//ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//Èç¹ûÊôÓÚ×Ô¼º´¦ÀíµÄÖ°Ôð·¶Î§£¬¾ÍÔÚÕâÀï´¦ÀíÇëÇó
+			//¾ßÌåµÄ´¦Àí´úÂë
 			System.out.println("ConcreteHandler1 handle request");
 		}else{
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½Î§ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Ðºï¿½Ìµï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½
-			//ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½
-			//ï¿½ï¿½ï¿½Ã»ï¿½Ð£ï¿½Ê²Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½
+			//Èç¹û²»ÊôÓÚ×Ô¼º´¦ÀíµÄÖ°Ôð·¶Î§£¬ÄÇ¾ÍÅÐ¶ÏÊÇ·ñ»¹ÓÐºó¼ÌµÄÖ°Ôð¶ÔÏó
+			//Èç¹ûÓÐ£¬¾Í×ª·¢ÇëÇó¸øºó¼ÌµÄÖ°Ôð¶ÔÏó
+			//Èç¹ûÃ»ÓÐ£¬Ê²Ã´¶¼²»×ö£¬×ÔÈ»½áÊø
 			if(this.successor!=null){
 				this.successor.handleRequest();
 			}

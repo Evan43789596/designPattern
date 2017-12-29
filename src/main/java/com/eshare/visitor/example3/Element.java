@@ -1,11 +1,11 @@
 package com.eshare.visitor.example3;
 /**
- * 锟斤拷锟斤拷锟绞碉拷元锟截的接匡拷
+ * 被访问的元素的接口
  */
 public abstract class Element {
 	/**
-	 * 锟斤拷锟杰凤拷锟斤拷锟竭的凤拷锟斤拷
-	 * @param visitor 锟斤拷锟斤拷锟竭讹拷锟斤拷
+	 * 接受访问者的访问
+	 * @param visitor 访问者对象
 	 */
 	public abstract void accept(Visitor visitor);
 }

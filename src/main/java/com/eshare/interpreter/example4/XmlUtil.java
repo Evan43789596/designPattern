@@ -8,13 +8,13 @@ import org.w3c.dom.Document;
 public class XmlUtil {
 	public static Document getRoot(String filePathName) throws Exception{
 		Document doc = null;
-	      //锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+	      //建立一个解析器工厂
 	      DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	      //锟斤拷锟揭伙拷锟紻ocumentBuilder锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟剿撅拷锟斤拷锟紻OM锟斤拷锟斤拷锟斤拷
+	      //获得一个DocumentBuilder对象，这个对象代表了具体的DOM解析器
 	      DocumentBuilder builder=factory.newDocumentBuilder();
-	      //锟矫碉拷一锟斤拷锟斤拷示XML锟侥碉拷锟斤拷Document锟斤拷锟斤拷
+	      //得到一个表示XML文档的Document对象
 	      doc=builder.parse(filePathName);
-	      //去锟斤拷XML锟侥碉拷锟斤拷锟斤拷为锟斤拷式锟斤拷锟斤拷锟捷的空白讹拷映锟斤拷锟斤拷DOM锟斤拷锟叫的诧拷锟斤拷要锟斤拷Text Node锟斤拷锟斤拷
+	      //去掉XML文档中作为格式化内容的空白而映射在DOM树中的不必要的Text Node对象
 	      doc.normalize();
 	      return doc;
 	}

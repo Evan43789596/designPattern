@@ -1,15 +1,15 @@
 package com.eshare.abstractfactory.example1;
 /**
- *Intelï¿½ï¿½CPUÊµï¿½ï¿½
+ *IntelµÄCPUÊµÏÖ
  */
 public class IntelCPU implements CPUApi{
 	/**
-	 * CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+	 * CPUµÄÕë½ÅÊıÄ¿
 	 */
 	private int pins = 0;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
-	 * @param pins CPUï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
+	 * ¹¹Ôì·½·¨£¬´«ÈëCPUµÄÕë½ÅÊıÄ¿
+	 * @param pins CPUµÄÕë½ÅÊıÄ¿
 	 */
 	public IntelCPU(int pins){
 		this.pins = pins;

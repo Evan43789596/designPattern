@@ -1,6 +1,6 @@
 package com.eshare.command.example5;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬±ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼
+ * ÃüÁî¶ÔÏó£¬±±¾©¿¾Ñ¼
  */
 public class DuckCommand implements Command{
 	private CookApi cookApi = null;
@@ -9,6 +9,6 @@ public class DuckCommand implements Command{
 	}
 	
 	public void execute() {
-		this.cookApi.cook("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼");
+		this.cookApi.cook("±±¾©¿¾Ñ¼");
 	}
 }

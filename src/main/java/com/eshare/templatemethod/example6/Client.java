@@ -6,32 +6,33 @@ import java.util.Iterator;
 public class Client {
 	public static void main(String[] args) {
 		UserJDBC uj = new UserJDBC();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÏÈĞÂÔö¼¸Ìõ
 		UserModel um1 = new UserModel();
 		um1.setUuid("u1");
-		um1.setName("ï¿½ï¿½ï¿½ï¿½");
+		um1.setName("ÕÅÈı1");
 		um1.setAge(22);		
-		uj.create(um1);		
+//		uj.create(um1);		
 		
 		UserModel um2 = new UserModel();
 		um2.setUuid("u2");
-		um2.setName("ï¿½ï¿½ï¿½ï¿½");
+		um2.setName("ÀîËÄ1");
 		um2.setAge(25);		
-		uj.create(um2);
+//		uj.create(um2);
 		
 		UserModel um3 = new UserModel();
 		um3.setUuid("u3");
-		um3.setName("ï¿½ï¿½ï¿½ï¿½");
+		um3.setName("ÍõÎå1");
 		um3.setAge(32);		
-		uj.create(um3);
+//		uj.create(um3);
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸ï¿½
-		um3.setName("ï¿½ï¿½ï¿½å±»ï¿½ï¿½ï¿½ï¿½");
+		//²âÊÔĞŞ¸Ä
+		um3.setName("ÍõÎå±»¸ÄÁË");
 		um3.setAge(35);
-		uj.update(um3);
+//		uj.update(um3);
 		
-		//ï¿½ï¿½ï¿½Ô²ï¿½Ñ¯
+		//²âÊÔ²éÑ¯
 		UserQueryModel uqm = new UserQueryModel();
+		uqm.setName("Àî");
 		uqm.setAge(25);
 		uqm.setAge2(36);
 		Collection<UserModel> col = uj.getByCondition(uqm);

@@ -2,6 +2,6 @@ package com.eshare.facade.example2;
 
 public class AModuleImpl implements AModuleApi{
 	public void testA() {
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½AÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½testAï¿½ï¿½ï¿½ï¿½");
+		System.out.println("ÏÖÔÚÔÚAÄ£¿éÀïÃæ²Ù×÷testA·½·¨");
 	}
 }

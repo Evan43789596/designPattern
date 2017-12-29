@@ -1,22 +1,22 @@
 package com.eshare.chainofresponsibility.example2;
 /**
- * Ö°ï¿½ï¿½Ä½Ó¿Ú£ï¿½Ò²ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+ * Ö°ÔðµÄ½Ó¿Ú£¬Ò²¾ÍÊÇ´¦ÀíÇëÇóµÄ½Ó¿Ú
  */
 public abstract class Handler {
 	/**
-	 * ï¿½ï¿½ï¿½Ðºï¿½Ìµï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓÐºó¼ÌµÄÖ°Ôð¶ÔÏó
 	 */
 	protected Handler successor;
 	/**
-	 * ï¿½ï¿½ï¿½Ãºï¿½Ìµï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param successor ï¿½ï¿½Ìµï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉèÖÃºó¼ÌµÄÖ°Ôð¶ÔÏó
+	 * @param successor ºó¼ÌµÄÖ°Ôð¶ÔÏó
 	 */
 	public void setSuccessor(Handler successor) {
 		this.successor = successor;
 	}
 	/**
-	 * Ê¾ï¿½â´¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * ï¿½ï¿½Êµï¿½ï¿½ï¿½Ç¿ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ç·ñ´«µÝ²ï¿½ï¿½ï¿½
+	 * Ê¾Òâ´¦ÀíÇëÇóµÄ·½·¨£¬ËäÈ»Õâ¸öÊ¾Òâ·½·¨ÊÇÃ»ÓÐ´«Èë²ÎÊý£¬
+	 * µ«Êµ¼ÊÊÇ¿ÉÒÔ´«Èë²ÎÊýµÄ£¬¸ù¾Ý¾ßÌåÐèÒªÀ´Ñ¡ÔñÊÇ·ñ´«µÝ²ÎÊý
 	 */
 	public abstract void handleRequest();
 }

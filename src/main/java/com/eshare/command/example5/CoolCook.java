@@ -1,10 +1,10 @@
 package com.eshare.command.example5;
 
 /**
- * ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ³øÊ¦¶ÔÏó£¬×öÁ¹²Ë
  */
 public class CoolCook implements CookApi {
 	public void cook(String name) {
-		System.out.println("ï¿½ï¿½ï¿½ï¿½"+name+"ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½×°ï¿½Ì¡ï¿½" );
+		System.out.println("Á¹²Ë"+name+"ÒÑ¾­×öºÃ£¬±¾³øÊ¦ÕýÔÚ×°ÅÌ¡£" );
 	}
 }

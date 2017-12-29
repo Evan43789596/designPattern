@@ -1,39 +1,39 @@
 package com.eshare.command.example4;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥
+ * ¼ÆËãÆ÷Àà£¬¼ÆËãÆ÷ÉÏÓĞ¼Ó·¨°´Å¥¡¢¼õ·¨°´Å¥
  */
 public class Calculator2 {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓĞÖ´ĞĞ¼Ó·¨µÄÃüÁî¶ÔÏó
 	 */
 	private Command addCmd = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓĞÖ´ĞĞ¼õ·¨µÄÃüÁî¶ÔÏó
 	 */
 	private Command substractCmd = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param addCmd Ö´ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉèÖÃÖ´ĞĞ¼Ó·¨µÄÃüÁî¶ÔÏó
+	 * @param addCmd Ö´ĞĞ¼Ó·¨µÄÃüÁî¶ÔÏó
 	 */
 	public void setAddCmd(Command addCmd) {
 		this.addCmd = addCmd;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param substractCmd Ö´ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÉèÖÃÖ´ĞĞ¼õ·¨µÄÃüÁî¶ÔÏó
+	 * @param substractCmd Ö´ĞĞ¼õ·¨µÄÃüÁî¶ÔÏó
 	 */
 	public void setSubstractCmd(Command substractCmd) {
 		this.substractCmd = substractCmd;
 	}	
 	/**
-	 * ï¿½á¹©ï¿½ï¿½ï¿½Í»ï¿½Ê¹ï¿½Ã£ï¿½Ö´ï¿½Ğ¼Ó·ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ìá¹©¸ø¿Í»§Ê¹ÓÃ£¬Ö´ĞĞ¼Ó·¨¹¦ÄÜ
 	 */
 	public void addPressed(){
 		this.addCmd.execute();
 	}
 	/**
-	 * ï¿½á¹©ï¿½ï¿½ï¿½Í»ï¿½Ê¹ï¿½Ã£ï¿½Ö´ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ìá¹©¸ø¿Í»§Ê¹ÓÃ£¬Ö´ĞĞ¼õ·¨¹¦ÄÜ
 	 */
 	public void substractPressed(){
 		this.substractCmd.execute();

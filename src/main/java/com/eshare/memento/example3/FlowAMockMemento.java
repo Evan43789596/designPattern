@@ -1,8 +1,8 @@
 package com.eshare.memento.example3;
 import java.io.*;
 /**
- * Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Ä¶ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Â¼ï¿½Ó¿Ú£ï¿½ï¿½Ç¸ï¿½Õ­ï¿½Ó¿ï¿½
+ * Ä£ÄâÔËÐÐÁ÷³ÌAµÄ¶ÔÏóµÄ±¸ÍüÂ¼½Ó¿Ú£¬ÊÇ¸öÕ­½Ó¿Ú
  */
 public interface FlowAMockMemento extends Serializable{
-	//ï¿½Õµï¿½
+	//¿ÕµÄ
 }

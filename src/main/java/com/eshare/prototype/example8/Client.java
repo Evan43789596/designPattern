@@ -3,31 +3,31 @@ package com.eshare.prototype.example8;
 public class Client {
 	public static void main(String[] args) {
 		try {
-			// ï¿½ï¿½Ê¼ï¿½ï¿½Ô­ï¿½Í¹ï¿½ï¿½ï¿½ï¿½ï¿½
+			// ³õÊ¼»¯Ô­ÐÍ¹ÜÀíÆ÷
 			Prototype p1 = new ConcretePrototype1();
 			PrototypeManager.setPrototype("Prototype1", p1);
 
-			// ï¿½ï¿½È¡Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			// »ñÈ¡Ô­ÐÍÀ´´´½¨¶ÔÏó
 			Prototype p3 = PrototypeManager.getPrototype("Prototype1").clone();
-			p3.setName("ï¿½ï¿½ï¿½ï¿½");
-			System.out.println("ï¿½ï¿½Ò»ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½" + p3);
+			p3.setName("ÕÅÈý");
+			System.out.println("µÚÒ»¸öÊµÀý£º" + p3);
 
-			// ï¿½ï¿½ï¿½Ë¶ï¿½Ì¬ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Êµï¿½ï¿½
+			// ÓÐÈË¶¯Ì¬µÄÇÐ»»ÁËÊµÏÖ
 			Prototype p2 = new ConcretePrototype2();
 			PrototypeManager.setPrototype("Prototype1", p2);
 
-			// ï¿½ï¿½ï¿½Â»ï¿½È¡Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			// ÖØÐÂ»ñÈ¡Ô­ÐÍÀ´´´½¨¶ÔÏó
 			Prototype p4 = PrototypeManager.getPrototype("Prototype1").clone();
-			p4.setName("ï¿½ï¿½ï¿½ï¿½");
-			System.out.println("ï¿½Ú¶ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½" + p4);
+			p4.setName("ÀîËÄ");
+			System.out.println("µÚ¶þ¸öÊµÀý£º" + p4);
 
-			// ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½
+			// ÓÐÈË×¢ÏúÁËÕâ¸öÔ­ÐÍ
 			PrototypeManager.removePrototype("Prototype1");
 
-			// ï¿½Ù´Î»ï¿½È¡Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			// ÔÙ´Î»ñÈ¡Ô­ÐÍÀ´´´½¨¶ÔÏó
 			Prototype p5 = PrototypeManager.getPrototype("Prototype1").clone();
-			p5.setName("ï¿½ï¿½ï¿½ï¿½");
-			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½" + p5);
+			p5.setName("ÍõÎå");
+			System.out.println("µÚÈý¸öÊµÀý£º" + p5);
 		} catch (Exception err) {
 			System.err.println(err.getMessage());
 		}

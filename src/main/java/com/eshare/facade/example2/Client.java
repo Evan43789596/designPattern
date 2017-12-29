@@ -2,7 +2,7 @@ package com.eshare.facade.example2;
 
 public class Client {
 	public static void main(String[] args) {
-//		//ï¿½ï¿½ï¿½ï¿½Facadeï¿½ï¿½ï¿½ï¿½Òªï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½é½»ï¿½ï¿½
+//		//²»ÓÃFacade£¬ÐèÒª×Ô¼º¸ú¶à¸öÄ£¿é½»»¥
 //		AModuleApi a = new AModuleImpl();
 //		a.testA();
 //		BModuleApi b = new BModuleImpl();
@@ -10,8 +10,8 @@ public class Client {
 //		CModuleApi c = new CModuleImpl();
 //		c.testC();
 //		
-//		System.out.println("Ê¹ï¿½ï¿½Facade----------------------ï¿½ï¿½");
-		//Ê¹ï¿½ï¿½ï¿½ï¿½Facade
+//		System.out.println("Ê¹ÓÃFacade----------------------¡µ");
+		//Ê¹ÓÃÁËFacade
 		new Facade().test();		
 	}
 }

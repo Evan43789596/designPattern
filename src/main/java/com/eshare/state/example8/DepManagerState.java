@@ -3,30 +3,30 @@ package com.eshare.state.example8;
 import java.util.Scanner;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ë½ï¿½ï¿½ï¿½×´Ì¬
+ * ´¦Àí²¿ÃÅ¾­ÀíµÄÉóºË£¬´¦Àíºó¶ÔÓ¦ÉóºË½áÊø×´Ì¬
  */
 public class DepManagerState implements LeaveRequestState{
 	public void doWork(StateMachine request) {
-		//ï¿½È°ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½
+		//ÏÈ°ÑÒµÎñ¶ÔÏóÔìĞÍ»ØÀ´
 		LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
-		System.out.println("ï¿½ï¿½ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ£ï¿½ï¿½ï¿½ï¿½Ôºï¿½......");
+		System.out.println("²¿ÃÅ¾­ÀíÉóºËÖĞ£¬ÇëÉÔºò......");
 		
-		//Ä£ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ£¬Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
-		System.out.println(lrm.getUser()+"ï¿½ï¿½ï¿½ï¿½ï¿½"+lrm.getBeginDate()+
-		"ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½"+lrm.getLeaveDays()+"ï¿½ï¿½,ï¿½ë²¿ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(1ÎªÍ¬ï¿½â£¬2Îªï¿½ï¿½Í¬ï¿½ï¿½)ï¿½ï¿½");
-		//ï¿½ï¿½È¡ï¿½Ó¿ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//Ä£ÄâÓÃ»§´¦Àí½çÃæ£¬Í¨¹ı¿ØÖÆÌ¨À´¶ÁÈ¡Êı¾İ
+		System.out.println(lrm.getUser()+"ÉêÇë´Ó"+lrm.getBeginDate()+
+		"¿ªÊ¼Çë¼Ù"+lrm.getLeaveDays()+"Ìì,Çë²¿ÃÅ¾­ÀíÉóºË(1ÎªÍ¬Òâ£¬2Îª²»Í¬Òâ)£º");
+		//¶ÁÈ¡´Ó¿ØÖÆÌ¨ÊäÈëµÄÊı¾İ
 		Scanner scanner = new Scanner(System.in);
 		if(scanner.hasNext()){
 			int a = scanner.nextInt();
-			//ï¿½ï¿½ï¿½Ã»Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			String result = "ï¿½ï¿½Í¬ï¿½ï¿½";
+			//ÉèÖÃ»Øµ½ÉÏÏÂÎÄÖĞ
+			String result = "²»Í¬Òâ";
 			if(a==1){
-				result = "Í¬ï¿½ï¿½";
+				result = "Í¬Òâ";
 			}
-			lrm.setResult("ï¿½ï¿½ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½"+result);
-			//ï¿½ï¿½ï¿½Å¾ï¿½ï¿½ï¿½ï¿½ï¿½Ë¹ï¿½ï¿½ï¿½Ö±ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½
+			lrm.setResult("²¿ÃÅ¾­ÀíÉóºË½á¹û£º"+result);
+			//²¿ÃÅ¾­ÀíÉóºË¹ıºó£¬Ö±½Ó×ªÏòÉóºË½áÊø×´Ì¬ÁË
 			request.setState(new AuditOverState());
-			//ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//¼ÌĞøÖ´ĞĞÏÂÒ»²½¹¤×÷
 			request.doWork();
 		}		
 	}

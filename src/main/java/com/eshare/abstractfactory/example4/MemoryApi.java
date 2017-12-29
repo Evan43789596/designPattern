@@ -1,10 +1,10 @@
 package com.eshare.abstractfactory.example4;
 /**
- * ï¿½Ú´ï¿½Ä½Ó¿ï¿½
+ * ÄÚ´æµÄ½Ó¿Ú
  */
 public interface MemoryApi {
 	/**
-	 * Ê¾ï¿½â·½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ê¾Òâ·½·¨£¬ÄÚ´æ¾ßÓÐ»º´æÊý¾ÝµÄÄÜÁ¦
 	 */
 	public void cacheData();
 }

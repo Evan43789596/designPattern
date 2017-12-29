@@ -7,38 +7,38 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 /**
- *	О©╫О©╫О©╫О©╫О©╫дёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫р╩п╘х╚О©╫О©╫О©╫О©╫о╒
+ *	иообндё╛сцю╢╟Э╨╛╫БймфВпХр╙╣др╩п╘х╚╬жпео╒
  */
 public class Context {
 	/**
-	 * О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╙О©╫О©╫
+	 * иор╩╦Ж╠╩╢╕юМ╣дт╙кь
 	 */
 	private Element preEle = null;
 	/**
-	 * DomО©╫О©╫О©╫О©╫XmlО©╫О©╫DocumentО©╫О©╫О©╫О©╫
+	 * Dom╫БнЖXml╣дDocument╤тоС
 	 */
 	private Document document = null;
 	/**
-	 * О©╫О©╫О©╫Л╥╫О©╫О©╫
-	 * @param filePathName О©╫О©╫р╙О©╫О©╫х║О©╫О©╫xmlО©╫О©╫б╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+	 * ╧╧тЛ╥╫╥╗
+	 * @param filePathName пХр╙╤ах║╣дxml╣дб╥╬╤╨мцШвж
 	 * @throws Exception
 	 */
 	public Context(String filePathName) throws Exception{
-		//м╗О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫XmlО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫xmlО©╫О©╫с╕О©╫О©╫DocumentО©╫О©╫О©╫О©╫
+		//м╗╧Щ╦╗жЗ╣дXml╧╓╬ъюЮю╢╩Ях║╠╩╫БнЖ╣дxml╤тс╕╣дDocument╤тоС
 		this.document = XmlUtil.getRoot(filePathName);
 	}
 	/**
-	 * О©╫О©╫О©╫бЁО©╫й╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+	 * жьпбЁУй╪╩╞иообнд
 	 */
 	public void reInit(){
 		preEle = null;
 	}
 	/**
-	 * О©╫О©╫О©╫О©╫ExpressionО©╫О©╫О©╫О©╫й╧О©╫ц╣д╥О©╫О©╫О©╫,
-	 * О©╫О©╫О©╫щ╦О©╫т╙О©╫ь╨м╣О©╫г╟т╙О©╫ь╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫х║О©╫О©╫г╟О©╫О©╫т╙О©╫О©╫
-	 * @param pEle О©╫О©╫т╙О©╫О©╫
-	 * @param eleName О©╫О©╫г╟т╙О©╫ь╣О©╫О©╫О©╫О©╫О©╫
-	 * @return О©╫р╣О©╫О©╫д╣О©╫г╟т╙О©╫О©╫
+	 * ╦В╦ЖExpression╧╚╧╡й╧сц╣д╥╫╥╗,
+	 * ╦Ы╬щ╦╦т╙кь╨м╣╠г╟т╙кь╣дцШЁфю╢╩Ях║╣╠г╟╣дт╙кь
+	 * @param pEle ╦╦т╙кь
+	 * @param eleName ╣╠г╟т╙кь╣дцШЁф
+	 * @return ур╣╫╣д╣╠г╟т╙кь
 	 */
 	public Element getNowEle(Element pEle,String eleName){
 		NodeList tempNodeList = pEle.getChildNodes();

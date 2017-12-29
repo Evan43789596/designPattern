@@ -2,43 +2,43 @@ package com.eshare.chainofresponsibility.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½Òªï¿½ï¿½×°Ö°ï¿½ï¿½ï¿½ï¿½		
+		//ÏÈÒª×é×°Ö°ÔğÁ´		
 		Handler h1 = new GeneralManager2();
 		Handler h2 = new DepManager2();
 		Handler h3 = new ProjectManager2();
 		h3.setSuccessor(h2);
 		h2.setSuccessor(h1);
 		
-		//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û²Í·ï¿½ï¿½ï¿½
+		//¿ªÊ¼²âÊÔÉêÇë¾Û²Í·ÑÓÃ
 		FeeRequestModel frm = new FeeRequestModel();
 		frm.setFee(300);
-		frm.setUser("Ğ¡ï¿½ï¿½");
-		//ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½
+		frm.setUser("Ğ¡Àî");
+		//µ÷ÓÃ´¦Àí
 		String ret1 = (String)h3.handleRequest(frm);
 		System.out.println("ret1="+ret1);
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½Ùµï¿½ï¿½Ã´ï¿½ï¿½ï¿½
+		//ÖØĞÂÉèÖÃÉêÇë½ğ¶î£¬ÔÙµ÷ÓÃ´¦Àí
 		frm.setFee(800);		
 		h3.handleRequest(frm);
 		String ret2 = (String)h3.handleRequest(frm);
 		System.out.println("ret2="+ret2);
 		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½Ùµï¿½ï¿½Ã´ï¿½ï¿½ï¿½
+		//ÖØĞÂÉèÖÃÉêÇë½ğ¶î£¬ÔÙµ÷ÓÃ´¦Àí
 		frm.setFee(1600);		
 		h3.handleRequest(frm);
 		String ret3 = (String)h3.handleRequest(frm);
 		System.out.println("ret3="+ret3);
 		
-		//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¤Ö§ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½
+		//¿ªÊ¼²âÊÔÉêÇëÔ¤Ö§²îÂÃ·ÑÓÃ
 		PreFeeRequestModel pfrm = new PreFeeRequestModel();
 		pfrm.setFee(3000);
-		pfrm.setUser("Ğ¡ï¿½ï¿½");
-		//ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½
+		pfrm.setUser("Ğ¡ÕÅ");
+		//µ÷ÓÃ´¦Àí
 		h3.handleRequest(pfrm);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½Ùµï¿½ï¿½Ã´ï¿½ï¿½ï¿½
+		//ÖØĞÂÉèÖÃÉêÇë½ğ¶î£¬ÔÙµ÷ÓÃ´¦Àí
 		pfrm.setFee(6000);
 		h3.handleRequest(pfrm);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½Ùµï¿½ï¿½Ã´ï¿½ï¿½ï¿½
+		//ÖØĞÂÉèÖÃÉêÇë½ğ¶î£¬ÔÙµ÷ÓÃ´¦Àí
 		pfrm.setFee(36000);
 		h3.handleRequest(pfrm);
 	}

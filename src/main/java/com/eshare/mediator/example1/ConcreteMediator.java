@@ -1,36 +1,36 @@
 package com.eshare.mediator.example1;
 /**
- * я┐╜я┐╜я┐╜я┐╜я┐╜я┐╜╨╜я┐╜я┐╜я┐╜╩╡я┐╜я┐╜
+ * ╛▀╠х╡─╓╨╜щ╒▀╩╡╧╓
  */
 public class ConcreteMediator implements Mediator {
 	
 	/**
-	 * я┐╜я┐╜я┐╜╨▓я┐╜╬мя┐╜я┐╜═мя┐╜я┐╜A
+	 * │╓╙╨▓в╬м╗д═м╩┬A
 	 */
 	private ConcreteColleagueA colleagueA;
 	/**
-	 * я┐╜я┐╜я┐╜╨▓я┐╜╬мя┐╜я┐╜═мя┐╜я┐╜B
+	 * │╓╙╨▓в╬м╗д═м╩┬B
 	 */
 	private ConcreteColleagueB colleagueB;
 	
 	/**
-	 * я┐╜я┐╜я┐╜я┐╜я┐╜╨╜я┐╜я┐╜я┐╜я┐╜я┐╜╥кя┐╜╦╜т▓в╬мя┐╜я┐╜я┐╜я┐╜═мя┐╜я┐╜Aя┐╜я┐╜я┐╜я┐╜
-	 * @param colleague ═мя┐╜я┐╜Aя┐╜я┐╜я┐╜я┐╜
+	 * ╔ш╓├╓╨╜щ╒▀╨ш╥к┴╦╜т▓в╬м╗д╡─═м╩┬A╢╘╧є
+	 * @param colleague ═м╩┬A╢╘╧є
 	 */
 	public void setConcreteColleagueA(ConcreteColleagueA colleague) {
 		colleagueA = colleague;
 	}
 	/**
-	 * я┐╜я┐╜я┐╜я┐╜я┐╜╨╜я┐╜я┐╜я┐╜я┐╜я┐╜╥кя┐╜╦╜т▓в╬мя┐╜я┐╜я┐╜я┐╜═мя┐╜я┐╜Bя┐╜я┐╜я┐╜я┐╜
-	 * @param colleague ═мя┐╜я┐╜Bя┐╜я┐╜я┐╜я┐╜
+	 * ╔ш╓├╓╨╜щ╒▀╨ш╥к┴╦╜т▓в╬м╗д╡─═м╩┬B╢╘╧є
+	 * @param colleague ═м╩┬B╢╘╧є
 	 */
 	public void setConcreteColleagueB(ConcreteColleagueB colleague) {
 		colleagueB = colleague;
 	}
 	
 	public void changed(Colleague colleague) {
-		//─│я┐╜я┐╜═мя┐╜я┐╜я┐╜р╖вя┐╜я┐╜я┐╜╦▒ф╗пя┐╜я┐╜═ия┐╜я┐╜я┐╜я┐╜╥кя┐╜я┐╜я┐╜я┐╜я┐╜я┐╜═мя┐╜┬╜я┐╜я┐╜я┐╜
-		//я┐╜я┐╜я┐╜я┐╜╨ня┐╜я┐╜я┐╜я┐╜╙жя┐╜я┐╜═мя┐╜┬╢я┐╜я┐╜я┐╜я┐╜я┐╜╩╡я┐╜я┐╜╨ня┐╜я┐╜я┐╜я┐╜╬к
+		//─│╕Ў═м╩┬└р╖в╔·┴╦▒ф╗пгм═и│г╨ш╥к╙ы╞ф╦√═м╩┬╜╗╗е
+		//╛▀╠х╨н╡ў╧р╙ж╡─═м╩┬╢╘╧є└┤╩╡╧╓╨н╫ў╨╨╬к
 	}
 
 }

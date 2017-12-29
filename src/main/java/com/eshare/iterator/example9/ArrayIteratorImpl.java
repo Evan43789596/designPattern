@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ê¾Ûºï¿½Ôªï¿½ØµÄµï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
+ * ÓÃÀ´ÊµÏÖËæ»ú·­Ò³·ÃÎÊ¾ÛºÏÔªËØµÄµü´ú½Ó¿Ú
  */
 public class ArrayIteratorImpl implements AggregationIterator{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃÀ´´æ·Å±»µü´úµÄÊı×é
 	 */
 	private PayModel[] pms = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òı
 	 */
 	private int index = 0;
 	
@@ -22,7 +22,7 @@ public class ArrayIteratorImpl implements AggregationIterator{
 	
 	
 	public boolean hasNext() {
-		//ï¿½Ğ¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½
+		//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÔªËØ
 		if(pms!=null && index<=(pms.length-1)){
 			return true;
 		}
@@ -38,24 +38,24 @@ public class ArrayIteratorImpl implements AggregationIterator{
 	
 	public Collection getPage(int pageNum,int pageShow){
 		Collection col = new ArrayList();
-		//ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½İµÄ¿ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Í½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ĞèÒªÔÚÕâÀïÏÈ¼ÆËãĞèÒª»ñÈ¡µÄÊı¾İµÄ¿ªÊ¼ÌõÊıºÍ½áÊøÌõÊı
 		int start = (pageNum-1)*pageShow;
 		int end = start + pageShow-1;
-		//ï¿½ï¿½ï¿½ï¿½startï¿½Ä±ß½ç£¬ï¿½ï¿½Ğ¡ï¿½ï¿½0
+		//¿ØÖÆstartµÄ±ß½ç£¬×îĞ¡ÊÇ0
 		if(start < 0){
 			start = 0;
 		}
-		//ï¿½ï¿½ï¿½ï¿½endï¿½Ä±ß½ç£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//¿ØÖÆendµÄ±ß½ç£¬×î´óÊÇÊı×éµÄ×î´óË÷Òı
 		if(end > this.pms.length-1){
 			end = this.pms.length - 1;
 		}
-		//Ã¿ï¿½ï¿½È¡Öµï¿½ï¿½ï¿½Ç´ï¿½Í·ï¿½ï¿½Ê¼Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½indexÎª0
+		//Ã¿´ÎÈ¡Öµ¶¼ÊÇ´ÓÍ·¿ªÊ¼Ñ­»·£¬ËùÒÔÉèÖÃindexÎª0
 		index = 0;
 		while(hasNext()  && index<=end){
 			if(index >= start){
 				col.add(pms[index]);
 			}
-			//ï¿½ï¿½ï¿½Ñ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1
+			//°ÑÒÑ·ÃÎÊË÷Òı¼Ó1
 			index++;
 		}
 		return col;

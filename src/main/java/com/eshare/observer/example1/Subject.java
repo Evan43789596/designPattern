@@ -2,29 +2,29 @@ package com.eshare.observer.example1;
 
 import java.util.*;
 /**
- * Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½ï¿½Ä¹Û²ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½á¹©×¢ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½Û²ï¿½ï¿½ßµÄ½Ó¿ï¿½
+ * Ä¿±ê¶ÔÏó£¬ËüÖªµÀ¹Û²ìËüµÄ¹Û²ìÕß£¬²¢Ìá¹©×¢²áºÍÉ¾³ı¹Û²ìÕßµÄ½Ó¿Ú
  */
 public class Subject {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½Ä¹Û²ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
+	 * ÓÃÀ´±£´æ×¢²áµÄ¹Û²ìÕß¶ÔÏó
 	 */
 	private List<Observer> observers = new ArrayList<Observer>();
 	/**
-	 * ×¢ï¿½ï¿½Û²ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
-	 * @param observer ï¿½Û²ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
+	 * ×¢²á¹Û²ìÕß¶ÔÏó
+	 * @param observer ¹Û²ìÕß¶ÔÏó
 	 */
 	public void attach(Observer observer) {
 		observers.add(observer);
 	}
 	/**
-	 * É¾ï¿½ï¿½ï¿½Û²ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
-	 * @param observer ï¿½Û²ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
+	 * É¾³ı¹Û²ìÕß¶ÔÏó
+	 * @param observer ¹Û²ìÕß¶ÔÏó
 	 */
 	public void detach(Observer observer) {
 		observers.remove(observer);
 	}
 	/**
-	 * Í¨Öªï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½Ä¹Û²ï¿½ï¿½ß¶ï¿½ï¿½ï¿½
+	 * Í¨ÖªËùÓĞ×¢²áµÄ¹Û²ìÕß¶ÔÏó
 	 */
 	protected void notifyObservers() {
 		for(Observer observer : observers){

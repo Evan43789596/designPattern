@@ -1,6 +1,6 @@
 package com.eshare.templatemethod.example2;
 /**
- * 锟斤拷锟斤拷锟斤拷录锟斤拷员锟斤拷录时锟斤拷写锟斤拷锟斤拷息锟斤拷锟斤拷锟斤拷模锟斤拷
+ * 描述登录人员登录时填写的信息的数据模型
  */
 public class LoginModel{
 	private String workerId,pwd;

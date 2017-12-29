@@ -2,11 +2,11 @@ package com.eshare.composite.example4;
 
 public class RecursiveTest {
 	/**
-	 * Ê¾ï¿½ï¿½İ¹ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½×³Ë¡ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½Ç¼òµ¥µï¿½Êµï¿½Ö£ï¿½Ö»ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Ğ¡ï¿½Ä½×³Ë£ï¿½
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ±È½Ï´ï¿½Ä½×³Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½100ï¿½Ä½×³ï¿½Ó¦ï¿½Ã²ï¿½ï¿½ï¿½java.math.BigDecimal
-	 * ï¿½ï¿½ï¿½ï¿½java.math.BigInteger
-	 * @param a ï¿½ï¿½×³Ëµï¿½ï¿½ï¿½Öµ
-	 * @return ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä½×³ï¿½Öµ
+	 * Ê¾Òâµİ¹éËã·¨£¬Çó½×³Ë¡£ÕâÀïÖ»ÊÇ¼òµ¥µÄÊµÏÖ£¬Ö»ÄÜÊµÏÖÇóÊıÖµ½ÏĞ¡µÄ½×³Ë£¬
+	 * ¶ÔÓÚÊı¾İ±È½Ï´óµÄ½×³Ë£¬±ÈÈçÇó100µÄ½×³ËÓ¦¸Ã²ÉÓÃjava.math.BigDecimal
+	 * »òÊÇjava.math.BigInteger
+	 * @param a Çó½×³ËµÄÊıÖµ
+	 * @return ¸ÃÊıÖµµÄ½×³ËÖµ
 	 */
 	public int recursive(int a){
 		if(a==1){
@@ -18,6 +18,6 @@ public class RecursiveTest {
 	public static void main(String[] args) {
 		RecursiveTest test = new RecursiveTest();
 		int result = test.recursive(5);
-		System.out.println("5ï¿½Ä½×³ï¿½="+result);
+		System.out.println("5µÄ½×³Ë="+result);
 	}
 }

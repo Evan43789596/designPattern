@@ -1,6 +1,6 @@
 package com.eshare.memento.example2;
 /**
- * 锟斤拷锟斤拷录锟斤拷窄锟接口ｏ拷没锟斤拷锟轿何凤拷锟斤拷锟斤拷锟斤拷
+ * 备忘录的窄接口，没有任何方法定义
  */
 public interface Memento {
 	

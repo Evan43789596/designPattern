@@ -1,13 +1,13 @@
 package com.eshare.strategy.example8;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
+ * °ÑÈÕÖ¾¼ÇÂ¼µ½Êý¾Ý¿â
  */
 public class DbLog extends LogStrategyTemplate{
 	public void doLog(String msg) {		
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÖÆÔì´íÎó
 		if(msg!=null && msg.trim().length()>5){
 			int a = 5/0;
 		}
-		System.out.println("ï¿½ï¿½ï¿½Ú°ï¿½ '"+msg+"' ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½");
+		System.out.println("ÏÖÔÚ°Ñ '"+msg+"' ¼ÇÂ¼µ½Êý¾Ý¿âÖÐ");
 	}
 }

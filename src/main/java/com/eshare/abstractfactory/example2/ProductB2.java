@@ -1,9 +1,9 @@
 package com.eshare.abstractfactory.example2;
 
 /**
- * ï¿½ï¿½Æ·Bï¿½Ä¾ï¿½ï¿½ï¿½Êµï¿½ï¿½
+ * ²úÆ·BµÄ¾ßÌåÊµÏÖ
  */
 public class ProductB2 implements AbstractProductB {
-	//Êµï¿½Ö²ï¿½Æ·Bï¿½Ä½Ó¿ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
+	//ÊµÏÖ²úÆ·BµÄ½Ó¿ÚÖÐ¶¨ÒåµÄ²Ù×÷
 }
 

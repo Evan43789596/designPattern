@@ -2,19 +2,19 @@ package com.eshare.visitor.example4;
 
 
 /**
- * ï¿½ï¿½Òµï¿½Í»ï¿½
+ * ÆóÒµ¿Í»§
  */
 public class EnterpriseCustomer extends Customer{
 	/**
-	 * ï¿½ï¿½Ïµï¿½ï¿½
+	 * ÁªÏµÈË
 	 */
 	private String linkman;
 	/**
-	 * ï¿½ï¿½Ïµï¿½ç»°
+	 * ÁªÏµµç»°
 	 */
 	private String linkTelephone;
 	/**
-	 * ï¿½ï¿½Òµ×¢ï¿½ï¿½ï¿½Ö·
+	 * ÆóÒµ×¢²áµØÖ·
 	 */
 	private String registerAddress;
 	
@@ -44,7 +44,7 @@ public class EnterpriseCustomer extends Customer{
 	}
 	
 	public void accept(Visitor visitor) {
-		//ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
+		//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
 		visitor.visitEnterpriseCustomer(this);
 	}
 }

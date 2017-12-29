@@ -1,7 +1,7 @@
 package com.eshare.prototype.example8;
 
 /**
- * ï¿½ï¿½Â¡ï¿½Ä¾ï¿½ï¿½ï¿½Êµï¿½Ö¶ï¿½ï¿½ï¿½
+ * ¿ËÂ¡µÄ¾ßÌåÊµÏÖ¶ÔÏó
  */
 public class ConcretePrototype2 implements Prototype {
 	private String name;
@@ -19,6 +19,6 @@ public class ConcretePrototype2 implements Prototype {
 	}
 	
 	public String toString(){
-		return "Now in Prototype2ï¿½ï¿½name="+name;
+		return "Now in Prototype2£¬name="+name;
 	}
 }

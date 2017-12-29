@@ -3,15 +3,15 @@ package com.eshare.singleton.example1;
 import java.io.*;
 import java.util.*;
 /**
- * О©╫О©╫х║с╕О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫
+ * ╤ах║с╕сцеДжцнд╪Ч
  */
 public class AppConfig {
 	/**
-	 * О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫п╡О©╫О©╫О©╫AО©╫О©╫ж╣
+	 * сцю╢╢Ф╥ееДжцнд╪Чжп╡нйЩA╣дж╣
 	 */
 	private String parameterA;
 	/**
-	 * О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫п╡О©╫О©╫О©╫BО©╫О©╫ж╣
+	 * сцю╢╢Ф╥ееДжцнд╪Чжп╡нйЩB╣дж╣
 	 */
 	private String parameterB;
 	
@@ -22,26 +22,27 @@ public class AppConfig {
 		return parameterB;
 	}
 	/**
-	 * О©╫О©╫О©╫Л╥╫О©╫О©╫
+	 * ╧╧тЛ╥╫╥╗
 	 */
 	public AppConfig(){
-		//О©╫О©╫О©╫ц╤О©╫х║О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫д╥О©╫О©╫О©╫
+		//╣Всц╤ах║еДжцнд╪Ч╣д╥╫╥╗
 		readConfig();
 	}
 	/**
-	 * О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫п╣О©╫О©╫О©╫О©╫щ╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ц╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+	 * ╤ах║еДжцнд╪Чё╛╟яеДжцнд╪Чжп╣ддзхщ╤аЁЖю╢иХжц╣╫йТптио
 	 */
 	private void readConfig(){
 		Properties p = new Properties(); 
 		InputStream in = null;
 		try {
+			System.out.println("╤ах║ еДжцнд╪Чр╩╢н=============");
 			in = AppConfig.class.getResourceAsStream("AppConfig.properties");
 			p.load(in);
-			//О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫п╣О©╫О©╫О©╫О©╫щ╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ц╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+			//╟яеДжцнд╪Чжп╣ддзхщ╤аЁЖю╢иХжц╣╫йТптио
 			this.parameterA = p.getProperty("paramA");
 			this.parameterB = p.getProperty("paramB");
 		} catch (IOException e) {
-			System.out.println("в╟О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫кёО©╫О©╫О©╫О©╫О©╫О©╫у╩О©╫О©╫о╒О©╫О©╫О©╫бёО©╫");
+			System.out.println("в╟тьеДжцнд╪ЧЁЖ╢Макё╛╬ълЕ╤яу╩пео╒хГобё╨");
 			e.printStackTrace();
 		}finally{
 			try {

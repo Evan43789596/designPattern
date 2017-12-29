@@ -3,19 +3,19 @@ import java.util.*;
 
 public class Client {
 	public static void main(String[] args) throws Exception{
-		//锟斤拷要锟饺碉拷录锟斤拷然锟斤拷锟斤拷锟叫讹拷锟角凤拷锟斤拷权锟斤拷
+		//需要先登录，然后再判断是否有权限
 		SecurityMgr mgr = SecurityMgr.getInstance();
-		mgr.login("锟斤拷锟斤拷");
-		mgr.login("锟斤拷锟斤拷");		
-		boolean f1 = mgr.hasPermit("锟斤拷锟斤拷","薪锟斤拷锟斤拷锟斤拷","锟介看");
-		boolean f2 = mgr.hasPermit("锟斤拷锟斤拷","薪锟斤拷锟斤拷锟斤拷","锟介看");		
+		mgr.login("张三");
+		mgr.login("李四");		
+		boolean f1 = mgr.hasPermit("张三","薪资数据","查看");
+		boolean f2 = mgr.hasPermit("李四","薪资数据","查看");		
 		
 		System.out.println("f1=="+f1);
 		System.out.println("f2=="+f2);
 		
 		for(int i=0;i<3;i++){
-			mgr.login("锟斤拷锟斤拷"+i);
-			mgr.hasPermit("锟斤拷锟斤拷"+i,"薪锟斤拷锟斤拷锟斤拷","锟介看");
+			mgr.login("张三"+i);
+			mgr.hasPermit("张三"+i,"薪资数据","查看");
 		}
 	}
 }

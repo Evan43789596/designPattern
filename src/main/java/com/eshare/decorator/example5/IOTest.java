@@ -2,7 +2,7 @@ package com.eshare.decorator.example5;
 import java.io.*;
 public class IOTest {
 	public static void main(String[] args)throws Exception  {
-		//ï¿½ï¿½Ê½ï¿½ï¿½È¡ï¿½Ä¼ï¿½
+		//Á÷Ê½¶ÁÈ¡ÎÄ¼ş
 		DataInputStream din = null;
 		try{
 			din = new DataInputStream(
@@ -10,11 +10,11 @@ public class IOTest {
 						new FileInputStream("IOTest.txt")
 				)
 			);
-			//È»ï¿½ï¿½Í¿ï¿½ï¿½Ô»ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//È»ºó¾Í¿ÉÒÔ»ñÈ¡ÎÄ¼şÄÚÈİÁË
 			byte bs []= new byte[din.available()]; 
 			din.read(bs);
 			String content = new String(bs);
-			System.out.println("ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½===="+content);
+			System.out.println("ÎÄ¼şÄÚÈİ===="+content);
 		}finally{
 			din.close();
 		}		

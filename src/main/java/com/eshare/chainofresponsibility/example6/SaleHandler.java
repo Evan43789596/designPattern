@@ -1,25 +1,25 @@
 package com.eshare.chainofresponsibility.example6;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+ * ¶¨ÒåÖ°Ôğ¶ÔÏóµÄ½Ó¿Ú
  */
 public abstract class SaleHandler {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ³ÖÓĞÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
 	 */
 	protected SaleHandler successor = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
-	 * @param successor ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * ÉèÖÃÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
+	 * @param successor ÏÂÒ»¸ö´¦ÀíÇëÇóµÄ¶ÔÏó
 	 */
 	public void setSuccessor(SaleHandler successor){
 		this.successor = successor;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param user ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±
-	 * @param customer ï¿½Í»ï¿½
-	 * @param saleModel ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½Ç·ï¿½ï¿½ï¿½É¹ï¿½
+	 * ´¦Àí±£´æÏúÊÛĞÅÏ¢µÄÇëÇó
+	 * @param user ²Ù×÷ÈËÔ±
+	 * @param customer ¿Í»§
+	 * @param saleModel ÏúÊÛÊı¾İ
+	 * @return ÊÇ·ñ´¦Àí³É¹¦
 	 */
 	public abstract boolean sale(String user,String customer,SaleModel saleModel);
 }

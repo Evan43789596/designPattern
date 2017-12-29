@@ -2,17 +2,17 @@ package com.eshare.prototype.example7;
 
 
 /**
- * 锟斤拷锟斤拷锟侥接匡拷
+ * 订单的接口
  */
 public interface OrderApi {
 	/**
-	 * 锟斤拷取锟斤拷锟斤拷锟斤拷品锟斤拷锟斤拷
-	 * @return 锟斤拷锟斤拷锟叫诧拷品锟斤拷锟斤拷
+	 * 获取订单产品数量
+	 * @return 订单中产品数量
 	 */
 	public int getOrderProductNum();
 	/**
-	 * 锟斤拷锟矫讹拷锟斤拷锟斤拷品锟斤拷锟斤拷
-	 * @param num 锟斤拷锟斤拷锟斤拷品锟斤拷锟斤拷
+	 * 设置订单产品数量
+	 * @param num 订单产品数量
 	 */
 	public void setOrderProductNum(int num);
 	

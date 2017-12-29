@@ -2,14 +2,14 @@ package com.eshare.command.example1;
 
 public class Client {
 	/**
-	 * Ê¾ï¿½â£¬ï¿½ï¿½ï¿½ğ´´½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬²ï¿½ï¿½è¶¨ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ê¾Òâ£¬¸ºÔğ´´½¨ÃüÁî¶ÔÏó£¬²¢Éè¶¨ËüµÄ½ÓÊÜÕß
 	 */
 	public void assemble(){
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//´´½¨½ÓÊÜÕß
 		Receiver receiver = new Receiver();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è¶¨ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//´´½¨ÃüÁî¶ÔÏó£¬Éè¶¨ËüµÄ½ÓÊÕÕß
 		Command command = new ConcreteCommand(receiver);
-		//ï¿½ï¿½ï¿½ï¿½Invokerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã½ï¿½È¥
+		//´´½¨Invoker£¬°ÑÃüÁî¶ÔÏóÉèÖÃ½øÈ¥
 		Invoker invoker = new Invoker();
 		invoker.setCommand(command);
 	}

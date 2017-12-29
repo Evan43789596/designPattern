@@ -1,21 +1,21 @@
 package com.eshare.command.example5;
 /**
- * О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫л╤О©╫О©╫е╧О©╫О©╫О©╫
+ * цЭаН╤тоСё╛бл╤╧ее╧гЛр
  */
 public class ChopCommand implements Command{
 	/**
-	 * О©╫О©╫О©╫п╬О©╫О©╫О©╫О©╫О©╫О©╫к╣дЁО©╫й╕О©╫д╤О©╫О©╫О©╫
+	 * Ёжсп╬ълЕвЖ╡к╣дЁЬй╕╣д╤тоС
 	 */
 	private CookApi cookApi = null;
 	/**
-	 * О©╫О©╫О©╫ц╬О©╫О©╫О©╫О©╫О©╫О©╫к╣дЁО©╫й╕О©╫д╤О©╫О©╫О©╫
-	 * @param cookApi О©╫О©╫О©╫О©╫О©╫О©╫О©╫к╣дЁО©╫й╕О©╫д╤О©╫О©╫О©╫
+	 * иХжц╬ълЕвЖ╡к╣дЁЬй╕╣д╤тоС
+	 * @param cookApi ╬ълЕвЖ╡к╣дЁЬй╕╣д╤тоС
 	 */
 	public void setCookApi(CookApi cookApi) {
 		this.cookApi = cookApi;
 	}
 	
 	public void execute() {
-		this.cookApi.cook("О©╫л╤О©╫О©╫е╧О©╫О©╫О©╫");
+		this.cookApi.cook("бл╤╧ее╧гЛр");
 	}
 }

@@ -1,18 +1,18 @@
 package com.eshare.flyweight.example5;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ó»º´ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½
+ * ÃèÊöÏíÔª¶ÔÏó»º´æµÄÅäÖÃ¶ÔÏó
  */
 public class CacheConfModel{
 	/**
-	 * ï¿½ï¿½ï¿½æ¿ªÊ¼ï¿½ï¿½Ê±ï¿½Ä¿ï¿½Ê¼Ê±ï¿½ï¿½
+	 * »º´æ¿ªÊ¼¼ÆÊ±µÄ¿ªÊ¼Ê±¼ä
 	 */
 	private long beginTime;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÅµÄ³ï¿½ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½Êµï¿½ï¿½ï¿½î³¤ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½Ê±ï¿½ï¿½
+	 * »º´æ¶ÔÏó´æ·ÅµÄ³ÖÐøÊ±¼ä£¬ÆäÊµÊÇ×î³¤²»±»Ê¹ÓÃµÄÊ±¼ä
 	 */
 	private double durableTime;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ã´æ´¢ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Òªï¿½Ó»ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
+	 * »º´æ¶ÔÏóÐèÒª±»ÓÀ¾Ã´æ´¢£¬Ò²¾ÍÊÇ²»ÐèÒª´Ó»º´æÖÐÉ¾³ý
 	 */
 	private boolean forever;
 	public boolean isForever() {

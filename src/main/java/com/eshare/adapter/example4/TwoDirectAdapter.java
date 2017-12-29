@@ -3,33 +3,33 @@ package com.eshare.adapter.example4;
 import java.util.List;
 
 /**
- * к╚О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+ * к╚оРййеДфВ╤тоС
  */
 public class TwoDirectAdapter implements LogDbOperateApi,LogFileOperateApi{
 	/**
-	 * О©╫О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫Ф╢╒О©╫О©╫ж╬О©╫д╫с©з╤О©╫О©╫О©╫
+	 * ЁжсппХр╙╠╩ййеД╣днд╪Ч╢Ф╢╒хуж╬╣д╫с©з╤тоС
 	 */
 	private LogFileOperateApi fileLog;
 	/**
-	 * О©╫О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫DBО©╫Ф╢╒О©╫О©╫ж╬О©╫д╫с©з╤О©╫О©╫О©╫
+	 * ЁжсппХр╙╠╩ййеД╣дDB╢Ф╢╒хуж╬╣д╫с©з╤тоС
 	 */
 	private LogDbOperateApi  dbLog;
 	/**
-	 * О©╫О©╫О©╫Л╥╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫д╤О©╫О©╫О©╫
-	 * @param fileLog О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫Ф╢╒О©╫О©╫ж╬О©╫д╫с©з╤О©╫О©╫О©╫
-	 * @param dbLog О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫DBО©╫Ф╢╒О©╫О©╫ж╬О©╫д╫с©з╤О©╫О©╫О©╫
+	 * ╧╧тЛ╥╫╥╗ё╛╢╚хКпХр╙╠╩ййеД╣д╤тоС
+	 * @param fileLog пХр╙╠╩ййеД╣днд╪Ч╢Ф╢╒хуж╬╣д╫с©з╤тоС
+	 * @param dbLog пХр╙╠╩ййеД╣дDB╢Ф╢╒хуж╬╣д╫с©з╤тоС
 	 */
 	public TwoDirectAdapter(LogFileOperateApi fileLog,LogDbOperateApi dbLog) {
 		this.fileLog = fileLog;
 		this.dbLog = dbLog;
 	}
-/*-----О©╫О©╫О©╫О©╫О©╫г╟О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫д╥О©╫й╫О©╫О©╫О©╫О©╫О©╫н╙DBй╣О©╫ж╥О©╫й╫О©╫д╫с©О©╫-----*/	
+/*-----ртобйг╟янд╪Ч╡ывВ╣д╥╫й╫ййеДЁин╙DBй╣ож╥╫й╫╣д╫с©з-----*/	
 	public void createLog(LogModel lm) {
-		//1О©╫О©╫О©╫х╤О©╫х║О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+		//1ё╨ох╤ах║нд╪Ч╣ддзхщ
 		List<LogModel> list = fileLog.readLogFile();
-		//2О©╫О©╫О©╫О©╫О©╫О©╫О©╫б╣О©╫О©╫О©╫ж╬О©╫О©╫О©╫О©╫
+		//2ё╨╪схКпб╣дхуж╬╤тоС
 		list.add(lm);
-		//3О©╫О©╫О©╫О©╫О©╫О©╫п╢О©╫О©╫О©╫д╪О©╫
+		//3ё╨жьпбп╢хКнд╪Ч
 		fileLog.writeLogFile(list);
 	}
 
@@ -38,35 +38,39 @@ public class TwoDirectAdapter implements LogDbOperateApi,LogFileOperateApi{
 	}
 
 	public void removeLog(LogModel lm) {
-		//1О©╫О©╫О©╫х╤О©╫х║О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+		//1ё╨ох╤ах║нд╪Ч╣ддзхщ
 		List<LogModel> list = fileLog.readLogFile();
-		//2О©╫О©╫и╬О©╫О©╫О©╫О©╫с╕О©╫О©╫О©╫О©╫ж╬О©╫О©╫О©╫О©╫
+		//2ё╨и╬ЁЩоЮс╕╣дхуж╬╤тоС
 		list.remove(lm);
-		//3О©╫О©╫О©╫О©╫О©╫О©╫п╢О©╫О©╫О©╫д╪О©╫
+		//3ё╨жьпбп╢хКнд╪Ч
 		fileLog.writeLogFile(list);
 	}
 
 	public void updateLog(LogModel lm) {
-		//1О©╫О©╫О©╫х╤О©╫х║О©╫д╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+		//1ё╨ох╤ах║нд╪Ч╣ддзхщ
 		List<LogModel> list = fileLog.readLogFile();
-		//2О©╫О©╫О©╫ч╦О©╫О©╫О©╫с╕О©╫О©╫О©╫О©╫ж╬О©╫О©╫О©╫О©╫
+		//2ё╨пч╦доЮс╕╣дхуж╬╤тоС
 		for(int i=0;i<list.size();i++){
 			if(list.get(i).getLogId().equals(lm.getLogId())){
 				list.set(i, lm);
 				break;
 			}
 		}
-		//3О©╫О©╫О©╫О©╫О©╫О©╫п╢О©╫О©╫О©╫д╪О©╫
+		//3ё╨жьпбп╢хКнд╪Ч
 		fileLog.writeLogFile(list);
 	}
-/*-----О©╫О©╫О©╫О©╫О©╫г╟О©╫DBО©╫О©╫О©╫О©╫О©╫д╥О©╫й╫О©╫О©╫О©╫О©╫О©╫н╙О©╫д╪О©╫й╣О©╫ж╥О©╫й╫О©╫д╫с©О©╫-----*/
+	public void removeAll(){
+		System.out.println("now in two direct remove all");
+	}
+/*-----ртобйг╟яDB╡ывВ╣д╥╫й╫ййеДЁин╙нд╪Чй╣ож╥╫й╫╣д╫с©з-----*/
 	public List<LogModel> readLogFile() {
 		return dbLog.getAllLog();
 	}
 
 	public void writeLogFile(List<LogModel> list) {
-		//1О©╫О©╫О©╫О©╫Р╣╔╣О©╫й╣О©╫О©╫к╪б╥О©╫О©╫О©╫О©╫и╬О©╫О©╫О©╫О©╫О©╫щ©О©╫О©╫п╣О©╫О©╫О©╫О©╫О©╫
-		//2О©╫О©╫х╩О©╫О©╫я╜О©╫О©╫О©╫О©╫О©╫О©╫О©╫з╣О©╫О©╫О©╫О©╫щ╪О©╫О©╫К╣╫О©╫О©╫О©╫щ©О©╫О©╫О©╫
+		//1ё╨вН╪Р╣╔╣дй╣ожк╪б╥ё╛охи╬ЁЩйЩ╬щ©Бжп╣дйЩ╬щ
+		dbLog.removeAll();
+		//2ё╨х╩╨Ся╜╩╥╟яожтз╣дйЩ╬щ╪схК╣╫йЩ╬щ©Бжп
 		for(LogModel lm : list){
 			dbLog.createLog(lm);
 		}		

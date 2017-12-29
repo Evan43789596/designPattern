@@ -1,12 +1,12 @@
 package com.eshare.command.example7;
 /**
- * ï¿½ï¿½Ê¦ï¿½Ä½Ó¿ï¿½
+ * ³øÊ¦µÄ½Ó¿Ú
  */
 public interface CookApi {
 	/**
-	 * Ê¾ï¿½â£¬ï¿½ï¿½ï¿½ËµÄ·ï¿½ï¿½ï¿½
-	 * @param tableNum ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param name ï¿½ï¿½ï¿½ï¿½
+	 * Ê¾Òâ£¬×ö²ËµÄ·½·¨
+	 * @param tableNum µã²ËµÄ×ÀºÅ
+	 * @param name ²ËÃû
 	 */
 	public void cook(int tableNum, String name);
 }

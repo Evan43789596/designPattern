@@ -1,11 +1,11 @@
 package com.eshare.bridge.example5;
 
 /**
- * 锟斤拷锟斤拷锟侥撅拷锟斤拷实锟街讹拷锟斤拷
+ * 真正的具体实现对象
  */
 public class ConcreteImplementorA implements Implementor {
 	public void operationImpl() { 
-		//锟斤拷锟斤拷锟斤拷实锟斤拷
+		//真正的实现
 	}
 }
 

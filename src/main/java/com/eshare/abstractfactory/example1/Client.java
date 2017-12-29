@@ -2,9 +2,9 @@ package com.eshare.abstractfactory.example1;
 
 public class Client {
 	public static void main(String[] args) {
-		//锟斤拷锟斤拷装锟斤拷锟斤拷锟斤拷师锟斤拷锟斤拷
+		//创建装机工程师对象
 		ComputerEngineer engineer = new ComputerEngineer();
-		//锟斤拷锟斤拷装锟斤拷锟斤拷锟斤拷师锟皆硷拷选锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷装锟斤拷锟斤拷锟斤拷师锟斤拷装锟斤拷锟斤拷
+		//告诉装机工程师自己选择的配件，让装机工程师组装电脑
 		engineer.makeComputer(1,2);
 	}
 }

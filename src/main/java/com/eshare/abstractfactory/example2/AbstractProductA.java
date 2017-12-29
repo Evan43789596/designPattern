@@ -1,8 +1,8 @@
 package com.eshare.abstractfactory.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Æ·Aï¿½Ä½Ó¿ï¿½
+ * ³éÏó²úÆ·AµÄ½Ó¿Ú
  */
 public interface AbstractProductA {
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·Aï¿½ï¿½ØµÄ²ï¿½ï¿½ï¿½
+	//¶¨Òå³éÏó²úÆ·AÏà¹ØµÄ²Ù×÷
 }
 

@@ -1,10 +1,10 @@
 package com.eshare.memento.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö¼Ó¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÔËËãÀà£¬ÕæÕıÊµÏÖ¼Ó¼õ·¨ÔËËã
  */
 public class Operation implements OperationApi{
 	/**
-	 * ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½
+	 * ¼ÇÂ¼ÔËËãµÄ½á¹û
 	 */
 	private int result;
 	public int getResult() {
@@ -26,7 +26,7 @@ public class Operation implements OperationApi{
 		this.result = m.getResult();
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+	 * ±¸ÍüÂ¼¶ÔÏó
 	 */
 	private static class MementoImpl implements Memento{
 		private int result = 0;

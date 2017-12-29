@@ -1,18 +1,17 @@
 package com.eshare.iterator.example3;
 
-import java.util.*;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö·ï¿½ï¿½ï¿½Collectionï¿½ï¿½ï¿½ÏµÄµï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½Îªï¿½ï¿½ï¿½â²¿Í³Ò»ï¿½ï¿½ï¿½Ê·ï¿½Ê½
+ * ÓÃÀ´ÊµÏÖ·ÃÎÊCollection¼¯ºÏµÄµü´ú½Ó¿Ú£¬ÎªÁËÍâ²¿Í³Ò»·ÃÎÊ·½Ê½
  */
 public class CollectionIteratorImpl implements Iterator {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ÛºÏ¶ï¿½ï¿½ï¿½
+	 * ÓÃÀ´´æ·Å±»µü´úµÄ¾ÛºÏ¶ÔÏó
 	 */
 	private PayManager aggregate = null;
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * -1ï¿½ï¿½Ê¾ï¿½Õ¿ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ò£¬µï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ÛºÏ¶ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®Ç°
+	 * ÓÃÀ´¼ÇÂ¼µ±Ç°µü´úµ½µÄÎ»ÖÃË÷Òý
+	 * -1±íÊ¾¸Õ¿ªÊ¼µÄÊ±ºò£¬µü´úÆ÷Ö¸Ïò¾ÛºÏ¶ÔÏóµÚÒ»¸ö¶ÔÏóÖ®Ç°
 	 */
 	private int index = -1;
 	

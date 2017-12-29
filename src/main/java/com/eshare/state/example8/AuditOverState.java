@@ -1,12 +1,12 @@
 package com.eshare.state.example8;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ´¦ÀíÉóºË½áÊøµÄÀà
  */
 public class AuditOverState implements LeaveRequestState{
 	public void doWork(StateMachine request) {
-		//ï¿½È°ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½
+		//ÏÈ°ÑÒµÎñ¶ÔÏóÔìĞÍ»ØÀ´
 		LeaveRequestModel lrm = (LeaveRequestModel)request.getBusinessVO();
-		System.out.println(lrm.getUser()+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½"+lrm.getResult());
+		System.out.println(lrm.getUser()+"£¬ÄãµÄÇë¼ÙÉêÇëÒÑ¾­ÉóºË½áÊø£¬½á¹ûÊÇ£º"+lrm.getResult());
 	}
 }

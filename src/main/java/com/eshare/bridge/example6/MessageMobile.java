@@ -1,10 +1,10 @@
 package com.eshare.bridge.example6;
 /**
- * 锟斤拷锟街伙拷锟斤拷锟斤拷息锟侥凤拷式锟斤拷锟斤拷锟斤拷息
+ * 以手机短消息的方式发送消息
  */
 public  class MessageMobile implements MessageImplementor{
 
 	public void send(String message, String toUser) {
-		System.out.println("使锟斤拷锟街伙拷锟斤拷锟斤拷息锟侥凤拷式锟斤拷锟斤拷锟斤拷锟斤拷息'"+message+"'锟斤拷"+toUser);
+		System.out.println("使用手机短消息的方式，发送消息'"+message+"'给"+toUser);
 	}
 }

@@ -1,27 +1,27 @@
 package com.eshare.visitor.example4;
 import java.util.*;
 /**
- * ï¿½ï¿½ï¿½ï¿½á¹¹,Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü·ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ðµï¿½Ôªï¿½ï¿½
+ * ¶ÔÏó½á¹¹,Í¨³£ÔÚÕâÀï¶ÔÔªËØ¶ÔÏó½øÐÐ±éÀú£¬ÈÃ·ÃÎÊÕßÄÜ·ÃÎÊµ½ËùÓÐµÄÔªËØ
  */
 public class ObjectStructure {
 	/**
-	 * Òªï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Òª²Ù×÷µÄ¿Í»§¼¯ºÏ
 	 */
 	private Collection<Customer> col = new ArrayList<Customer>();
 	/**
-	 * ï¿½á¹©ï¿½ï¿½ï¿½Í»ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½Ä¸ß²ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½É¿Í»ï¿½ï¿½Ë´ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ß¾ï¿½ï¿½ï¿½
-	 * @param visitor ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ìá¹©¸ø¿Í»§¶Ë²Ù×÷µÄ¸ß²ã½Ó¿Ú£¬¾ßÌåµÄ¹¦ÄÜÓÉ¿Í»§¶Ë´«ÈëµÄ·ÃÎÊÕß¾ö¶¨
+	 * @param visitor ¿Í»§¶ËÐèÒªÊ¹ÓÃµÄ·ÃÎÊÕß
 	 */
 	public void handleRequest(Visitor visitor){
-		//Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½Ðµï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½
+		//Ñ­»·¶ÔÏó½á¹¹ÖÐµÄÔªËØ£¬½ÓÊÜ·ÃÎÊ
 		for(Customer cm : col){
 			cm.accept(visitor);
 		}
 	}
 	/**
-	 * ï¿½é½¨ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¡ï¿½
-	 * ï¿½ï¿½Í¬ï¿½Ä¶ï¿½ï¿½ï¿½á¹¹ï¿½Ð²ï¿½Í¬ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
-	 * @param ele ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½ï¿½ï¿½á¹¹ï¿½ï¿½Ôªï¿½ï¿½
+	 * ×é½¨¶ÔÏó½á¹¹£¬Ïò¶ÔÏó½á¹¹ÖÐÌí¼ÓÔªËØ¡£
+	 * ²»Í¬µÄ¶ÔÏó½á¹¹ÓÐ²»Í¬µÄ¹¹½¨·½Ê½
+	 * @param ele ¼ÓÈëµ½¶ÔÏó½á¹¹µÄÔªËØ
 	 */
 	public void addElement(Customer ele){
 		this.col.add(ele);

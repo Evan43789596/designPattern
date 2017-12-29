@@ -3,11 +3,11 @@ package com.eshare.observer.example4;
 import java.util.Observable;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ß£ï¿½Îªï¿½Ë¼òµ¥¾ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÕæÕıµÄ¶ÁÕß£¬ÎªÁË¼òµ¥¾ÍÃèÊöÒ»ÏÂĞÕÃû
  */
 public class Reader implements java.util.Observer{
 	/**
-	 * ï¿½ï¿½ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¶ÁÕßµÄĞÕÃû
 	 */
 	private String name;
 	public String getName() {
@@ -16,12 +16,14 @@ public class Reader implements java.util.Observer{
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 	public void update(Observable o, Object obj) {
-		//ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½ï¿½ÆµÄ·ï¿½Ê½
-		System.out.println(name+"ï¿½Õµï¿½ï¿½ï¿½Ö½ï¿½Ë£ï¿½ï¿½Ä¶ï¿½ï¿½È¡ï¿½Ä¿ï¿½ï¿½ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½==="+obj);
-		//ï¿½ï¿½ï¿½Ç»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		System.out.println(name+"ï¿½Õµï¿½ï¿½ï¿½Ö½ï¿½Ë£ï¿½ï¿½Ä¶ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½==="
+		//Í¬Ê±Ö§³Ö ÍÆÄ£ĞÍ ºÍ À­Ä£ĞÍ
+		
+		//ÕâÊÇ²ÉÓÃÍÆµÄ·½Ê½
+		System.out.println(name+"ÊÕµ½±¨Ö½ÁË£¬ÔÄ¶ÁÏÈ¡£Ä¿±êÍÆ¹ıÀ´µÄÄÚÈİÊÇ==="+obj);
+		//ÕâÊÇ»ñÈ¡À­µÄÊı¾İ
+		System.out.println(name+"ÊÕµ½±¨Ö½ÁË£¬ÔÄ¶ÁÏÈ¡£Ö÷¶¯µ½Ä¿±ê¶ÔÏóÈ¥À­µÄÄÚÈİÊÇ==="
 		+((NewsPaper)o).getContent());
 	}
 	

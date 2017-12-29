@@ -1,11 +1,11 @@
 package com.eshare.factorymethod.example3;
 /**
- * О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫щ©Б╠╦О©╫О©╫О©╫д╪О©╫О©╫О©╫й╫О©╫д╤О©╫О©╫О©╫
+ * ╣╪ЁЖЁийЩ╬щ©Б╠╦╥щнд╪Чпнй╫╣д╤тоС
  */
 public class ExportDB implements ExportFileApi{
 	public boolean export(String data) {
-		//О©╫О©╫й╬О©╫О©╫р╩О©╫бёО©╫О©╫О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫щ©О©╫О©╫О©╫д╪О©╫
-		System.out.println("О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫"+data+"О©╫О©╫О©╫О©╫О©╫щ©Б╠╦О©╫О©╫О©╫д╪О©╫");
+		//╪Р╣╔й╬рБр╩обё╛уБюОпХр╙╡ывВйЩ╬щ©Б╨мнд╪Ч
+		System.out.println("╣╪ЁЖйЩ╬щ"+data+"╣╫йЩ╬щ©Б╠╦╥щнд╪Ч");
 		return true;
 	}
 }

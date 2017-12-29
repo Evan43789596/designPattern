@@ -1,10 +1,10 @@
 package com.eshare.factorymethod.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö¶ï¿½ï¿½ï¿½
+ * ¾ßÌåµÄ´´½¨Æ÷ÊµÏÖ¶ÔÏó
  */
 public class ConcreteCreator extends Creator {
 	public Product factoryMethod() {
-		//ï¿½Ø¶ï¿½ï¿½å¹¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Productï¿½ï¿½ï¿½ï¿½
+		//ÖØ¶¨Òå¹¤³§·½·¨£¬·µ»ØÒ»¸ö¾ßÌåµÄProduct¶ÔÏó
 		return new ConcreteProduct();
 	}
 }

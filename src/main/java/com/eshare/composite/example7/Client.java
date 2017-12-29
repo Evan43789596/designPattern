@@ -2,17 +2,17 @@ package com.eshare.composite.example7;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½
-		Component root = new Composite("ï¿½ï¿½×°");
-		Component c1 = new Composite("ï¿½ï¿½×°");
-		Component c2= new Composite("ï¿½ï¿½ï¿½ï¿½");
-		Component c3= new Composite("ï¿½ï¿½×°");
-		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½×´ï¿½ï¿½ï¿½ï¿½
+		//¶¨ÒåËùÓĞµÄ×éºÏ¶ÔÏó
+		Component root = new Composite("·ş×°");
+		Component c1 = new Composite("ÄĞ×°");
+		Component c2= new Composite("³ÄÒÂ");
+		Component c3= new Composite("ÄĞ×°");
+		//ÉèÖÃÒ»¸ö»·×´ÒıÓÃ
 		root.addChild(c1);
 		c1.addChild(c2);
-		c2.addChild(c3);
+//		c2.addChild(c3);
 		
-		//ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//µ÷ÓÃ¸ù¶ÔÏóµÄÊä³ö¹¦ÄÜÀ´Êä³öÕû¿ÃÊ÷
 		root.printStruct("");
 	}
 }

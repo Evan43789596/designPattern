@@ -1,9 +1,9 @@
 package com.eshare.strategy.example8;
 /**
- * 锟斤拷锟斤拷志锟斤拷录锟斤拷锟斤拷锟捷匡拷
+ * 把日志记录到数据库
  */
 public class FileLog extends LogStrategyTemplate{
 	public void doLog(String msg) {
-		System.out.println("锟斤拷锟节帮拷 '"+msg+"' 锟斤拷录锟斤拷锟侥硷拷锟斤拷");
+		System.out.println("现在把 '"+msg+"' 记录到文件中");
 	}
 }

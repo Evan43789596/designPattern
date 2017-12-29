@@ -1,44 +1,44 @@
 package com.eshare.prototype.example8;
 import java.util.*;
 /**
- * Ô­ï¿½Í¹ï¿½ï¿½ï¿½ï¿½ï¿½
+ * Ô­ÐÍ¹ÜÀíÆ÷
  */
 public class PrototypeManager {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼Ô­ï¿½ÍµÄ±ï¿½Åºï¿½Ô­ï¿½ï¿½Êµï¿½ï¿½ï¿½Ä¶ï¿½Ó¦ï¿½ï¿½Ïµ
+	 * ÓÃÀ´¼ÇÂ¼Ô­ÐÍµÄ±àºÅºÍÔ­ÐÍÊµÀýµÄ¶ÔÓ¦¹ØÏµ
 	 */
 	private static Map<String,Prototype> map = new HashMap<String,Prototype>();
 	/**
-	 * Ë½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â²¿ï¿½ï¿½Î½ï¿½Ä´ï¿½ï¿½ï¿½Êµï¿½ï¿½
+	 * Ë½ÓÐ»¯¹¹Ôì·½·¨£¬±ÜÃâÍâ²¿ÎÞÎ½µÄ´´½¨ÊµÀý
 	 */
 	private PrototypeManager(){
 		//
 	}
 	/**
-	 * ï¿½ï¿½Ô­ï¿½Í¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó»ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½Ä³ï¿½ï¿½Ô­ï¿½ï¿½×¢ï¿½ï¿½
-	 * @param prototypeId Ô­ï¿½Í±ï¿½ï¿½
-	 * @param prototype Ô­ï¿½ï¿½Êµï¿½ï¿½
+	 * ÏòÔ­ÐÍ¹ÜÀíÆ÷ÀïÃæÌí¼Ó»òÊÇÐÞ¸ÄÄ³¸öÔ­ÐÍ×¢²á
+	 * @param prototypeId Ô­ÐÍ±àºÅ
+	 * @param prototype Ô­ÐÍÊµÀý
 	 */
 	public synchronized static void setPrototype(String prototypeId,Prototype prototype){
 		map.put(prototypeId, prototype);
 	}
 	/**
-	 * ï¿½ï¿½Ô­ï¿½Í¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½Ä³ï¿½ï¿½Ô­ï¿½ï¿½×¢ï¿½ï¿½
-	 * @param prototypeId Ô­ï¿½Í±ï¿½ï¿½
+	 * ´ÓÔ­ÐÍ¹ÜÀíÆ÷ÀïÃæÉ¾³ýÄ³¸öÔ­ÐÍ×¢²á
+	 * @param prototypeId Ô­ÐÍ±àºÅ
 	 */
 	public synchronized static void removePrototype(String prototypeId){
 		map.remove(prototypeId);
 	}
 	/**
-	 * ï¿½ï¿½È¡Ä³ï¿½ï¿½Ô­ï¿½Í±ï¿½Å¶ï¿½Ó¦ï¿½ï¿½Ô­ï¿½ï¿½Êµï¿½ï¿½
-	 * @param prototypeId Ô­ï¿½Í±ï¿½ï¿½
-	 * @return Ô­ï¿½Í±ï¿½Å¶ï¿½Ó¦ï¿½ï¿½Ô­ï¿½ï¿½Êµï¿½ï¿½
-	 * @throws Exception ï¿½ï¿½ï¿½Ô­ï¿½Í±ï¿½Å¶ï¿½Ó¦ï¿½ï¿½Ô­ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * »ñÈ¡Ä³¸öÔ­ÐÍ±àºÅ¶ÔÓ¦µÄÔ­ÐÍÊµÀý
+	 * @param prototypeId Ô­ÐÍ±àºÅ
+	 * @return Ô­ÐÍ±àºÅ¶ÔÓ¦µÄÔ­ÐÍÊµÀý
+	 * @throws Exception Èç¹ûÔ­ÐÍ±àºÅ¶ÔÓ¦µÄÔ­ÐÍÊµÀý²»´æÔÚ£¬±¨³öÀýÍâ
 	 */
 	public synchronized static Prototype getPrototype(String prototypeId)throws Exception{
 		Prototype prototype = map.get(prototypeId);
 		if(prototype == null){
-			throw new Exception("ï¿½ï¿½Ï£ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ô­ï¿½Í»ï¿½Ã»ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½");
+			throw new Exception("ÄúÏ£Íû»ñÈ¡µÄÔ­ÐÍ»¹Ã»ÓÐ×¢²á»òÒÑ±»Ïú»Ù");
 		}
 		return prototype;
 	}

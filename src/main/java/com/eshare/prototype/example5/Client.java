@@ -2,22 +2,22 @@ package com.eshare.prototype.example5;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½È´ï¿½ï¿½ï¿½Ô­ï¿½ï¿½Êµï¿½ï¿½
+		//ÏÈ´´½¨Ô­ĞÍÊµÀı
 		PersonalOrder oa1 = new PersonalOrder();
 		
-		//ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½Êµï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+		//ÉèÖÃÔ­ĞÍÊµÀıµÄ¶©µ¥ÊıÁ¿µÄÖµ
 		oa1.setOrderProductNum(100);
-		//Îªï¿½Ë¼òµ¥£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	    System.out.println("ï¿½ï¿½ï¿½Çµï¿½Ò»ï¿½Î»ï¿½È¡ï¿½Ä¶ï¿½ï¿½ï¿½Êµï¿½ï¿½==="+oa1.getOrderProductNum());
+		//ÎªÁË¼òµ¥£¬ÕâÀï½ö½öÊä³öÊıÁ¿
+	    System.out.println("ÕâÊÇµÚÒ»´Î»ñÈ¡µÄ¶ÔÏóÊµÀı==="+oa1.getOrderProductNum());
 	    
-		//Í¨ï¿½ï¿½ï¿½ï¿½Â¡ï¿½ï¿½ï¿½ï¿½È¡ï¿½Âµï¿½Êµï¿½ï¿½
+		//Í¨¹ı¿ËÂ¡À´»ñÈ¡ĞÂµÄÊµÀı
 	    PersonalOrder oa2 = (PersonalOrder)oa1.clone();
-		//ï¿½Ş¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ĞŞ¸ÄËüµÄÊıÁ¿
 		oa2.setOrderProductNum(80);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Â¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½Öµ
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Â¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½==="+oa2.getOrderProductNum());
+		//Êä³ö¿ËÂ¡³öÀ´µÄ¶ÔÏóµÄÖµ
+		System.out.println("Êä³ö¿ËÂ¡³öÀ´µÄÊµÀı==="+oa2.getOrderProductNum());
 		
-		//ï¿½Ù´ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Öµ
-		System.out.println("ï¿½Ù´ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½Êµï¿½ï¿½==="+oa1.getOrderProductNum());	
+		//ÔÙ´ÎÊä³öÔ­ĞÍÊµÀıµÄÖµ
+		System.out.println("ÔÙ´ÎÊä³öÔ­ĞÍÊµÀı==="+oa1.getOrderProductNum());	
 	}
 }

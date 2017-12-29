@@ -1,26 +1,26 @@
 package com.eshare.command.example4;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿ï¿½
+ * ²Ù×÷ÔËËãµÄ½Ó¿Ú
  */
 public interface OperationApi {
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½Ä½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½Ä½ï¿½ï¿½
+	 * »ñÈ¡¼ÆËãÍê³ÉºóµÄ½á¹û
+	 * @return ¼ÆËãÍê³ÉºóµÄ½á¹û
 	 */
 	public int getResult();
 	/**
-	 * ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ã¿ªÊ¼ï¿½Ä³ï¿½Ê¼Öµ
-	 * @param result ï¿½ï¿½ï¿½ã¿ªÊ¼ï¿½Ä³ï¿½Ê¼Öµ
+	 * ÉèÖÃ¼ÆËã¿ªÊ¼µÄ³õÊ¼Öµ
+	 * @param result ¼ÆËã¿ªÊ¼µÄ³õÊ¼Öµ
 	 */
 	public void setResult(int result);
 	/**
-	 * Ö´ï¿½Ð¼Ó·ï¿½
-	 * @param num ï¿½ï¿½Òªï¿½Óµï¿½ï¿½ï¿½
+	 * Ö´ÐÐ¼Ó·¨
+	 * @param num ÐèÒª¼ÓµÄÊý
 	 */
 	public void add(int num);
 	/**
-	 * Ö´ï¿½Ð¼ï¿½ï¿½ï¿½
-	 * @param num ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ö´ÐÐ¼õ·¨
+	 * @param num ÐèÒª¼õµÄÊý
 	 */
 	public void substract(int num);
 }

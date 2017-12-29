@@ -1,40 +1,40 @@
 package com.eshare.templatemethod.example7;
 /**
- *	ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æµï¿½Ä£ï¿½ï¿½
+ *	µÇÂ¼¿ØÖÆµÄÄ£°å
  */
 public class LoginTemplate {
 	/**
-	 * ï¿½Ð¶Ïµï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Üµï¿½Â¼ï¿½É¹ï¿½
-	 * @param lm ï¿½ï¿½×°ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ýµï¿½Model
-	 * @param callback LoginCallbackï¿½ï¿½ï¿½ï¿½
-	 * @return trueï¿½ï¿½Ê¾ï¿½ï¿½Â¼ï¿½É¹ï¿½ï¿½ï¿½falseï¿½ï¿½Ê¾ï¿½ï¿½Â¼Ê§ï¿½ï¿½
+	 * ÅÐ¶ÏµÇÂ¼Êý¾ÝÊÇ·ñÕýÈ·£¬Ò²¾ÍÊÇÊÇ·ñÄÜµÇÂ¼³É¹¦
+	 * @param lm ·â×°µÇÂ¼Êý¾ÝµÄModel
+	 * @param callback LoginCallback¶ÔÏó
+	 * @return true±íÊ¾µÇÂ¼³É¹¦£¬false±íÊ¾µÇÂ¼Ê§°Ü
 	 */
 	public final boolean login(LoginModel lm,LoginCallback callback){
-		//1ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½Â¼ï¿½ï¿½Ô±ï¿½Ä±ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£º¸ù¾ÝµÇÂ¼ÈËÔ±µÄ±àºÅÈ¥»ñÈ¡ÏàÓ¦µÄÊý¾Ý
 		LoginModel dbLm = callback.findLoginUser(lm.getLoginId());
 		if(dbLm!=null){
-			//2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
+			//2£º¶ÔÃÜÂë½øÐÐ¼ÓÃÜ
 			String encryptPwd = callback.encryptPwd(lm.getPwd(),this);
-			//ï¿½Ñ¼ï¿½ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»Øµï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//°Ñ¼ÓÃÜºóµÄÃÜÂëÉèÖÃ»Øµ½µÇÂ¼Êý¾ÝÄ£ÐÍÀïÃæ
 			lm.setPwd(encryptPwd);
-			//3ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½
+			//3£ºÅÐ¶ÏÊÇ·ñÆ¥Åä
 			return callback.match(lm, dbLm,this);
 		}
 		return false;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
-	 * @param pwd ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¶ÔÃÜÂëÊý¾Ý½øÐÐ¼ÓÃÜ
+	 * @param pwd ÃÜÂëÊý¾Ý
+	 * @return ¼ÓÃÜºóµÄÃÜÂëÊý¾Ý
 	 */
 	public String encryptPwd(String pwd){
 		return pwd;
 	}
 	/**
-	 * ï¿½Ð¶ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ð´ï¿½Äµï¿½Â¼ï¿½ï¿½ï¿½ÝºÍ´æ´¢ï¿½Ð¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param lm ï¿½Ã»ï¿½ï¿½ï¿½Ð´ï¿½Äµï¿½Â¼ï¿½ï¿½ï¿½ï¿½
-	 * @param dbLm ï¿½Ú´æ´¢ï¿½Ð¶ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return trueï¿½ï¿½Ê¾Æ¥ï¿½ï¿½É¹ï¿½ï¿½ï¿½falseï¿½ï¿½Ê¾Æ¥ï¿½ï¿½Ê§ï¿½ï¿½
+	 * ÅÐ¶ÏÓÃ»§ÌîÐ´µÄµÇÂ¼Êý¾ÝºÍ´æ´¢ÖÐ¶ÔÓ¦µÄÊý¾ÝÊÇ·ñÆ¥ÅäµÃÉÏ
+	 * @param lm ÓÃ»§ÌîÐ´µÄµÇÂ¼Êý¾Ý
+	 * @param dbLm ÔÚ´æ´¢ÖÐ¶ÔÓ¦µÄÊý¾Ý
+	 * @return true±íÊ¾Æ¥Åä³É¹¦£¬false±íÊ¾Æ¥ÅäÊ§°Ü
 	 */
 	public boolean match(LoginModel lm,LoginModel dbLm){
 		if(lm.getLoginId().equals(dbLm.getLoginId()) 

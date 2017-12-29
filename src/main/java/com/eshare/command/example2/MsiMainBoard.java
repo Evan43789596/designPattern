@@ -1,17 +1,17 @@
 package com.eshare.command.example2;
 /**
- * Î¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ß£ï¿½ï¿½ï¿½CommandÄ£Ê½ï¿½Ğ³äµ±Receiver
+ * Î¢ĞÇÖ÷°åÀà£¬¿ª»úÃüÁîµÄÕæÕıÊµÏÖÕß£¬ÔÚCommandÄ£Ê½ÖĞ³äµ±Receiver
  */
 public class MsiMainBoard implements MainBoardApi{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+	 * ÕæÕıµÄ¿ª»úÃüÁîµÄÊµÏÖ
 	 */
 	public void open(){
-		System.out.println("Î¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èºï¿½");
-		System.out.println("ï¿½ï¿½Í¨ï¿½ï¿½Ô´......");
-		System.out.println("ï¿½è±¸ï¿½ï¿½ï¿½......");
-		System.out.println("×°ï¿½ï¿½ÏµÍ³......");
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½......");
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò¿ª£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		System.out.println("Î¢ĞÇÖ÷°åÏÖÔÚÕıÔÚ¿ª»ú£¬ÇëµÈºò");
+		System.out.println("½ÓÍ¨µçÔ´......");
+		System.out.println("Éè±¸¼ì²é......");
+		System.out.println("×°ÔØÏµÍ³......");
+		System.out.println("»úÆ÷Õı³£ÔË×ªÆğÀ´......");
+		System.out.println("»úÆ÷ÒÑ¾­Õı³£´ò¿ª£¬Çë²Ù×÷");
 	}
 }

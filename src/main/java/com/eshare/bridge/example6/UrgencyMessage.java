@@ -1,22 +1,22 @@
 package com.eshare.bridge.example6;
 /**
- * ï¿½Ó¼ï¿½ï¿½ï¿½Ï¢
+ * ¼Ó¼±ÏûÏ¢
  */
 public class UrgencyMessage extends AbstractMessage{
 	public UrgencyMessage(MessageImplementor impl) {
 		super(impl);
 	}
 	public void sendMessage(String message, String toUser) {
-		message = "ï¿½Ó¼ï¿½ï¿½ï¿½"+message;
+		message = "¼Ó¼±£º"+message;
 		super.sendMessage(message, toUser);
 	}
 	/**
-	 * ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Ï¢ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param messageId ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½Ï¢ï¿½Ä±ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Object
+	 * ¼à¿ØÄ³ÏûÏ¢µÄ´¦Àí¹ı³Ì
+	 * @param messageId ±»¼à¿ØµÄÏûÏ¢µÄ±àºÅ
+	 * @return °üº¬¼à¿Øµ½µÄÊı¾İ¶ÔÏó£¬ÕâÀïÊ¾ÒâÒ»ÏÂ£¬ËùÒÔÓÃÁËObject
 	 */
 	public Object watch(String messageId) {
-		//ï¿½ï¿½È¡ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½Ö¯ï¿½É¼ï¿½Øµï¿½ï¿½ï¿½ï¿½İ¶ï¿½ï¿½ï¿½È»ï¿½ó·µ»ï¿½		
+		//»ñÈ¡ÏàÓ¦µÄÊı¾İ£¬×éÖ¯³É¼à¿ØµÄÊı¾İ¶ÔÏó£¬È»ºó·µ»Ø		
 		return null;
 	}	
 }

@@ -2,9 +2,9 @@ package com.eshare.state.example3;
 
 public class NormalVoteState2 extends NormalVoteState{
 	public void vote(String user, String voteItem, VoteManager voteManager) {
-		//ï¿½Èµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¹ï¿½ï¿½ï¿½
+		//ÏÈµ÷ÓÃÒÑÓÐµÄ¹¦ÄÜ
 		super.vote(user, voteItem, voteManager);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½ï¿½
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½");
+		//¸øÓè»ý·Ö½±Àø£¬Ê¾ÒâÒ»ÏÂ
+		System.out.println("½±Àø»ý·Ö10·Ö");
 	}
 }

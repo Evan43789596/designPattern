@@ -1,23 +1,23 @@
 package com.eshare.templatemethod.example1;
 
 /**
- * ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æµï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ÆÕÍ¨ÓÃ»§µÇÂ¼¿ØÖÆµÄÂß¼­´¦Àí
  */
 public class NormalLogin {
 	/**
-	 * ï¿½Ð¶Ïµï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Üµï¿½Â¼ï¿½É¹ï¿½
-	 * @param lm ï¿½ï¿½×°ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ýµï¿½Model
-	 * @return trueï¿½ï¿½Ê¾ï¿½ï¿½Â¼ï¿½É¹ï¿½ï¿½ï¿½falseï¿½ï¿½Ê¾ï¿½ï¿½Â¼Ê§ï¿½ï¿½
+	 * ÅÐ¶ÏµÇÂ¼Êý¾ÝÊÇ·ñÕýÈ·£¬Ò²¾ÍÊÇÊÇ·ñÄÜµÇÂ¼³É¹¦
+	 * @param lm ·â×°µÇÂ¼Êý¾ÝµÄModel
+	 * @return true±íÊ¾µÇÂ¼³É¹¦£¬false±íÊ¾µÇÂ¼Ê§°Ü
 	 */
 	public boolean login(LoginModel lm) {
-		//1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½È¡ï¿½ï¿½Â¼ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//1£º´ÓÊý¾Ý¿â»ñÈ¡µÇÂ¼ÈËÔ±µÄÐÅÏ¢£¬ ¾ÍÊÇ¸ù¾ÝÓÃ»§±àºÅÈ¥»ñÈ¡ÈËÔ±µÄÊý¾Ý
 		UserModel um = this.findUserByUserId(lm.getUserId());
-		//2ï¿½ï¿½ï¿½Ð¶Ï´ï¿½Ç°Ì¨ï¿½ï¿½ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½Äµï¿½Â¼ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½
-		//ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ã»ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½umÎªnullï¿½ï¿½Ëµï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½Ç²ï¿½Îªnullï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½new UserModel();
-		//ï¿½ï¿½Ë»ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
+		//2£ºÅÐ¶Ï´ÓÇ°Ì¨´«µÝ¹ýÀ´µÄµÇÂ¼Êý¾Ý£¬ºÍÊý¾Ý¿âÖÐÒÑÓÐµÄÊý¾ÝÊÇ·ñÆ¥Åä
+		//ÏÈÅÐ¶ÏÓÃ»§ÊÇ·ñ´æÔÚ£¬Èç¹ûumÎªnull£¬ËµÃ÷ÓÃ»§¿Ï¶¨²»´æÔÚ
+		//µ«ÊÇ²»Îªnull£¬ÓÃ»§²»Ò»¶¨´æÔÚ£¬ÒòÎªÊý¾Ý²ã¿ÉÄÜ·µ»Ønew UserModel();
+		//Òò´Ë»¹ÐèÒª×ö½øÒ»²½µÄÅÐ¶Ï
 		if (um != null) {
-			//ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Æ¥ï¿½ï¿½
+			//Èç¹ûÓÃ»§´æÔÚ£¬¼ì²éÓÃ»§±àºÅºÍÃÜÂëÊÇ·ñÆ¥Åä
 			if (um.getUserId().equals(lm.getUserId())
 					&& um.getPwd().equals(lm.getPwd())) {
 				return true;
@@ -26,12 +26,12 @@ public class NormalLogin {
 		return false;
 	}
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Å»ï¿½È¡ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
-	 * @param userId ï¿½Ã»ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
+	 * ¸ù¾ÝÓÃ»§±àºÅ»ñÈ¡ÓÃ»§µÄÏêÏ¸ÐÅÏ¢
+	 * @param userId ÓÃ»§±àºÅ
+	 * @return ¶ÔÓ¦µÄÓÃ»§µÄÏêÏ¸ÐÅÏ¢
 	 */
 	private UserModel findUserByUserId(String userId) {
-		// ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½Ô¾ï¿½ï¿½ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¶ï¿½ï¿½ï¿½
+		// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓÐÄ¬ÈÏÊý¾ÝµÄ¶ÔÏó
 		UserModel um = new UserModel();
 		um.setUserId(userId);
 		um.setName("test");

@@ -1,14 +1,14 @@
 package com.eshare.adapter.example1;
 /**
- * Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Í»ï¿½ï¿½ï¿½
+ * Ê¹ÓÃÊÊÅäÆ÷µÄ¿Í»§¶Ë
  */
 public class Client {	
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½è±»ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+		//´´½¨Ğè±»ÊÊÅäµÄ¶ÔÏó
 		Adaptee adaptee = new Adaptee();
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ÃµÄ½Ó¿Ú¶ï¿½ï¿½ï¿½
+		//´´½¨¿Í»§¶ËĞèÒªµ÷ÓÃµÄ½Ó¿Ú¶ÔÏó
 		Target target = new Adapter(adaptee);
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ÇëÇó´¦Àí
 		target.request();
 	}
 }

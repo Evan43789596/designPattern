@@ -1,7 +1,7 @@
 package com.eshare.facade.example3;
 /**
- * Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Modelï¿½ï¿½È¥ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½
+ * Ê¾ÒâÅäÖÃ¹ÜÀí£¬¾ÍÊÇ¸ºÔğ¶ÁÈ¡ÅäÖÃÎÄ¼ş£¬
+ * ²¢°ÑÅäÖÃÎÄ¼şµÄÄÚÈİÉèÖÃµ½ÅäÖÃModelÖĞÈ¥£¬ÊÇ¸öµ¥Àı
  */
 public class ConfigManager {
 	private static ConfigManager manager = null;
@@ -13,13 +13,13 @@ public class ConfigManager {
 		if(manager == null){
 			manager = new ConfigManager();
 			cm = new ConfigModel();
-			//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ãµï¿½ConfigModelï¿½ï¿½È¥
+			//¶ÁÈ¡ÅäÖÃÎÄ¼ş£¬°ÑÖµÉèÖÃµ½ConfigModelÖĞÈ¥
 		}
 		return manager;
 	}
 	/**
-	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @return ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
+	 * »ñÈ¡ÅäÖÃµÄÊı¾İ
+	 * @return ÅäÖÃµÄÊı¾İ
 	 */
 	public ConfigModel getConfigData(){
 		return cm;

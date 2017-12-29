@@ -1,6 +1,6 @@
 package com.eshare.decorator.example6;
 /**
- * й╣О©╫О©╫х╗О©╫ч©О©╫О©╫О©╫
+ * й╣ожх╗оч©ьжф
  */
 public class CheckDecorator extends Decorator{
 	public CheckDecorator(GoodsSaleEbi ebi){
@@ -8,10 +8,10 @@ public class CheckDecorator extends Decorator{
 	}
 	
 	public boolean sale(String user,String customer, SaleModel saleModel) {
-		//О©╫Р╣╔╣Цё╛ж╩О©╫О©╫О©╫О©╫О©╫О©╫ж╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
-		if(!"О©╫О©╫О©╫О©╫".equals(user)){
-			System.out.println("О©╫т╡О©╫О©╫О©╫"+user+"О©╫О©╫О©╫О©╫ц╩О©╫п╠О©╫О©╫О©╫О©╫О©╫О©╫ш╣О©╫О©╫О©╫х╗О©╫О©╫");
-			//О©╫м╡О©╫О©╫ы╣О©╫О©╫ц╠О©╫в╟О©╫н╤О©╫О©╫О©╫д╧О©╫О©╫О©╫О©╫О©╫
+		//╪Р╣╔╣Цё╛ж╩хцуехЩж╢ппуБ╦Ж╧╕дэ
+		if(!"уехЩ".equals(user)){
+			System.out.println("╤т╡╩фП"+user+"ё╛дЦц╩сп╠ё╢ФоЗйш╣╔╣дх╗оч");
+			//╬м╡╩ты╣Всц╠╩в╟йн╤тоС╣д╧╕дэак
 			return false;
 		}else{
 			return this.ebi.sale(user, customer, saleModel);

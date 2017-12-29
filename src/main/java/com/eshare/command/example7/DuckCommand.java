@@ -3,7 +3,7 @@ package com.eshare.command.example7;
 import java.io.Serializable;
 
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬±ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼
+ * ÃüÁî¶ÔÏó£¬±±¾©¿¾Ñ¼
  */
 public class DuckCommand implements Command,Serializable{
 	private CookApi cookApi = null;
@@ -19,6 +19,6 @@ public class DuckCommand implements Command,Serializable{
 	}
 	
 	public void execute() {
-		this.cookApi.cook(tableNum,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼");
+		this.cookApi.cook(tableNum,"±±¾©¿¾Ñ¼");
 	}
 }

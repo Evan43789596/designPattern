@@ -3,17 +3,17 @@ package com.eshare.singleton.example11;
 
 public class Singleton {
 	/**
-	 * 锟洁级锟斤拷锟节诧拷锟洁，也锟斤拷锟角撅拷态锟侥筹拷员式锟节诧拷锟洁，锟斤拷锟节诧拷锟斤拷锟绞碉拷锟斤拷锟斤拷獠匡拷锟斤拷实锟斤拷没锟叫绑定癸拷系锟斤拷
-	 * 锟斤拷锟斤拷只锟叫憋拷锟斤拷锟矫碉拷锟脚伙拷装锟截ｏ拷锟接讹拷实锟斤拷锟斤拷锟接迟硷拷锟斤拷
+	 * 类级的内部类，也就是静态的成员式内部类，该内部类的实例与外部类的实例没有绑定关系，
+	 * 而且只有被调用到才会装载，从而实现了延迟加载
 	 */
 	private static class SingletonHolder{
 		/**
-		 * 锟斤拷态锟斤拷始锟斤拷锟斤拷锟斤拷锟斤拷JVM锟斤拷锟斤拷证锟竭程帮拷全
+		 * 静态初始化器，由JVM来保证线程安全
 		 */
 		private static Singleton instance = new Singleton();
 	}
 	/**
-	 * 私锟叫伙拷锟斤拷锟届方锟斤拷
+	 * 私有化构造方法
 	 */
 	private Singleton(){
 	}

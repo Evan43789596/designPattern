@@ -1,13 +1,13 @@
 package com.eshare.mediator.example1;
 /**
- * ï¿½Ð½ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Â¶ï¿½ï¿½ï¿½Í¨ï¿½ÅµÄ½Ó¿ï¿½
+ * ÖÐ½éÕß£¬¶¨Òå¸÷¸öÍ¬ÊÂ¶ÔÏóÍ¨ÐÅµÄ½Ó¿Ú
  */
 public interface Mediator {
 	/**
-	 * Í¬ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Í¨Öªï¿½Ð½ï¿½ï¿½ßµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Â¶ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½
-	 * @param colleague Í¬ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ß¶ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
-	 *                  È¥ï¿½ï¿½È¡Í¬ï¿½Â¶ï¿½ï¿½ï¿½ï¿½×´Ì¬
+	 * Í¬ÊÂ¶ÔÏóÔÚ×ÔÉí¸Ä±äµÄÊ±ºòÀ´Í¨ÖªÖÐ½éÕßµÄ·½·¨£¬
+	 * ÈÃÖÐ½éÕßÈ¥¸ºÔðÏàÓ¦µÄÓëÆäËûÍ¬ÊÂ¶ÔÏóµÄ½»»¥
+	 * @param colleague Í¬ÊÂ¶ÔÏó×ÔÉí£¬ºÃÈÃÖÐ½éÕß¶ÔÏóÍ¨¹ý¶ÔÏóÊµÀý
+	 *                  È¥»ñÈ¡Í¬ÊÂ¶ÔÏóµÄ×´Ì¬
 	 */
 	public void changed(Colleague colleague);
 }

@@ -2,11 +2,11 @@ package com.eshare.abstractfactory.example4;
 
 public class Client {
 	public static void main(String[] args) {
-		//ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½ï¿½ï¿½
+		//´´½¨×°»ú¹¤³ÌÊ¦¶ÔÏó
 		ComputerEngineer engineer = new ComputerEngineer();
-		//ï¿½Í»ï¿½Ñ¡ï¿½ñ²¢´ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½Ãµï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//¿Í»§Ñ¡Ôñ²¢´´½¨ÐèÒªÊ¹ÓÃµÄ×°»ú·½°¸¶ÔÏó
 		AbstractFactory schema = new Schema3();
-		//ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½Ô¼ï¿½Ñ¡ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¦ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
+		//¸æËß×°»ú¹¤³ÌÊ¦×Ô¼ºÑ¡ÔñµÄ×°»ú·½°¸£¬ÈÃ×°»ú¹¤³ÌÊ¦×é×°µçÄÔ
 		engineer.makeComputer(schema);
 	}
 }

@@ -1,16 +1,16 @@
 package com.eshare.observer.example5;
 /**
- * ï¿½ï¿½ï¿½ï¿½Ä¹Û²ï¿½ï¿½ï¿½Êµï¿½ï¿½
+ * ¾ßÌåµÄ¹Û²ìÕßÊµÏÖ
  */
 public class Watcher implements WatcherObserver{
 	/**
-	 * Ö°ï¿½ï¿½
+	 * Ö°Îñ
 	 */
 	private String job;
 	
 	public void update(WaterQualitySubject subject) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Ê½
-		System.out.println(job+"ï¿½ï¿½È¡ï¿½ï¿½Í¨Öªï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½È¾ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½"+subject.getPolluteLevel());
+		//ÕâÀï²ÉÓÃµÄÊÇÀ­µÄ·½Ê½
+		System.out.println(job+"»ñÈ¡µ½Í¨Öª£¬µ±Ç°ÎÛÈ¾¼¶±ðÎª£º"+subject.getPolluteLevel());
 	}
 	
 	public String getJob() {

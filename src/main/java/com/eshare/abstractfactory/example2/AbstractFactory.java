@@ -1,16 +1,16 @@
 package com.eshare.abstractfactory.example2;
 /**
- * 锟斤拷锟襟工筹拷锟侥接口ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟狡凤拷锟斤拷锟侥诧拷锟斤拷
+ * 抽象工厂的接口，声明创建抽象产品对象的操作
  */
 public interface AbstractFactory {
 	/**
-	 * 示锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟狡稟锟侥讹拷锟斤拷
-	 * @return 锟斤拷锟斤拷锟狡稟锟侥讹拷锟斤拷
+	 * 示例方法，创建抽象产品A的对象
+	 * @return 抽象产品A的对象
 	 */
 	public AbstractProductA createProductA();
 	/**
-	 * 示锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟狡稡锟侥讹拷锟斤拷
-	 * @return 锟斤拷锟斤拷锟狡稡锟侥讹拷锟斤拷
+	 * 示例方法，创建抽象产品B的对象
+	 * @return 抽象产品B的对象
 	 */
 	public AbstractProductB createProductB();
 }

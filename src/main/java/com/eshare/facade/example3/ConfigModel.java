@@ -1,18 +1,18 @@
 package com.eshare.facade.example3;
 /**
- * Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Modelï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ»ï¿½Ü¶ï¿½
+ * Ê¾ÒâÅäÖÃÃèÊöµÄÊı¾İModel£¬ÕæÊµµÄÅäÖÃÊı¾İ»áºÜ¶à
  */
 public class ConfigModel {
 	/**
-	 * ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½É±ï¿½ï¿½Ö²ã£¬Ä¬ï¿½ï¿½ï¿½ï¿½true
+	 * ÊÇ·ñĞèÒªÉú³É±íÏÖ²ã£¬Ä¬ÈÏÊÇtrue
 	 */
 	private boolean needGenPresentation = true;
 	/**
-	 * ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ã£¬Ä¬ï¿½ï¿½ï¿½ï¿½true
+	 * ÊÇ·ñĞèÒªÉú³ÉÂß¼­²ã£¬Ä¬ÈÏÊÇtrue
 	 */
 	private boolean needGenBusiness = true;
 	/**
-	 * ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½DAOï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½true
+	 * ÊÇ·ñĞèÒªÉú³ÉDAO£¬Ä¬ÈÏÊÇtrue
 	 */
 	private boolean needGenDAO = true;
 	public boolean isNeedGenPresentation() {

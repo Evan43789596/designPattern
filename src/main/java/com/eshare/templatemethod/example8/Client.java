@@ -2,40 +2,42 @@ package com.eshare.templatemethod.example8;
 import java.util.*;
 public class Client {
 	public static void main(String[] args) {
-		//×¼ï¿½ï¿½Òªï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½
+		//×¼±¸Òª²âÊÔµÄÊý¾Ý
 		UserModel um1 = new UserModel("u1","user1",23);
 		UserModel um2 = new UserModel("u2","user2",22);
 		UserModel um3 = new UserModel("u3","user3",21);
 		UserModel um4 = new UserModel("u4","user4",24);
-		//ï¿½ï¿½Óµï¿½ï¿½Ð±ï¿½ï¿½ï¿½
+		//Ìí¼Óµ½ÁÐ±íÖÐ
 		List<UserModel> list = new ArrayList<UserModel>();
 		list.add(um1);
 		list.add(um2);
 		list.add(um3);
 		list.add(um4);
 		
-		System.out.println("ï¿½ï¿½ï¿½ï¿½Ç°---------------------ï¿½ï¿½");
+		System.out.println("ÅÅÐòÇ°---------------------¡µ");
 		printList(list);
-		//Êµï¿½Ö±È½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+		
+		
+		//ÊµÏÖ±È½ÏÆ÷£¬Ò²¿ÉÒÔµ¥¶ÀÓÃÒ»¸öÀàÀ´ÊµÏÖ
 		Comparator c = new Comparator(){
 			public int compare(Object obj1, Object obj2) {
-				//ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				//¼ÙÈçÊµÏÖ°´ÕÕÄêÁäÉýÐòÅÅÐò
 				UserModel tempUm1 = (UserModel)obj1;
 				UserModel tempUm2 = (UserModel)obj2;
 				if(tempUm1.getAge() > tempUm2.getAge()){
-					return 1;
+					return -1;
 				}else if(tempUm1.getAge() == tempUm2.getAge()){
 					return 0;
 				}else if(tempUm1.getAge() < tempUm2.getAge()){
-					return -1;
+					return 1;
 				}
 				return 0;
 			}};
 		
-			//ï¿½ï¿½ï¿½ï¿½	
+			//ÅÅÐò	
 		Collections.sort(list,c);
 		
-		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½---------------------ï¿½ï¿½");
+		System.out.println("ÅÅÐòºó---------------------¡µ");
 		printList(list);
 		
 	}

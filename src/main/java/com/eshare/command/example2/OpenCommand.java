@@ -1,24 +1,24 @@
 package com.eshare.command.example2;
 /**
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½Êµï¿½ï¿½Commandï¿½Ó¿Ú£ï¿½
- * ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Ã½ï¿½ï¿½ï¿½ï¿½ßµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ¿ª»úÃüÁîµÄÊµÏÖ£¬ÊµÏÖCommand½Ó¿Ú£¬
+ * ³ÖÓÐ¿ª»úÃüÁîµÄÕæÕýÊµÏÖ£¬Í¨¹ýµ÷ÓÃ½ÓÊÕÕßµÄ·½·¨À´ÊµÏÖÃüÁî
  */
 public class OpenCommand implements Command{
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ß¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ³ÖÓÐÕæÕýÊµÏÖÃüÁîµÄ½ÓÊÕÕß¡ª¡ªÖ÷°å¶ÔÏó
 	 */
 	private MainBoardApi mainBoard = null;
 	/**
-	 * ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	 * @param mainBoard ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¹¹Ôì·½·¨£¬´«ÈëÖ÷°å¶ÔÏó
+	 * @param mainBoard Ö÷°å¶ÔÏó
 	 */
 	public OpenCommand(MainBoardApi mainBoard) {
 		this.mainBoard = mainBoard;
 	}
 	
 	public void execute() {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬¸ï¿½ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½É¿ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½
+		//¶ÔÓÚÃüÁî¶ÔÏó£¬¸ù±¾²»ÖªµÀÈçºÎ¿ª»ú£¬»á×ªµ÷Ö÷°å¶ÔÏó
+		//ÈÃÖ÷°åÈ¥Íê³É¿ª»úµÄ¹¦ÄÜ
 		this.mainBoard.open();
 	}
 }
